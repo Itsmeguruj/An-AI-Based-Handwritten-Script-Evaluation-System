@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "local-1783312877897-k7hfo",
+    "name": "Guru",
+    "email": "itsmeguruj@gmail.com",
+    "mobile": "9902024543",
+    "countryCode": "+91",
+    "institution": "GECM",
+    "department": "CSE",
+    "username": "Genghis22",
+    "verificationCode": "OTP_VERIFIED",
+    "password": "$2b$10$8O8QQSN4O5eUAg8l9rLoJuNU5cyLi13zEU2OWKi3so5w/7mPHNoXO",
+    "isVerified": true,
+    "createdAt": "2026-07-06T04:41:17.897Z",
+    "timestamp": "2026-07-06T04:41:17.897Z"
+  }
+]

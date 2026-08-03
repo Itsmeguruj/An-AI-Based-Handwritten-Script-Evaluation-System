@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "local-1785468242420-jfymf",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-07-31T03:24:02.420Z",
+    "timestamp": "2026-07-31T03:24:02.420Z"
+  },
+  {
+    "_id": "local-1785509691555-grqji",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-07-31T14:54:51.555Z",
+    "timestamp": "2026-07-31T14:54:51.555Z"
+  }
+]
