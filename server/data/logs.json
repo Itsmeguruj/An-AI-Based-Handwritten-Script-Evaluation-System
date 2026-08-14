@@ -1,0 +1,1992 @@
+[
+  {
+    "_id": "local-1785468242420-jfymf",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-07-31T03:24:02.420Z",
+    "timestamp": "2026-07-31T03:24:02.420Z"
+  },
+  {
+    "_id": "local-1786106500703-kekrf",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T12:41:40.703Z",
+    "timestamp": "2026-08-07T12:41:40.703Z"
+  },
+  {
+    "_id": "local-1786106634522-ievvq",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T12:43:54.522Z",
+    "timestamp": "2026-08-07T12:43:54.523Z"
+  },
+  {
+    "_id": "local-1786107125263-5atyw",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T12:52:05.263Z",
+    "timestamp": "2026-08-07T12:52:05.263Z"
+  },
+  {
+    "_id": "local-1786107445115-2e0nn",
+    "action": "Assigned paper BCS304 (1).pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T12:57:25.115Z",
+    "timestamp": "2026-08-07T12:57:25.115Z"
+  },
+  {
+    "_id": "local-1786108021043-2xo5j",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:07:01.043Z",
+    "timestamp": "2026-08-07T13:07:01.043Z"
+  },
+  {
+    "_id": "local-1786108244625-7ybfb",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:10:44.625Z",
+    "timestamp": "2026-08-07T13:10:44.625Z"
+  },
+  {
+    "_id": "local-1786108591913-1bx72",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:16:31.913Z",
+    "timestamp": "2026-08-07T13:16:31.913Z"
+  },
+  {
+    "_id": "local-1786109004846-y52ap",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:23:24.847Z",
+    "timestamp": "2026-08-07T13:23:24.847Z"
+  },
+  {
+    "_id": "local-1786109234591-ua7m3",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:27:14.591Z",
+    "timestamp": "2026-08-07T13:27:14.591Z"
+  },
+  {
+    "_id": "local-1786109352003-l69kt",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:29:12.003Z",
+    "timestamp": "2026-08-07T13:29:12.003Z"
+  },
+  {
+    "_id": "local-1786109448265-2lc2v",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:30:48.265Z",
+    "timestamp": "2026-08-07T13:30:48.265Z"
+  },
+  {
+    "_id": "local-1786109939404-gs21i",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:38:59.404Z",
+    "timestamp": "2026-08-07T13:38:59.404Z"
+  },
+  {
+    "_id": "local-1786110220786-486sc",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:43:40.786Z",
+    "timestamp": "2026-08-07T13:43:40.786Z"
+  },
+  {
+    "_id": "local-1786110235201-np1bg",
+    "action": "Assigned paper BCS304 (1).pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:43:55.201Z",
+    "timestamp": "2026-08-07T13:43:55.201Z"
+  },
+  {
+    "_id": "local-1786110422254-db51i",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:47:02.254Z",
+    "timestamp": "2026-08-07T13:47:02.254Z"
+  },
+  {
+    "_id": "local-1786110455339-hyav4",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:47:35.339Z",
+    "timestamp": "2026-08-07T13:47:35.339Z"
+  },
+  {
+    "_id": "local-1786110913926-3mo41",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-07T13:55:13.926Z",
+    "timestamp": "2026-08-07T13:55:13.926Z"
+  },
+  {
+    "_id": "local-1786193042304-v9wef",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T12:44:02.305Z",
+    "timestamp": "2026-08-08T12:44:02.305Z"
+  },
+  {
+    "_id": "local-1786193057810-563ex",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T12:44:17.810Z",
+    "timestamp": "2026-08-08T12:44:17.810Z"
+  },
+  {
+    "_id": "local-1786193060036-6mxi0",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T12:44:20.036Z",
+    "timestamp": "2026-08-08T12:44:20.036Z"
+  },
+  {
+    "_id": "local-1786193112959-x3e7o",
+    "action": "Assigned paper BCS304 (1).pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T12:45:12.959Z",
+    "timestamp": "2026-08-08T12:45:12.959Z"
+  },
+  {
+    "_id": "local-1786193154042-3s3ti",
+    "action": "Assigned paper BCS304 (1).pdf (Serial No: SN-2026-002) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T12:45:54.042Z",
+    "timestamp": "2026-08-08T12:45:54.042Z"
+  },
+  {
+    "_id": "local-1786193173606-i52bw",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T12:46:13.606Z",
+    "timestamp": "2026-08-08T12:46:13.606Z"
+  },
+  {
+    "_id": "local-1786195723313-gdc01",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T13:28:43.313Z",
+    "timestamp": "2026-08-08T13:28:43.313Z"
+  },
+  {
+    "_id": "local-1786200289585-qbi0w",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T14:44:49.585Z",
+    "timestamp": "2026-08-08T14:44:49.585Z"
+  },
+  {
+    "_id": "local-1786200308106-nm30h",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T14:45:08.106Z",
+    "timestamp": "2026-08-08T14:45:08.106Z"
+  },
+  {
+    "_id": "local-1786200327238-9cjbz",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T14:45:27.238Z",
+    "timestamp": "2026-08-08T14:45:27.238Z"
+  },
+  {
+    "_id": "local-1786200646428-t36fx",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T14:50:46.428Z",
+    "timestamp": "2026-08-08T14:50:46.428Z"
+  },
+  {
+    "_id": "local-1786200762646-hkv29",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T14:52:42.646Z",
+    "timestamp": "2026-08-08T14:52:42.646Z"
+  },
+  {
+    "_id": "local-1786201989484-4a6fa",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T15:13:09.484Z",
+    "timestamp": "2026-08-08T15:13:09.484Z"
+  },
+  {
+    "_id": "local-1786202065132-yaby6",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T15:14:25.132Z",
+    "timestamp": "2026-08-08T15:14:25.132Z"
+  },
+  {
+    "_id": "local-1786205135170-jpuxh",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T16:05:35.170Z",
+    "timestamp": "2026-08-08T16:05:35.170Z"
+  },
+  {
+    "_id": "local-1786205144884-imsfp",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T16:05:44.884Z",
+    "timestamp": "2026-08-08T16:05:44.884Z"
+  },
+  {
+    "_id": "local-1786210078406-j19f6",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:27:58.406Z",
+    "timestamp": "2026-08-08T17:27:58.406Z"
+  },
+  {
+    "_id": "local-1786210216666-guvye",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:30:16.666Z",
+    "timestamp": "2026-08-08T17:30:16.666Z"
+  },
+  {
+    "_id": "local-1786210224932-yh4v0",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:30:24.932Z",
+    "timestamp": "2026-08-08T17:30:24.932Z"
+  },
+  {
+    "_id": "local-1786210240917-nvwcd",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:30:40.917Z",
+    "timestamp": "2026-08-08T17:30:40.917Z"
+  },
+  {
+    "_id": "local-1786210265334-l8tcp",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:31:05.334Z",
+    "timestamp": "2026-08-08T17:31:05.334Z"
+  },
+  {
+    "_id": "local-1786210492296-zl5v9",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:34:52.296Z",
+    "timestamp": "2026-08-08T17:34:52.296Z"
+  },
+  {
+    "_id": "local-1786210499406-w9yms",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:34:59.406Z",
+    "timestamp": "2026-08-08T17:34:59.406Z"
+  },
+  {
+    "_id": "local-1786210524830-7ylax",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:35:24.830Z",
+    "timestamp": "2026-08-08T17:35:24.830Z"
+  },
+  {
+    "_id": "local-1786210567931-96vlk",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:36:07.931Z",
+    "timestamp": "2026-08-08T17:36:07.931Z"
+  },
+  {
+    "_id": "local-1786210602516-afvt2",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:36:42.516Z",
+    "timestamp": "2026-08-08T17:36:42.516Z"
+  },
+  {
+    "_id": "local-1786211635365-b8qig",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T17:53:55.365Z",
+    "timestamp": "2026-08-08T17:53:55.365Z"
+  },
+  {
+    "_id": "local-1786212139621-h0qw6",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:02:19.621Z",
+    "timestamp": "2026-08-08T18:02:19.621Z"
+  },
+  {
+    "_id": "local-1786212314848-a9wwn",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:05:14.848Z",
+    "timestamp": "2026-08-08T18:05:14.848Z"
+  },
+  {
+    "_id": "local-1786212323302-0q8ff",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:05:23.302Z",
+    "timestamp": "2026-08-08T18:05:23.302Z"
+  },
+  {
+    "_id": "local-1786212351409-zs092",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:05:51.409Z",
+    "timestamp": "2026-08-08T18:05:51.409Z"
+  },
+  {
+    "_id": "local-1786212624043-yqsfb",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:10:24.043Z",
+    "timestamp": "2026-08-08T18:10:24.043Z"
+  },
+  {
+    "_id": "local-1786212946778-yuhdw",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:15:46.778Z",
+    "timestamp": "2026-08-08T18:15:46.778Z"
+  },
+  {
+    "_id": "local-1786212956336-28ou5",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:15:56.336Z",
+    "timestamp": "2026-08-08T18:15:56.336Z"
+  },
+  {
+    "_id": "local-1786213512313-r3lp1",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:25:12.313Z",
+    "timestamp": "2026-08-08T18:25:12.313Z"
+  },
+  {
+    "_id": "local-1786214027172-o3zpt",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:33:47.173Z",
+    "timestamp": "2026-08-08T18:33:47.173Z"
+  },
+  {
+    "_id": "local-1786214478840-clhox",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:41:18.840Z",
+    "timestamp": "2026-08-08T18:41:18.840Z"
+  },
+  {
+    "_id": "local-1786214492401-dyyao",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:41:32.401Z",
+    "timestamp": "2026-08-08T18:41:32.401Z"
+  },
+  {
+    "_id": "local-1786214520871-1cefd",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:42:00.871Z",
+    "timestamp": "2026-08-08T18:42:00.871Z"
+  },
+  {
+    "_id": "local-1786214666793-y855d",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:44:26.793Z",
+    "timestamp": "2026-08-08T18:44:26.793Z"
+  },
+  {
+    "_id": "local-1786214692428-kgakq",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-08T18:44:52.428Z",
+    "timestamp": "2026-08-08T18:44:52.428Z"
+  },
+  {
+    "_id": "local-1786264108432-qhmex",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:28:28.432Z",
+    "timestamp": "2026-08-09T08:28:28.432Z"
+  },
+  {
+    "_id": "local-1786264482198-k48jt",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:34:42.198Z",
+    "timestamp": "2026-08-09T08:34:42.198Z"
+  },
+  {
+    "_id": "local-1786264804580-lrun2",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:40:04.580Z",
+    "timestamp": "2026-08-09T08:40:04.580Z"
+  },
+  {
+    "_id": "local-1786264810024-8ozol",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:40:10.024Z",
+    "timestamp": "2026-08-09T08:40:10.024Z"
+  },
+  {
+    "_id": "local-1786264821899-m05vd",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:40:21.899Z",
+    "timestamp": "2026-08-09T08:40:21.899Z"
+  },
+  {
+    "_id": "local-1786265262310-pq4dk",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:47:42.310Z",
+    "timestamp": "2026-08-09T08:47:42.310Z"
+  },
+  {
+    "_id": "local-1786265456807-18jkf",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T08:50:56.807Z",
+    "timestamp": "2026-08-09T08:50:56.807Z"
+  },
+  {
+    "_id": "local-1786270673982-rsfx7",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:17:53.982Z",
+    "timestamp": "2026-08-09T10:17:53.982Z"
+  },
+  {
+    "_id": "local-1786270697971-dam8v",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:18:17.972Z",
+    "timestamp": "2026-08-09T10:18:17.972Z"
+  },
+  {
+    "_id": "local-1786270767280-ukybj",
+    "action": "Assigned paper BCS304 (1).pdf (Serial No: SN-2026-002) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:19:27.280Z",
+    "timestamp": "2026-08-09T10:19:27.280Z"
+  },
+  {
+    "_id": "local-1786270823905-chm83",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:20:23.905Z",
+    "timestamp": "2026-08-09T10:20:23.905Z"
+  },
+  {
+    "_id": "local-1786270828734-tvr80",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:20:28.734Z",
+    "timestamp": "2026-08-09T10:20:28.734Z"
+  },
+  {
+    "_id": "local-1786270839429-hcmsu",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:20:39.429Z",
+    "timestamp": "2026-08-09T10:20:39.429Z"
+  },
+  {
+    "_id": "local-1786270928703-rgfao",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T10:22:08.703Z",
+    "timestamp": "2026-08-09T10:22:08.703Z"
+  },
+  {
+    "_id": "local-1786283689461-5938j",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T13:54:49.461Z",
+    "timestamp": "2026-08-09T13:54:49.461Z"
+  },
+  {
+    "_id": "local-1786283951000-sn8q0",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T13:59:11.000Z",
+    "timestamp": "2026-08-09T13:59:11.000Z"
+  },
+  {
+    "_id": "local-1786284439390-n5uab",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T14:07:19.390Z",
+    "timestamp": "2026-08-09T14:07:19.390Z"
+  },
+  {
+    "_id": "local-1786284459730-dc815",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T14:07:39.730Z",
+    "timestamp": "2026-08-09T14:07:39.730Z"
+  },
+  {
+    "_id": "local-1786284478341-5ysdl",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T14:07:58.341Z",
+    "timestamp": "2026-08-09T14:07:58.341Z"
+  },
+  {
+    "_id": "local-1786284492974-0qciz",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T14:08:12.974Z",
+    "timestamp": "2026-08-09T14:08:12.974Z"
+  },
+  {
+    "_id": "local-1786284500864-29udc",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T14:08:20.864Z",
+    "timestamp": "2026-08-09T14:08:20.864Z"
+  },
+  {
+    "_id": "local-1786286595876-janka",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T14:43:15.876Z",
+    "timestamp": "2026-08-09T14:43:15.876Z"
+  },
+  {
+    "_id": "local-1786287750317-uy1rw",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T15:02:30.317Z",
+    "timestamp": "2026-08-09T15:02:30.317Z"
+  },
+  {
+    "_id": "local-1786287754645-9rwt7",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T15:02:34.645Z",
+    "timestamp": "2026-08-09T15:02:34.645Z"
+  },
+  {
+    "_id": "local-1786287777789-tbiai",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T15:02:57.789Z",
+    "timestamp": "2026-08-09T15:02:57.789Z"
+  },
+  {
+    "_id": "local-1786287801750-wzfxt",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T15:03:21.750Z",
+    "timestamp": "2026-08-09T15:03:21.750Z"
+  },
+  {
+    "_id": "local-1786287829758-ne1ey",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T15:03:49.758Z",
+    "timestamp": "2026-08-09T15:03:49.758Z"
+  },
+  {
+    "_id": "local-1786289493140-tsils",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T15:31:33.140Z",
+    "timestamp": "2026-08-09T15:31:33.140Z"
+  },
+  {
+    "_id": "local-1786292302776-76mf7",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:18:22.776Z",
+    "timestamp": "2026-08-09T16:18:22.776Z"
+  },
+  {
+    "_id": "local-1786292329228-xlnyb",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:18:49.228Z",
+    "timestamp": "2026-08-09T16:18:49.228Z"
+  },
+  {
+    "_id": "local-1786292469659-2h0s2",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:21:09.659Z",
+    "timestamp": "2026-08-09T16:21:09.659Z"
+  },
+  {
+    "_id": "local-1786292532416-vd3ac",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:22:12.416Z",
+    "timestamp": "2026-08-09T16:22:12.416Z"
+  },
+  {
+    "_id": "local-1786292588254-3v92t",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:23:08.254Z",
+    "timestamp": "2026-08-09T16:23:08.254Z"
+  },
+  {
+    "_id": "local-1786292711935-0oyiz",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:25:11.935Z",
+    "timestamp": "2026-08-09T16:25:11.935Z"
+  },
+  {
+    "_id": "local-1786292730653-nvy6x",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:25:30.653Z",
+    "timestamp": "2026-08-09T16:25:30.653Z"
+  },
+  {
+    "_id": "local-1786292736479-hhnxz",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:25:36.479Z",
+    "timestamp": "2026-08-09T16:25:36.479Z"
+  },
+  {
+    "_id": "local-1786292891288-323yy",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:28:11.288Z",
+    "timestamp": "2026-08-09T16:28:11.288Z"
+  },
+  {
+    "_id": "local-1786292936759-ljwey",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:28:56.759Z",
+    "timestamp": "2026-08-09T16:28:56.759Z"
+  },
+  {
+    "_id": "local-1786292947395-4ttwu",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:29:07.395Z",
+    "timestamp": "2026-08-09T16:29:07.395Z"
+  },
+  {
+    "_id": "local-1786292999538-nyuji",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:29:59.538Z",
+    "timestamp": "2026-08-09T16:29:59.538Z"
+  },
+  {
+    "_id": "local-1786293003932-fv689",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:30:03.932Z",
+    "timestamp": "2026-08-09T16:30:03.932Z"
+  },
+  {
+    "_id": "local-1786293296995-o1t7g",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:34:56.995Z",
+    "timestamp": "2026-08-09T16:34:56.995Z"
+  },
+  {
+    "_id": "local-1786293301084-en1uq",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:35:01.084Z",
+    "timestamp": "2026-08-09T16:35:01.084Z"
+  },
+  {
+    "_id": "local-1786293309548-q3kz3",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:35:09.548Z",
+    "timestamp": "2026-08-09T16:35:09.548Z"
+  },
+  {
+    "_id": "local-1786293325080-yztdb",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:35:25.080Z",
+    "timestamp": "2026-08-09T16:35:25.080Z"
+  },
+  {
+    "_id": "local-1786293376843-ofc9g",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:36:16.843Z",
+    "timestamp": "2026-08-09T16:36:16.843Z"
+  },
+  {
+    "_id": "local-1786293551696-ikulv",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:39:11.696Z",
+    "timestamp": "2026-08-09T16:39:11.696Z"
+  },
+  {
+    "_id": "local-1786293561681-2t1nz",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:39:21.681Z",
+    "timestamp": "2026-08-09T16:39:21.681Z"
+  },
+  {
+    "_id": "local-1786293566059-jlg25",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:39:26.059Z",
+    "timestamp": "2026-08-09T16:39:26.059Z"
+  },
+  {
+    "_id": "local-1786293723449-5rpml",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:42:03.449Z",
+    "timestamp": "2026-08-09T16:42:03.449Z"
+  },
+  {
+    "_id": "local-1786293728873-ai4ma",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:42:08.873Z",
+    "timestamp": "2026-08-09T16:42:08.873Z"
+  },
+  {
+    "_id": "local-1786293735361-ysmj6",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:42:15.361Z",
+    "timestamp": "2026-08-09T16:42:15.361Z"
+  },
+  {
+    "_id": "local-1786293739822-w37mu",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:42:19.822Z",
+    "timestamp": "2026-08-09T16:42:19.822Z"
+  },
+  {
+    "_id": "local-1786293741162-i0dsm",
+    "action": "Started evaluation of another paper and completely cleared previous student answer script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:42:21.162Z",
+    "timestamp": "2026-08-09T16:42:21.162Z"
+  },
+  {
+    "_id": "local-1786293746559-ik7pj",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:42:26.559Z",
+    "timestamp": "2026-08-09T16:42:26.559Z"
+  },
+  {
+    "_id": "local-1786293849232-autcx",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:44:09.232Z",
+    "timestamp": "2026-08-09T16:44:09.232Z"
+  },
+  {
+    "_id": "local-1786293858447-8zhdi",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:44:18.447Z",
+    "timestamp": "2026-08-09T16:44:18.447Z"
+  },
+  {
+    "_id": "local-1786293859558-fu20r",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-09T16:44:19.558Z",
+    "timestamp": "2026-08-09T16:44:19.558Z"
+  },
+  {
+    "_id": "local-1786328192632-l69z4",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:16:32.632Z",
+    "timestamp": "2026-08-10T02:16:32.633Z"
+  },
+  {
+    "_id": "local-1786328197659-6n5g1",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:16:37.659Z",
+    "timestamp": "2026-08-10T02:16:37.659Z"
+  },
+  {
+    "_id": "local-1786328832797-16fwr",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:27:12.797Z",
+    "timestamp": "2026-08-10T02:27:12.797Z"
+  },
+  {
+    "_id": "local-1786328884231-u2rli",
+    "action": "Exported evaluation scorecard to PDF.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:28:04.231Z",
+    "timestamp": "2026-08-10T02:28:04.231Z"
+  },
+  {
+    "_id": "local-1786329099389-o4w9y",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:31:39.389Z",
+    "timestamp": "2026-08-10T02:31:39.389Z"
+  },
+  {
+    "_id": "local-1786329100876-ill6y",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:31:40.876Z",
+    "timestamp": "2026-08-10T02:31:40.876Z"
+  },
+  {
+    "_id": "local-1786329110847-mguvv",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:31:50.847Z",
+    "timestamp": "2026-08-10T02:31:50.847Z"
+  },
+  {
+    "_id": "local-1786329146880-oqani",
+    "action": "Exported evaluation scorecard to PDF.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:32:26.880Z",
+    "timestamp": "2026-08-10T02:32:26.881Z"
+  },
+  {
+    "_id": "local-1786329227376-9lrmp",
+    "action": "Exported evaluation scorecard to PDF.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:33:47.376Z",
+    "timestamp": "2026-08-10T02:33:47.376Z"
+  },
+  {
+    "_id": "local-1786329356551-pxehu",
+    "action": "Exported evaluation PDF breakdown scorecard for Serial No: SN-2026-002.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:35:56.551Z",
+    "timestamp": "2026-08-10T02:35:56.551Z"
+  },
+  {
+    "_id": "local-1786329427033-a0vxg",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:37:07.033Z",
+    "timestamp": "2026-08-10T02:37:07.033Z"
+  },
+  {
+    "_id": "local-1786329452691-srwi0",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:37:32.692Z",
+    "timestamp": "2026-08-10T02:37:32.692Z"
+  },
+  {
+    "_id": "local-1786329703266-v37gl",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:41:43.266Z",
+    "timestamp": "2026-08-10T02:41:43.266Z"
+  },
+  {
+    "_id": "local-1786329712143-348jx",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:41:52.143Z",
+    "timestamp": "2026-08-10T02:41:52.143Z"
+  },
+  {
+    "_id": "local-1786329718842-e4dgq",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:41:58.842Z",
+    "timestamp": "2026-08-10T02:41:58.842Z"
+  },
+  {
+    "_id": "local-1786329718849-h784e",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:41:58.849Z",
+    "timestamp": "2026-08-10T02:41:58.849Z"
+  },
+  {
+    "_id": "local-1786329726211-1yz65",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:42:06.211Z",
+    "timestamp": "2026-08-10T02:42:06.211Z"
+  },
+  {
+    "_id": "local-1786329752526-sl7wj",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:42:32.526Z",
+    "timestamp": "2026-08-10T02:42:32.526Z"
+  },
+  {
+    "_id": "local-1786329870726-ehd0g",
+    "action": "Exported evaluation PDF breakdown scorecard for Serial No: SN-2026-002.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:44:30.726Z",
+    "timestamp": "2026-08-10T02:44:30.726Z"
+  },
+  {
+    "_id": "local-1786329874216-fxvbe",
+    "action": "Exported evaluation PDF breakdown scorecard for Serial No: SN-2026-002.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:44:34.216Z",
+    "timestamp": "2026-08-10T02:44:34.216Z"
+  },
+  {
+    "_id": "local-1786330228561-fr11q",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:50:28.561Z",
+    "timestamp": "2026-08-10T02:50:28.561Z"
+  },
+  {
+    "_id": "local-1786330261544-5j2gw",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:51:01.544Z",
+    "timestamp": "2026-08-10T02:51:01.544Z"
+  },
+  {
+    "_id": "local-1786330261551-5prqz",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-10T02:51:01.551Z",
+    "timestamp": "2026-08-10T02:51:01.551Z"
+  },
+  {
+    "_id": "local-1786448077095-x66u1",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T11:34:37.095Z",
+    "timestamp": "2026-08-11T11:34:37.095Z"
+  },
+  {
+    "_id": "local-1786448082429-x0axi",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T11:34:42.430Z",
+    "timestamp": "2026-08-11T11:34:42.430Z"
+  },
+  {
+    "_id": "local-1786448388778-u4qb1",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T11:39:48.778Z",
+    "timestamp": "2026-08-11T11:39:48.778Z"
+  },
+  {
+    "_id": "local-1786448394817-bbhuh",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T11:39:54.817Z",
+    "timestamp": "2026-08-11T11:39:54.817Z"
+  },
+  {
+    "_id": "local-1786449636864-bhkch",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:00:36.864Z",
+    "timestamp": "2026-08-11T12:00:36.864Z"
+  },
+  {
+    "_id": "local-1786449664855-3gj79",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:01:04.855Z",
+    "timestamp": "2026-08-11T12:01:04.855Z"
+  },
+  {
+    "_id": "local-1786449803936-n2m4x",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:03:23.936Z",
+    "timestamp": "2026-08-11T12:03:23.936Z"
+  },
+  {
+    "_id": "local-1786449809199-hzk2z",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:03:29.199Z",
+    "timestamp": "2026-08-11T12:03:29.199Z"
+  },
+  {
+    "_id": "local-1786449823399-9c9k1",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:03:43.399Z",
+    "timestamp": "2026-08-11T12:03:43.399Z"
+  },
+  {
+    "_id": "local-1786450431093-91lc3",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:13:51.093Z",
+    "timestamp": "2026-08-11T12:13:51.093Z"
+  },
+  {
+    "_id": "local-1786450439859-7l57s",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:13:59.859Z",
+    "timestamp": "2026-08-11T12:13:59.859Z"
+  },
+  {
+    "_id": "local-1786450542396-bv44c",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:15:42.396Z",
+    "timestamp": "2026-08-11T12:15:42.396Z"
+  },
+  {
+    "_id": "local-1786450731164-uixm1",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:18:51.164Z",
+    "timestamp": "2026-08-11T12:18:51.164Z"
+  },
+  {
+    "_id": "local-1786450731173-v554e",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:18:51.174Z",
+    "timestamp": "2026-08-11T12:18:51.174Z"
+  },
+  {
+    "_id": "local-1786450934179-7raih",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T12:22:14.179Z",
+    "timestamp": "2026-08-11T12:22:14.179Z"
+  },
+  {
+    "_id": "local-1786455476380-nb408",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T13:37:56.380Z",
+    "timestamp": "2026-08-11T13:37:56.380Z"
+  },
+  {
+    "_id": "local-1786455480227-26mpl",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T13:38:00.227Z",
+    "timestamp": "2026-08-11T13:38:00.227Z"
+  },
+  {
+    "_id": "local-1786455491192-54yg2",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T13:38:11.192Z",
+    "timestamp": "2026-08-11T13:38:11.192Z"
+  },
+  {
+    "_id": "local-1786459190851-cfog5",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T14:39:50.851Z",
+    "timestamp": "2026-08-11T14:39:50.851Z"
+  },
+  {
+    "_id": "local-1786459195368-kw80a",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T14:39:55.368Z",
+    "timestamp": "2026-08-11T14:39:55.368Z"
+  },
+  {
+    "_id": "local-1786459204284-x54h1",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-11T14:40:04.284Z",
+    "timestamp": "2026-08-11T14:40:04.284Z"
+  },
+  {
+    "_id": "local-1786496237379-q7sfl",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T00:57:17.379Z",
+    "timestamp": "2026-08-12T00:57:17.379Z"
+  },
+  {
+    "_id": "local-1786496243441-xzxqs",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T00:57:23.441Z",
+    "timestamp": "2026-08-12T00:57:23.441Z"
+  },
+  {
+    "_id": "local-1786496276342-p0i3o",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T00:57:56.342Z",
+    "timestamp": "2026-08-12T00:57:56.342Z"
+  },
+  {
+    "_id": "local-1786499034845-gu2h1",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T01:43:54.845Z",
+    "timestamp": "2026-08-12T01:43:54.845Z"
+  },
+  {
+    "_id": "local-1786499034860-2ilfu",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T01:43:54.860Z",
+    "timestamp": "2026-08-12T01:43:54.860Z"
+  },
+  {
+    "_id": "local-1786502097969-ux0um",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T02:34:57.969Z",
+    "timestamp": "2026-08-12T02:34:57.969Z"
+  },
+  {
+    "_id": "local-1786502113162-mfdd9",
+    "action": "Auto-generated evaluation rubric with 28 questions from Question Paper",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T02:35:13.162Z",
+    "timestamp": "2026-08-12T02:35:13.162Z"
+  },
+  {
+    "_id": "local-1786502125133-4psrv",
+    "action": "Assigned paper BCS304 (1).pdf (Serial No: SN-2026-002) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T02:35:25.133Z",
+    "timestamp": "2026-08-12T02:35:25.133Z"
+  },
+  {
+    "_id": "local-1786502196660-8mq5f",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T02:36:36.660Z",
+    "timestamp": "2026-08-12T02:36:36.660Z"
+  },
+  {
+    "_id": "local-1786502201885-1fe57",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-12T02:36:41.885Z",
+    "timestamp": "2026-08-12T02:36:41.885Z"
+  },
+  {
+    "_id": "local-1786669932692-f353r",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:12:12.692Z",
+    "timestamp": "2026-08-14T01:12:12.692Z"
+  },
+  {
+    "_id": "local-1786669940982-denca",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:12:20.982Z",
+    "timestamp": "2026-08-14T01:12:20.982Z"
+  },
+  {
+    "_id": "local-1786671335077-u2o3y",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:35:35.077Z",
+    "timestamp": "2026-08-14T01:35:35.077Z"
+  },
+  {
+    "_id": "local-1786671434541-ti118",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:37:14.541Z",
+    "timestamp": "2026-08-14T01:37:14.541Z"
+  },
+  {
+    "_id": "local-1786671462828-m1l4t",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:37:42.828Z",
+    "timestamp": "2026-08-14T01:37:42.828Z"
+  },
+  {
+    "_id": "local-1786671473729-rpxzz",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:37:53.729Z",
+    "timestamp": "2026-08-14T01:37:53.729Z"
+  },
+  {
+    "_id": "local-1786672127720-ey2bc",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:48:47.720Z",
+    "timestamp": "2026-08-14T01:48:47.720Z"
+  },
+  {
+    "_id": "local-1786672153685-kdkjd",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:49:13.685Z",
+    "timestamp": "2026-08-14T01:49:13.685Z"
+  },
+  {
+    "_id": "local-1786672158778-e5fxg",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:49:18.778Z",
+    "timestamp": "2026-08-14T01:49:18.779Z"
+  },
+  {
+    "_id": "local-1786672158839-gd0ul",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:49:18.839Z",
+    "timestamp": "2026-08-14T01:49:18.839Z"
+  },
+  {
+    "_id": "local-1786672189007-qv1xi",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:49:49.007Z",
+    "timestamp": "2026-08-14T01:49:49.007Z"
+  },
+  {
+    "_id": "local-1786672211538-4gg5h",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:50:11.538Z",
+    "timestamp": "2026-08-14T01:50:11.538Z"
+  },
+  {
+    "_id": "local-1786672669629-47xka",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:57:49.629Z",
+    "timestamp": "2026-08-14T01:57:49.629Z"
+  },
+  {
+    "_id": "local-1786672676171-idmoh",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T01:57:56.171Z",
+    "timestamp": "2026-08-14T01:57:56.171Z"
+  },
+  {
+    "_id": "local-1786673211617-jbbtz",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:06:51.617Z",
+    "timestamp": "2026-08-14T02:06:51.617Z"
+  },
+  {
+    "_id": "local-1786675134104-ev5rb",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:38:54.104Z",
+    "timestamp": "2026-08-14T02:38:54.104Z"
+  },
+  {
+    "_id": "local-1786675156738-t6yk8",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:39:16.738Z",
+    "timestamp": "2026-08-14T02:39:16.738Z"
+  },
+  {
+    "_id": "local-1786675171799-esgv1",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:39:31.799Z",
+    "timestamp": "2026-08-14T02:39:31.799Z"
+  },
+  {
+    "_id": "local-1786675184061-g2ots",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:39:44.061Z",
+    "timestamp": "2026-08-14T02:39:44.061Z"
+  },
+  {
+    "_id": "local-1786675184072-yxm5p",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:39:44.072Z",
+    "timestamp": "2026-08-14T02:39:44.072Z"
+  },
+  {
+    "_id": "local-1786675610645-crg1w",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:46:50.645Z",
+    "timestamp": "2026-08-14T02:46:50.645Z"
+  },
+  {
+    "_id": "local-1786675800749-r7pds",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:50:00.749Z",
+    "timestamp": "2026-08-14T02:50:00.749Z"
+  },
+  {
+    "_id": "local-1786675852267-51aoj",
+    "action": "Saved evaluation result for Serial No SN-2026-002 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:50:52.267Z",
+    "timestamp": "2026-08-14T02:50:52.267Z"
+  },
+  {
+    "_id": "local-1786675887350-izscw",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:51:27.350Z",
+    "timestamp": "2026-08-14T02:51:27.350Z"
+  },
+  {
+    "_id": "local-1786675939248-xrysw",
+    "action": "Revoked assignment (Serial No: SN-2026-002) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T02:52:19.248Z",
+    "timestamp": "2026-08-14T02:52:19.248Z"
+  },
+  {
+    "_id": "local-1786676465967-mvuho",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T03:01:05.967Z",
+    "timestamp": "2026-08-14T03:01:05.967Z"
+  },
+  {
+    "_id": "local-1786676470698-wmpy5",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T03:01:10.698Z",
+    "timestamp": "2026-08-14T03:01:10.698Z"
+  },
+  {
+    "_id": "local-1786676493459-72i5w",
+    "action": "Started paper evaluation using GOT-OCR 2.0 (High-Precision End-to-End)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-14T03:01:33.459Z",
+    "timestamp": "2026-08-14T03:01:33.459Z"
+  }
+]

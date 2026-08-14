@@ -1,0 +1,93 @@
+[
+  {
+    "_id": "local-1786454018273-2eixx",
+    "id": "cons-script-101-Q1a",
+    "script_id": "script-101",
+    "question_id": "Q1a",
+    "combined_text": "[Text from Page 1]:\nQ1(a): Define Data Structure. Explain primitive and non-primitive data structures with classification diagram and memory allocation principles.\n\n[Student Hand-Written Response]:\nA data structure is a specialized format for organizing, processing, retrieving, and storing data in computer memory efficiently.\n• Primitive Data Structures: Int (4 bytes), Float (4 bytes), Char (1 byte), Double (8 bytes), Pointer.\n• Non-Primitive Data Structures:\n  - Linear: Arrays, Stacks, Queues, Linked Lists (sequential layout).\n  - Non-Linear: Trees, Graphs (hierarchical layout).\n• Memory Allocation: Static allocation uses stack memory at compile-time. Dynamic allocation uses heap memory at runtime via pointers.",
+    "block_ids": [
+      "blk-101-1"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-08-11T13:13:38.273Z",
+    "timestamp": "2026-08-11T13:13:38.273Z"
+  },
+  {
+    "_id": "local-1786454018277-xlxbu",
+    "id": "cons-script-101-Q1b",
+    "script_id": "script-101",
+    "question_id": "Q1b",
+    "combined_text": "[Text from Page 1]:\nQ1(b): Explain Knuth-Morris-Pratt (KMP) pattern matching algorithm. Trace failure function π for P = \"ababaca\".\n\n[Student Hand-Written Response]:\nKMP algorithm avoids backtracking text pointer i by computing prefix function π (failure function) on pattern P.\nFailure function π for P = \"ababaca\":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nTime Complexity: O(n + m) linear matching time compared to O(n*m) naive algorithm.",
+    "block_ids": [
+      "blk-101-2"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-08-11T13:13:38.277Z",
+    "timestamp": "2026-08-11T13:13:38.277Z"
+  },
+  {
+    "_id": "local-1786454018281-y7bwh",
+    "id": "cons-script-101-Q5a",
+    "script_id": "script-101",
+    "question_id": "Q5a",
+    "combined_text": "[Text from Page 5]:\nQ5(a): Singly Linked List C functions for insertion and deletion at front and end.\n\n[Student Hand-Written Response]:\nNode struct: struct Node { int data; struct Node* next; };\n• Insert Front: temp->next = head; head = temp;\n• Delete Front: temp = head; head = head->next; free(temp);",
+    "block_ids": [
+      "blk-101-6"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-08-11T13:13:38.281Z",
+    "timestamp": "2026-08-11T13:13:38.281Z"
+  },
+  {
+    "_id": "local-1786454018303-0em7l",
+    "id": "cons-script-102-Q2a",
+    "script_id": "script-102",
+    "question_id": "Q2a",
+    "combined_text": "[Text from Page 1]:\nAns 2a: Define A* Search Algorithm.\nA* search is an informed search algorithm using heuristic function f(n) = g(n) + h(n), where g(n) is actual cost from start to n, and h(n) is estimated cost from n to goal.",
+    "block_ids": [
+      "blk-102-1"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-08-11T13:13:38.303Z",
+    "timestamp": "2026-08-11T13:13:38.303Z"
+  },
+  {
+    "_id": "local-1786671335034-8pfan",
+    "id": "cons-script-101-Q2a",
+    "script_id": "script-101",
+    "question_id": "Q2a",
+    "combined_text": "[Text from Page 2]:\nQ2(a): Explain dynamic memory allocation functions in C: malloc(), calloc(), realloc(), free().\n\n[Student Hand-Written Response]:\n• malloc(size_t size): Allocates uninitialized memory on heap. Returns void* or NULL.\n• calloc(num, size): Allocates zero-initialized contiguous memory.\n• realloc(ptr, new_size): Resizes existing block.\n• free(ptr): Deallocates memory block to prevent memory leaks.",
+    "block_ids": [
+      "blk-101-3"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-08-14T01:35:35.034Z",
+    "timestamp": "2026-08-14T01:35:35.034Z"
+  },
+  {
+    "_id": "local-1786671335039-456pc",
+    "id": "cons-script-101-Q3a",
+    "script_id": "script-101",
+    "question_id": "Q3a",
+    "combined_text": "[Text from Page 3]:\nQ3(a): Define Stack ADT. Explain array implementation of Stack with push(), pop(), display().\n\n[Student Hand-Written Response]:\nStack is LIFO linear list.\n• Push: Check if top == MAX - 1 (Overflow). top++; stack[top] = item;\n• Pop: Check if top == -1 (Underflow). item = stack[top]; top--; return item;",
+    "block_ids": [
+      "blk-101-4"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-08-14T01:35:35.039Z",
+    "timestamp": "2026-08-14T01:35:35.039Z"
+  },
+  {
+    "_id": "local-1786671335043-5xehy",
+    "id": "cons-script-101-Q3b",
+    "script_id": "script-101",
+    "question_id": "Q3b",
+    "combined_text": "[Text from Page 4]:\nQ3(b): Infix to Postfix conversion for ((A + B) * C - (D - E) ^ (F + G)).\n\n[Student Hand-Written Response - Multi-Page Continuation]:\nStep-by-step operator stack trace table:\nInfix expression: ((A + B) * C - (D - E) ^ (F + G))\nFinal Postfix Result: AB+C*DE-FG+^-",
+    "block_ids": [
+      "blk-101-5"
+    ],
+    "is_manually_overridden": true,
+    "createdAt": "2026-08-14T01:35:35.043Z",
+    "timestamp": "2026-08-14T01:35:35.043Z"
+  }
+]

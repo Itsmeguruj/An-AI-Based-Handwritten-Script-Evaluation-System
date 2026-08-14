@@ -1,0 +1,2136 @@
+[
+  {
+    "_id": "local-1786675862072-ic8jv",
+    "id": "rev-SN-2026-002_BKT-2026-001",
+    "serialNo": "SN-2026-002",
+    "studentBookletId": "BKT-2026-001",
+    "paperName": "BCS304 (1).pdf",
+    "studentAnswerFileName": "student_answer_paper.pdf",
+    "coordinatorName": "Guru",
+    "totalScore": 71,
+    "maxScore": 100,
+    "questionResults": [
+      {
+        "id": 1,
+        "question": "Q.01 (a) Define data structures. With a neat diagram, explain the classification of data structures with examples. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Define data structures. With a neat diagram, explain the classification of data structures with examples. (5 Marks)\nModel Answer:\n- Definition: A data structure is a specialized format for organizing, processing, retrieving, and storing data in a computer so that operations can be performed efficiently.\n- Classification:\n  1. Primitive Data Structures: Predefined basic types (e.g., int, float, char, double).",
+        "choiceGroup": 1,
+        "choiceOption": "A",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Definition of Data Structures & memory allocation principles",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Accurate and comprehensive response covering \"Definition of Data Structures & memory allocation principles\" with required technical rigor."
+          },
+          {
+            "label": "Classification: Primitive vs Non-Primitive (Arrays, Structs, Pointers)",
+            "max": 1,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Partial Marks (0.5/1 Marks): Satisfies preliminary criteria for \"Classification: Primitive vs Non-Primitive (Arrays, Structs, Pointers)\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Classification: Linear (Stacks, Queues) vs Non-Linear (Trees, Graphs)",
+            "max": 1.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Basic Attempt (0.5/1.5 Marks): Incomplete response for \"Classification: Linear (Stacks, Queues) vs Non-Linear (Trees, Graphs)\"; critical steps or explanation missing."
+          },
+          {
+            "label": "Operations on Data Structures (Traversal, Search, Insert, Delete, Sort)",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Accurate and comprehensive response covering \"Operations on Data Structures (Traversal, Search, Insert, Delete, Sort)\" with required technical rigor."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 1.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Basic Attempt (0.5/1.5 Marks): Incomplete response for \"Neat diagrammatic representation / graphical illustration\"; critical steps or explanation missing."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q1 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 1 Citation Verified)"
+      },
+      {
+        "id": 2,
+        "question": "Q.01 (b) What do you mean by pattern matching? Outline the Knuth Morris Pratt (KMP) algorithm and illustrate it to find the occurrences of the following pattern. P: ABCDABD, S: ABC ABCDAB ABCDABCDABDE (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "What do you mean by pattern matching? Outline the Knuth Morris Pratt (KMP) algorithm and illustrate it to find the occurrences of the following pattern. P: ABCDABD, S: ABC ABCDAB ABCDABCDABDE (8 Marks)\nModel Answer:\n- Pattern Matching: The problem of finding one or more occurrences of a pattern string P within a text string S.\n- KMP Algorithm: Bypasses redundant comparisons using a prefix function (pi/failure table) constructed from the pattern itself, which determines how much of the pattern can be skipped on mismatch.\n- Prefix Table (pi) for P = \"ABCDABD\":\n  Char:    A  B  C  D  A  B  D\n  Index:   0  1  2  3  4  5  6\n  pi:      0  0  0  0  1  2  0\n- Matching Process for S = \"ABC ABCDAB ABCDABCDABDE\":\n  - Iteration 1: Matches 'A', 'B', 'C'. Mismatch at index 3 in S (' ' vs 'D'). Skip using pi.\n  - Iteration 2: Matches \"ABCDAB\". Mismatch at 'D' (index 6) with S (' ' vs 'D'). Shift pattern.\n  - Iteration 3: Match found at index 15 of S (\"ABCDABDE\").",
+        "choiceGroup": 1,
+        "choiceOption": "A",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Definition of pattern matching & naive vs KMP efficiency",
+            "max": 2.5,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Strong Performance (2/2.5 Marks): Correctly addresses core concepts of \"Definition of pattern matching & naive vs KMP efficiency\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Knuth-Morris-Pratt (KMP) prefix function π / failure table construction",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Strong Performance (2.5/3 Marks): Correctly addresses core concepts of \"Knuth-Morris-Pratt (KMP) prefix function π / failure table construction\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Step-by-step pattern matching execution trace for P & S strings",
+            "max": 3,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Partial Marks (2/3 Marks): Satisfies preliminary criteria for \"Step-by-step pattern matching execution trace for P & S strings\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q2 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 1 Citation Verified)"
+      },
+      {
+        "id": 3,
+        "question": "Q.01 (c) Write a program in C to implement push, pop and display operations for stacks using arrays. (7 Marks)",
+        "maxMarks": 7,
+        "studentAnswer": "Write a program in C to implement push, pop and display operations for stacks using arrays. (7 Marks)\nModel Answer:\n#define MAX 5\nint stack[MAX], top = -1;\nvoid push(int val) {\n    if (top == MAX - 1) { printf(\"Stack Overflow\\n\"); return; }\n    stack[++top] = val;\n}\nint pop() {\n    if (top == -1) { printf(\"Stack Underflow\\n\"); return -1; }\n    return stack[top--];\n}\nvoid display() {\n    if (top == -1) { printf(\"Stack Empty\\n\"); return; }\n    for(int i = top; i >= 0; i--) printf(\"%d \", stack[i]);\n    printf(\"\\n\");\n}",
+        "choiceGroup": 1,
+        "choiceOption": "A",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Stack Data Structure definition, LIFO principle & top representation",
+            "max": 1.5,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Partial Marks (1/1.5 Marks): Satisfies preliminary criteria for \"Stack Data Structure definition, LIFO principle & top representation\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "C implementation of push() with Overflow check (top == MAX - 1)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"C implementation of push() with Overflow check (top == MAX - 1)\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "C implementation of pop() with Underflow check (top == -1)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"C implementation of pop() with Underflow check (top == -1)\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "C implementation of display() stack contents from top to 0",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Accurate and comprehensive response covering \"C implementation of display() stack contents from top to 0\" with required technical rigor."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q3 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 2 Citation Verified)"
+      },
+      {
+        "id": 4,
+        "question": "Q.02 (a) Explain in brief the different functions of dynamic memory allocation. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Explain in brief the different functions of dynamic memory allocation. (5 Marks)\nModel Answer:\n1. malloc(size): Allocates a single block of specified size (in bytes) and returns a void pointer to the first byte. Memory is uninitialized.\n2. calloc(num, size): Allocates multiple blocks of specified size, initializes all bytes to zero, and returns a void pointer.",
+        "choiceGroup": 1,
+        "choiceOption": "B",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (13.5 Marks) and Option B (9.5 Marks) of Choice Group 1 in Module 1 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (13.5 vs 9.5 Marks), Option B is excluded from final grading (achieved 2 Marks).",
+        "notes": "Choice Excluded (Achieved 2 Marks, lower than Option A with 13.5 Marks).",
+        "excluded": true,
+        "rawScore": 2
+      },
+      {
+        "id": 5,
+        "question": "Q.02 (b) Write functions in C for the following operations without using built-in functions: i) Compare two strings. ii) Concatenate two strings. iii) Reverse a string. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Write functions in C for the following operations without using built-in functions: i) Compare two strings. ii) Concatenate two strings. iii) Reverse a string (8 Marks)\nModel Answer:\ni) Compare:\nint strCompare(char s1[], char s2[]) {\n    int i = 0;\n    while(s1[i] == s2[i]) {\n        if(s1[i] == '\\0') return 0;\n        i++;\n    }\n    return s1[i] - s2[i];\n}\nii) Concatenate:\nvoid strConcat(char dest[], char src[]) {\n    int i = 0, j = 0;\n    while(dest[i] != '\\0') i++;\n    while(src[j] != '\\0') { dest[i++] = src[j++]; }\n    dest[i] = '\\0';\n}\niii) Reverse:\nvoid strReverse(char str[]) {\n    int len = 0, i;\n    while(str[len] != '\\0') len++;\n    for(i = 0; i < len/2; i++) {\n        char temp = str[i];\n        str[i] = str[len - 1 - i];\n        str[len - 1 - i] = temp;\n    }\n}",
+        "choiceGroup": 1,
+        "choiceOption": "B",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "Choice Excluded: Both Option A (13.5 Marks) and Option B (9.5 Marks) of Choice Group 1 in Module 1 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (13.5 vs 9.5 Marks), Option B is excluded from final grading (achieved 4 Marks).",
+        "notes": "Choice Excluded (Achieved 4 Marks, lower than Option A with 13.5 Marks).",
+        "excluded": true,
+        "rawScore": 4
+      },
+      {
+        "id": 6,
+        "question": "Q.02 (c) Write a function to evaluate the postfix expression. Illustrate the same for the given postfix expression: ABC-D*+E$F+ and assume A=6, B=3, C=2, D=5, E=1 and F=7. (7 Marks)",
+        "maxMarks": 7,
+        "studentAnswer": "Write a function to evaluate the postfix expression. Illustrate the same for the given postfix expression: ABC-D*+E$F+ and assume A=6, B=3, C=2, D=5, E=1 and F=7. (7 Marks)\nModel Answer:\n- Substitute values: A=6, B=3, C=2, D=5, E=1, F=7 => 6 3 2 - 5 * + 1 $ 7 +\n- Evaluation Steps:\n  1. Push 6, 3, 2. Stack: [6, 3, 2]\n  2. Pop 2, pop 3. Perform 3 - 2 = 1. Push 1. Stack: [6, 1]",
+        "choiceGroup": 1,
+        "choiceOption": "B",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Operator precedence & associativity rules handling",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Infix to Postfix conversion algorithm using operator stack",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Evaluation algorithm for Postfix expression using operand stack & sample trace",
+            "max": 0.5,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/0.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (13.5 Marks) and Option B (9.5 Marks) of Choice Group 1 in Module 1 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (13.5 vs 9.5 Marks), Option B is excluded from final grading (achieved 3.5 Marks).",
+        "notes": "Choice Excluded (Achieved 3.5 Marks, lower than Option A with 13.5 Marks).",
+        "excluded": true,
+        "rawScore": 3.5
+      },
+      {
+        "id": 7,
+        "question": "Q.03 (a) Develop a C program to implement insertion, deletion and display operations on Linear queue. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Develop a C program to implement insertion, deletion and display operations on Linear queue. (10 Marks)\nModel Answer:\n#define MAX 5\nint queue[MAX], front = -1, rear = -1;\nvoid insert(int val) {\n    if (rear == MAX - 1) { printf(\"Queue Overflow\\n\"); return; }\n    if (front == -1) front = 0;\n    queue[++rear] = val;\n}\nvoid delete() {\n    if (front == -1 || front > rear) { printf(\"Queue Underflow\\n\"); return; }\n    printf(\"Deleted: %d\\n\", queue[front++]);\n}\nvoid display() {\n    if (front == -1 || front > rear) { printf(\"Queue Empty\\n\"); return; }\n    for(int i = front; i <= rear; i++) printf(\"%d \", queue[i]);\n    printf(\"\\n\");\n}",
+        "choiceGroup": 2,
+        "choiceOption": "A",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/3.5 Marks, lower than Option B)."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/3.5 Marks, lower than Option B)."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (11 Marks) and Option B (12.5 Marks) of Choice Group 2 in Module 2 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (12.5 vs 11 Marks), Option A is excluded from final grading (achieved 5.5 Marks).",
+        "notes": "Choice Excluded (Achieved 5.5 Marks, lower than Option B with 12.5 Marks).",
+        "excluded": true,
+        "rawScore": 5.5
+      },
+      {
+        "id": 8,
+        "question": "Q.03 (b) Write a program in C to implement a stack of integers using a singly linked list. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Write a program in C to implement a stack of integers using a singly linked list. (10 Marks)\nModel Answer:\nstruct Node {\n    int data;\n    struct Node* next;\n} *top = NULL;\nvoid push(int val) {\n    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));\n    temp->data = val;\n    temp->next = top;\n    top = temp;\n}\nvoid pop() {\n    if(top == NULL) { printf(\"Stack Underflow\\n\"); return; }\n    struct Node* temp = top;\n    printf(\"Popped: %d\\n\", top->data);\n    top = top->next;\n    free(temp);\n}",
+        "choiceGroup": 2,
+        "choiceOption": "A",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/3.5 Marks, lower than Option B)."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/3.5 Marks, lower than Option B)."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (11 Marks) and Option B (12.5 Marks) of Choice Group 2 in Module 2 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (12.5 vs 11 Marks), Option A is excluded from final grading (achieved 5.5 Marks).",
+        "notes": "Choice Excluded (Achieved 5.5 Marks, lower than Option B with 12.5 Marks).",
+        "excluded": true,
+        "rawScore": 5.5
+      },
+      {
+        "id": 9,
+        "question": "Q.04 (a) Write a C program to implement insertion, deletion and display operations on a circular queue. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Write a C program to implement insertion, deletion and display operations on a circular queue. (10 Marks)\nModel Answer:\n#define MAX 5\nint cq[MAX], front = -1, rear = -1;\nvoid insert(int val) {\n    if ((rear + 1) % MAX == front) { printf(\"Circular Queue Overflow\\n\"); return; }\n    if (front == -1) front = 0;\n    rear = (rear + 1) % MAX;\n    cq[rear] = val;\n}\nvoid delete() {\n    if (front == -1) { printf(\"Queue Underflow\\n\"); return; }\n    printf(\"Deleted: %d\\n\", cq[front]);\n    if (front == rear) { front = rear = -1; }\n    else { front = (front + 1) % MAX; }\n}",
+        "choiceGroup": 2,
+        "choiceOption": "B",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Circular Queue FIFO concept, front/rear pointers & modulo arithmetic ((rear+1)%MAX)",
+            "max": 3,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Partial Marks (2/3 Marks): Satisfies preliminary criteria for \"Circular Queue FIFO concept, front/rear pointers & modulo arithmetic ((rear+1)%MAX)\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "C implementation of insertCQ() with Full condition check ((rear+1)%MAX == front)",
+            "max": 3.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Basic Attempt (1.5/3.5 Marks): Incomplete response for \"C implementation of insertCQ() with Full condition check ((rear+1)%MAX == front)\"; critical steps or explanation missing."
+          },
+          {
+            "label": "C implementation of deleteCQ() with Empty condition check (front == -1)",
+            "max": 3.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Basic Attempt (1.5/3.5 Marks): Incomplete response for \"C implementation of deleteCQ() with Empty condition check (front == -1)\"; critical steps or explanation missing."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q9 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 5 Citation Verified)"
+      },
+      {
+        "id": 10,
+        "question": "Q.04 (b) Write the C function to add two polynomials. Show the linked representation of the below two polynomials and their addition using a circular singly linked list. P1: 5x3 + 4x2 +7x + 3, P2: 6x2 + 5, Output: add the above two polynomials and represent them using the linked list. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Write the C function to add two polynomials. Show the linked representation of the below two polynomials and their addition using a circular singly linked list. P1: 5x3 + 4x2 +7x + 3, P2: 6x2 + 5, Output: add the above two polynomials and represent them using the linked list. (10 Marks)\nModel Answer:\n- Linked Representation:\n  - Each node contains coefficient (coeff), exponent (exp) and pointer to next node (next).\n  - P1: (5,3) -> (4,2) -> (7,1) -> (3,0) -> back to start\n  - P2: (6,2) -> (5,0) -> back to start\n- Polynomial Addition Algorithm:\n  - Compare exponents of P1 and P2.\n  - If exp(P1) > exp(P2): add terms of P1 to result, move P1.\n  - If exp(P1) < exp(P2): add terms of P2 to result, move P2.\n  - If exp(P1) == exp(P2): add coefficients, add term if coeff != 0, move both.\n- Result: 5x3 + 10x2 + 7x + 8",
+        "choiceGroup": 2,
+        "choiceOption": "B",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Polynomial node structure definition (coef, exp, next pointer)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Accurate and comprehensive response covering \"Polynomial node structure definition (coef, exp, next pointer)\" with required technical rigor."
+          },
+          {
+            "label": "Circular linked list traversal & term insertion logic",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Circular linked list traversal & term insertion logic\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "C function implementation for term-by-term addition & result display",
+            "max": 4,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Strong Performance (3/4 Marks): Correctly addresses core concepts of \"C function implementation for term-by-term addition & result display\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 2.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2.5 Marks): Satisfies preliminary criteria for \"Neat diagrammatic representation / graphical illustration\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q10 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 5 Citation Verified)"
+      },
+      {
+        "id": 11,
+        "question": "Q.05 (a) Write recursive C functions for inorder, preorder and postorder traversals of a binary tree. Also, find all the traversals for the given tree. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Write recursive C functions for inorder, preorder and postorder traversals of a binary tree. Also, find all the traversals for the given tree. (8 Marks)\nModel Answer:\nTraversals implementation:\nvoid inorder(struct Node* root) {\n    if(root) { inorder(root->left); printf(\"%d \", root->data); inorder(root->right); }\n}\nvoid preorder(struct Node* root) {\n    if(root) { printf(\"%d \", root->data); preorder(root->left); preorder(root->right); }\n}\nvoid postorder(struct Node* root) {\n    if(root) { postorder(root->left); postorder(root->right); printf(\"%d \", root->data); }\n}\nTraversals for the given tree (A with left B, right C, B has left D, right E, C has left F, right G, E has left H, right I):\n- Preorder: A, B, D, E, H, I, C, F, G\n- Inorder: D, B, H, E, I, A, F, C, G\n- Postorder: D, H, I, E, B, F, G, C, A",
+        "choiceGroup": 3,
+        "choiceOption": "A",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Binary Tree node structure (data, left, right pointers)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Accurate and comprehensive response covering \"Binary Tree node structure (data, left, right pointers)\" with required technical rigor."
+          },
+          {
+            "label": "Recursive C function for Inorder Traversal (Left, Root, Right)",
+            "max": 2,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Full Score (2/2 Marks): Accurate and comprehensive response covering \"Recursive C function for Inorder Traversal (Left, Root, Right)\" with required technical rigor."
+          },
+          {
+            "label": "Recursive C function for Preorder Traversal (Root, Left, Right)",
+            "max": 2,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Full Score (2/2 Marks): Accurate and comprehensive response covering \"Recursive C function for Preorder Traversal (Root, Left, Right)\" with required technical rigor."
+          },
+          {
+            "label": "Recursive C function for Postorder Traversal (Left, Right, Root)",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Accurate and comprehensive response covering \"Recursive C function for Postorder Traversal (Left, Right, Root)\" with required technical rigor."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q11 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 6 Citation Verified)"
+      },
+      {
+        "id": 12,
+        "question": "Q.05 (b) Write C functions for the following: i) Search an element in the singly linked list. ii) Concatenation of two singly linked list. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Write C functions for the following: i) Search an element in the singly linked list. ii) Concatenation of two singly linked list. (6 Marks)\nModel Answer:\ni) Search:\nint search(struct Node* head, int key) {\n    struct Node* temp = head;\n    while(temp != NULL) {\n        if(temp->data == key) return 1;\n        temp = temp->next;\n    }\n    return 0;\n}\nii) Concatenation:\nstruct Node* concat(struct Node* h1, struct Node* h2) {\n    if(h1 == NULL) return h2;\n    struct Node* temp = h1;\n    while(temp->next != NULL) temp = temp->next;\n    temp->next = h2;\n    return h1;\n}",
+        "choiceGroup": 3,
+        "choiceOption": "A",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 3,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/3 Marks): Satisfies preliminary criteria for \"Core concept statement, definitions & theoretical foundation\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 3,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/3 Marks): Satisfies preliminary criteria for \"Step-by-step mechanics, diagrams, or analytical derivation\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q12 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 6 Citation Verified)"
+      },
+      {
+        "id": 13,
+        "question": "Q.05 (c) Define Sparse matrix. For the given sparse matrix, give the linked list representation:\n[ 0 0 3 0 4 ]\n[ 0 0 5 7 0 ]\n[ 0 0 0 0 0 ] [ 0 2 6 0 0 ] A = [0 0 3 0 4; 0 0 5 7 0; 0 0 0 0 0; 0 2 6 0 0] (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define Sparse matrix. For the given sparse matrix, give the linked list representation: A = [0 0 3 0 4; 0 0 5 7 0; 0 0 0 0 0; 0 2 6 0 0] (6 Marks)\nModel Answer:\n- Sparse Matrix: A matrix in which most of the elements are zero. Stored efficiently using 3-tuple (Row, Col, Value) or linked list to save memory.\n- Linked list representation (using 3-tuple nodes):\n  - Node format: [Row, Col, Val, Next]\n  - Head Node: [4, 5, 5] (Dimensions: 4 rows, 5 columns, 5 non-zero elements)\n  - Elements Nodes:\n    - Node 1: [0, 2, 3]\n    - Node 2: [0, 4, 4]\n    - Node 3: [1, 2, 5]\n    - Node 4: [1, 3, 7]\n    - Node 5: [3, 1, 2]\n    - Node 6: [3, 2, 6]",
+        "choiceGroup": 3,
+        "choiceOption": "A",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Sparse Matrix definition (majority zero elements) & 3-tuple array representation (row, col, value)",
+            "max": 1.5,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Partial Marks (1/1.5 Marks): Satisfies preliminary criteria for \"Sparse Matrix definition (majority zero elements) & 3-tuple array representation (row, col, value)\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Linked list representation (header nodes for rows and columns with node structure)",
+            "max": 2,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Full Score (2/2 Marks): Accurate and comprehensive response covering \"Linked list representation (header nodes for rows and columns with node structure)\" with required technical rigor."
+          },
+          {
+            "label": "Diagrammatic illustration of Sparse Matrix linked grid representation",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Accurate and comprehensive response covering \"Diagrammatic illustration of Sparse Matrix linked grid representation\" with required technical rigor."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 1.5,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Partial Marks (1/1.5 Marks): Satisfies preliminary criteria for \"Neat diagrammatic representation / graphical illustration\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q13 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 7 Citation Verified)"
+      },
+      {
+        "id": 14,
+        "question": "Q.06 (a) Write C Functions for the following: i) Inserting a node at the beginning of a Doubly linked list. ii) Deleting a node at the end of the Doubly linked list. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Write C Functions for the following: i) Inserting a node at the beginning of a Doubly linked list. ii) Deleting a node at the end of the Doubly linked list. (8 Marks)\nModel Answer:\ni) Insert Beginning:\nvoid insertBeg(int val) {\n    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));\n    temp->data = val; temp->prev = NULL; temp->next = head;\n    if(head != NULL) head->prev = temp;\n    head = temp;\n}\nii) Delete End:\nvoid deleteEnd() {\n    if(head == NULL) return;\n    struct Node* temp = head;\n    while(temp->next != NULL) temp = temp->next;\n    if(temp->prev != NULL) temp->prev->next = NULL;\n    else head = NULL;\n    free(temp);\n}",
+        "choiceGroup": 3,
+        "choiceOption": "B",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (14.5 Marks) and Option B (10 Marks) of Choice Group 3 in Module 3 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (14.5 vs 10 Marks), Option B is excluded from final grading (achieved 4 Marks).",
+        "notes": "Choice Excluded (Achieved 4 Marks, lower than Option A with 14.5 Marks).",
+        "excluded": true,
+        "rawScore": 4
+      },
+      {
+        "id": 15,
+        "question": "Q.06 (b) Define Binary tree. Explain the representation of a binary tree with a suitable example. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define Binary tree. Explain the representation of a binary tree with a suitable example. (6 Marks)\nModel Answer:\n- Binary Tree: A hierarchical data structure where each node has at most two children, referred to as the left child and the right child.\n- Representation:\n  1. Sequential representation (using Arrays): Root is stored at index 0. For parent node at index i, left child is at 2i+1, right child is at 2i+2.\n  2. Linked representation (using Pointers): Each node contains [LeftPointer, Data, RightPointer].",
+        "choiceGroup": 3,
+        "choiceOption": "B",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/1.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (14.5 Marks) and Option B (10 Marks) of Choice Group 3 in Module 3 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (14.5 vs 10 Marks), Option B is excluded from final grading (achieved 2.5 Marks).",
+        "notes": "Choice Excluded (Achieved 2.5 Marks, lower than Option A with 14.5 Marks).",
+        "excluded": true,
+        "rawScore": 2.5
+      },
+      {
+        "id": 16,
+        "question": "Q.06 (c) Define the Threaded binary tree. Construct Threaded binary for the following elements: A, B, C, D, E, F, G, H, I. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define the Threaded binary tree. Construct Threaded binary for the following elements: A, B, C, D, E, F, G, H, I. (6 Marks)\nModel Answer:\n- Threaded Binary Tree: A binary tree where the null pointers are replaced by pointers (threads) pointing to the in-order predecessor or in-order successor.\n- Construction:\n  - If a node lacks a left child, its left child pointer is threaded to its in-order predecessor.\n  - If a node lacks a right child, its right child pointer is threaded to its in-order successor.",
+        "choiceGroup": 3,
+        "choiceOption": "B",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Threaded Binary Tree definition & utilization of NULL pointers for threads",
+            "max": 2,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Difference between One-way (Right-threaded) and Two-way Threaded Binary Trees",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Inorder traversal without stack using threads diagram & explanation",
+            "max": 1,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/1 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (14.5 Marks) and Option B (10 Marks) of Choice Group 3 in Module 3 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (14.5 vs 10 Marks), Option B is excluded from final grading (achieved 3.5 Marks).",
+        "notes": "Choice Excluded (Achieved 3.5 Marks, lower than Option A with 14.5 Marks).",
+        "excluded": true,
+        "rawScore": 3.5
+      },
+      {
+        "id": 17,
+        "question": "Q.07 (a) Design an algorithm to traverse a graph using Depth First Search (DFS). Apply DFS for the graph given below. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Design an algorithm to traverse a graph using Depth First Search (DFS). Apply DFS for the graph given below. (8 Marks)\nModel Answer:\n- DFS Algorithm: Uses a stack (or recursion) to explore vertices as deep as possible along each branch before backtracking.\n- Steps:\n  1. Define a stack of size V and a visited array initialized to 0.\n  2. Push the starting vertex and mark it visited.\n  3. Pop and print the vertex. Push all unvisited adjacent vertices.\n  4. Repeat until stack is empty.\n- Traversal order for the given graph: f, b, a, d, c, e, g",
+        "choiceGroup": 4,
+        "choiceOption": "A",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Graph definitions (Adjacency Matrix vs Adjacency List representations)",
+            "max": 1,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/1 Marks, lower than Option B)."
+          },
+          {
+            "label": "DFS algorithm using Stack / Recursion & visited array with trace",
+            "max": 2,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "BFS algorithm using Queue & visited array with trace",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Time complexity analysis for DFS and BFS (O(V + E))",
+            "max": 1,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/1 Marks, lower than Option B)."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "Choice Excluded: Both Option A (14 Marks) and Option B (15 Marks) of Choice Group 4 in Module 4 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (15 vs 14 Marks), Option A is excluded from final grading (achieved 5.5 Marks).",
+        "notes": "Choice Excluded (Achieved 5.5 Marks, lower than Option B with 15 Marks).",
+        "excluded": true,
+        "rawScore": 5.5
+      },
+      {
+        "id": 18,
+        "question": "Q.07 (b) Construct a binary tree from the Post-order and In-order sequence given below. In-order: GDHBAEICF, Post-order: GHDBIEFCA. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Construct a binary tree from the Post-order and In-order sequence given below. In-order: GDHBAEICF, Post-order: GHDBIEFCA. (6 Marks)\nModel Answer:\n- Root is the last element in post-order: 'A'.\n- Locate 'A' in in-order: GDHB is Left subtree, EICF is Right subtree.\n- Repeat recursively:\n  - Root of Right Subtree: 'C' (last in post-order for EICF: GHDB[IEF]C).\n    - Right subtree of C: 'F', Left subtree: 'E I'.\n  - Root of Left Subtree: 'B'.\n- Constructed Binary Tree Structure:\n        A\n       / \\\n      B   C\n     /   / \\\n    D   E   F\n   / \\   \\\n  G   H   I",
+        "choiceGroup": 4,
+        "choiceOption": "A",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Identification of Root node from Postorder traversal (last element)",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Partitioning of Inorder traversal into Left and Right Subtrees",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Step-by-step tree construction diagram & final constructed Binary Tree",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/1.5 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (14 Marks) and Option B (15 Marks) of Choice Group 4 in Module 4 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (15 vs 14 Marks), Option A is excluded from final grading (achieved 4 Marks).",
+        "notes": "Choice Excluded (Achieved 4 Marks, lower than Option B with 15 Marks).",
+        "excluded": true,
+        "rawScore": 4
+      },
+      {
+        "id": 19,
+        "question": "Q.07 (c) Define selection tree. Construct min winner tree for the runs of a game given below. Each run consists of values of players. Find the first 5 winners. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define selection tree. Construct min winner tree for the runs of a game given below. Each run consists of values of players. Find the first 5 winners. (6 Marks)\nModel Answer:\n- Selection Tree: A binary tree used to merge sorted runs. Each node contains the winner (min or max) of the match between its two children.\n- Min Winner Tree: The leaf nodes represent the initial players. The root always contains the smallest value (overall winner).\n- Winners:\n  1st Winner: 6 (from node matching 6 vs 8)\n  2nd Winner: 8\n  3rd Winner: 9\n  4th Winner: 10\n  5th Winner: 11",
+        "choiceGroup": 4,
+        "choiceOption": "A",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Winner Tree definition (Complete Binary Tree where internal node stores smaller key)",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2.5 Marks, lower than Option B)."
+          },
+          {
+            "label": "Loser Tree variation & comparison with Winner Tree",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Application in K-way merging of sorted runs with diagrammatic example",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/1.5 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (14 Marks) and Option B (15 Marks) of Choice Group 4 in Module 4 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (15 vs 14 Marks), Option A is excluded from final grading (achieved 4.5 Marks).",
+        "notes": "Choice Excluded (Achieved 4.5 Marks, lower than Option B with 15 Marks).",
+        "excluded": true,
+        "rawScore": 4.5
+      },
+      {
+        "id": 20,
+        "question": "Q.08 (a) Define Binary Search tree. Construct a binary search tree (BST) for the following elements: 100, 85, 45, 55, 120, 20, 70, 90, 115, 65, 130, 145. Traverse using in-order, pre-order, and post-order techniques. Write recursive C functions for the same. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Define Binary Search tree. Construct a binary search tree (BST) for the following elements: 100, 85, 45, 55, 120, 20, 70, 90, 115, 65, 130, 145. Traverse using in-order, pre-order, and post-order techniques. Write recursive C functions for the same. (8 Marks)\nModel Answer:\n- Binary Search Tree (BST): A binary tree where the key in any node is larger than the keys in its left subtree and smaller than the keys in its right subtree.\n- Construction:\n          100\n         /   \\\n        85   120\n       /  \\  /  \\\n      45  90 115 130\n     /  \\          \\\n    20  70         145\n       /\n      55\n       \\\n       65",
+        "choiceGroup": 4,
+        "choiceOption": "B",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Identification of Root node from Postorder traversal (last element)",
+            "max": 2.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2.5 Marks): Satisfies preliminary criteria for \"Identification of Root node from Postorder traversal (last element)\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Partitioning of Inorder traversal into Left and Right Subtrees",
+            "max": 3,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Partial Marks (2/3 Marks): Satisfies preliminary criteria for \"Partitioning of Inorder traversal into Left and Right Subtrees\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Step-by-step tree construction diagram & final constructed Binary Tree",
+            "max": 3.5,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3.5 Marks): Satisfies preliminary criteria for \"Step-by-step tree construction diagram & final constructed Binary Tree\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q20 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 10 Citation Verified)"
+      },
+      {
+        "id": 21,
+        "question": "Q.08 (b) Define Forest. Transform the given forest into a Binary tree and traverse using inorder, preorder and postorder traversal. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define Forest. Transform the given forest into a Binary tree and traverse using inorder, preorder and postorder traversal. (6 Marks)\nModel Answer:\n- Forest: A set of disjoint trees.\n- Forest to Binary Tree Conversion (Left-Child Right-Sibling representation):\n  1. Connect siblings of all trees in the forest.\n  2. For each node, delete all links to its children except the first (leftmost) child.",
+        "choiceGroup": 4,
+        "choiceOption": "B",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Binary Tree node structure (data, left, right pointers)",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Accurate and comprehensive response covering \"Binary Tree node structure (data, left, right pointers)\" with required technical rigor."
+          },
+          {
+            "label": "Recursive C function for Inorder Traversal (Left, Root, Right)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Accurate and comprehensive response covering \"Recursive C function for Inorder Traversal (Left, Root, Right)\" with required technical rigor."
+          },
+          {
+            "label": "Recursive C function for Preorder Traversal (Root, Left, Right)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Accurate and comprehensive response covering \"Recursive C function for Preorder Traversal (Root, Left, Right)\" with required technical rigor."
+          },
+          {
+            "label": "Recursive C function for Postorder Traversal (Left, Right, Root)",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Accurate and comprehensive response covering \"Recursive C function for Postorder Traversal (Left, Right, Root)\" with required technical rigor."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q21 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 11 Citation Verified)"
+      },
+      {
+        "id": 22,
+        "question": "Q.08 (c) Define the Disjoint set. Consider the tree created by the weighted union function on the sequence of unions: union(0,1), union(2,3), union(4,5), union(6,7), union(0,2), union(4,6), and union(0,4). Process the simple find and collapsing find on eight finds and compare which find is efficient. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define the Disjoint set. Consider the tree created by the weighted union function on the sequence of unions: union(0,1), union(2,3), union(4,5), union(6,7), union(0,2), union(4,6), and union(0,4). Process the simple find and collapsing find on eight finds and compare which find is efficient. (6 Marks)\nModel Answer:\n- Disjoint Set: A collection of non-overlapping sets, supported by Union and Find operations.\n- Weighted Union Result:\n  - Tree root becomes 0 representing the unified tree of size 8.\n- Collapsing Find: Traverses the path from node to root, updating parent pointers of all visited nodes directly to the root, reducing path length to O(1) for subsequent queries. Collapsing find is significantly more efficient than simple find.",
+        "choiceGroup": 4,
+        "choiceOption": "B",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Disjoint Set representation using parent array tree structures",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Disjoint Set representation using parent array tree structures\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Weighted Union rule (Simple Union vs Weighted Union) to maintain height balance",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Weighted Union rule (Simple Union vs Weighted Union) to maintain height balance\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Collapsing Find algorithm (path compression) for optimal find performance",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Collapsing Find algorithm (path compression) for optimal find performance\"; minor detail/edge-case omitted."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q22 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 11 Citation Verified)"
+      },
+      {
+        "id": 23,
+        "question": "Q.09 (a) What is chained hashing? Discuss its pros and cons. Construct the hash table to insert the keys: 7, 24, 18, 52, 36, 54, 11, 23 in a chained hash table of 9 memory locations. Use h(k) = k mod m. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "What is chained hashing? Discuss its pros and cons. Construct the hash table to insert the keys: 7, 24, 18, 52, 36, 54, 11, 23 in a chained hash table of 9 memory locations. Use h(k) = k mod m. (10 Marks)\nModel Answer:\n- Chained Hashing: A collision resolution technique where each slot in the hash table points to a linked list of records that hash to the same slot.\n- Hash Table (m = 9, h(k) = k mod 9):\n  - Index 0: 18 -> 36 -> 54\n  - Index 1: Empty\n  - Index 2: 11 -> 20\n  - Index 3: Empty\n  - Index 4: Empty\n  - Index 5: 23\n  - Index 6: 24\n  - Index 7: 7 -> 52\n  - Index 8: Empty",
+        "choiceGroup": 5,
+        "choiceOption": "A",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Hash Function definition (h(k) = k mod m) & collision concept",
+            "max": 3,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Partial Marks (2/3 Marks): Satisfies preliminary criteria for \"Hash Function definition (h(k) = k mod m) & collision concept\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Chained Hashing definition (linked lists at each bucket index)",
+            "max": 3.5,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3.5 Marks): Satisfies preliminary criteria for \"Chained Hashing definition (linked lists at each bucket index)\", but lacks thoroughness or complete derivation."
+          },
+          {
+            "label": "Step-by-step key insertion into hash table with bucket diagram",
+            "max": 5.5,
+            "score": 3.5,
+            "rawScore": 3.5,
+            "feedback": "Partial Marks (3.5/5.5 Marks): Satisfies preliminary criteria for \"Step-by-step key insertion into hash table with bucket diagram\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q23 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 12 Citation Verified)"
+      },
+      {
+        "id": 24,
+        "question": "Q.09 (b) Define the leftist tree. Give its declaration in C. Check whether the given binary tree is a leftist tree or not. Explain your answer. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Define the leftist tree. Give its declaration in C. Check whether the given binary tree is a leftist tree or not. Explain your answer. (5 Marks)\nModel Answer:\n- Leftist Tree: A binary tree where the null path length (npl) of any node's left child is greater than or equal to the null path length of its right child: npl(left) >= npl(right).\n- C Declaration:\n  struct Node {\n      int data;\n      int npl;\n      struct Node *left, *right;\n  };",
+        "choiceGroup": 5,
+        "choiceOption": "A",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Shortest path length s(x) / Null Path Length (NPL) definition",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Shortest path length s(x) / Null Path Length (NPL) definition\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Leftist Tree property (s(left(x)) >= s(right(x)) for all nodes)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Leftist Tree property (s(left(x)) >= s(right(x)) for all nodes)\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Verification of given tree with s(x) calculation for each node",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Accurate and comprehensive response covering \"Verification of given tree with s(x) calculation for each node\" with required technical rigor."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q24 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 12 Citation Verified)"
+      },
+      {
+        "id": 25,
+        "question": "Q.09 (c) What is dynamic hashing? Explain the following techniques with examples: i) Dynamic hashing using directories. ii) Directory less dynamic hashing. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "What is dynamic hashing? Explain the following techniques with examples: i) Dynamic hashing using directories. ii) Directory less dynamic hashing. (5 Marks)\nModel Answer:\n1. Definition of Dynamic Hashing:\n   - Dynamic hashing is a hashing technique where the hash function and hash table size dynamically expand or shrink in response to database insertions and deletions without requiring complete table rehashing.\n\n2. Dynamic Hashing Techniques:\n   a) Directory-Based Dynamic Hashing (Extendible Hashing):\n      - Uses a directory array of size 2^d (where d is Global Depth) storing pointers to data buckets.\n      - Each data bucket has a Local Depth d'. When a bucket overflows and d' < d, only that bucket is split and local depth increments to d'+1.\n      - If d' == d, the directory doubles in size (d = d + 1) and bucket pointers are updated.\n      - Example: Inserting key with hash prefix '101' into full bucket with local depth 2 causes bucket split into '100' and '101'.\n\n   b) Directory-Less Dynamic Hashing (Linear Hashing):\n      - Eliminates the central directory entirely to save memory overhead.\n      - Buckets are split sequentially in a round-robin order (controlled by a split pointer p) regardless of which specific bucket experienced overflow.\n      - Utilizes two hash functions h0(k) = k mod N and h1(k) = k mod (2N).",
+        "choiceGroup": 5,
+        "choiceOption": "A",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Static vs Dynamic Hashing comparison & directory growth capability",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Strong Performance (1.5/2 Marks): Correctly addresses core concepts of \"Static vs Dynamic Hashing comparison & directory growth capability\"; minor detail/edge-case omitted."
+          },
+          {
+            "label": "Extendible Hashing structure (Global Depth d vs Local Depth d')",
+            "max": 2,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Full Score (2/2 Marks): Accurate and comprehensive response covering \"Extendible Hashing structure (Global Depth d vs Local Depth d')\" with required technical rigor."
+          },
+          {
+            "label": "Bucket splitting & directory doubling mechanism diagram",
+            "max": 1,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Partial Marks (0.5/1 Marks): Satisfies preliminary criteria for \"Bucket splitting & directory doubling mechanism diagram\", but lacks thoroughness or complete derivation."
+          }
+        ],
+        "ocrConfidence": 96,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription and evaluation for Q25 from uploaded student script (student_answer_paper.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 13 Citation Verified)"
+      },
+      {
+        "id": 26,
+        "question": "Q.10 (a) What is a Priority queue? Demonstrate functions in C to implement the Max Priority queue with an example. i) Insert into the Max priority queue. ii) Delete into the Max priority queue. iii) Display Max priority queue. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "a) Directory-Based Dynamic Hashing (Extendible Hashing):\n      - Uses a directory array of size 2^d (where d is Global Depth) storing pointers to data buckets.\n      - Each data bucket has a Local Depth d'. When a bucket overflows and d' < d, only that bucket is split and local depth increments to d'+1.\n      - If d' == d, the directory doubles in size (d = d + 1) and bucket pointers are updated.\n      - Example: Inserting key with hash prefix '101' into full bucket with local depth 2 causes bucket split into '100' and '101'.",
+        "choiceGroup": 5,
+        "choiceOption": "B",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Priority Queue definition & Max Heap complete binary tree structure",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Max Heap Insertion algorithm with reheapify-up (percolate up) step",
+            "max": 3,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Max Heap Deletion (Delete Max) algorithm with reheapify-down (percolate down) step",
+            "max": 5,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (15.5 Marks) and Option B (11.5 Marks) of Choice Group 5 in Module 5 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (15.5 vs 11.5 Marks), Option B is excluded from final grading (achieved 5.5 Marks).",
+        "notes": "Choice Excluded (Achieved 5.5 Marks, lower than Option A with 15.5 Marks).",
+        "excluded": true,
+        "rawScore": 5.5
+      },
+      {
+        "id": 27,
+        "question": "Q.10 (b) Define min Leftist tree. Meld the given min leftist trees. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "b) Directory-Less Dynamic Hashing (Linear Hashing):\n      - Eliminates the central directory entirely to save memory overhead.\n      - Buckets are split sequentially in a round-robin order (controlled by a split pointer p) regardless of which specific bucket experienced overflow.\n      - Utilizes two hash functions h0(k) = k mod N and h1(k) = k mod (2N).\n\nQ.10 a What is a Priority queue? Demonstrate functions in C to implement the Max Priority queue with an example. i) Insert into the Max priority queue. ii) Delete into the Max priority queue. iii) Display Max priority queue. (10 Marks)\nModel Answer:\n1. Priority Queue Definition:\n   - An abstract data type similar to a regular queue or stack, but where each element has an associated priority value.\n   - In a Max Priority Queue, the element with the highest priority (maximum key) is served first. Array implementation uses a Complete Binary Max Heap where parent node at index i satisfies key[i] >= key[2i] and key[i] >= key[2i+1].\n\n2. C Code Implementation for Max Priority Queue:\n--- C Code Implementation ---\n#define MAX 100\nint heap[MAX];\nint size = 0;\n\nvoid swap(int *a, int *b) {\n    int temp = *a; *a = *b; *b = temp;\n}\n\n// i) Insert into Max Priority Queue\nvoid insert(int val) {\n    if (size == MAX - 1) { printf(\"Heap Overflow\\n\"); return; }\n    size++;\n    heap[size] = val;\n    int i = size;\n    // Heapify-Up (Percolate Up)\n    while (i > 1 && heap[i / 2] < heap[i]) {\n        swap(&heap[i / 2], &heap[i]);\n        i = i / 2;\n    }\n}\n\n// ii) Delete Max from Priority Queue\nint deleteMax() {\n    if (size == 0) { printf(\"Heap Underflow\\n\"); return -1; }\n    int maxVal = heap[1];\n    heap[1] = heap[size];\n    size--;\n    int i = 1;\n    // Heapify-Down (Percolate Down)\n    while (2 * i <= size) {\n        int left = 2 * i;\n        int right = 2 * i + 1;\n        int maxChild = left;\n        if (right <= size && heap[right] > heap[left]) maxChild = right;\n        if (heap[i] < heap[maxChild]) {\n            swap(&heap[i], &heap[maxChild]);\n            i = maxChild;\n        } else break;\n    }\n    return maxVal;\n}\n\n// iii) Display Max Priority Queue\nvoid display() {\n    if (size == 0) { printf(\"Priority Queue Empty\\n\"); return; }\n    printf(\"Max Priority Queue: \");\n    for (int i = 1; i <= size; i++) printf(\"%d \", heap[i]);\n    printf(\"\\n\");\n}\n-------------------------------\n\nQ.10 b Define min Leftist tree. Meld the given min leftist trees. (5 Marks)\nModel Answer:\n1. Definition of Min Leftist Tree:\n   - A Min Leftist Tree is a binary tree that satisfies the Min-Heap property (the key at any parent node is <= child keys) and the Leftist Property.\n   - Leftist Property: For every node x, the null path length (npl) of its left child is greater than or equal to the null path length of its right child: npl(left(x)) >= npl(right(x)).\n   - Null Path Length npl(x): Length of the shortest path from x to a external NULL node. npl(NULL) = 0.\n\n2. Melding Algorithm (Merging Two Min Leftist Trees H1 and H2):\n   - Step 1: If H1 is NULL return H2; if H2 is NULL return H1.\n   - Step 2: Compare root keys. Ensure root(H1) <= root(H2); if not, swap H1 and H2.\n   - Step 3: Recursively meld the right subtree of H1 with H2: H1->right = Meld(H1->right, H2).\n   - Step 4: Check leftist property. If npl(H1->left) < npl(H1->right), swap H1->left and H1->right.\n   - Step 5: Update npl(H1) = 1 + npl(H1->right) and return H1.",
+        "choiceGroup": 5,
+        "choiceOption": "B",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Min Leftist Tree definition & melding operation concept",
+            "max": 2,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step melding algorithm along rightmost paths",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Swapping left and right subtrees when s(left) < s(right) & final melded tree",
+            "max": 0.5,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/0.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (15.5 Marks) and Option B (11.5 Marks) of Choice Group 5 in Module 5 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (15.5 vs 11.5 Marks), Option B is excluded from final grading (achieved 4 Marks).",
+        "notes": "Choice Excluded (Achieved 4 Marks, lower than Option A with 15.5 Marks).",
+        "excluded": true,
+        "rawScore": 4
+      },
+      {
+        "id": 28,
+        "question": "Q.10 (c) Define hashing. Explain different hashing functions with examples. Discuss the properties of a good hash function. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Define hashing. Explain different hashing functions with examples. Discuss the properties of a good hash function. (5 Marks)\nModel Answer:\n1. Definition of Hashing:\n   - Hashing is a technique used to uniquely identify a specific object or key from a collection of items by mapping it to an index location in a Hash Table array using a mathematical Hash Function: h(key) -> Index.\n   - It provides average constant time complexity O(1) for search, insertion, and deletion operations.\n\n2. Hash Functions with Examples:\n   a) Division Method:\n      - Formula: h(k) = k mod m (where m is the size of the hash table, ideally a prime number).\n      - Example: For key k = 54 and table size m = 9, h(54) = 54 mod 9 = 0.\n   b) Mid-Square Method:\n      - Concept: Square the key k and extract the middle r digits as the index location.\n      - Example: For key k = 43, k^2 = 1849. Extract middle 2 digits '84' -> Index = 84 % m.\n   c) Folding Method:\n      - Concept: Divide the key k into several parts of equal size, sum the parts together, and apply modulo m.\n      - Example: Key k = 12345678. Parts: 123 + 456 + 789 = 1368. Index = 1368 mod m.",
+        "choiceGroup": 5,
+        "choiceOption": "B",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/2.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (15.5 Marks) and Option B (11.5 Marks) of Choice Group 5 in Module 5 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (15.5 vs 11.5 Marks), Option B is excluded from final grading (achieved 2 Marks).",
+        "notes": "Choice Excluded (Achieved 2 Marks, lower than Option A with 15.5 Marks).",
+        "excluded": true,
+        "rawScore": 2
+      }
+    ],
+    "evaluatedAt": "8/14/2026, 8:21:02 AM",
+    "status": "Evaluated & Reverted",
+    "createdAt": "2026-08-14T02:51:02.073Z",
+    "timestamp": "2026-08-14T02:51:02.073Z"
+  },
+  {
+    "_id": "local-1786675862123-yu9jg",
+    "id": "rev-1786672158639-dtt8b",
+    "serialNo": "SN-2026-002",
+    "studentBookletId": "BKT-2026-002",
+    "paperName": "BCS304 (1).pdf",
+    "studentAnswerFileName": "Student1.pdf",
+    "coordinatorName": "Guru",
+    "totalScore": 83.5,
+    "maxScore": 100,
+    "questionResults": [
+      {
+        "id": 1,
+        "question": "Q.01 (a) Define data structures. With a neat diagram, explain the classification of data structures with examples. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Define data structures. With a neat diagram, explain the classification of data structures with examples. (5 Marks)\nModel Answer:\n- Definition: A data structure is a specialized format for organizing, processing, retrieving, and storing data in a computer so that operations can be performed efficiently.\n- Classification:\n  1. Primitive Data Structures: Predefined basic types (e.g., int, float, char, double).",
+        "choiceGroup": 1,
+        "choiceOption": "A",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Definition of Data Structures & memory allocation principles",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Vision OCR extracted response segment for Q1 completely satisfies rubric point \"Definition of Data Structures & memory allocation principles\"."
+          },
+          {
+            "label": "Classification: Primitive vs Non-Primitive (Arrays, Structs, Pointers)",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Vision OCR extracted response segment for Q1 completely satisfies rubric point \"Classification: Primitive vs Non-Primitive (Arrays, Structs, Pointers)\"."
+          },
+          {
+            "label": "Classification: Linear (Stacks, Queues) vs Non-Linear (Trees, Graphs)",
+            "max": 1.5,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Partial Marks (1/1.5 Marks): Vision OCR extracted response segment for Q1 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Operations on Data Structures (Traversal, Search, Insert, Delete, Sort)",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Vision OCR extracted response segment for Q1 completely satisfies rubric point \"Operations on Data Structures (Traversal, Search, Insert, Delete, Sort)\"."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 1.5,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Partial Marks (1/1.5 Marks): Vision OCR extracted response segment for Q1 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q1 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 1 Citation Verified)"
+      },
+      {
+        "id": 2,
+        "question": "Q.01 (b) What do you mean by pattern matching? Outline the Knuth Morris Pratt (KMP) algorithm and illustrate it to find the occurrences of the following pattern. P: ABCDABD, S: ABC ABCDAB ABCDABCDABDE (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "What do you mean by pattern matching? Outline the Knuth Morris Pratt (KMP) algorithm and illustrate it to find the occurrences of the following pattern. P: ABCDABD, S: ABC ABCDAB ABCDABCDABDE (8 Marks)\nModel Answer:\n- Pattern Matching: The problem of finding one or more occurrences of a pattern string P within a text string S.\n- KMP Algorithm: Bypasses redundant comparisons using a prefix function (pi/failure table) constructed from the pattern itself, which determines how much of the pattern can be skipped on mismatch.\n- Prefix Table (pi) for P = \"ABCDABD\":\n  Char:    A  B  C  D  A  B  D\n  Index:   0  1  2  3  4  5  6\n  pi:      0  0  0  0  1  2  0\n- Matching Process for S = \"ABC ABCDAB ABCDABCDABDE\":\n  - Iteration 1: Matches 'A', 'B', 'C'. Mismatch at index 3 in S (' ' vs 'D'). Skip using pi.\n  - Iteration 2: Matches \"ABCDAB\". Mismatch at 'D' (index 6) with S (' ' vs 'D'). Shift pattern.\n  - Iteration 3: Match found at index 15 of S (\"ABCDABDE\").",
+        "choiceGroup": 1,
+        "choiceOption": "A",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Definition of pattern matching & naive vs KMP efficiency",
+            "max": 2.5,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Full Score (2.5/2.5 Marks): Vision OCR extracted response segment for Q2 completely satisfies rubric point \"Definition of pattern matching & naive vs KMP efficiency\"."
+          },
+          {
+            "label": "Knuth-Morris-Pratt (KMP) prefix function π / failure table construction",
+            "max": 3,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Full Score (3/3 Marks): Vision OCR extracted response segment for Q2 completely satisfies rubric point \"Knuth-Morris-Pratt (KMP) prefix function π / failure table construction\"."
+          },
+          {
+            "label": "Step-by-step pattern matching execution trace for P & S strings",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q2 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q2 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 2 Citation Verified)"
+      },
+      {
+        "id": 3,
+        "question": "Q.01 (c) Write a program in C to implement push, pop and display operations for stacks using arrays. (7 Marks)",
+        "maxMarks": 7,
+        "studentAnswer": "Write a program in C to implement push, pop and display operations for stacks using arrays. (7 Marks)\nModel Answer:\n#define MAX 5\nint stack[MAX], top = -1;\nvoid push(int val) {\n    if (top == MAX - 1) { printf(\"Stack Overflow\\n\"); return; }\n    stack[++top] = val;\n}\nint pop() {\n    if (top == -1) { printf(\"Stack Underflow\\n\"); return -1; }\n    return stack[top--];\n}\nvoid display() {\n    if (top == -1) { printf(\"Stack Empty\\n\"); return; }\n    for(int i = top; i >= 0; i--) printf(\"%d \", stack[i]);\n    printf(\"\\n\");\n}",
+        "choiceGroup": 1,
+        "choiceOption": "A",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Stack Data Structure definition, LIFO principle & top representation",
+            "max": 1.5,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Partial Marks (1/1.5 Marks): Vision OCR extracted response segment for Q3 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "C implementation of push() with Overflow check (top == MAX - 1)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q3 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "C implementation of pop() with Underflow check (top == -1)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q3 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "C implementation of display() stack contents from top to 0",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Vision OCR extracted response segment for Q3 completely satisfies rubric point \"C implementation of display() stack contents from top to 0\"."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q3 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 3 Citation Verified)"
+      },
+      {
+        "id": 4,
+        "question": "Q.02 (a) Explain in brief the different functions of dynamic memory allocation. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Explain in brief the different functions of dynamic memory allocation. (5 Marks)\nModel Answer:\n1. malloc(size): Allocates a single block of specified size (in bytes) and returns a void pointer to the first byte. Memory is uninitialized.\n2. calloc(num, size): Allocates multiple blocks of specified size, initializes all bytes to zero, and returns a void pointer.",
+        "choiceGroup": 1,
+        "choiceOption": "B",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/2.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/2.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (16.5 Marks) and Option B (16.5 Marks) of Choice Group 1 in Module 1 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (16.5 vs 16.5 Marks), Option B is excluded from final grading (achieved 5 Marks).",
+        "notes": "Choice Excluded (Achieved 5 Marks, lower than Option A with 16.5 Marks).",
+        "excluded": true,
+        "rawScore": 5
+      },
+      {
+        "id": 5,
+        "question": "Q.02 (b) Write functions in C for the following operations without using built-in functions: i) Compare two strings. ii) Concatenate two strings. iii) Reverse a string. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Write functions in C for the following operations without using built-in functions: i) Compare two strings. ii) Concatenate two strings. iii) Reverse a string (8 Marks)\nModel Answer:\ni) Compare:\nint strCompare(char s1[], char s2[]) {\n    int i = 0;\n    while(s1[i] == s2[i]) {\n        if(s1[i] == '\\0') return 0;\n        i++;\n    }\n    return s1[i] - s2[i];\n}\nii) Concatenate:\nvoid strConcat(char dest[], char src[]) {\n    int i = 0, j = 0;\n    while(dest[i] != '\\0') i++;\n    while(src[j] != '\\0') { dest[i++] = src[j++]; }\n    dest[i] = '\\0';\n}\niii) Reverse:\nvoid strReverse(char str[]) {\n    int len = 0, i;\n    while(str[len] != '\\0') len++;\n    for(i = 0; i < len/2; i++) {\n        char temp = str[i];\n        str[i] = str[len - 1 - i];\n        str[len - 1 - i] = temp;\n    }\n}",
+        "choiceGroup": 1,
+        "choiceOption": "B",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3,
+            "score": 0,
+            "rawScore": 3,
+            "feedback": "Excluded under choice option rules (Achieved 3/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (16.5 Marks) and Option B (16.5 Marks) of Choice Group 1 in Module 1 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (16.5 vs 16.5 Marks), Option B is excluded from final grading (achieved 7 Marks).",
+        "notes": "Choice Excluded (Achieved 7 Marks, lower than Option A with 16.5 Marks).",
+        "excluded": true,
+        "rawScore": 7
+      },
+      {
+        "id": 6,
+        "question": "Q.02 (c) Write a function to evaluate the postfix expression. Illustrate the same for the given postfix expression: ABC-D*+E$F+ and assume A=6, B=3, C=2, D=5, E=1 and F=7. (7 Marks)",
+        "maxMarks": 7,
+        "studentAnswer": "Write a function to evaluate the postfix expression. Illustrate the same for the given postfix expression: ABC-D*+E$F+ and assume A=6, B=3, C=2, D=5, E=1 and F=7. (7 Marks)\nModel Answer:\n- Substitute values: A=6, B=3, C=2, D=5, E=1, F=7 => 6 3 2 - 5 * + 1 $ 7 +\n- Evaluation Steps:\n  1. Push 6, 3, 2. Stack: [6, 3, 2]\n  2. Pop 2, pop 3. Perform 3 - 2 = 1. Push 1. Stack: [6, 1]",
+        "choiceGroup": 1,
+        "choiceOption": "B",
+        "module": 1,
+        "criteria": [
+          {
+            "label": "Operator precedence & associativity rules handling",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Infix to Postfix conversion algorithm using operator stack",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Evaluation algorithm for Postfix expression using operand stack & sample trace",
+            "max": 0.5,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/0.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (16.5 Marks) and Option B (16.5 Marks) of Choice Group 1 in Module 1 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (16.5 vs 16.5 Marks), Option B is excluded from final grading (achieved 4.5 Marks).",
+        "notes": "Choice Excluded (Achieved 4.5 Marks, lower than Option A with 16.5 Marks).",
+        "excluded": true,
+        "rawScore": 4.5
+      },
+      {
+        "id": 7,
+        "question": "Q.03 (a) Develop a C program to implement insertion, deletion and display operations on Linear queue. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Develop a C program to implement insertion, deletion and display operations on Linear queue. (10 Marks)\nModel Answer:\n#define MAX 5\nint queue[MAX], front = -1, rear = -1;\nvoid insert(int val) {\n    if (rear == MAX - 1) { printf(\"Queue Overflow\\n\"); return; }\n    if (front == -1) front = 0;\n    queue[++rear] = val;\n}\nvoid delete() {\n    if (front == -1 || front > rear) { printf(\"Queue Underflow\\n\"); return; }\n    printf(\"Deleted: %d\\n\", queue[front++]);\n}\nvoid display() {\n    if (front == -1 || front > rear) { printf(\"Queue Empty\\n\"); return; }\n    for(int i = front; i <= rear; i++) printf(\"%d \", queue[i]);\n    printf(\"\\n\");\n}",
+        "choiceGroup": 2,
+        "choiceOption": "A",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3.5,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Partial Marks (3/3.5 Marks): Vision OCR extracted response segment for Q7 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3.5,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Partial Marks (3/3.5 Marks): Vision OCR extracted response segment for Q7 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q7 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q7 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 7 Citation Verified)"
+      },
+      {
+        "id": 8,
+        "question": "Q.03 (b) Write a program in C to implement a stack of integers using a singly linked list. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Write a program in C to implement a stack of integers using a singly linked list. (10 Marks)\nModel Answer:\nstruct Node {\n    int data;\n    struct Node* next;\n} *top = NULL;\nvoid push(int val) {\n    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));\n    temp->data = val;\n    temp->next = top;\n    top = temp;\n}\nvoid pop() {\n    if(top == NULL) { printf(\"Stack Underflow\\n\"); return; }\n    struct Node* temp = top;\n    printf(\"Popped: %d\\n\", top->data);\n    top = top->next;\n    free(temp);\n}",
+        "choiceGroup": 2,
+        "choiceOption": "A",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3.5,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Partial Marks (3/3.5 Marks): Vision OCR extracted response segment for Q8 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3.5,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Partial Marks (3/3.5 Marks): Vision OCR extracted response segment for Q8 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q8 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q8 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 8 Citation Verified)"
+      },
+      {
+        "id": 9,
+        "question": "Q.04 (a) Write a C program to implement insertion, deletion and display operations on a circular queue. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Write a C program to implement insertion, deletion and display operations on a circular queue. (10 Marks)\nModel Answer:\n#define MAX 5\nint cq[MAX], front = -1, rear = -1;\nvoid insert(int val) {\n    if ((rear + 1) % MAX == front) { printf(\"Circular Queue Overflow\\n\"); return; }\n    if (front == -1) front = 0;\n    rear = (rear + 1) % MAX;\n    cq[rear] = val;\n}\nvoid delete() {\n    if (front == -1) { printf(\"Queue Underflow\\n\"); return; }\n    printf(\"Deleted: %d\\n\", cq[front]);\n    if (front == rear) { front = rear = -1; }\n    else { front = (front + 1) % MAX; }\n}",
+        "choiceGroup": 2,
+        "choiceOption": "B",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Circular Queue FIFO concept, front/rear pointers & modulo arithmetic ((rear+1)%MAX)",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "C implementation of insertCQ() with Full condition check ((rear+1)%MAX == front)",
+            "max": 3.5,
+            "score": 0,
+            "rawScore": 3,
+            "feedback": "Excluded under choice option rules (Achieved 3/3.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "C implementation of deleteCQ() with Empty condition check (front == -1)",
+            "max": 3.5,
+            "score": 0,
+            "rawScore": 3,
+            "feedback": "Excluded under choice option rules (Achieved 3/3.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (17 Marks) and Option B (17 Marks) of Choice Group 2 in Module 2 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (17 vs 17 Marks), Option B is excluded from final grading (achieved 8.5 Marks).",
+        "notes": "Choice Excluded (Achieved 8.5 Marks, lower than Option A with 17 Marks).",
+        "excluded": true,
+        "rawScore": 8.5
+      },
+      {
+        "id": 10,
+        "question": "Q.04 (b) Write the C function to add two polynomials. Show the linked representation of the below two polynomials and their addition using a circular singly linked list. P1: 5x3 + 4x2 +7x + 3, P2: 6x2 + 5, Output: add the above two polynomials and represent them using the linked list. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "Write the C function to add two polynomials. Show the linked representation of the below two polynomials and their addition using a circular singly linked list. P1: 5x3 + 4x2 +7x + 3, P2: 6x2 + 5, Output: add the above two polynomials and represent them using the linked list. (10 Marks)\nModel Answer:\n- Linked Representation:\n  - Each node contains coefficient (coeff), exponent (exp) and pointer to next node (next).\n  - P1: (5,3) -> (4,2) -> (7,1) -> (3,0) -> back to start\n  - P2: (6,2) -> (5,0) -> back to start\n- Polynomial Addition Algorithm:\n  - Compare exponents of P1 and P2.\n  - If exp(P1) > exp(P2): add terms of P1 to result, move P1.\n  - If exp(P1) < exp(P2): add terms of P2 to result, move P2.\n  - If exp(P1) == exp(P2): add coefficients, add term if coeff != 0, move both.\n- Result: 5x3 + 10x2 + 7x + 8",
+        "choiceGroup": 2,
+        "choiceOption": "B",
+        "module": 2,
+        "criteria": [
+          {
+            "label": "Polynomial node structure definition (coef, exp, next pointer)",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/1.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Circular linked list traversal & term insertion logic",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "C function implementation for term-by-term addition & result display",
+            "max": 4,
+            "score": 0,
+            "rawScore": 3.5,
+            "feedback": "Excluded under choice option rules (Achieved 3.5/4 Marks, lower than Option A)."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (17 Marks) and Option B (17 Marks) of Choice Group 2 in Module 2 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (17 vs 17 Marks), Option B is excluded from final grading (achieved 8.5 Marks).",
+        "notes": "Choice Excluded (Achieved 8.5 Marks, lower than Option A with 17 Marks).",
+        "excluded": true,
+        "rawScore": 8.5
+      },
+      {
+        "id": 11,
+        "question": "Q.05 (a) Write recursive C functions for inorder, preorder and postorder traversals of a binary tree. Also, find all the traversals for the given tree. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Write recursive C functions for inorder, preorder and postorder traversals of a binary tree. Also, find all the traversals for the given tree. (8 Marks)\nModel Answer:\nTraversals implementation:\nvoid inorder(struct Node* root) {\n    if(root) { inorder(root->left); printf(\"%d \", root->data); inorder(root->right); }\n}\nvoid preorder(struct Node* root) {\n    if(root) { printf(\"%d \", root->data); preorder(root->left); preorder(root->right); }\n}\nvoid postorder(struct Node* root) {\n    if(root) { postorder(root->left); postorder(root->right); printf(\"%d \", root->data); }\n}\nTraversals for the given tree (A with left B, right C, B has left D, right E, C has left F, right G, E has left H, right I):\n- Preorder: A, B, D, E, H, I, C, F, G\n- Inorder: D, B, H, E, I, A, F, C, G\n- Postorder: D, H, I, E, B, F, G, C, A",
+        "choiceGroup": 3,
+        "choiceOption": "A",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Binary Tree node structure (data, left, right pointers)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Vision OCR extracted response segment for Q11 completely satisfies rubric point \"Binary Tree node structure (data, left, right pointers)\"."
+          },
+          {
+            "label": "Recursive C function for Inorder Traversal (Left, Root, Right)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q11 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Recursive C function for Preorder Traversal (Root, Left, Right)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q11 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Recursive C function for Postorder Traversal (Left, Right, Root)",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Vision OCR extracted response segment for Q11 completely satisfies rubric point \"Recursive C function for Postorder Traversal (Left, Right, Root)\"."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q11 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 11 Citation Verified)"
+      },
+      {
+        "id": 12,
+        "question": "Q.05 (b) Write C functions for the following: i) Search an element in the singly linked list. ii) Concatenation of two singly linked list. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Write C functions for the following: i) Search an element in the singly linked list. ii) Concatenation of two singly linked list. (6 Marks)\nModel Answer:\ni) Search:\nint search(struct Node* head, int key) {\n    struct Node* temp = head;\n    while(temp != NULL) {\n        if(temp->data == key) return 1;\n        temp = temp->next;\n    }\n    return 0;\n}\nii) Concatenation:\nstruct Node* concat(struct Node* h1, struct Node* h2) {\n    if(h1 == NULL) return h2;\n    struct Node* temp = h1;\n    while(temp->next != NULL) temp = temp->next;\n    temp->next = h2;\n    return h1;\n}",
+        "choiceGroup": 3,
+        "choiceOption": "A",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q12 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q12 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q12 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 12 Citation Verified)"
+      },
+      {
+        "id": 13,
+        "question": "Q.05 (c) Define Sparse matrix. For the given sparse matrix, give the linked list representation:\n[ 0 0 3 0 4 ]\n[ 0 0 5 7 0 ]\n[ 0 0 0 0 0 ] [ 0 2 6 0 0 ] A = [0 0 3 0 4; 0 0 5 7 0; 0 0 0 0 0; 0 2 6 0 0] (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define Sparse matrix. For the given sparse matrix, give the linked list representation: A = [0 0 3 0 4; 0 0 5 7 0; 0 0 0 0 0; 0 2 6 0 0] (6 Marks)\nModel Answer:\n- Sparse Matrix: A matrix in which most of the elements are zero. Stored efficiently using 3-tuple (Row, Col, Value) or linked list to save memory.\n- Linked list representation (using 3-tuple nodes):\n  - Node format: [Row, Col, Val, Next]\n  - Head Node: [4, 5, 5] (Dimensions: 4 rows, 5 columns, 5 non-zero elements)\n  - Elements Nodes:\n    - Node 1: [0, 2, 3]\n    - Node 2: [0, 4, 4]\n    - Node 3: [1, 2, 5]\n    - Node 4: [1, 3, 7]\n    - Node 5: [3, 1, 2]\n    - Node 6: [3, 2, 6]",
+        "choiceGroup": 3,
+        "choiceOption": "A",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Sparse Matrix definition (majority zero elements) & 3-tuple array representation (row, col, value)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Vision OCR extracted response segment for Q13 completely satisfies rubric point \"Sparse Matrix definition (majority zero elements) & 3-tuple array representation (row, col, value)\"."
+          },
+          {
+            "label": "Linked list representation (header nodes for rows and columns with node structure)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q13 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Diagrammatic illustration of Sparse Matrix linked grid representation",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Vision OCR extracted response segment for Q13 completely satisfies rubric point \"Diagrammatic illustration of Sparse Matrix linked grid representation\"."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Vision OCR extracted response segment for Q13 completely satisfies rubric point \"Neat diagrammatic representation / graphical illustration\"."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q13 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 13 Citation Verified)"
+      },
+      {
+        "id": 14,
+        "question": "Q.06 (a) Write C Functions for the following: i) Inserting a node at the beginning of a Doubly linked list. ii) Deleting a node at the end of the Doubly linked list. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Write C Functions for the following: i) Inserting a node at the beginning of a Doubly linked list. ii) Deleting a node at the end of the Doubly linked list. (8 Marks)\nModel Answer:\ni) Insert Beginning:\nvoid insertBeg(int val) {\n    struct Node* temp = (struct Node*)malloc(sizeof(struct Node));\n    temp->data = val; temp->prev = NULL; temp->next = head;\n    if(head != NULL) head->prev = temp;\n    head = temp;\n}\nii) Delete End:\nvoid deleteEnd() {\n    if(head == NULL) return;\n    struct Node* temp = head;\n    while(temp->next != NULL) temp = temp->next;\n    if(temp->prev != NULL) temp->prev->next = NULL;\n    else head = NULL;\n    free(temp);\n}",
+        "choiceGroup": 3,
+        "choiceOption": "B",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Fundamental definition, terminology & primary properties",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Algorithmic process explanation & step-by-step description",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Equations, diagrams, trace execution, or practical application examples",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (16 Marks) and Option B (15.5 Marks) of Choice Group 3 in Module 3 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (16 vs 15.5 Marks), Option B is excluded from final grading (achieved 6.5 Marks).",
+        "notes": "Choice Excluded (Achieved 6.5 Marks, lower than Option A with 16 Marks).",
+        "excluded": true,
+        "rawScore": 6.5
+      },
+      {
+        "id": 15,
+        "question": "Q.06 (b) Define Binary tree. Explain the representation of a binary tree with a suitable example. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define Binary tree. Explain the representation of a binary tree with a suitable example. (6 Marks)\nModel Answer:\n- Binary Tree: A hierarchical data structure where each node has at most two children, referred to as the left child and the right child.\n- Representation:\n  1. Sequential representation (using Arrays): Root is stored at index 0. For parent node at index i, left child is at 2i+1, right child is at 2i+2.\n  2. Linked representation (using Pointers): Each node contains [LeftPointer, Data, RightPointer].",
+        "choiceGroup": 3,
+        "choiceOption": "B",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/1.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (16 Marks) and Option B (15.5 Marks) of Choice Group 3 in Module 3 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (16 vs 15.5 Marks), Option B is excluded from final grading (achieved 5 Marks).",
+        "notes": "Choice Excluded (Achieved 5 Marks, lower than Option A with 16 Marks).",
+        "excluded": true,
+        "rawScore": 5
+      },
+      {
+        "id": 16,
+        "question": "Q.06 (c) Define the Threaded binary tree. Construct Threaded binary for the following elements: A, B, C, D, E, F, G, H, I. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define the Threaded binary tree. Construct Threaded binary for the following elements: A, B, C, D, E, F, G, H, I. (6 Marks)\nModel Answer:\n- Threaded Binary Tree: A binary tree where the null pointers are replaced by pointers (threads) pointing to the in-order predecessor or in-order successor.\n- Construction:\n  - If a node lacks a left child, its left child pointer is threaded to its in-order predecessor.\n  - If a node lacks a right child, its right child pointer is threaded to its in-order successor.",
+        "choiceGroup": 3,
+        "choiceOption": "B",
+        "module": 3,
+        "criteria": [
+          {
+            "label": "Threaded Binary Tree definition & utilization of NULL pointers for threads",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Difference between One-way (Right-threaded) and Two-way Threaded Binary Trees",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Inorder traversal without stack using threads diagram & explanation",
+            "max": 1,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/1 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (16 Marks) and Option B (15.5 Marks) of Choice Group 3 in Module 3 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (16 vs 15.5 Marks), Option B is excluded from final grading (achieved 4 Marks).",
+        "notes": "Choice Excluded (Achieved 4 Marks, lower than Option A with 16 Marks).",
+        "excluded": true,
+        "rawScore": 4
+      },
+      {
+        "id": 17,
+        "question": "Q.07 (a) Design an algorithm to traverse a graph using Depth First Search (DFS). Apply DFS for the graph given below. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Design an algorithm to traverse a graph using Depth First Search (DFS). Apply DFS for the graph given below. (8 Marks)\nModel Answer:\n- DFS Algorithm: Uses a stack (or recursion) to explore vertices as deep as possible along each branch before backtracking.\n- Steps:\n  1. Define a stack of size V and a visited array initialized to 0.\n  2. Push the starting vertex and mark it visited.\n  3. Pop and print the vertex. Push all unvisited adjacent vertices.\n  4. Repeat until stack is empty.\n- Traversal order for the given graph: f, b, a, d, c, e, g",
+        "choiceGroup": 4,
+        "choiceOption": "A",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Graph definitions (Adjacency Matrix vs Adjacency List representations)",
+            "max": 1,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/1 Marks, lower than Option B)."
+          },
+          {
+            "label": "DFS algorithm using Stack / Recursion & visited array with trace",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "BFS algorithm using Queue & visited array with trace",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Time complexity analysis for DFS and BFS (O(V + E))",
+            "max": 1,
+            "score": 0,
+            "rawScore": 1,
+            "feedback": "Excluded under choice option rules (Achieved 1/1 Marks, lower than Option B)."
+          },
+          {
+            "label": "Neat diagrammatic representation / graphical illustration",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (16 Marks) and Option B (16.5 Marks) of Choice Group 4 in Module 4 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (16.5 vs 16 Marks), Option A is excluded from final grading (achieved 6.5 Marks).",
+        "notes": "Choice Excluded (Achieved 6.5 Marks, lower than Option B with 16.5 Marks).",
+        "excluded": true,
+        "rawScore": 6.5
+      },
+      {
+        "id": 18,
+        "question": "Q.07 (b) Construct a binary tree from the Post-order and In-order sequence given below. In-order: GDHBAEICF, Post-order: GHDBIEFCA. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Construct a binary tree from the Post-order and In-order sequence given below. In-order: GDHBAEICF, Post-order: GHDBIEFCA. (6 Marks)\nModel Answer:\n- Root is the last element in post-order: 'A'.\n- Locate 'A' in in-order: GDHB is Left subtree, EICF is Right subtree.\n- Repeat recursively:\n  - Root of Right Subtree: 'C' (last in post-order for EICF: GHDB[IEF]C).\n    - Right subtree of C: 'F', Left subtree: 'E I'.\n  - Root of Left Subtree: 'B'.\n- Constructed Binary Tree Structure:\n        A\n       / \\\n      B   C\n     /   / \\\n    D   E   F\n   / \\   \\\n  G   H   I",
+        "choiceGroup": 4,
+        "choiceOption": "A",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Identification of Root node from Postorder traversal (last element)",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Partitioning of Inorder traversal into Left and Right Subtrees",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Step-by-step tree construction diagram & final constructed Binary Tree",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/1.5 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (16 Marks) and Option B (16.5 Marks) of Choice Group 4 in Module 4 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (16.5 vs 16 Marks), Option A is excluded from final grading (achieved 4.5 Marks).",
+        "notes": "Choice Excluded (Achieved 4.5 Marks, lower than Option B with 16.5 Marks).",
+        "excluded": true,
+        "rawScore": 4.5
+      },
+      {
+        "id": 19,
+        "question": "Q.07 (c) Define selection tree. Construct min winner tree for the runs of a game given below. Each run consists of values of players. Find the first 5 winners. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define selection tree. Construct min winner tree for the runs of a game given below. Each run consists of values of players. Find the first 5 winners. (6 Marks)\nModel Answer:\n- Selection Tree: A binary tree used to merge sorted runs. Each node contains the winner (min or max) of the match between its two children.\n- Min Winner Tree: The leaf nodes represent the initial players. The root always contains the smallest value (overall winner).\n- Winners:\n  1st Winner: 6 (from node matching 6 vs 8)\n  2nd Winner: 8\n  3rd Winner: 9\n  4th Winner: 10\n  5th Winner: 11",
+        "choiceGroup": 4,
+        "choiceOption": "A",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Winner Tree definition (Complete Binary Tree where internal node stores smaller key)",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2.5 Marks, lower than Option B)."
+          },
+          {
+            "label": "Loser Tree variation & comparison with Winner Tree",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option B)."
+          },
+          {
+            "label": "Application in K-way merging of sorted runs with diagrammatic example",
+            "max": 1.5,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/1.5 Marks, lower than Option B)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (16 Marks) and Option B (16.5 Marks) of Choice Group 4 in Module 4 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option B achieved higher marks (16.5 vs 16 Marks), Option A is excluded from final grading (achieved 5 Marks).",
+        "notes": "Choice Excluded (Achieved 5 Marks, lower than Option B with 16.5 Marks).",
+        "excluded": true,
+        "rawScore": 5
+      },
+      {
+        "id": 20,
+        "question": "Q.08 (a) Define Binary Search tree. Construct a binary search tree (BST) for the following elements: 100, 85, 45, 55, 120, 20, 70, 90, 115, 65, 130, 145. Traverse using in-order, pre-order, and post-order techniques. Write recursive C functions for the same. (8 Marks)",
+        "maxMarks": 8,
+        "studentAnswer": "Define Binary Search tree. Construct a binary search tree (BST) for the following elements: 100, 85, 45, 55, 120, 20, 70, 90, 115, 65, 130, 145. Traverse using in-order, pre-order, and post-order techniques. Write recursive C functions for the same. (8 Marks)\nModel Answer:\n- Binary Search Tree (BST): A binary tree where the key in any node is larger than the keys in its left subtree and smaller than the keys in its right subtree.\n- Construction:\n          100\n         /   \\\n        85   120\n       /  \\  /  \\\n      45  90 115 130\n     /  \\          \\\n    20  70         145\n       /\n      55\n       \\\n       65",
+        "choiceGroup": 4,
+        "choiceOption": "B",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Identification of Root node from Postorder traversal (last element)",
+            "max": 2.5,
+            "score": 2,
+            "rawScore": 2,
+            "feedback": "Partial Marks (2/2.5 Marks): Vision OCR extracted response segment for Q20 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Partitioning of Inorder traversal into Left and Right Subtrees",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q20 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Step-by-step tree construction diagram & final constructed Binary Tree",
+            "max": 3.5,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Partial Marks (3/3.5 Marks): Vision OCR extracted response segment for Q20 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q20 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 20 Citation Verified)"
+      },
+      {
+        "id": 21,
+        "question": "Q.08 (b) Define Forest. Transform the given forest into a Binary tree and traverse using inorder, preorder and postorder traversal. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define Forest. Transform the given forest into a Binary tree and traverse using inorder, preorder and postorder traversal. (6 Marks)\nModel Answer:\n- Forest: A set of disjoint trees.\n- Forest to Binary Tree Conversion (Left-Child Right-Sibling representation):\n  1. Connect siblings of all trees in the forest.\n  2. For each node, delete all links to its children except the first (leftmost) child.",
+        "choiceGroup": 4,
+        "choiceOption": "B",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Binary Tree node structure (data, left, right pointers)",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Vision OCR extracted response segment for Q21 completely satisfies rubric point \"Binary Tree node structure (data, left, right pointers)\"."
+          },
+          {
+            "label": "Recursive C function for Inorder Traversal (Left, Root, Right)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Vision OCR extracted response segment for Q21 completely satisfies rubric point \"Recursive C function for Inorder Traversal (Left, Root, Right)\"."
+          },
+          {
+            "label": "Recursive C function for Preorder Traversal (Root, Left, Right)",
+            "max": 1.5,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Full Score (1.5/1.5 Marks): Vision OCR extracted response segment for Q21 completely satisfies rubric point \"Recursive C function for Preorder Traversal (Root, Left, Right)\"."
+          },
+          {
+            "label": "Recursive C function for Postorder Traversal (Left, Right, Root)",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Vision OCR extracted response segment for Q21 completely satisfies rubric point \"Recursive C function for Postorder Traversal (Left, Right, Root)\"."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q21 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 21 Citation Verified)"
+      },
+      {
+        "id": 22,
+        "question": "Q.08 (c) Define the Disjoint set. Consider the tree created by the weighted union function on the sequence of unions: union(0,1), union(2,3), union(4,5), union(6,7), union(0,2), union(4,6), and union(0,4). Process the simple find and collapsing find on eight finds and compare which find is efficient. (6 Marks)",
+        "maxMarks": 6,
+        "studentAnswer": "Define the Disjoint set. Consider the tree created by the weighted union function on the sequence of unions: union(0,1), union(2,3), union(4,5), union(6,7), union(0,2), union(4,6), and union(0,4). Process the simple find and collapsing find on eight finds and compare which find is efficient. (6 Marks)\nModel Answer:\n- Disjoint Set: A collection of non-overlapping sets, supported by Union and Find operations.\n- Weighted Union Result:\n  - Tree root becomes 0 representing the unified tree of size 8.\n- Collapsing Find: Traverses the path from node to root, updating parent pointers of all visited nodes directly to the root, reducing path length to O(1) for subsequent queries. Collapsing find is significantly more efficient than simple find.",
+        "choiceGroup": 4,
+        "choiceOption": "B",
+        "module": 4,
+        "criteria": [
+          {
+            "label": "Disjoint Set representation using parent array tree structures",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q22 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Weighted Union rule (Simple Union vs Weighted Union) to maintain height balance",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q22 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Collapsing Find algorithm (path compression) for optimal find performance",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q22 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q22 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 22 Citation Verified)"
+      },
+      {
+        "id": 23,
+        "question": "Q.09 (a) What is chained hashing? Discuss its pros and cons. Construct the hash table to insert the keys: 7, 24, 18, 52, 36, 54, 11, 23 in a chained hash table of 9 memory locations. Use h(k) = k mod m. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "What is chained hashing? Discuss its pros and cons. Construct the hash table to insert the keys: 7, 24, 18, 52, 36, 54, 11, 23 in a chained hash table of 9 memory locations. Use h(k) = k mod m. (10 Marks)\nModel Answer:\n- Chained Hashing: A collision resolution technique where each slot in the hash table points to a linked list of records that hash to the same slot.\n- Hash Table (m = 9, h(k) = k mod 9):\n  - Index 0: 18 -> 36 -> 54\n  - Index 1: Empty\n  - Index 2: 11 -> 20\n  - Index 3: Empty\n  - Index 4: Empty\n  - Index 5: 23\n  - Index 6: 24\n  - Index 7: 7 -> 52\n  - Index 8: Empty",
+        "choiceGroup": 5,
+        "choiceOption": "A",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Hash Function definition (h(k) = k mod m) & collision concept",
+            "max": 3,
+            "score": 2.5,
+            "rawScore": 2.5,
+            "feedback": "Partial Marks (2.5/3 Marks): Vision OCR extracted response segment for Q23 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Chained Hashing definition (linked lists at each bucket index)",
+            "max": 3.5,
+            "score": 3,
+            "rawScore": 3,
+            "feedback": "Partial Marks (3/3.5 Marks): Vision OCR extracted response segment for Q23 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Step-by-step key insertion into hash table with bucket diagram",
+            "max": 5.5,
+            "score": 4.5,
+            "rawScore": 4.5,
+            "feedback": "Partial Marks (4.5/5.5 Marks): Vision OCR extracted response segment for Q23 satisfies core concepts; minor details missing."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q23 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 23 Citation Verified)"
+      },
+      {
+        "id": 24,
+        "question": "Q.09 (b) Define the leftist tree. Give its declaration in C. Check whether the given binary tree is a leftist tree or not. Explain your answer. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Define the leftist tree. Give its declaration in C. Check whether the given binary tree is a leftist tree or not. Explain your answer. (5 Marks)\nModel Answer:\n- Leftist Tree: A binary tree where the null path length (npl) of any node's left child is greater than or equal to the null path length of its right child: npl(left) >= npl(right).\n- C Declaration:\n  struct Node {\n      int data;\n      int npl;\n      struct Node *left, *right;\n  };",
+        "choiceGroup": 5,
+        "choiceOption": "A",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Shortest path length s(x) / Null Path Length (NPL) definition",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q24 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Leftist Tree property (s(left(x)) >= s(right(x)) for all nodes)",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q24 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Verification of given tree with s(x) calculation for each node",
+            "max": 0.5,
+            "score": 0.5,
+            "rawScore": 0.5,
+            "feedback": "Full Score (0.5/0.5 Marks): Vision OCR extracted response segment for Q24 completely satisfies rubric point \"Verification of given tree with s(x) calculation for each node\"."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q24 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 24 Citation Verified)"
+      },
+      {
+        "id": 25,
+        "question": "Q.09 (c) What is dynamic hashing? Explain the following techniques with examples: i) Dynamic hashing using directories. ii) Directory less dynamic hashing. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "What is dynamic hashing? Explain the following techniques with examples: i) Dynamic hashing using directories. ii) Directory less dynamic hashing. (5 Marks)\nModel Answer:\n1. Definition of Dynamic Hashing:\n   - Dynamic hashing is a hashing technique where the hash function and hash table size dynamically expand or shrink in response to database insertions and deletions without requiring complete table rehashing.\n\n2. Dynamic Hashing Techniques:\n   a) Directory-Based Dynamic Hashing (Extendible Hashing):\n      - Uses a directory array of size 2^d (where d is Global Depth) storing pointers to data buckets.\n      - Each data bucket has a Local Depth d'. When a bucket overflows and d' < d, only that bucket is split and local depth increments to d'+1.\n      - If d' == d, the directory doubles in size (d = d + 1) and bucket pointers are updated.\n      - Example: Inserting key with hash prefix '101' into full bucket with local depth 2 causes bucket split into '100' and '101'.\n\n   b) Directory-Less Dynamic Hashing (Linear Hashing):\n      - Eliminates the central directory entirely to save memory overhead.\n      - Buckets are split sequentially in a round-robin order (controlled by a split pointer p) regardless of which specific bucket experienced overflow.\n      - Utilizes two hash functions h0(k) = k mod N and h1(k) = k mod (2N).",
+        "choiceGroup": 5,
+        "choiceOption": "A",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Static vs Dynamic Hashing comparison & directory growth capability",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q25 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Extendible Hashing structure (Global Depth d vs Local Depth d')",
+            "max": 2,
+            "score": 1.5,
+            "rawScore": 1.5,
+            "feedback": "Partial Marks (1.5/2 Marks): Vision OCR extracted response segment for Q25 satisfies core concepts; minor details missing."
+          },
+          {
+            "label": "Bucket splitting & directory doubling mechanism diagram",
+            "max": 1,
+            "score": 1,
+            "rawScore": 1,
+            "feedback": "Full Score (1/1 Marks): Vision OCR extracted response segment for Q25 completely satisfies rubric point \"Bucket splitting & directory doubling mechanism diagram\"."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "High-Precision Vision OCR: Precise transcription from extracted Q25 answer section of uploaded student script (Student1.pdf).",
+        "notes": "Extracted from Student Answer Script (Page 25 Citation Verified)"
+      },
+      {
+        "id": 26,
+        "question": "Q.10 (a) What is a Priority queue? Demonstrate functions in C to implement the Max Priority queue with an example. i) Insert into the Max priority queue. ii) Delete into the Max priority queue. iii) Display Max priority queue. (10 Marks)",
+        "maxMarks": 10,
+        "studentAnswer": "a) Directory-Based Dynamic Hashing (Extendible Hashing):\n      - Uses a directory array of size 2^d (where d is Global Depth) storing pointers to data buckets.\n      - Each data bucket has a Local Depth d'. When a bucket overflows and d' < d, only that bucket is split and local depth increments to d'+1.\n      - If d' == d, the directory doubles in size (d = d + 1) and bucket pointers are updated.\n      - Example: Inserting key with hash prefix '101' into full bucket with local depth 2 causes bucket split into '100' and '101'.",
+        "choiceGroup": 5,
+        "choiceOption": "B",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Priority Queue definition & Max Heap complete binary tree structure",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Max Heap Insertion algorithm with reheapify-up (percolate up) step",
+            "max": 3,
+            "score": 0,
+            "rawScore": 2.5,
+            "feedback": "Excluded under choice option rules (Achieved 2.5/3 Marks, lower than Option A)."
+          },
+          {
+            "label": "Max Heap Deletion (Delete Max) algorithm with reheapify-down (percolate down) step",
+            "max": 5,
+            "score": 0,
+            "rawScore": 4.5,
+            "feedback": "Excluded under choice option rules (Achieved 4.5/5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 99,
+        "aiFeedback": "Choice Excluded: Both Option A (17.5 Marks) and Option B (17 Marks) of Choice Group 5 in Module 5 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (17.5 vs 17 Marks), Option B is excluded from final grading (achieved 9.5 Marks).",
+        "notes": "Choice Excluded (Achieved 9.5 Marks, lower than Option A with 17.5 Marks).",
+        "excluded": true,
+        "rawScore": 9.5
+      },
+      {
+        "id": 27,
+        "question": "Q.10 (b) Define min Leftist tree. Meld the given min leftist trees. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "b) Directory-Less Dynamic Hashing (Linear Hashing):\n      - Eliminates the central directory entirely to save memory overhead.\n      - Buckets are split sequentially in a round-robin order (controlled by a split pointer p) regardless of which specific bucket experienced overflow.\n      - Utilizes two hash functions h0(k) = k mod N and h1(k) = k mod (2N).\n\nQ.10 a What is a Priority queue? Demonstrate functions in C to implement the Max Priority queue with an example. i) Insert into the Max priority queue. ii) Delete into the Max priority queue. iii) Display Max priority queue. (10 Marks)\nModel Answer:\n1. Priority Queue Definition:\n   - An abstract data type similar to a regular queue or stack, but where each element has an associated priority value.\n   - In a Max Priority Queue, the element with the highest priority (maximum key) is served first. Array implementation uses a Complete Binary Max Heap where parent node at index i satisfies key[i] >= key[2i] and key[i] >= key[2i+1].\n\n2. C Code Implementation for Max Priority Queue:\n--- C Code Implementation ---\n#define MAX 100\nint heap[MAX];\nint size = 0;\n\nvoid swap(int *a, int *b) {\n    int temp = *a; *a = *b; *b = temp;\n}\n\n// i) Insert into Max Priority Queue\nvoid insert(int val) {\n    if (size == MAX - 1) { printf(\"Heap Overflow\\n\"); return; }\n    size++;\n    heap[size] = val;\n    int i = size;\n    // Heapify-Up (Percolate Up)\n    while (i > 1 && heap[i / 2] < heap[i]) {\n        swap(&heap[i / 2], &heap[i]);\n        i = i / 2;\n    }\n}\n\n// ii) Delete Max from Priority Queue\nint deleteMax() {\n    if (size == 0) { printf(\"Heap Underflow\\n\"); return -1; }\n    int maxVal = heap[1];\n    heap[1] = heap[size];\n    size--;\n    int i = 1;\n    // Heapify-Down (Percolate Down)\n    while (2 * i <= size) {\n        int left = 2 * i;\n        int right = 2 * i + 1;\n        int maxChild = left;\n        if (right <= size && heap[right] > heap[left]) maxChild = right;\n        if (heap[i] < heap[maxChild]) {\n            swap(&heap[i], &heap[maxChild]);\n            i = maxChild;\n        } else break;\n    }\n    return maxVal;\n}\n\n// iii) Display Max Priority Queue\nvoid display() {\n    if (size == 0) { printf(\"Priority Queue Empty\\n\"); return; }\n    printf(\"Max Priority Queue: \");\n    for (int i = 1; i <= size; i++) printf(\"%d \", heap[i]);\n    printf(\"\\n\");\n}\n-------------------------------\n\nQ.10 b Define min Leftist tree. Meld the given min leftist trees. (5 Marks)\nModel Answer:\n1. Definition of Min Leftist Tree:\n   - A Min Leftist Tree is a binary tree that satisfies the Min-Heap property (the key at any parent node is <= child keys) and the Leftist Property.\n   - Leftist Property: For every node x, the null path length (npl) of its left child is greater than or equal to the null path length of its right child: npl(left(x)) >= npl(right(x)).\n   - Null Path Length npl(x): Length of the shortest path from x to a external NULL node. npl(NULL) = 0.\n\n2. Melding Algorithm (Merging Two Min Leftist Trees H1 and H2):\n   - Step 1: If H1 is NULL return H2; if H2 is NULL return H1.\n   - Step 2: Compare root keys. Ensure root(H1) <= root(H2); if not, swap H1 and H2.\n   - Step 3: Recursively meld the right subtree of H1 with H2: H1->right = Meld(H1->right, H2).\n   - Step 4: Check leftist property. If npl(H1->left) < npl(H1->right), swap H1->left and H1->right.\n   - Step 5: Update npl(H1) = 1 + npl(H1->right) and return H1.",
+        "choiceGroup": 5,
+        "choiceOption": "B",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Min Leftist Tree definition & melding operation concept",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step melding algorithm along rightmost paths",
+            "max": 2,
+            "score": 0,
+            "rawScore": 1.5,
+            "feedback": "Excluded under choice option rules (Achieved 1.5/2 Marks, lower than Option A)."
+          },
+          {
+            "label": "Swapping left and right subtrees when s(left) < s(right) & final melded tree",
+            "max": 0.5,
+            "score": 0,
+            "rawScore": 0.5,
+            "feedback": "Excluded under choice option rules (Achieved 0.5/0.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 97,
+        "aiFeedback": "Choice Excluded: Both Option A (17.5 Marks) and Option B (17 Marks) of Choice Group 5 in Module 5 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (17.5 vs 17 Marks), Option B is excluded from final grading (achieved 3.5 Marks).",
+        "notes": "Choice Excluded (Achieved 3.5 Marks, lower than Option A with 17.5 Marks).",
+        "excluded": true,
+        "rawScore": 3.5
+      },
+      {
+        "id": 28,
+        "question": "Q.10 (c) Define hashing. Explain different hashing functions with examples. Discuss the properties of a good hash function. (5 Marks)",
+        "maxMarks": 5,
+        "studentAnswer": "Define hashing. Explain different hashing functions with examples. Discuss the properties of a good hash function. (5 Marks)\nModel Answer:\n1. Definition of Hashing:\n   - Hashing is a technique used to uniquely identify a specific object or key from a collection of items by mapping it to an index location in a Hash Table array using a mathematical Hash Function: h(key) -> Index.\n   - It provides average constant time complexity O(1) for search, insertion, and deletion operations.\n\n2. Hash Functions with Examples:\n   a) Division Method:\n      - Formula: h(k) = k mod m (where m is the size of the hash table, ideally a prime number).\n      - Example: For key k = 54 and table size m = 9, h(54) = 54 mod 9 = 0.\n   b) Mid-Square Method:\n      - Concept: Square the key k and extract the middle r digits as the index location.\n      - Example: For key k = 43, k^2 = 1849. Extract middle 2 digits '84' -> Index = 84 % m.\n   c) Folding Method:\n      - Concept: Divide the key k into several parts of equal size, sum the parts together, and apply modulo m.\n      - Example: Key k = 12345678. Parts: 123 + 456 + 789 = 1368. Index = 1368 mod m.",
+        "choiceGroup": 5,
+        "choiceOption": "B",
+        "module": 5,
+        "criteria": [
+          {
+            "label": "Core concept statement, definitions & theoretical foundation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2.5 Marks, lower than Option A)."
+          },
+          {
+            "label": "Step-by-step mechanics, diagrams, or analytical derivation",
+            "max": 2.5,
+            "score": 0,
+            "rawScore": 2,
+            "feedback": "Excluded under choice option rules (Achieved 2/2.5 Marks, lower than Option A)."
+          }
+        ],
+        "ocrConfidence": 98,
+        "aiFeedback": "Choice Excluded: Both Option A (17.5 Marks) and Option B (17 Marks) of Choice Group 5 in Module 5 were answered by the student. Under evaluation policy rules, the set of questions achieving the highest marks is taken into consideration for evaluation. Since Option A achieved higher marks (17.5 vs 17 Marks), Option B is excluded from final grading (achieved 4 Marks).",
+        "notes": "Choice Excluded (Achieved 4 Marks, lower than Option A with 17.5 Marks).",
+        "excluded": true,
+        "rawScore": 4
+      }
+    ],
+    "evaluatedAt": "8/14/2026, 8:21:02 AM",
+    "status": "Evaluated & Reverted",
+    "createdAt": "2026-08-14T02:51:02.123Z",
+    "timestamp": "2026-08-14T02:51:02.123Z"
+  }
+]
