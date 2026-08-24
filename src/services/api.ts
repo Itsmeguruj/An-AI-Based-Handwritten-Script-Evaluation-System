@@ -335,7 +335,7 @@ export const apiService = {
   /**
    * 24. Create Manual Selection Block
    */
-  async createBlock(scriptId: string, payload: { page_number: number; question_id: string; module_number: number; raw_text: string; bounding_box?: any }) {
+  async createBlock(scriptId: string, payload: { page_number: number; question_id: string; module_number?: number; raw_text: string; is_continuation?: boolean; bounding_box?: { x: number; y: number; width: number; height: number } }) {
     const response = await fetch(`/api/coordinator/scripts/${scriptId}/create-block`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -353,6 +353,78 @@ export const apiService = {
       headers: { 'Content-Type': 'application/json' }
     });
     return handleResponse(response);
+  },
+
+  /**
+   * 26. Update Block Details (Inline text, question_id, continuation status, bounding_box)
+   */
+  async updateBlock(scriptId: string, payload: { block_id: string; raw_text?: string; question_id?: string; module_number?: number; is_continuation?: boolean; confidence_score?: number; bounding_box?: { x: number; y: number; width: number; height: number } }) {
+    const response = await fetch(`/api/coordinator/scripts/${scriptId}/update-block`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 26B. Save All Blocks & Commit Grab Handle Positions
+   */
+  async saveAllBlocks(scriptId: string, payload: { blocks: any[]; consolidatedAnswers?: any[] }) {
+    const response = await fetch(`/api/coordinator/scripts/${scriptId}/save-all-blocks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 27. Delete Block
+   */
+  async deleteBlock(scriptId: string, block_id: string) {
+    const response = await fetch(`/api/coordinator/scripts/${scriptId}/delete-block`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ block_id })
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 28. Split Block into Two
+   */
+  async splitBlock(scriptId: string, payload: { block_id: string; split_index: number; new_question_id_2?: string }) {
+    const response = await fetch(`/api/coordinator/scripts/${scriptId}/split-block`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 29. Auto-Detect Multi-Page Continuations
+   */
+  async autoDetectContinuations(scriptId: string) {
+    const response = await fetch(`/api/coordinator/scripts/${scriptId}/auto-detect-continuations`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 30. Manual Consolidated Answer Override Update
+   */
+  async updateConsolidatedAnswer(scriptId: string, payload: { question_id: string; combined_text: string }) {
+    const response = await fetch(`/api/coordinator/scripts/${scriptId}/update-consolidated-answer`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
   }
 };
+
 

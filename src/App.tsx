@@ -20,6 +20,8 @@ import {
   TermsSection,
 } from './components/HomeSections';
 import { apiService } from './services/api';
+import { useSessionTimeout } from './hooks/useSessionTimeout';
+import { SessionTimeoutModal } from './components/SessionTimeoutModal';
 
 interface UserAuth {
   role: 'coordinator' | 'admin';
@@ -54,11 +56,36 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const getModalTitle = () => {
+    switch (activeSectionModal) {
+      case 'features': return 'Core Engine Architecture & Features';
+      case 'download': return 'Desktop App & Engine CLI Downloads';
+      case 'docs': return 'Developer & Coordinator Documentation';
+      case 'changelog': return 'Release Changelog & Product Updates';
+      case 'blog': return 'AI Vision & Pedagogy Insights';
+      case 'pricing': return 'Evaluation Tiers & Licensing';
+      case 'cases': return 'Academic & Institutional Case Studies';
+      case 'about': return 'About DeepScript Vision Platform';
+      case 'privacy': return 'Privacy Policy & Data Protection';
+      case 'terms': return 'Terms of Service & Usage Agreements';
+      default: return 'System Information';
+    }
+  };
+
   // Load session from localStorage on initial render
   const [auth, setAuth] = useState<UserAuth | null>(() => {
     const saved = localStorage.getItem('deepscript_auth');
     if (saved) {
       try {
+        const lastActive = localStorage.getItem('deepscript_last_active');
+        if (lastActive) {
+          const elapsed = Date.now() - parseInt(lastActive, 10);
+          if (elapsed > 20 * 60 * 1000) {
+            localStorage.removeItem('deepscript_auth');
+            localStorage.removeItem('deepscript_last_active');
+            return null;
+          }
+        }
         return JSON.parse(saved);
       } catch (_e) {
         return null;
@@ -78,6 +105,29 @@ function App() {
       localStorage.removeItem('deepscript_auth');
     }
   }, [auth]);
+
+  // 20-minute inactivity session timeout hook for Admin and Coordinator panels
+  const {
+    showWarning: showTimeoutWarning,
+    showExpired: showTimeoutExpired,
+    secondsRemaining: timeoutSecondsRemaining,
+    extendSession: extendTimeoutSession,
+    dismissExpiredModal: dismissTimeoutExpiredModal
+  } = useSessionTimeout({
+    isLoggedIn: !!auth,
+    onLogout: () => {
+      handleLogout();
+    },
+    onSessionExpired: () => {
+      setCoordSubTab('login');
+    }
+  });
+
+  const handleDismissTimeoutExpired = () => {
+    dismissTimeoutExpiredModal();
+    setShowLoginOverlay(true);
+    setCoordSubTab('login');
+  };
 
   // States for updating mobile number in coordinator profile modal
   const [isEditingMobile, setIsEditingMobile] = useState(false);
@@ -225,12 +275,14 @@ function App() {
     id?: string
   ) => {
     clearWorkspaceSessionState();
+    localStorage.setItem('deepscript_last_active', String(Date.now()));
     setAuth({ role, name, email, mobile, countryCode, isVerified, id });
   };
 
   const handleLogout = () => {
     clearWorkspaceSessionState();
     localStorage.removeItem('deepscript_auth');
+    localStorage.removeItem('deepscript_last_active');
     setAuth(null);
   };
 
@@ -1130,6 +1182,17 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* 20-Minute Inactivity Session Timeout Warning & Expired Modals */}
+      <SessionTimeoutModal
+        showWarning={showTimeoutWarning}
+        showExpired={showTimeoutExpired}
+        secondsRemaining={timeoutSecondsRemaining}
+        onExtendSession={extendTimeoutSession}
+        onLogout={handleLogout}
+        onDismissExpired={handleDismissTimeoutExpired}
+        role={auth?.role || 'coordinator'}
+      />
     </div>
   );
 }

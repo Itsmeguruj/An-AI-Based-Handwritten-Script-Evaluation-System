@@ -81,6 +81,50 @@ body {
   position: relative;
 }
 
+/* Global Eye-Soothing Select & Option Theming (Dark Mode Default) */
+select {
+  color-scheme: dark;
+  background-color: #121217;
+  color: var(--text-primary);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+select option {
+  background-color: #16161f !important;
+  color: #f1f5f9 !important;
+  padding: 10px 14px;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: #232333 !important;
+  color: var(--gta-cyan) !important;
+}
+
+body.light-theme select {
+  color-scheme: light;
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+}
+
+body.light-theme select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  padding: 10px 14px;
+}
+
+body.light-theme select option:hover,
+body.light-theme select option:focus,
+body.light-theme select option:checked {
+  background-color: #f0f9ff !important;
+  color: #0284c7 !important;
+}
+
 /* Background Cyber Grid & Sunset Glow Blobs */
 body::before {
   content: "";
@@ -1592,5 +1636,72 @@ body.light-theme .paper-line {
   }
 }
 
+/* Review Studio & Document Viewer Scrollbars */
+.scan-scroll-viewport,
+.document-scroll-container,
+.custom-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 203, 214, 0.4) rgba(255, 255, 255, 0.03);
+}
 
+.scan-scroll-viewport::-webkit-scrollbar,
+.document-scroll-container::-webkit-scrollbar,
+.custom-scroll-container::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.scan-scroll-viewport::-webkit-scrollbar-track,
+.document-scroll-container::-webkit-scrollbar-track,
+.custom-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.scan-scroll-viewport::-webkit-scrollbar-thumb,
+.document-scroll-container::-webkit-scrollbar-thumb,
+.custom-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 203, 214, 0.35);
+  border-radius: 4px;
+}
+
+.scan-scroll-viewport::-webkit-scrollbar-thumb:hover,
+.document-scroll-container::-webkit-scrollbar-thumb:hover,
+.custom-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 203, 214, 0.65);
+}
+
+/* Trendy Floating Toast Notification System */
+@keyframes trendyToastIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.92);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(3px) scale(1.015);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastProgressShrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+@keyframes toastPulseGlow {
+  0%, 100% { box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 18px rgba(0, 203, 214, 0.25); }
+  50% { box-shadow: 0 14px 38px rgba(0, 0, 0, 0.7), 0 0 28px rgba(0, 203, 214, 0.45); }
+}
+
+.trendy-toast-card {
+  animation: trendyToastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards, toastPulseGlow 3s ease-in-out infinite;
+}
+
+.trendy-toast-progress {
+  animation: toastProgressShrink 3.8s linear forwards;
+}
 

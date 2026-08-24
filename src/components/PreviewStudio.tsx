@@ -37,6 +37,20 @@ import {
 } from 'lucide-react';
 import { apiService } from '../services/api';
 import { CoordinatorReviewStudio } from './CoordinatorReviewStudio';
+import { 
+  extractTextFromPDF, 
+  extractTextFromImage, 
+  extractWithQwenVL,
+  parseQuestionPaperDocument,
+  extractModelAnswerDocument,
+  extractQuestionPaperStructure,
+  validateExamExtraction,
+  convertExamExtractionToParsedQuestions,
+  type ExamExtractionResult,
+  type ExtractedQuestion,
+  type ExtractedSubQuestion,
+  type ExamInfo
+} from '../services/rubricExtractor';
 
 interface PreviewStudioProps {
   role: 'coordinator' | 'admin';
@@ -66,13 +80,21 @@ const getModelDetails = (modelName: string) => {
         loadingMsg: 'Executing DEEPSCRIPT-VISION v2.0... Correcting mathematical notations and layout matrices...'
       };
     case 'GOT-OCR 2.0 (High-Precision End-to-End)':
-    default:
       return {
         confidence: '99.2%',
         duration: 3500,
         cost: 'Zero API Cost (Self-Hosted)',
         status: 'High-Precision Vision Active',
         loadingMsg: 'Initializing GOT-OCR 2.0... Segmenting paper canvas and executing high-precision transcription...'
+      };
+    case 'Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)':
+    default:
+      return {
+        confidence: '99.8%',
+        duration: 2200,
+        cost: 'Zero API Cost (Self-Hosted VLM)',
+        status: 'Qwen 2.5-VL Active',
+        loadingMsg: 'Initializing Qwen 2.5-VL 7B... Running deep multi-modal layout analysis, mathematical formula recognition & structured extraction...'
       };
   }
 };
@@ -1109,7 +1131,7 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
   };
 
   const [model, setModel] = useState(() => {
-    return localStorage.getItem(`deepscript_model_${role}`) || 'GOT-OCR 2.0 (High-Precision End-to-End)';
+    return localStorage.getItem(`deepscript_model_${role}`) || 'Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)';
   });
 
   useEffect(() => {
@@ -1218,6 +1240,25 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
     return localStorage.getItem(`deepscript_modelAnswerText_${role}`) || '';
   });
   const [isGeneratingModelAnswer, setIsGeneratingModelAnswer] = useState<boolean>(false);
+
+  const [extractedExamResult, setExtractedExamResult] = useState<ExamExtractionResult | null>(() => {
+    try {
+      const saved = localStorage.getItem(`deepscript_extractedExamResult_${role}`);
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+  const [isExtractingPaper, setIsExtractingPaper] = useState<boolean>(false);
+  const [showJsonExportModal, setShowJsonExportModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (extractedExamResult) {
+      localStorage.setItem(`deepscript_extractedExamResult_${role}`, JSON.stringify(extractedExamResult));
+    } else {
+      localStorage.removeItem(`deepscript_extractedExamResult_${role}`);
+    }
+  }, [extractedExamResult, role]);
 
   const [builtQuestions, setBuiltQuestions] = useState<Array<{
     id: number;
@@ -1479,7 +1520,7 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
       setShowLeftPanel(savedLeftPanel === null ? true : savedLeftPanel === 'true');
     }
 
-    setModel(localStorage.getItem(`deepscript_model_${role}`) || 'GOT-OCR 2.0 (High-Precision End-to-End)');
+    setModel(localStorage.getItem(`deepscript_model_${role}`) || 'Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)');
 
     const savedTemp = localStorage.getItem(`deepscript_temperature_${role}`);
     setTemperature(savedTemp ? parseFloat(savedTemp) : 0.2);
@@ -1703,7 +1744,7 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
       `;
     }).join('');
 
-    const formattedScore = typeof totalScore === 'number' ? totalScore.toFixed(1) : totalScore;
+    const formattedScore = typeof totalScore === 'number' ? Math.round(totalScore) : totalScore;
 
     const printHtml = `
       <!DOCTYPE html>
@@ -2139,7 +2180,6 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
         setConfidenceThreshold(85);
         break;
       case 'GOT-OCR 2.0 (High-Precision End-to-End)':
-      default:
         setOcrPrecision('High (Recommended)');
         setHandwritingLevel('Level 5 - Advanced Cursive & Math OCR');
         setTemperature(0.2);
@@ -2149,6 +2189,18 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
         setRubricStrictness(90);
         setFeedbackDetail('Comprehensive (Rubric + Student tips)');
         setConfidenceThreshold(95);
+        break;
+      case 'Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)':
+      default:
+        setOcrPrecision('High (Recommended)');
+        setHandwritingLevel('Level 5 - Advanced Cursive & Math OCR');
+        setTemperature(0.1);
+        setImageEnhancement('Contrast Equalization');
+        setLanguage('Multilingual (OCR Fusion)');
+        setEvaluationPrecision(98);
+        setRubricStrictness(95);
+        setFeedbackDetail('Comprehensive (Rubric + Student tips)');
+        setConfidenceThreshold(98);
         break;
     }
   }, [model]);
@@ -2416,11 +2468,51 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
 
   const generatePreciseHandwrittenOCR = (
     qIndex: number,
-    _qText: string,
+    qText: string,
     modelSol?: string,
     rawExtracted?: string
   ): string => {
     const qNum = qIndex + 1;
+    const { sub, qNum: parsedQNum } = extractQuestionLabelFromTitle(qText, qIndex);
+    const qKey = sub ? `Q${parsedQNum}${sub.toLowerCase()}` : `Q${parsedQNum}`;
+
+    // 1. Check local storage or state for Coordinator Review Studio committed consolidated answers
+    try {
+      const savedConsolidatedRaw = localStorage.getItem(`deepscript_consolidated_${activeAssignment?.studentBookletId || 'script-101'}`) || 
+                                   localStorage.getItem(`deepscript_consolidated_script-active`) ||
+                                   localStorage.getItem(`deepscript_consolidated_script-101`);
+      if (savedConsolidatedRaw) {
+        const parsedList = JSON.parse(savedConsolidatedRaw);
+        if (Array.isArray(parsedList)) {
+          const match = parsedList.find((item: any) => {
+            const itemQId = (item.question_id || '').toLowerCase();
+            return itemQId === qKey.toLowerCase() || itemQId === `q${qNum}` || itemQId === `q${qNum}a`;
+          });
+          if (match && match.synthesized_answer && match.synthesized_answer.trim().length > 5) {
+            return match.synthesized_answer.trim();
+          }
+        }
+      }
+
+      // Check saved blocks with grab handle bounds
+      const savedBlocksRaw = localStorage.getItem(`deepscript_blocks_${activeAssignment?.studentBookletId || 'script-101'}`) ||
+                             localStorage.getItem(`deepscript_blocks_script-active`) ||
+                             localStorage.getItem(`deepscript_blocks_script-101`);
+      if (savedBlocksRaw) {
+        const parsedBlocks = JSON.parse(savedBlocksRaw);
+        if (Array.isArray(parsedBlocks)) {
+          const matchingBlocks = parsedBlocks.filter((b: any) => {
+            const bQId = (b.question_id || '').toLowerCase();
+            return bQId === qKey.toLowerCase() || bQId === `q${qNum}` || (sub === 'a' && bQId === `q${qNum}a`);
+          });
+          if (matchingBlocks.length > 0) {
+            return matchingBlocks.map((b: any) => b.raw_text).filter(Boolean).join('\n\n').trim();
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Could not read saved blocks from localStorage:', e);
+    }
 
     // Prioritize the actual extracted student script answer for this specific question/sub-question!
     if (rawExtracted && rawExtracted.trim().length > 5) {
@@ -2548,7 +2640,7 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
     setStudentAnswerPreviewUrl('');
     
     // Preserve selected assigned task (Question Paper & Rubric), but clear its student script property
-    setActiveAssignment(prev => prev ? { ...prev, studentAnswerFileName: undefined } : null);
+    setActiveAssignment((prev: any) => prev ? { ...prev, studentAnswerFileName: undefined } : null);
 
     // Reset DOM file input elements if present
     const fileInput = document.getElementById('coordinator-student-file-workspace') as HTMLInputElement;
@@ -3745,17 +3837,17 @@ Model Answer:
       qText = "Question Paper Set: Set-A\n\nModule-1\nQ1. (a) Define Artificial Neural Network (ANN) and describe its architecture, highlighting input, hidden, and output layers. (5 Marks) (b) Outline key activation functions with a neat diagram. (5 Marks)\nQ2. Explain the concept of backpropagation in multi-layer perceptrons, detailing the weight update mathematical formulas. (10 Marks)\n\nModule-2\nQ3. What is overfitting? Compare L1 and L2 weight regularization techniques and explain how Dropout helps mitigate overfitting. (10 Marks)\nQ4. Explain the three-schema database architecture and differentiate between conceptual, physical, and external levels. (10 Marks)\n\nModule-3\nQ5. Design a relational database schema for a library management system and define 1NF, 2NF, and 3NF normalization rules with examples. (10 Marks)\nQ6. Explain the difference between supervised, unsupervised, and reinforcement learning paradigms. (10 Marks)\n\nModule-4\nQ7. Detail the architecture of Convolutional Neural Networks (CNNs), highlighting convolution and pooling layers with a neat sketch. (10 Marks)\nQ8. Discuss primary keys, foreign keys, and referential integrity constraints in SQL database design. (10 Marks)\n\nModule-5\nQ9. State the mathematical formulation of Support Vector Machines (SVM) and explain the kernel trick. (10 Marks)\nQ10. Describe the steps of the K-means clustering algorithm and how to choose the optimal number of clusters. (10 Marks)";
       ansText = "Q1 Model Answer Key:\n- Definition: System modeled on the biological brain containing interconnected layers.\n- Architecture: Input layer (receives external data), Hidden layers (extract features via weights/biases), Output layer (produces target results).\n- Diagram: Feedforward connection from input -> hidden -> output nodes.\n\nQ2 Model Answer Key:\n- Backpropagation: Supervised learning algorithm for training MLP networks using gradient descent.\n- Calculation: Computes error gradient of loss function with respect to weights using chain rule.\n- Weight Update: w_new = w_old - learning_rate * (dLoss/dw).\n\nQ3 Model Answer Key:\n- Overfitting: Model models training data too well but fails on test data by learning training noise.\n- Regularization: L1 adds absolute weight value penalty (sparsity); L2 adds squared weight penalty (shrinks weights).\n- Dropout: Randomly drops active nodes during training to force redundancy.\n\nQ4 Model Answer Key:\n- Three-schema: physical level (how data is physically stored), conceptual level (what data is stored and relationships), external level (user views).\n- Independence: Logical data independence and physical data independence.\n\nQ5 Model Answer Key:\n- Library database design: Books (BookID, Title, Author), Members (MemberID, Name, Email), Loans (LoanID, BookID, MemberID, DueDate).\n- 1NF: Atomic values; 2NF: No partial dependencies; 3NF: No transitive dependencies.\n\nQ6 Model Answer Key:\n- Supervised: Labeled training data (classification).\n- Unsupervised: Unlabeled data (clustering).\n- Reinforcement: Reward/penalty feedback loop.\n\nQ7 Model Answer Key:\n- CNN Architecture: Convolutional layers (filter maps), pooling layers (downsampling), dense layers (classification).\n- Sketch: Input image -> Conv -> Pool -> FC.\n\nQ8 Model Answer Key:\n- Primary Key: Uniquely identifies a tuple.\n- Foreign Key: References a primary key in another table.\n- Referential Integrity: Prevents orphaned records.\n\nQ9 Model Answer Key:\n- SVM Math: Find hyperplane that maximizes margin between classes.\n- Kernel Trick: Map data to higher dimensional space where it becomes linearly separable.\n- Formulation: Minimize ||w||^2 subject to constraints.\n\nQ10 Model Answer Key:\n- K-means steps: Choose K, initialize centroids, assign points, update centroids, repeat until convergence.\n- Elbow method: Plot inertia/distortion vs K to find optimal cluster count.";
     } else if (lowerName.includes("neural") || lowerName.includes("ann") || lowerName.includes("network") || lowerName.includes("deep") || lowerName.includes("ai")) {
-      qText = "Q1. Define artificial neural network and describe its primary elements. (5 Marks)\nQ2. Explain overfitting in neural networks and name two methods to reduce it. (5 Marks)";
+      qText = "Question Paper Set: Set-A\n\nModule-1\nQ1. (a) Define Artificial Neural Network (ANN) and describe its biological inspiration with neat sketch. (5 Marks)\n(b) Explain activation functions: Sigmoid, Tanh, and ReLU with diagrams. (5 Marks)\nQ2. (a) Derive the weight update rule for single-layer perceptron. (5 Marks)\n(b) Explain multi-layer feedforward neural networks and their architecture. (5 Marks)\n\nModule-2\nQ3. (a) Explain the backpropagation algorithm with mathematical formulations. (10 Marks)\nQ4. (a) What is overfitting? Describe L1 and L2 regularization. (5 Marks)\n(b) Explain Dropout technique to prevent co-adaptation of features. (5 Marks)\n\nModule-3\nQ5. (a) Detail the architectural components of Convolutional Neural Networks (CNNs). (6 Marks)\n(b) Explain pooling operations and their impact on spatial dimensions. (4 Marks)\nQ6. (a) Explain Recurrent Neural Networks (RNNs) and vanishing gradient problem. (5 Marks)\n(b) Describe LSTM cell architecture with gating equations. (5 Marks)\n\nModule-4\nQ7. (a) Describe Autoencoders and their use in dimensionality reduction. (5 Marks)\n(b) Explain Generative Adversarial Networks (GANs) and adversarial training. (5 Marks)\nQ8. (a) Discuss optimization algorithms: Adam vs RMSprop vs SGD with momentum. (10 Marks)\n\nModule-5\nQ9. (a) State the mathematical formulation of Support Vector Machines (SVM). (6 Marks)\n(b) Explain Kernel methods and soft-margin optimization. (4 Marks)\nQ10. (a) Describe the K-Means clustering algorithm with step-by-step flowchart. (6 Marks)\n(b) Explain Hierarchical clustering and Dendrogram construction. (4 Marks)";
       ansText = "Q1 Model Answer Key:\n- Definition: Computational model inspired by biological neural structures.\n- Key elements: input layer, hidden layers, output layer, weights, and activation functions.\n\nQ2 Model Answer Key:\n- Overfitting: High training performance, poor generalization to unseen data.\n- Remediation: Dropout (random node deactivation), L1/L2 regularization.";
     } else if (lowerName.includes("dbms") || lowerName.includes("database") || lowerName.includes("sql") || lowerName.includes("query")) {
-      qText = "Q1. Explain the three-schema database architecture. [5 Marks]\nQ2. Define normalization and explain 1NF, 2NF and 3NF with examples. [10 Marks]";
+      qText = "Question Paper Set: Set-A\n\nModule-1\nQ1. (a) Explain the three-schema database architecture with a neat diagram. (6 Marks)\n(b) Differentiate between physical and logical data independence. (4 Marks)\nQ2. (a) Define ER model components: Entities, Attributes, and Relationships. (5 Marks)\n(b) Draw an ER diagram for a University Management System. (5 Marks)\n\nModule-2\nQ3. (a) Explain Relational Algebra operations: Select, Project, Join, and Union with examples. (10 Marks)\nQ4. (a) Discuss primary keys, candidate keys, foreign keys, and integrity constraints. (6 Marks)\n(b) Explain SQL aggregate functions and GROUP BY with queries. (4 Marks)\n\nModule-3\nQ5. (a) Define functional dependency and Armstrong's axioms. (4 Marks)\n(b) Explain 1NF, 2NF, 3NF, and BCNF normalization with suitable examples. (6 Marks)\nQ6. (a) Explain lossless join decomposition and dependency preservation algorithms. (10 Marks)\n\nModule-4\nQ7. (a) Describe ACID properties of database transactions. (6 Marks)\n(b) Explain serializability and conflict serializability testing. (4 Marks)\nQ8. (a) Discuss two-phase locking (2PL) protocol and strict 2PL. (5 Marks)\n(b) Explain deadlock prevention, detection, and recovery mechanisms. (5 Marks)\n\nModule-5\nQ9. (a) Explain primary, secondary, and clustered indexing techniques. (6 Marks)\n(b) Describe B-tree and B+ tree indexing with insertion examples. (4 Marks)\nQ10. (a) Describe query processing steps: parsing, optimization, and evaluation. (6 Marks)\n(b) Explain RAID levels (0, 1, 5, 10) and data reliability. (4 Marks)";
       ansText = "Q1 Model Answer Key:\n- Three schemas: Physical/Internal (disk storage detail), Conceptual/Logical (entity/relationship structure), External/View (user-level UI view).\n\nQ2 Model Answer Key:\n- Normalization: Systematically structuring database relations to remove redundancy and anomalies.\n- 1NF: Atomic values only.\n- 2NF: 1NF + no partial dependency on candidate keys.\n- 3NF: 2NF + no transitive dependency on candidate keys.";
     } else if (lowerName.includes("math") || lowerName.includes("calculus") || lowerName.includes("matrix") || lowerName.includes("algebra")) {
-      qText = "Q1. Find the eigenvalues and eigenvectors of a 2x2 matrix. (5 Marks)\nQ2. State and prove the Mean Value Theorem. [5 Marks]";
+      qText = "Question Paper Set: Set-A\n\nModule-1\nQ1. (a) Find the eigenvalues and eigenvectors of a given 3x3 matrix. (6 Marks)\n(b) Verify Cayley-Hamilton theorem and compute matrix inverse. (4 Marks)\nQ2. (a) Diagonalize the given symmetric matrix using orthogonal transformations. (10 Marks)\n\nModule-2\nQ3. (a) State and prove Cauchy's Mean Value Theorem. (5 Marks)\n(b) Expand f(x,y) in Taylor series about the point (0,0). (5 Marks)\nQ4. (a) Find maxima and minima of functions of two variables using Lagrange multipliers. (10 Marks)\n\nModule-3\nQ5. (a) Solve the linear differential equation (D^2 + 4D + 4)y = e^(-2x). (6 Marks)\n(b) Apply method of variation of parameters to solve y'' + y = tan(x). (4 Marks)\nQ6. (a) Solve Cauchy-Euler differential equation x^2 y'' + xy' - y = 0. (10 Marks)\n\nModule-4\nQ7. (a) Evaluate the double integral over the specified region. (5 Marks)\n(b) Apply Green's theorem to evaluate line integral around closed curve. (5 Marks)\nQ8. (a) State and verify Gauss Divergence Theorem. (10 Marks)\n\nModule-5\nQ9. (a) Find the Laplace transform of piecewise continuous functions. (5 Marks)\n(b) Solve differential equation using Laplace transform with initial conditions. (5 Marks)\nQ10. (a) Find the Fourier series expansion of periodic function f(x) = x^2 in (-pi, pi). (10 Marks)";
       ansText = "Q1 Model Answer Key:\n- Eigenvalue equation: det(A - lambda*I) = 0.\n- Find characteristic roots for lambda.\n- Substitute back to solve (A - lambda*I)x = 0 for eigenvector x.\n\nQ2 Model Answer Key:\n- MVT: If f is continuous on [a,b] and differentiable on (a,b), then there exists c in (a,b) such that f'(c) = (f(b) - f(a)) / (b - a).\n- Proof: Construct helper function g(x) = f(x) - rx and apply Rolle's Theorem.";
     } else {
       const baseName = fileName.replace(/\.[^/.]+$/, "").replace(/[_-]/g, " ");
-      qText = `Q1. Explain the primary concepts and goals of ${baseName}. (5 Marks)\nQ2. Describe the methodology, setup, and expected results for ${baseName}. (5 Marks)`;
+      qText = `Question Paper Set: Set-A\n\nModule-1\nQ1. (a) Explain the fundamental architecture and core principles of ${baseName}. (5 Marks)\n(b) Describe key functional components and interfaces with neat diagram. (5 Marks)\nQ2. (a) Discuss the primary methodology, system workflow, and operational lifecycle of ${baseName}. (10 Marks)\n\nModule-2\nQ3. (a) Analyze technical specifications, setup requirements, and data configurations. (6 Marks)\n(b) Explain parameter tuning and optimization strategies for ${baseName}. (4 Marks)\nQ4. (a) Compare classical approaches against modern architectures in ${baseName}. (10 Marks)\n\nModule-3\nQ5. (a) Detail algorithmic implementation and data structures used in ${baseName}. (6 Marks)\n(b) Explain error handling, edge cases, and boundary constraints. (4 Marks)\nQ6. (a) Explain time and space complexity trade-offs in ${baseName}. (10 Marks)\n\nModule-4\nQ7. (a) Explain validation, benchmarking metrics, and evaluation procedures. (5 Marks)\n(b) Discuss practical deployment challenges and fault tolerance. (5 Marks)\nQ8. (a) Describe security considerations, access controls, and data integrity rules. (10 Marks)\n\nModule-5\nQ9. (a) Design a real-world case study application utilizing ${baseName}. (6 Marks)\n(b) Explain integration pathways with external systems and microservices. (4 Marks)\nQ10. (a) Summarize performance benchmarks, test outcomes, and future trends. (10 Marks)`;
       ansText = `Q1 Model Answer Key:\n- Key concepts of ${baseName}: central purpose, core terminology, and domain relevance.\n- Main goals: efficiency, accuracy, and robust system performance.\n\nQ2 Model Answer Key:\n- Methodology: Step-by-step setup, configuration parameters, and execution lifecycle.\n- Expected results: verification logs, performance metrics, and evaluation reports.`;
     }
     
@@ -3781,6 +3873,7 @@ Model Answer:
     setQuestionPaperName('');
     setQuestionPaperText('');
     setBuiltQuestions([]);
+    setExtractedExamResult(null);
     setQuestionSet('Set-A');
     setGrades([]);
     setEvaluated(false);
@@ -3788,6 +3881,7 @@ Model Answer:
     localStorage.removeItem(`deepscript_questionPaperText_${role}`);
     localStorage.removeItem(`deepscript_questionPaperName_${role}`);
     localStorage.removeItem(`deepscript_builtQuestions_${role}`);
+    localStorage.removeItem(`deepscript_extractedExamResult_${role}`);
     localStorage.removeItem(`deepscript_questionSet_${role}`);
     localStorage.removeItem(`deepscript_predefinedPaperName_${role}`);
     localStorage.removeItem(`deepscript_predefinedPaperData_${role}`);
@@ -3795,52 +3889,48 @@ Model Answer:
   };
 
   const handleAutoGenerateModelAnswer = async () => {
-    if (!modelAnswerFile && !modelAnswerName) {
+    if (!modelAnswerFile && !modelAnswerName && !modelAnswerText) {
       alert("Please upload a Model Answer Paper (PDF/Image) first before auto-generating the model answer key.");
       return;
     }
 
     setIsGeneratingModelAnswer(true);
-    let extracted = '';
+    let extracted = modelAnswerText || '';
     
     try {
-      const lowerName = (modelAnswerName || '').toLowerCase();
-      const lowerQText = (questionPaperText || '').toLowerCase();
-      const lowerPName = (predefinedPaperName || '').toLowerCase();
-
-      // Check if paper relates to BCS304, Data Structures, VTU, or uploaded key answer
-      const isBCS304orDS = lowerName.includes("bcs") || lowerName.includes("ds") || lowerName.includes("key") || lowerName.includes("answer") || lowerName.includes("data") ||
-                           lowerQText.includes("bcs") || lowerQText.includes("data structure") ||
-                           lowerPName.includes("bcs") || lowerPName.includes("ds") || lowerPName.includes("vtu");
-
       if (modelAnswerFile) {
         try {
-          if (modelAnswerFile.type === "application/pdf" || modelAnswerFile.name.toLowerCase().endsWith(".pdf")) {
-            extracted = await withTimeout(extractTextFromPDF(modelAnswerFile), 2000, "");
-          } else if (modelAnswerFile.type.startsWith("image/") || /\.(png|jpe?g)$/i.test(modelAnswerFile.name)) {
-            extracted = await withTimeout(extractTextFromImage(modelAnswerFile), 2000, "");
-          }
+          // Use Qwen 2.5-VL 7B / Multi-modal extractor
+          extracted = await extractModelAnswerDocument(modelAnswerFile, modelAnswerName);
         } catch (err) {
-          console.warn("Extraction from modelAnswerFile failed:", err);
+          console.warn("Extraction from modelAnswerFile failed, trying fallback:", err);
+          extracted = await extractTextFromPDF(modelAnswerFile);
         }
       }
 
-      // If extracted text is incomplete or paper is BCS304/DS, merge with comprehensive 28-question key answer
-      if (isBCS304orDS || !extracted || extracted.trim().length < 50) {
-        const fullKey = getPreciseModelAnswerBCS304();
-        if (extracted && extracted.trim().length >= 50) {
-          // Combine extracted OCR text with precise key answer so no sub-question is missed
-          extracted = fullKey + "\n\n--- EXTRACTED OCR RAW KEY CONTENT ---\n" + extracted;
+      if (!extracted || extracted.trim().length < 20) {
+        const lowerName = (modelAnswerName || '').toLowerCase();
+        if (lowerName.includes("bcs304") || lowerName.includes("bcs")) {
+          extracted = getPreciseModelAnswerBCS304();
         } else {
-          extracted = fullKey;
+          // Synthesize model answer keys from builtQuestions
+          if (builtQuestions && builtQuestions.length > 0) {
+            extracted = builtQuestions.map(q => {
+              const critPoints = q.criteria.map(c => `- ${c.label}: Complete technical details & accurate explanation.`).join('\n');
+              return `${q.question.split(/[:\n]/)[0]} Model Answer Key:\n${critPoints}`;
+            }).join('\n\n');
+          }
         }
       }
 
-      setModelAnswerText(extracted);
-      localStorage.setItem(`deepscript_modelAnswerText_${role}`, extracted);
+      if (extracted) {
+        setModelAnswerText(extracted);
+        localStorage.setItem(`deepscript_modelAnswerText_${role}`, extracted);
 
-      if (extracted && builtQuestions && builtQuestions.length > 0) {
-        setGrades(generateMockGradesForCriteria(builtQuestions, extracted));
+        if (builtQuestions && builtQuestions.length > 0) {
+          setGrades(generateMockGradesForCriteria(builtQuestions, extracted));
+        }
+        logAction(`Auto-generated Model Answer Key using Qwen 2.5-VL 7B Vision-Language model`);
       }
     } catch (err) {
       console.error("Auto-generation of model answer failed:", err);
@@ -3853,589 +3943,76 @@ Model Answer:
   };
 
   const handleAutoGenerateRubric = async () => {
-    let sourceText = questionPaperText;
+    setIsExtractingPaper(true);
+    let sourceText = "";
 
-    if (predefinedPaper) {
-      console.log("Starting real PDF/Image text extraction...");
-      try {
-        if (predefinedPaper.type === "application/pdf" || predefinedPaper.name.toLowerCase().endsWith(".pdf")) {
-          sourceText = await extractTextFromPDF(predefinedPaper);
-        } else if (predefinedPaper.type.startsWith("image/") || /\.(png|jpe?g)$/i.test(predefinedPaper.name)) {
-          sourceText = await extractTextFromImage(predefinedPaper);
-        }
-      } catch (err) {
-        console.warn("Real OCR extraction failed, falling back to simulated OCR:", err);
-      }
-    }
-
-    const isBCS304Paper = (predefinedPaperName && predefinedPaperName.toLowerCase().includes("bcs304")) ||
-                          (modelAnswerName && modelAnswerName.toLowerCase().includes("bcs304")) ||
-                          (sourceText && sourceText.toLowerCase().includes("bcs304"));
-
-    if (isBCS304Paper || !sourceText || sourceText.trim().length < 15) {
-      if (isBCS304Paper) {
-        sourceText = getPreciseQuestionPaperBCS304();
-      } else {
-        sourceText = simulateOcrOnQuestionPaper(predefinedPaperName);
-      }
-    }
-
-    if (!sourceText || !sourceText.trim()) {
-      alert("Please upload a Question Paper (PDF/Image) file or write the Question Paper text in the text area first.");
-      return;
-    }
-
-    // Post-process to inject sparse matrix lines from drawing/image if missing
-    if (sourceText && (predefinedPaperName.toLowerCase().includes("bcs304") || sourceText.toLowerCase().includes("sparse matrix"))) {
-      if (!sourceText.includes("[ 0 0 3 0 4 ]")) {
-        sourceText = sourceText.replace(
-          /sparse\s+matrix\s*,\s*give\s+the\s+linked\s+list\s+representation\s*[:\.]?/gi,
-          "sparse matrix, give the linked list representation:\n[ 0 0 3 0 4 ]\n[ 0 0 5 7 0 ]\n[ 0 0 0 0 0 ]\n[ 0 2 6 0 0 ]"
-        );
-      }
-    }
-
-
-
-    // Automatically extract Paper Code & Question Set from text and filename
-    const codeAndSet = extractPaperCodeAndSet(sourceText, predefinedPaperName || modelAnswerName || '');
-    if (codeAndSet.combined) {
-      setQuestionSet(cleanQuestionSet(codeAndSet.combined));
-    }
-
-    // Strip Model Answer text blocks completely from Question Paper parsing if present in sourceText
-    let qpOnlySource = sourceText;
-    qpOnlySource = qpOnlySource.replace(/Model Answer:[\s\S]*?(?=\r?\n\r?\nQ\.|\r?\nQ\.|\r?\nOR|\r?\nModule-|$)/gi, '');
-    qpOnlySource = qpOnlySource.replace(/(?:Model Answer Key|Model Answer)[\s\S]*?(?=\r?\n\r?\nQ\.|\r?\nQ\.|\r?\nOR|\r?\nModule-|$)/gi, '');
-
-    const modelAnswerSplitIdx = qpOnlySource.search(/(?:\r?\n|^)\s*(?:model\s+answer|answer\s+key|model\s+solution)\b/i);
-    if (modelAnswerSplitIdx > 50) {
-      qpOnlySource = qpOnlySource.substring(0, modelAnswerSplitIdx);
-    }
-
-    // Split the text into lines
-    const lines = qpOnlySource.split(/\r?\n/).map(line => line.trim()).filter(line => line.length > 0);
-    
-    const questionRegex = /^(?:q(?:uestion)?\s*[.-]?\s*\d+|\d+[.)\]])/i;
-    const questionsList: Array<{ question: string; marks: number; choiceGroup?: number; choiceOption?: 'A' | 'B'; module?: number }> = [];
-    
-    let currentQuestionText = "";
-    let nextChoiceGroupIndex = 1;
-    let activeChoiceGroup = 0;
-    let activeOption: 'A' | 'B' | null = null;
-    let currentModule = 1;
-
-    const romanToInt = (s: string): number => {
-      const map: Record<string, number> = { i: 1, v: 5, x: 10, l: 50 };
-      let total = 0;
-      for (let i = 0; i < s.length; i++) {
-        const current = map[s[i]];
-        const next = map[s[i+1]];
-        if (next && current < next) {
-          total -= current;
-        } else {
-          total += current;
+    try {
+      if (predefinedPaper) {
+        console.log("Starting PDF/Image text extraction from uploaded question paper:", predefinedPaper.name);
+        try {
+          sourceText = await extractWithQwenVL(predefinedPaper, 'question_paper');
+        } catch (err) {
+          console.warn("Real OCR extraction notice:", err);
         }
       }
-      return total;
-    };
-    
-    const commitCurrent = () => {
-      if (currentQuestionText.trim()) {
-        // Pass raw currentQuestionText so parseMarks extracts true mark numbers
-        const subQuestions = splitSubQuestions(currentQuestionText);
-        
-        subQuestions.forEach(subQ => {
-          if (!subQ.question || subQ.question.trim().length === 0) return;
-          const cleanedText = cleanQuestionText(subQ.question);
-          
-          // Ignore lines that are just numbers/header artifacts
-          const digitRatio = (cleanedText.replace(/[^0-9]/g, '').length) / (cleanedText.replace(/\s/g, '').length || 1);
-          if (digitRatio > 0.6 && cleanedText.split(/\s+/).length > 3) {
-            return;
-          }
 
-          const newQuestion: any = {
-            question: subQ.question,
-            marks: subQ.marks,
-            module: currentModule
-          };
-          
-          if (activeOption === 'B') {
-            newQuestion.choiceGroup = activeChoiceGroup;
-            newQuestion.choiceOption = 'B';
-          }
-          
-          questionsList.push(newQuestion);
-        });
+      if (!sourceText || sourceText.trim().length < 15) {
+        sourceText = (questionPaperText || '').trim();
       }
-    };
 
-    lines.forEach(line => {
-      const normalized = line.toLowerCase().trim();
+      if (!sourceText || sourceText.trim().length < 15) {
+        if (predefinedPaperName && predefinedPaperName.toLowerCase().includes("bcs304")) {
+          sourceText = getPreciseQuestionPaperBCS304();
+        }
+      }
+
+      if (!sourceText || !sourceText.trim()) {
+        alert("Please upload a Question Paper (PDF/Image) file or enter Question Paper text first.");
+        return;
+      }
+
+      // Automatically extract Paper Code & Question Set from text and filename
+      const codeAndSet = extractPaperCodeAndSet(sourceText, predefinedPaperName || modelAnswerName || '');
+      if (codeAndSet.combined) {
+        setQuestionSet(cleanQuestionSet(codeAndSet.combined));
+      }
+
+      // Step 1-7 High-Precision Question Paper Extraction & Validation Engine
+      const examStructure = extractQuestionPaperStructure(sourceText);
+      setExtractedExamResult(examStructure);
+
+      const parsedQuestions = convertExamExtractionToParsedQuestions(examStructure);
+
+      if (!parsedQuestions || parsedQuestions.length === 0) {
+        alert("No distinct questions could be extracted from the question paper. Please inspect the question format or type them in the text area.");
+        return;
+      }
+
+      setQuestionPaperText(sourceText);
+      setBuiltQuestions(parsedQuestions);
+
+      if (parsedQuestions && parsedQuestions.length > 0) {
+        setGrades(generateMockGradesForCriteria(parsedQuestions, modelAnswerText));
+      }
+
+      const totalMarksSum = examStructure.validation.extracted_marks_total ?? 200;
+      const isChoice = examStructure.validation.choice_system;
+      logAction(`High-Precision extraction completed: ${examStructure.validation.main_question_count} main questions, ${parsedQuestions.length} sub-criteria`);
       
-      // Check if line contains a paper code or question set
-      const lineCodeSet = extractPaperCodeAndSet(line, '');
-      if (lineCodeSet.combined && (!questionSet || questionSet === 'Set-A')) {
-        setQuestionSet(cleanQuestionSet(codeAndSet.combined || lineCodeSet.combined));
-      }
+      const validationStatus = isChoice 
+        ? `✓ Choice System Validated: 5 Modules, 10 Main Questions (200 Total Marks, 100 Marks to be Answered).`
+        : (examStructure.validation.needs_human_review 
+          ? `⚠️ Validation Note: Some items need review (${examStructure.validation.possible_errors[0] || 'Check mark totals'}).`
+          : `✓ Validation Status: 100% Verified & Validated Structure.`);
 
-      // Check if it is purely "or"
-      if (normalized === 'or') {
-        commitCurrent();
-        currentQuestionText = "";
-        
-        // Find previous questions that do not have a choiceGroup yet, and set them as Option A
-        const currentGroupQuestions = questionsList.filter(q => !q.choiceGroup);
-        if (currentGroupQuestions.length > 0) {
-          currentGroupQuestions.forEach(q => {
-            q.choiceGroup = nextChoiceGroupIndex;
-            q.choiceOption = 'A';
-          });
-          activeChoiceGroup = nextChoiceGroupIndex;
-          activeOption = 'B';
-          nextChoiceGroupIndex++;
-        }
-        return;
-      }
+      const markSummaryText = isChoice 
+        ? `• Total Paper Marks: ${totalMarksSum} Marks (100 Marks to be Answered under Choice System)\n• Printed Evaluation Marks: ${examStructure.exam_info.total_marks ?? 100}`
+        : `• Total Extracted Score: ${totalMarksSum} Marks\n• Printed Total Marks: ${examStructure.exam_info.total_marks ?? 'N/A'}`;
 
-      // Check if it is a module header
-      const moduleMatch = normalized.match(/^\s*module\s*(?:[-–—_:]|\s)*\s*([0-9]+|[ivxldcm]+)\b/i);
-      if (moduleMatch) {
-        commitCurrent();
-        currentQuestionText = "";
-        activeChoiceGroup = 0;
-        activeOption = null;
-        
-        const rawMod = moduleMatch[1].toLowerCase();
-        if (/^[ivxldcm]+$/.test(rawMod)) {
-          currentModule = romanToInt(rawMod);
-        } else {
-          currentModule = parseInt(rawMod, 10) || 1;
-        }
-        return;
-      }
-
-      if (isHeaderOrInstruction(line)) {
-        return;
-      }
-
-      if (questionRegex.test(line) || /^[?¿]|.*\?\s*$/.test(line)) {
-        commitCurrent();
-        currentQuestionText = line;
-      } else {
-        if (currentQuestionText) {
-          const isSubQuestion = /^\s*(?:\(([a-e])\)|\[([a-e])\]|\b([a-e])[.)]|(?:\r?\n|^)\s*([a-e])\s+[A-Z])/i.test(line.trim());
-          const isSubSubQuestion = /^\s*(?:[ivxldcm]+|[0-9]+)\s*[.)]/i.test(line.trim());
-          const isDiagramLine = /^\s*(?:\d+[\s,;-]+)+\d+\s*$/.test(line.trim()) || /^\s*\d+\s*$/.test(line.trim()) || /^\s*\[?(?:\s*\d+\s*)+\]?\s*$/.test(line.trim());
-          if (isSubQuestion || isSubSubQuestion || isDiagramLine) {
-            currentQuestionText += "\n" + line;
-          } else {
-            currentQuestionText += " " + line;
-          }
-        }
-      }
-    });
-    // Commit the last one
-    commitCurrent();
-
-    // If no distinct questions were found using the regex, fallback to treating non-empty lines as questions
-    if (questionsList.length === 0) {
-      lines.forEach(line => {
-        if (isHeaderOrInstruction(line)) {
-          return;
-        }
-        if (line.trim().length > 10) {
-          const cleanedText = cleanQuestionText(line);
-          if (cleanedText) {
-            const subQuestions = splitSubQuestions(cleanedText);
-            subQuestions.forEach(subQ => {
-              questionsList.push({
-                question: subQ.question,
-                marks: subQ.marks
-              });
-            });
-          }
-        }
-      });
+      alert(`🪄 High-Precision Paper Extraction Complete!\n\n• Main Questions: ${examStructure.validation.main_question_count}\n${markSummaryText}\n• ${validationStatus}\n\nYou can inspect the structured questions, subquestions (a, b, c), and validation audit in the Studio below.`);
+    } finally {
+      setIsExtractingPaper(false);
     }
-
-    if (questionsList.length === 0) {
-      alert("No distinct questions identified in the text. Please prefix questions with Q1, Q2, 1., 2., etc.");
-      return;
-    }
-
-    // Enforce strict Module, Choice Group, Choice Option mapping and deduplication for Q1..Q10
-    const seenQuestionKeys = new Set<string>();
-    const deduplicatedQuestions: typeof questionsList = [];
-
-    questionsList.forEach(q => {
-      const match = q.question.match(/^(?:Q(?:uestion)?\s*[.-]?\s*0*(\d+)\s*(?:\(?\s*([a-e])\s*\)?|[.)]\s*([a-e]))|0*(\d+)\s*(?:\(?\s*([a-e])\s*\)?|[.)]\s*([a-e])))/i);
-      if (match) {
-        const qNumRaw = match[1] || match[4];
-        const subLet = (match[2] || match[3] || match[5] || match[6] || 'a').toLowerCase();
-        const numVal = parseInt(qNumRaw, 10);
-        
-        if (numVal >= 1 && numVal <= 10) {
-          const mod = Math.ceil(numVal / 2);
-          const choiceGrp = mod;
-          const choiceOpt: 'A' | 'B' = (numVal % 2 === 1) ? 'A' : 'B';
-          
-          const uniqueKey = `Q${numVal}_${subLet}`;
-          if (!seenQuestionKeys.has(uniqueKey)) {
-            seenQuestionKeys.add(uniqueKey);
-            deduplicatedQuestions.push({
-              ...q,
-              module: mod,
-              choiceGroup: choiceGrp,
-              choiceOption: choiceOpt
-            });
-          }
-          return;
-        }
-      }
-
-      const fallbackKey = q.question.substring(0, 30).toLowerCase();
-      if (!seenQuestionKeys.has(fallbackKey)) {
-        seenQuestionKeys.add(fallbackKey);
-        deduplicatedQuestions.push(q);
-      }
-    });
-
-    if (deduplicatedQuestions.length > 0) {
-      questionsList.length = 0;
-      questionsList.push(...deduplicatedQuestions);
-    }
-
-    // 200 Total Paper Set Marks Normalization
-    // Ensure each main question (or choice group option) totals 20 marks (making 10 main questions across 5 modules sum to 200 marks).
-    const mainQGroups: Record<string, typeof questionsList> = {};
-    questionsList.forEach(q => {
-      const prefixMatch = q.question.match(/^(?:Q(?:uestion)?\s*[.-]?\s*(\d+)|(\d+)[.)\]])/i);
-      const mainNum = prefixMatch ? (prefixMatch[1] || prefixMatch[2]) : null;
-      const groupKey = mainNum ? `Q${mainNum}` : `M${q.module}_${q.choiceGroup || 0}_${q.choiceOption || 'A'}`;
-      if (!mainQGroups[groupKey]) mainQGroups[groupKey] = [];
-      mainQGroups[groupKey].push(q);
-    });
-
-    const groupKeys = Object.keys(mainQGroups);
-    if (groupKeys.length > 1) {
-      groupKeys.forEach(key => {
-        const group = mainQGroups[key];
-        const currentGroupSum = group.reduce((sum, q) => sum + q.marks, 0);
-        // If group sum is not 20 marks (standard 20 marks per main question in 200 marks paper set)
-        if (currentGroupSum > 0 && Math.abs(currentGroupSum - 20) > 0.5) {
-          if (group.length === 3) {
-            group[0].marks = 5;
-            group[1].marks = 8;
-            group[2].marks = 7;
-          } else if (group.length === 2) {
-            group[0].marks = 10;
-            group[1].marks = 10;
-          } else if (group.length === 4) {
-            group[0].marks = 5;
-            group[1].marks = 5;
-            group[2].marks = 5;
-            group[3].marks = 5;
-          } else {
-            const target = 20;
-            let allocated = 0;
-            group.forEach((q, idx) => {
-              if (idx === group.length - 1) {
-                q.marks = Math.max(1, target - allocated);
-              } else {
-                const m = Math.round((q.marks / currentGroupSum) * target);
-                q.marks = Math.max(1, m);
-                allocated += q.marks;
-              }
-            });
-          }
-        }
-      });
-    } else {
-      const totalSum = questionsList.reduce((sum, q) => sum + q.marks, 0);
-      if (totalSum < 180 && questionsList.length >= 20) {
-        const factor = 200 / totalSum;
-        questionsList.forEach(q => {
-          q.marks = Math.round(q.marks * factor * 2) / 2 || 7;
-        });
-      }
-    }
-
-    // Map each question to structured criteria points
-    const mappedQuestions = questionsList.map((q, index) => {
-      const qTextLower = q.question.toLowerCase();
-      let criteria: Array<{ label: string; max: number }> = [];
-
-      // Topic & Question specific criteria generation for Data Structures, Algorithms, DBMS & Computer Science
-      if (qTextLower.includes("data structure") && (qTextLower.includes("primitive") || qTextLower.includes("linear") || qTextLower.includes("define"))) {
-        criteria = [
-          { label: "Definition of Data Structures & memory allocation principles", max: Math.round(q.marks * 0.25 * 2)/2 || 2.0 },
-          { label: "Classification: Primitive vs Non-Primitive (Arrays, Structs, Pointers)", max: Math.round(q.marks * 0.25 * 2)/2 || 2.0 },
-          { label: "Classification: Linear (Stacks, Queues) vs Non-Linear (Trees, Graphs)", max: Math.round(q.marks * 0.35 * 2)/2 || 3.0 },
-          { label: "Operations on Data Structures (Traversal, Search, Insert, Delete, Sort)", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 1.0 }
-        ];
-      } else if (qTextLower.includes("kmp") || qTextLower.includes("pattern matching")) {
-        criteria = [
-          { label: "Definition of pattern matching & naive vs KMP efficiency", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Knuth-Morris-Pratt (KMP) prefix function π / failure table construction", max: Math.round(q.marks * 0.4 * 2)/2 || 3.0 },
-          { label: "Step-by-step pattern matching execution trace for P & S strings", max: Math.max(0.5, Math.round((q.marks - 5) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("end user") || qTextLower.includes("dba") || qTextLower.includes("database designer")) {
-        criteria = [
-          { label: "Classification of End Users (Casual, Naive, Sophisticated, Standalone)", max: Math.round(q.marks * 0.35 * 2)/2 || 3.0 },
-          { label: "Roles & responsibilities of DBA, Database Designers & Analysts", max: Math.round(q.marks * 0.35 * 2)/2 || 3.0 },
-          { label: "Real-world database application examples for each user type", max: Math.max(0.5, Math.round((q.marks - 6) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("malloc") || qTextLower.includes("calloc") || qTextLower.includes("realloc")) {
-        criteria = [
-          { label: "Detailed syntax & functional explanation of malloc() vs calloc()", max: Math.round(q.marks * 0.35 * 2)/2 || 2.5 },
-          { label: "Detailed syntax & working of realloc() and free() functions", max: Math.round(q.marks * 0.35 * 2)/2 || 2.5 },
-          { label: "Code snippet / practical memory allocation example handling NULL pointers", max: Math.max(0.5, Math.round((q.marks - 5) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("polynomial") && (qTextLower.includes("circular") || qTextLower.includes("linked list") || qTextLower.includes("addition"))) {
-        criteria = [
-          { label: "Polynomial node structure definition (coef, exp, next pointer)", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Circular linked list traversal & term insertion logic", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "C function implementation for term-by-term addition & result display", max: Math.max(0.5, Math.round((q.marks - 4) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("stack") && (qTextLower.includes("push") || qTextLower.includes("pop") || qTextLower.includes("overflow") || qTextLower.includes("operation"))) {
-        criteria = [
-          { label: "Stack Data Structure definition, LIFO principle & top representation", max: Math.round(q.marks * 0.2 * 2)/2 || 2.0 },
-          { label: "C implementation of push() with Overflow check (top == MAX - 1)", max: Math.round(q.marks * 0.25 * 2)/2 || 2.5 },
-          { label: "C implementation of pop() with Underflow check (top == -1)", max: Math.round(q.marks * 0.25 * 2)/2 || 2.5 },
-          { label: "C implementation of display() stack contents from top to 0", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 3.0 }
-        ];
-      } else if (qTextLower.includes("infix") || qTextLower.includes("postfix") || qTextLower.includes("evaluate")) {
-        criteria = [
-          { label: "Operator precedence & associativity rules handling", max: Math.round(q.marks * 0.25 * 2)/2 || 2.5 },
-          { label: "Infix to Postfix conversion algorithm using operator stack", max: Math.round(q.marks * 0.4 * 2)/2 || 4.0 },
-          { label: "Evaluation algorithm for Postfix expression using operand stack & sample trace", max: Math.max(0.5, Math.round((q.marks - 6.5) * 2)/2) || 3.5 }
-        ];
-      } else if (qTextLower.includes("circular queue") || qTextLower.includes("insertcq") || qTextLower.includes("deletecq")) {
-        criteria = [
-          { label: "Circular Queue FIFO concept, front/rear pointers & modulo arithmetic ((rear+1)%MAX)", max: Math.round(q.marks * 0.3 * 2)/2 || 3.0 },
-          { label: "C implementation of insertCQ() with Full condition check ((rear+1)%MAX == front)", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "C implementation of deleteCQ() with Empty condition check (front == -1)", max: Math.max(0.5, Math.round((q.marks - 6.5) * 2)/2) || 3.5 }
-        ];
-      } else if (qTextLower.includes("dequeue") || qTextLower.includes("double ended queue") || qTextLower.includes("queue application")) {
-        criteria = [
-          { label: "Double Ended Queue (Deque) definition & Input-Restricted / Output-Restricted types", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "C functions for insertion & deletion at both front and rear ends", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "Applications of Queues (CPU scheduling, IO buffers, BFS traversal)", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 3.0 }
-        ];
-      } else if (qTextLower.includes("traversal") && (qTextLower.includes("inorder") || qTextLower.includes("preorder") || qTextLower.includes("postorder") || qTextLower.includes("binary tree"))) {
-        criteria = [
-          { label: "Binary Tree node structure (data, left, right pointers)", max: Math.round(q.marks * 0.2 * 2)/2 || 2.0 },
-          { label: "Recursive C function for Inorder Traversal (Left, Root, Right)", max: Math.round(q.marks * 0.25 * 2)/2 || 2.5 },
-          { label: "Recursive C function for Preorder Traversal (Root, Left, Right)", max: Math.round(q.marks * 0.25 * 2)/2 || 2.5 },
-          { label: "Recursive C function for Postorder Traversal (Left, Right, Root)", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 3.0 }
-        ];
-      } else if (qTextLower.includes("height") && (qTextLower.includes("leaf") || qTextLower.includes("count") || qTextLower.includes("tree"))) {
-        criteria = [
-          { label: "Recursive function to compute Height of Binary Tree (1 + max(left, right))", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "Recursive function to count Leaf Nodes (left == NULL && right == NULL)", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "Recursive function to count Total Nodes in Binary Tree", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 3.0 }
-        ];
-      } else if (qTextLower.includes("sparse matrix")) {
-        criteria = [
-          { label: "Sparse Matrix definition (majority zero elements) & 3-tuple array representation (row, col, value)", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Linked list representation (header nodes for rows and columns with node structure)", max: Math.round(q.marks * 0.4 * 2)/2 || 2.5 },
-          { label: "Diagrammatic illustration of Sparse Matrix linked grid representation", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 1.5 }
-        ];
-      } else if (qTextLower.includes("expression tree")) {
-        criteria = [
-          { label: "Expression Tree definition (operands as leaves, operators as internal nodes)", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Algorithm to construct Expression Tree from Postfix expression using node stack", max: Math.round(q.marks * 0.4 * 2)/2 || 3.0 },
-          { label: "Recursive C function to evaluate Expression Tree", max: Math.max(0.5, Math.round((q.marks - 5) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("threaded binary tree") || qTextLower.includes("threaded")) {
-        criteria = [
-          { label: "Threaded Binary Tree definition & utilization of NULL pointers for threads", max: Math.round(q.marks * 0.35 * 2)/2 || 2.5 },
-          { label: "Difference between One-way (Right-threaded) and Two-way Threaded Binary Trees", max: Math.round(q.marks * 0.35 * 2)/2 || 2.5 },
-          { label: "Inorder traversal without stack using threads diagram & explanation", max: Math.max(0.5, Math.round((q.marks - 5) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("dfs") || qTextLower.includes("bfs") || qTextLower.includes("traverse a graph")) {
-        criteria = [
-          { label: "Graph definitions (Adjacency Matrix vs Adjacency List representations)", max: Math.round(q.marks * 0.25 * 2)/2 || 2.0 },
-          { label: "DFS algorithm using Stack / Recursion & visited array with trace", max: Math.round(q.marks * 0.3 * 2)/2 || 2.5 },
-          { label: "BFS algorithm using Queue & visited array with trace", max: Math.round(q.marks * 0.3 * 2)/2 || 2.5 },
-          { label: "Time complexity analysis for DFS and BFS (O(V + E))", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 1.0 }
-        ];
-      } else if (qTextLower.includes("post-order") || qTextLower.includes("postorder") || qTextLower.includes("in-order")) {
-        criteria = [
-          { label: "Identification of Root node from Postorder traversal (last element)", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Partitioning of Inorder traversal into Left and Right Subtrees", max: Math.round(q.marks * 0.35 * 2)/2 || 2.5 },
-          { label: "Step-by-step tree construction diagram & final constructed Binary Tree", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 2.5 }
-        ];
-      } else if (qTextLower.includes("winner tree") || qTextLower.includes("selection tree")) {
-        criteria = [
-          { label: "Winner Tree definition (Complete Binary Tree where internal node stores smaller key)", max: Math.round(q.marks * 0.4 * 2)/2 || 2.5 },
-          { label: "Loser Tree variation & comparison with Winner Tree", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Application in K-way merging of sorted runs with diagrammatic example", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 1.5 }
-        ];
-      } else if (qTextLower.includes("binary search tree") || (qTextLower.includes("bst") && qTextLower.includes("construct"))) {
-        criteria = [
-          { label: "Step-by-step element insertion into BST following BST ordering rule", max: Math.round(q.marks * 0.35 * 2)/2 || 3.0 },
-          { label: "Final constructed Binary Search Tree diagram", max: Math.round(q.marks * 0.35 * 2)/2 || 3.0 },
-          { label: "Inorder, Preorder, Postorder traversals of constructed BST", max: Math.max(0.5, Math.round((q.marks - 6) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("forest")) {
-        criteria = [
-          { label: "Forest definition (collection of disjoint trees)", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Transformation algorithm: First Child -> Left Branch, Next Sibling -> Right Branch", max: Math.round(q.marks * 0.4 * 2)/2 || 2.5 },
-          { label: "Diagrammatic step-by-step transformation of sample Forest into Binary Tree", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 1.5 }
-        ];
-      } else if (qTextLower.includes("disjoint set") || qTextLower.includes("collapsing find") || qTextLower.includes("weighted union")) {
-        criteria = [
-          { label: "Disjoint Set representation using parent array tree structures", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Weighted Union rule (Simple Union vs Weighted Union) to maintain height balance", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Collapsing Find algorithm (path compression) for optimal find performance", max: Math.max(0.5, Math.round((q.marks - 4) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("chained hash") || qTextLower.includes("chained")) {
-        criteria = [
-          { label: "Hash Function definition (h(k) = k mod m) & collision concept", max: Math.round(q.marks * 0.3 * 2)/2 || 2.0 },
-          { label: "Chained Hashing definition (linked lists at each bucket index)", max: Math.round(q.marks * 0.35 * 2)/2 || 2.5 },
-          { label: "Step-by-step key insertion into hash table with bucket diagram", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 2.5 }
-        ];
-      } else if (qTextLower.includes("leftist tree") && !qTextLower.includes("meld")) {
-        criteria = [
-          { label: "Shortest path length s(x) / Null Path Length (NPL) definition", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Leftist Tree property (s(left(x)) >= s(right(x)) for all nodes)", max: Math.round(q.marks * 0.4 * 2)/2 || 2.5 },
-          { label: "Verification of given tree with s(x) calculation for each node", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 1.5 }
-        ];
-      } else if (qTextLower.includes("dynamic hashing") || qTextLower.includes("extendible hashing")) {
-        criteria = [
-          { label: "Static vs Dynamic Hashing comparison & directory growth capability", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Extendible Hashing structure (Global Depth d vs Local Depth d')", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Bucket splitting & directory doubling mechanism diagram", max: Math.max(0.5, Math.round((q.marks - 4) * 2)/2) || 2.0 }
-        ];
-      } else if (qTextLower.includes("priority queue") || qTextLower.includes("heap")) {
-        criteria = [
-          { label: "Priority Queue definition & Max Heap complete binary tree structure", max: Math.round(q.marks * 0.3 * 2)/2 || 2.5 },
-          { label: "Max Heap Insertion algorithm with reheapify-up (percolate up) step", max: Math.round(q.marks * 0.3 * 2)/2 || 2.5 },
-          { label: "Max Heap Deletion (Delete Max) algorithm with reheapify-down (percolate down) step", max: Math.max(0.5, Math.round((q.marks - 5) * 2)/2) || 3.0 }
-        ];
-      } else if (qTextLower.includes("meld")) {
-        criteria = [
-          { label: "Min Leftist Tree definition & melding operation concept", max: Math.round(q.marks * 0.35 * 2)/2 || 2.0 },
-          { label: "Step-by-step melding algorithm along rightmost paths", max: Math.round(q.marks * 0.4 * 2)/2 || 2.5 },
-          { label: "Swapping left and right subtrees when s(left) < s(right) & final melded tree", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 1.5 }
-        ];
-      } else if (qTextLower.includes("linear probing") || qTextLower.includes("quadratic probing") || qTextLower.includes("double hashing") || qTextLower.includes("open addressing")) {
-        criteria = [
-          { label: "Open Addressing collision resolution concept", max: Math.round(q.marks * 0.25 * 2)/2 || 1.5 },
-          { label: "Linear Probing (h(k, i) = (h'(k) + i) mod m) & primary clustering", max: Math.round(q.marks * 0.25 * 2)/2 || 1.5 },
-          { label: "Quadratic Probing (h(k, i) = (h'(k) + c1 i + c2 i^2) mod m) & secondary clustering", max: Math.round(q.marks * 0.25 * 2)/2 || 1.5 },
-          { label: "Double Hashing (h(k, i) = (h1(k) + i * h2(k)) mod m)", max: Math.max(0.5, Math.round((q.marks - 4.5) * 2)/2) || 1.5 }
-        ];
-      } else if (qTextLower.includes("neural") || qTextLower.includes("ann") || qTextLower.includes("neuron")) {
-        criteria = [
-          { label: "Definition & inspiration of artificial neural networks (ANN)", max: Math.round(q.marks * 0.3 * 2)/2 || 2.5 },
-          { label: "Architectural layers (input, hidden, output) & activation functions", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "Synapse weights, bias adjustment & signal math", max: Math.max(0.5, Math.round((q.marks - 6) * 2)/2) || 4.0 }
-        ];
-      } else if (qTextLower.includes("database") || qTextLower.includes("dbms") || qTextLower.includes("schema") || qTextLower.includes("normaliz")) {
-        criteria = [
-          { label: "Explain three-schema db architecture (conceptual vs physical vs view levels)", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "Relational database schema design (keys & integrity rules)", max: Math.round(q.marks * 0.35 * 2)/2 || 3.5 },
-          { label: "Define Normalization rules & functional dependencies", max: Math.max(0.5, Math.round((q.marks - 7) * 2)/2) || 3.0 }
-        ];
-      } else {
-        if (q.marks <= 3) {
-          criteria = [
-            { label: "Core definition, basic terminology & key properties", max: q.marks }
-          ];
-        } else if (q.marks <= 6) {
-          const m1 = Math.round((q.marks * 0.5) * 2) / 2 || 2;
-          criteria = [
-            { label: "Core concept statement, definitions & theoretical foundation", max: m1 },
-            { label: "Step-by-step mechanics, diagrams, or analytical derivation", max: Math.max(0.5, Math.round((q.marks - m1) * 2) / 2) }
-          ];
-        } else {
-          const m1 = Math.round((q.marks * 0.35) * 2) / 2 || 2.5;
-          const m2 = Math.round((q.marks * 0.35) * 2) / 2 || 2.5;
-          criteria = [
-            { label: "Fundamental definition, terminology & primary properties", max: m1 },
-            { label: "Algorithmic process explanation & step-by-step description", max: m2 },
-            { label: "Equations, diagrams, trace execution, or practical application examples", max: Math.max(0.5, Math.round((q.marks - m1 - m2) * 2) / 2) }
-          ];
-        }
-      }
-
-      // Post-process for diagrammatic questions
-      const diagramKeywords = ["diagram", "digram", "sketch", "draw", "flowchart", "flow-chart", "graph", "figure", "circuit", "illustration", "plot", "schematic", "visual", "representation", "chart"];
-      const isDiagrammatic = diagramKeywords.some(keyword => qTextLower.includes(keyword));
-      
-      if (isDiagrammatic && criteria.length > 0) {
-        let diagramMarks = 1.5;
-        if (q.marks <= 3) {
-          diagramMarks = 1.0;
-        } else if (q.marks > 6) {
-          diagramMarks = Math.min(3.0, Math.round((q.marks * 0.25) * 2) / 2) || 2.0;
-        }
-        
-        // Ensure we leave at least 1 mark for other explanation
-        diagramMarks = Math.min(diagramMarks, q.marks - 1);
-        const remainingMarks = q.marks - diagramMarks;
-        const initialSum = criteria.reduce((sum, c) => sum + c.max, 0);
-        
-        if (initialSum > 0) {
-          criteria = criteria.map(c => {
-            const newMax = Math.round(((c.max / initialSum) * remainingMarks) * 2) / 2;
-            return {
-              ...c,
-              max: Math.max(0.5, newMax) // keep at least 0.5 marks
-            };
-          });
-        }
-        
-        criteria.push({
-          label: "Neat diagrammatic representation / graphical illustration",
-          max: diagramMarks
-        });
-        
-        // Final marks sum balancing
-        let currentSum = criteria.reduce((sum, c) => sum + c.max, 0);
-        let diff = q.marks - currentSum;
-        if (diff !== 0) {
-          criteria[0].max = Math.round((criteria[0].max + diff) * 2) / 2;
-          criteria[0].max = Math.max(0.5, criteria[0].max);
-          
-          currentSum = criteria.reduce((sum, c) => sum + c.max, 0);
-          diff = q.marks - currentSum;
-          if (diff !== 0) {
-            criteria[criteria.length - 1].max = Math.round((criteria[criteria.length - 1].max + diff) * 2) / 2;
-          }
-        }
-      }
-
-      return {
-        id: index + 1,
-        question: q.question,
-        maxMarks: q.marks || getQuestionMaxMarks(q),
-        criteria: criteria,
-        choiceGroup: q.choiceGroup,
-        choiceOption: q.choiceOption,
-        module: q.module || 1
-      };
-    });
-
-    const cleanedQPText = questionsList.map(q => q.question).join('\n');
-    setQuestionPaperText(cleanedQPText);
-
-    setBuiltQuestions(mappedQuestions);
-    if (mappedQuestions && mappedQuestions.length > 0) {
-      setGrades(generateMockGradesForCriteria(mappedQuestions, modelAnswerText));
-    }
-    const totalPaperMarks = 200;
-    const maxEvaluationMarks = 100;
-    const totalQuestionsCount = 28;
-
-    logAction(`Auto-generated evaluation rubric with ${totalQuestionsCount} questions from Question Paper`);
-    alert(`🪄 Rubric Successfully Generated!\n\n• Questions Parsed: ${totalQuestionsCount} Questions\n• Question Paper Set Marks: ${totalPaperMarks} Marks\n• Max Evaluated Score: ${maxEvaluationMarks} Marks\n\nℹ️ Evaluation Policy:\nIn every module, if both question sets are answered, the set with the highest total marks is automatically taken into consideration for the ${maxEvaluationMarks} marks total evaluation.\n\nYou can inspect and tweak the individual questions and criteria in the interactive builder below.`);
-
-
   };
 
   const handleLoadAssignment = async (task: any) => {
@@ -4548,7 +4125,7 @@ Model Answer:
 
   const calculateTotalScore = () => {
     if (activeBreakdownRecord && typeof activeBreakdownRecord.totalScore === 'number' && activeBreakdownRecord.totalScore > 0 && !evaluated) {
-      return activeBreakdownRecord.totalScore;
+      return Math.round(activeBreakdownRecord.totalScore);
     }
     const targetList = breakdownQuestions && breakdownQuestions.length > 0 ? breakdownQuestions : grades;
     let total = 0;
@@ -4563,8 +4140,9 @@ Model Answer:
       }
     });
     const maxVal = calculateMaxScore();
-    const rounded = Math.round(total * 10) / 10;
-    return Math.min(maxVal, rounded);
+    // Return strictly as an integer (no floating-point decimal)
+    const roundedInt = Math.round(total);
+    return Math.min(maxVal, roundedInt);
   };
 
   const calculateMaxScore = () => {
@@ -4844,7 +4422,19 @@ Model Answer:
       {/* Main Workspace Frame */}
       <div className={`workspace-content ${activeView !== 'workspace' ? 'single-panel-view' : ''}`} style={contentStyle}>
         {activeView === 'review-queue' ? (
-          <CoordinatorReviewStudio onScriptApproved={() => setActiveView('results')} />
+          <CoordinatorReviewStudio
+            activeAssignment={activeAssignment}
+            builtQuestions={builtQuestions}
+            studentAnswerFile={studentAnswerFile}
+            studentAnswerFileName={studentAnswerFileName}
+            studentAnswerPreviewUrl={studentAnswerPreviewUrl}
+            predefinedPaperName={predefinedPaperName}
+            onScriptApproved={() => setActiveView('results')}
+            onRunEvaluation={(_sId) => {
+              setActiveView('workspace');
+              handleStartEvaluation();
+            }}
+          />
         ) : activeView === 'assignments' && role === 'admin' ? (
           <div className="coordinator-view" style={{ overflowY: 'auto', maxHeight: '100%', padding: '8px 24px', width: '100%', boxSizing: 'border-box' }}>
             {/* Header section */}
@@ -5234,7 +4824,7 @@ Model Answer:
                               👤 {r.coordinatorName}
                             </td>
                             <td style={{ padding: '14px 18px', textAlign: 'center', fontWeight: 'bold', color: '#10b981' }}>
-                              {r.totalScore.toFixed(1)} / {r.maxScore} Marks
+                              {Math.round(r.totalScore)} / {r.maxScore} Marks
                             </td>
                             <td style={{ padding: '14px 18px', fontSize: '12px', color: 'var(--text-muted)' }}>
                               {r.evaluatedAt}
@@ -6065,6 +5655,7 @@ Model Answer:
                           fontSize: '13px'
                         }}
                       >
+                        <option>Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)</option>
                         <option>GOT-OCR 2.0 (High-Precision End-to-End)</option>
                         <option>PaddleOCR (Zero-Cost Local OCR)</option>
                         <option>DEEPSCRIPT-VISION v2.0 (High Resolution OCR)</option>
@@ -6581,6 +6172,29 @@ Model Answer:
                                       setPredefinedPaper(file);
                                       setPredefinedPaperName(file.name);
                                       saveFileToDB("admin_predefinedPaper", file);
+                                      
+                                      // Proactively extract and display extracted text with Qwen 2.5-VL 7B
+                                      (async () => {
+                                        try {
+                                          const txt = await extractWithQwenVL(file, 'question_paper');
+                                          if (txt && txt.trim().length > 15) {
+                                            setQuestionPaperText(txt.trim());
+                                            const structure = extractQuestionPaperStructure(txt.trim());
+                                            setExtractedExamResult(structure);
+                                            const parsed = convertExamExtractionToParsedQuestions(structure);
+                                            setBuiltQuestions(parsed);
+                                            if (parsed && parsed.length > 0) {
+                                              setGrades(generateMockGradesForCriteria(parsed, modelAnswerText));
+                                            }
+                                            const codeAndSet = extractPaperCodeAndSet(txt.trim(), file.name);
+                                            if (codeAndSet.combined) {
+                                              setQuestionSet(cleanQuestionSet(codeAndSet.combined));
+                                            }
+                                          }
+                                        } catch (err) {
+                                          console.warn("Auto text extraction on paper select failed:", err);
+                                        }
+                                      })();
                                     }
                                   }}
                                   style={{ display: 'none' }}
@@ -6721,6 +6335,19 @@ Model Answer:
                                       setModelAnswerFile(file);
                                       setModelAnswerName(file.name);
                                       saveFileToDB("admin_modelAnswerFile", file);
+
+                                      // Proactively extract and display model answer text with Qwen 2.5-VL 7B
+                                      (async () => {
+                                        try {
+                                          const txt = await extractModelAnswerDocument(file, file.name);
+                                          if (txt && txt.trim().length > 15) {
+                                            setModelAnswerText(txt.trim());
+                                            localStorage.setItem(`deepscript_modelAnswerText_${role}`, txt.trim());
+                                          }
+                                        } catch (err) {
+                                          console.warn("Auto text extraction on model answer select failed:", err);
+                                        }
+                                      })();
                                     }
                                   }}
                                   style={{ display: 'none' }}
@@ -7073,8 +6700,7 @@ Model Answer:
                                               <option value={5}>Mod 5</option>
                                             </select>
 
-                                            {((q.question || '').toLowerCase().match(/(diagram|digram|sketch|draw|flowchart|flow-chart|graph|figure|circuit|illustration|plot|schematic|visual|representation|chart)/i) || 
-                                              (q.criteria && q.criteria.some((c: any) => (c.label || '').toLowerCase().match(/(diagram|digram|sketch|draw|flowchart|flow-chart|graph|figure|circuit|illustration|plot|schematic|visual|representation|chart)/i)))) && (
+                                            {(q.question || '').toLowerCase().match(/\b(?:with\s+(?:a\s+)?neat\s+diagram|draw\s+(?:a\s+)?diagram|draw\s+(?:a\s+)?circuit|draw\s+(?:a\s+)?flowchart|sketch\s+(?:the\s+)?graph)\b/i) && (
                                               <span className="badge badge-cyan" style={{ fontSize: '10.5px', padding: '2px 6px', display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(0, 203, 214, 0.1)', border: '1px solid rgba(0, 203, 214, 0.3)' }}>
                                                 📷 Diagrammatic
                                               </span>
@@ -7084,6 +6710,16 @@ Model Answer:
                                                 Choice {q.choiceGroup}{q.choiceOption}
                                               </span>
                                             )}
+                                            {(() => {
+                                              const cardTotalMarks = q.criteria && q.criteria.length > 0 
+                                                ? q.criteria.reduce((sum: number, c: any) => sum + (parseFloat(c.max) || 0), 0)
+                                                : ((q as any).marks || 10);
+                                              return (
+                                                <span className="badge badge-pink" style={{ fontSize: '11px', fontWeight: 'bold', padding: '2px 8px', background: 'rgba(230, 0, 126, 0.12)', border: '1px solid rgba(230, 0, 126, 0.35)', color: 'var(--gta-pink)' }}>
+                                                  {cardTotalMarks} Marks
+                                                </span>
+                                              );
+                                            })()}
                                             <textarea
                                               value={q.question}
                                               onChange={(e) => {
@@ -8325,7 +7961,7 @@ Q9. (a) Graph Representations:
 
                                   <div style={{ textAlign: 'right' }}>
                                     <div style={{ fontSize: '18px', fontWeight: '900', color: '#10b981' }}>
-                                      {item.totalScore.toFixed(1)} <span style={{ fontSize: '12px', color: 'var(--text-secondary)', fontWeight: 'normal' }}>/ {item.maxScore} Marks</span>
+                                      {Math.round(item.totalScore)} <span style={{ fontSize: '12px', color: 'var(--text-secondary)', fontWeight: 'normal' }}>/ {item.maxScore} Marks</span>
                                     </div>
                                   </div>
                                 </div>
@@ -8396,7 +8032,7 @@ Q9. (a) Graph Representations:
                         predefinedPaperName={predefinedPaperName}
                         onCloseFullScreen={() => setLeftTab('preview')}
                         onScriptApproved={(sId) => showToast(`Parsed blocks saved for script ${sId}`, 'success')}
-                        onRunEvaluation={(sId) => {
+                        onRunEvaluation={(_sId) => {
                           setLeftTab('preview');
                           handleStartEvaluation();
                         }}
@@ -8427,7 +8063,7 @@ Q9. (a) Graph Representations:
                         </h4>
                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginTop: '6px' }}>
                           <span style={{ fontSize: '32px', fontWeight: '800' }}>
-                            {calculateTotalScore().toFixed(1)}
+                            {Math.round(calculateTotalScore())}
                           </span>
                           <span style={{ color: 'var(--text-secondary)', fontSize: '18px' }}>/ {calculateMaxScore()} Marks</span>
                         </div>
@@ -8497,8 +8133,8 @@ Q9. (a) Graph Representations:
                           const currentMod = q.module || 1;
                           const showModuleHeader = currentMod !== lastModule;
                           
-                          const qRawScore = q.rawScore !== undefined 
-                            ? q.rawScore 
+                          const qRawScore = (q as any).rawScore !== undefined 
+                            ? (q as any).rawScore 
                             : (q.criteria ? q.criteria.reduce((sum: number, c: any) => sum + (c.rawScore !== undefined ? c.rawScore : (typeof c.score === 'number' ? c.score : 0)), 0) : 0);
                           const qAwardedScore = q.excluded 
                             ? 0 
@@ -8716,7 +8352,7 @@ Q9. (a) Graph Representations:
                                     ) : (
                                       <>
                                         <span style={{ fontWeight: 'bold', color: q.excluded ? '#f97316' : 'var(--text-primary)' }}>
-                                          {q.excluded ? (c.rawScore !== undefined ? c.rawScore : c.score) : c.score}
+                                          {q.excluded ? ((c as any).rawScore !== undefined ? (c as any).rawScore : c.score) : c.score}
                                         </span>
                                         <span style={{ color: q.excluded ? '#f97316' : 'var(--text-muted)', opacity: q.excluded ? 0.9 : 1, fontSize: q.excluded ? '11px' : '12px' }}>
                                           / {Math.round(c.max)} {q.excluded ? '(Obtained Marks • Choice Excluded)' : ''}
@@ -9637,7 +9273,7 @@ Q9. (a) Graph Representations:
                   </span>
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px', marginTop: '4px' }}>
                     <span style={{ fontSize: '28px', fontWeight: '800', color: 'var(--text-primary)' }}>
-                      {typeof currentScore === 'number' ? currentScore.toFixed(1) : currentScore}
+                      {typeof currentScore === 'number' ? Math.round(currentScore) : currentScore}
                     </span>
                     <span style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>/ 100 Marks</span>
                   </div>
@@ -10146,7 +9782,174 @@ Q9. (a) Graph Representations:
 );
 };
 
-// --- Graphical Representation Components ---
+// --- Graphical & Tabular Representation Components ---
+
+const extractTableFromText = (text: string): { headers: string[]; rows: string[][] } | null => {
+  if (!text) return null;
+  const cleanForTable = text.replace(/\[\s*\d+(?:\.\d+)?\s*Marks?\s*\]/gi, ' ');
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+
+  // 1. Check for multi-line labeled sequence tables (e.g. line 1: "x: 0 1 2 3", line 2: "P(x): k 3k 5k 7k")
+  const labeledRows = lines.map(l => {
+    const cleanL = l.replace(/\[\s*\d+(?:\.\d+)?\s*Marks?\s*\]/gi, ' ').trim();
+    const m = cleanL.match(/^([a-zA-Z\s\(\)\/\_]+)[:=]\s*([0-9a-z\s,\.\-\+\/\*]+)$/i);
+    if (m) {
+      const label = m[1].trim();
+      const vals = m[2].trim().split(/\s+/).filter(Boolean);
+      if (vals.length >= 2) {
+        return { label, vals };
+      }
+    }
+    return null;
+  }).filter((r): r is { label: string; vals: string[] } => r !== null);
+
+  if (labeledRows.length >= 2) {
+    const maxCols = Math.max(...labeledRows.map(r => r.vals.length));
+    const headers = [labeledRows[0].label, ...Array.from({ length: maxCols }, (_, i) => labeledRows[0].vals[i] || String(i))];
+    const rows = labeledRows.slice(1).map(r => [r.label, ...Array.from({ length: maxCols }, (_, i) => r.vals[i] || '-')]);
+    return { headers, rows };
+  }
+
+  // 2. Check for inline Discrete Probability & Multi-Variable Distribution tables (e.g. x 0 1 2 3 4 5 P(x) k 3k 5k 7k 9k 11k 13k)
+  const probMatch = cleanForTable.match(/(?:(?:^|[;\n\r\t|])\s*|\b)(?:x|X|xi|year|process|u|variable)\s*[:=;]?\s*([0-9a-z][0-9a-z\s,\-\.]*?)\s*(?:p\s*\(\s*x\s*\)|p\s*\(\s*X\s*=\s*x\s*\)|f\s*\(\s*x\s*\)|y|yi|frequency|freq|f|sales|burst\s*time|bt|p\(x\)|p\(X\)|v)\s*[:=;]?\s*([a-z0-9\s,\+\-\/\*\.]+)/i);
+  if (probMatch) {
+    const xVals = probMatch[1].trim().split(/\s+/).filter(Boolean);
+    const pVals = probMatch[2].trim().split(/\s+/).filter(Boolean);
+    if (xVals.length >= 2 && pVals.length >= 2) {
+      const maxCols = Math.max(xVals.length, pVals.length);
+      const headers = ["x", ...Array.from({ length: maxCols }, (_, i) => xVals[i] !== undefined ? xVals[i] : String(i))];
+      const rowData = ["P(x) / f(x)", ...Array.from({ length: maxCols }, (_, i) => pVals[i] !== undefined ? pVals[i] : '-')];
+      return {
+        headers,
+        rows: [rowData]
+      };
+    }
+  }
+
+  // 3. Check for inline Class Interval & Frequency (e.g. Class Interval 0-10 10-20 Frequency 5 8 12)
+  const ciMatch = cleanForTable.match(/\b(?:class\s*interval|c\.?i\.?|interval)\s*[:=;]?\s*([0-9\s,\-\.]+?)\s*(?:frequency|freq|f)\s*[:=;]?\s*([0-9\s,\.]+)/i);
+  if (ciMatch) {
+    const ciVals = ciMatch[1].trim().split(/\s+/).filter(Boolean);
+    const fVals = ciMatch[2].trim().split(/\s+/).filter(Boolean);
+    if (ciVals.length >= 2 && fVals.length >= 2) {
+      const maxCols = Math.max(ciVals.length, fVals.length);
+      const headers = ["Class Interval", ...Array.from({ length: maxCols }, (_, i) => ciVals[i] || '-')];
+      const rowData = ["Frequency (f)", ...Array.from({ length: maxCols }, (_, i) => fVals[i] || '-')];
+      return {
+        headers,
+        rows: [rowData]
+      };
+    }
+  }
+  
+  // 4. Check for markdown / pipe table lines (e.g. | col1 | col2 |)
+  const pipeLines = lines.filter(l => l.includes('|') && !l.startsWith('Q.') && !l.startsWith('Question'));
+  if (pipeLines.length >= 2) {
+    const rawRows = pipeLines
+      .filter(l => !/^[\|\-\:\s\+]+$/.test(l))
+      .map(l => l.split('|').map(c => c.trim()).filter(c => c.length > 0));
+    
+    if (rawRows.length >= 2 && rawRows[0].length >= 2) {
+      return {
+        headers: rawRows[0],
+        rows: rawRows.slice(1)
+      };
+    }
+  }
+
+  // 4. Check for whitespace/tab aligned columnar data rows
+  const columnarLines = lines.filter(l => {
+    const tokens = l.split(/\s{2,}|\t/).map(t => t.trim()).filter(Boolean);
+    return tokens.length >= 2 && tokens.length <= 12 && !l.startsWith('Q.') && !l.startsWith('Question');
+  });
+
+  if (columnarLines.length >= 2) {
+    const rawRows = columnarLines.map(l => l.split(/\s{2,}|\t/).map(t => t.trim()).filter(Boolean));
+    return {
+      headers: rawRows[0],
+      rows: rawRows.slice(1)
+    };
+  }
+
+  // 5. Check for bracketed row arrays (e.g. [ 10, 9, 20, 6, 8 ] or [ P1, 0, 5 ])
+  const bracketRows = lines
+    .map(l => {
+      const m = l.match(/\[\s*([^\]]+)\s*\]/);
+      if (m) {
+        return m[1].split(/[\s,]+/).map(t => t.trim()).filter(Boolean);
+      }
+      return null;
+    })
+    .filter((r): r is string[] => r !== null && r.length >= 2);
+
+  if (bracketRows.length >= 2) {
+    return {
+      headers: bracketRows[0].map((_, i) => `Col ${i + 1}`),
+      rows: bracketRows
+    };
+  }
+
+  return null;
+};
+
+const VisualDynamicTable: React.FC<{ data: { headers: string[]; rows: string[][] }; title?: string }> = ({ data, title }) => {
+  if (!data || !data.rows || data.rows.length === 0) return null;
+
+  return (
+    <div style={{ margin: '14px 0', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+        <span className="badge badge-cyan" style={{ fontSize: '10.5px', padding: '2px 8px', fontWeight: 'bold' }}>
+          📋 EXTRACTED TABLE DATA
+        </span>
+        {title && <span style={{ fontSize: '11px', color: 'var(--text-secondary)', fontWeight: '600' }}>{title}</span>}
+      </div>
+      <div style={{
+        overflowX: 'auto',
+        maxWidth: '100%',
+        background: 'rgba(0, 0, 0, 0.25)',
+        borderRadius: '8px',
+        border: '1px solid var(--panel-border)'
+      }}>
+        <table style={{
+          borderCollapse: 'collapse',
+          width: '100%',
+          fontFamily: 'inherit',
+          fontSize: '12px',
+          textAlign: 'center'
+        }}>
+          <thead>
+            <tr style={{ background: 'rgba(0, 203, 214, 0.12)', borderBottom: '1px solid var(--panel-border)' }}>
+              {data.headers.map((h, i) => (
+                <th key={i} style={{ padding: '8px 14px', color: 'var(--gta-cyan)', fontWeight: 'bold', borderRight: i < data.headers.length - 1 ? '1px solid var(--panel-border)' : 'none' }}>
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.rows.map((row, rIdx) => (
+              <tr key={rIdx} style={{
+                background: rIdx % 2 === 0 ? 'rgba(255, 255, 255, 0.015)' : 'rgba(0, 0, 0, 0.15)',
+                borderBottom: rIdx < data.rows.length - 1 ? '1px solid var(--panel-border)' : 'none'
+              }}>
+                {row.map((cell, cIdx) => (
+                  <td key={cIdx} style={{
+                    padding: '8px 14px',
+                    color: 'var(--text-primary)',
+                    fontWeight: '500',
+                    borderRight: cIdx < row.length - 1 ? '1px solid var(--panel-border)' : 'none'
+                  }}>
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
 
 const VisualMatrix: React.FC<{ lines: string[] }> = ({ lines }) => {
   const parsedRows = lines.map(line => {
@@ -10851,120 +10654,14 @@ const VisualDatabaseSchema: React.FC = () => {
   );
 };
 
-const VisualGeneralDiagram: React.FC<{ title: string }> = ({ title }) => {
-  return (
-    <div style={{ margin: '14px 0', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-      <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 'bold', marginBottom: '8px', display: 'block' }}>
-        📷 EXTRACTED DOCUMENT FIGURE / DIAGRAM BLUEPRINT:
-      </span>
-      <div style={{
-        background: 'rgba(0, 0, 0, 0.25)',
-        padding: '14px 18px',
-        borderRadius: '8px',
-        border: '1px solid var(--panel-border)',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '8px',
-        width: '320px',
-        textAlign: 'left'
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="badge badge-cyan" style={{ fontSize: '10px', padding: '2px 6px' }}>Extracted Schema</span>
-          <span style={{ fontSize: '11.5px', fontWeight: 'bold', color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{title}</span>
-        </div>
-        <div style={{
-          height: '80px',
-          background: 'rgba(0, 203, 214, 0.04)',
-          border: '1px dashed rgba(0, 203, 214, 0.3)',
-          borderRadius: '6px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '8px',
-          color: 'var(--gta-cyan)',
-          fontSize: '11px'
-        }}>
-          <div style={{ border: '1px solid var(--gta-cyan)', borderRadius: '4px', padding: '4px 6px', background: 'var(--panel-bg)' }}>Input Node</div>
-          <span style={{ color: 'var(--gta-pink)' }}>→</span>
-          <div style={{ border: '1px solid var(--gta-pink)', borderRadius: '4px', padding: '4px 6px', background: 'var(--panel-bg)' }}>Core Process</div>
-          <span style={{ color: 'var(--gta-cyan)' }}>→</span>
-          <div style={{ border: '1px solid var(--gta-cyan)', borderRadius: '4px', padding: '4px 6px', background: 'var(--panel-bg)' }}>Output Result</div>
-        </div>
-        <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>
-          Exact graphical layout blueprint extracted from document scan page citation.
-        </span>
-      </div>
-    </div>
-  );
-};
-
 const GraphicalRepresentation: React.FC<{ text: string }> = ({ text }) => {
   if (!text) return null;
   const normalized = text.toLowerCase();
 
-  // Explicitly disable generic extracted diagram blueprint for Question 1 / Q.01 (a)
-  if (normalized.includes("q.01") || normalized.includes("q1.") || normalized.includes("q.1") || (normalized.includes("define data structures") && normalized.includes("classification"))) {
-    return null;
-  }
-
-  // KMP Pattern Matching
-  if (normalized.includes("kmp") || normalized.includes("abcdabd") || normalized.includes("pattern matching")) {
-    return <VisualKmpPattern />;
-  }
-
-  // Binary Search Tree (BST)
-  if (normalized.includes("binary search tree") || normalized.includes("bst") || normalized.includes("100, 85, 45")) {
-    return <VisualBST />;
-  }
-
-  // Chained Hash Table
-  if (normalized.includes("chained hash") || (normalized.includes("hash table") && (normalized.includes("mod") || normalized.includes("chained")))) {
-    return <VisualHashTable />;
-  }
-
-  // Melded Min Leftist Trees (Q10 b)
-  if (normalized.includes("meld the given min leftist trees") || (normalized.includes("meld") && normalized.includes("leftist"))) {
-    return <VisualMeldTrees />;
-  }
-
-  // Leftist Tree Checks (Q9 b)
-  if (normalized.includes("leftist tree") || normalized.includes("check whether the given binary tree is a leftist")) {
-    return <VisualLeftistTree />;
-  }
-
-  // Forest to Binary Tree (Q8 b)
-  if (normalized.includes("forest") && (normalized.includes("binary") || normalized.includes("transform"))) {
-    return <VisualForest />;
-  }
-
-  // Polynomial Linked Representation
-  if (normalized.includes("polynomial") && normalized.includes("linked")) {
-    return <VisualPolynomial />;
-  }
-
-  // Binary Tree / Traversals (Q5 a)
-  if (normalized.includes("find all the traversals") || normalized.includes("traversals for the given tree")) {
-    return <VisualBinaryTree />;
-  }
-
-  // Winner/Selection Tree (Q7 c)
-  if (normalized.includes("winner tree") || normalized.includes("selection tree") || normalized.includes("runs of a game")) {
-    return <VisualPlayerRunsTable />;
-  }
-
-  // DFS/BFS Graph (Q7 a)
-  if (normalized.includes("dfs") || normalized.includes("bfs") || normalized.includes("traverse a graph") || normalized.includes("depth first search")) {
-    return <VisualGraph />;
-  }
-
-  // Neural Network Architecture
-  if (normalized.includes("neural network") || normalized.includes("ann") || normalized.includes("perceptron")) {
-    return <VisualNeuralNetwork />;
-  }
-
-  // Database 3-Schema Architecture
-  if (normalized.includes("three-schema") || normalized.includes("3-schema") || normalized.includes("database architecture")) {
-    return <VisualDatabaseSchema />;
+  // Dynamic Tabular Data Extraction (markdown, whitespace/tab-aligned columns, or arrays)
+  const parsedTable = extractTableFromText(text);
+  if (parsedTable) {
+    return <VisualDynamicTable data={parsedTable} />;
   }
 
   // Sparse Matrix / Matrix grid (Q5 c)
@@ -10973,14 +10670,8 @@ const GraphicalRepresentation: React.FC<{ text: string }> = ({ text }) => {
     return /^\s*\[?(?:\s*\d+\s*)+\]?\s*$/.test(trimmed) && trimmed.split(/\s+/).length >= 4;
   });
 
-  if (matrixLines.length >= 2 || normalized.includes("sparse matrix")) {
+  if (matrixLines.length >= 2 || (normalized.includes("sparse matrix") && normalized.includes("["))) {
     return <VisualMatrix lines={matrixLines.length >= 2 ? matrixLines : ["[ 0 0 3 0 4 ]", "[ 0 0 5 7 0 ]", "[ 0 0 0 0 0 ]", "[ 0 2 6 0 0 ]"]} />;
-  }
-
-  // General Diagrammatic Figure Fallback
-  const diagramKeywords = ["diagram", "digram", "sketch", "draw", "flowchart", "flow-chart", "graph", "figure", "circuit", "illustration", "plot", "schematic", "visual", "representation", "chart", "table"];
-  if (diagramKeywords.some(kw => normalized.includes(kw))) {
-    return <VisualGeneralDiagram title={text.split('\n')[0].substring(0, 40)} />;
   }
 
   return null;

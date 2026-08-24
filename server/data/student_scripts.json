@@ -6,14 +6,17 @@
     "studentName": "Student Answer Script (BCS304)",
     "examId": "BCS304-EXAM-2026",
     "paperName": "BCS304 (1).pdf - Data Structures & Applications",
-    "totalPages": 5,
-    "status": "READY_FOR_EVALUATION",
+    "totalPages": 8,
+    "status": "NEEDS_COORDINATOR_REVIEW",
     "pageUrls": [
       "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop"
     ],
     "createdAt": "2026-08-12T02:00:00.000Z",
     "timestamp": "2026-08-12T02:00:00.000Z"

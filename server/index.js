@@ -36,10 +36,16 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// Connect to MongoDB Atlas
-mongoose.connect(MONGODB_URI)
-  .then(() => console.log('✅ Connected successfully to MongoDB Atlas.'))
-  .catch((err) => console.error('❌ MongoDB Atlas connection error:', err));
+// Connect to MongoDB Atlas (with graceful local fallback)
+if (MONGODB_URI && !MONGODB_URI.includes('dummy')) {
+  mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 2000 })
+    .then(() => console.log('✅ Connected successfully to MongoDB Atlas.'))
+    .catch((err) => {
+      console.warn('⚠️ MongoDB Atlas is not reachable. Operating in local JSON storage mode.');
+    });
+} else {
+  console.log('ℹ️ Running in local JSON storage mode.');
+}
 
 // ----------------------------------------------------
 // Local JSON File Database Fallback (when MongoDB is offline)
@@ -1175,8 +1181,12 @@ const aggregateScriptBlocks = async (script_id) => {
   });
 
   const consolidatedList = [];
+  const sortedQIds = Object.keys(grouped).sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+  );
 
-  for (const [qId, blockGroup] of Object.entries(grouped)) {
+  for (const qId of sortedQIds) {
+    const blockGroup = grouped[qId];
     // Sort blocks chronologically by page_number
     blockGroup.sort((a, b) => a.page_number - b.page_number);
 
@@ -1243,14 +1253,15 @@ const seedScriptParsingData = async () => {
         studentName: 'Student Answer Script (BCS304)',
         examId: 'BCS304-EXAM-2026',
         paperName: 'BCS304 (1).pdf - Data Structures & Applications',
-        totalPages: 5,
+        totalPages: 6,
         status: 'NEEDS_COORDINATOR_REVIEW',
         pageUrls: [
           'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop',
           'https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&auto=format&fit=crop',
           'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop',
           'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop',
-          'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop'
+          'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop'
         ],
         createdAt: new Date().toISOString()
       };
@@ -1262,10 +1273,10 @@ const seedScriptParsingData = async () => {
           page_number: 1,
           question_id: 'Q1a',
           module_number: 1,
-          raw_text: 'Q1(a): Define Data Structure. Explain primitive and non-primitive data structures with classification diagram and memory allocation principles.\n\n[Student Hand-Written Response]:\nA data structure is a specialized format for organizing, processing, retrieving, and storing data in computer memory efficiently.\n• Primitive Data Structures: Int (4 bytes), Float (4 bytes), Char (1 byte), Double (8 bytes), Pointer.\n• Non-Primitive Data Structures:\n  - Linear: Arrays, Stacks, Queues, Linked Lists (sequential layout).\n  - Non-Linear: Trees, Graphs (hierarchical layout).\n• Memory Allocation: Static allocation uses stack memory at compile-time. Dynamic allocation uses heap memory at runtime via pointers.',
-          confidence_score: 0.94,
+          raw_text: 'Q1(a): Define Data Structure. Explain primitive and non-primitive data structures with classification diagram and memory allocation principles.\n\n[Student Hand-Written Response - Page 1]:\nA data structure is a specialized format for organizing, processing, retrieving, and storing data in computer memory efficiently.\n• Primitive Data Structures: Int (4 bytes), Float (4 bytes), Char (1 byte), Double (8 bytes), Pointer.\n• Non-Primitive Data Structures:\n  - Linear: Arrays, Stacks, Queues, Linked Lists (sequential layout).\n  - Non-Linear: Trees, Graphs (hierarchical layout).\n• Memory Allocation: Static allocation uses stack memory at compile-time. Dynamic allocation uses heap memory at runtime via pointers.',
+          confidence_score: 0.96,
           is_continuation: false,
-          bounding_box: { x: 45, y: 60, width: 710, height: 280 },
+          bounding_box: { x: 45, y: 50, width: 710, height: 220 },
           createdAt: new Date().toISOString()
         },
         {
@@ -1274,10 +1285,22 @@ const seedScriptParsingData = async () => {
           page_number: 1,
           question_id: 'Q1b',
           module_number: 1,
-          raw_text: 'Q1(b): Explain Knuth-Morris-Pratt (KMP) pattern matching algorithm. Trace failure function π for P = "ababaca".\n\n[Student Hand-Written Response]:\nKMP algorithm avoids backtracking text pointer i by computing prefix function π (failure function) on pattern P.\nFailure function π for P = "ababaca":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nTime Complexity: O(n + m) linear matching time compared to O(n*m) naive algorithm.',
-          confidence_score: 0.91,
+          raw_text: 'Q1(b): Explain Knuth-Morris-Pratt (KMP) pattern matching algorithm. Trace failure function π for P = "ababaca".\n\n[Student Hand-Written Response - Page 1]:\nKMP algorithm avoids backtracking text pointer i by computing prefix function π (failure function) on pattern P.\n• Algorithm Logic: When a mismatch occurs at P[q], set q = π[q-1] to skip redundant comparisons.\n(Answer continued on Page 5...)',
+          confidence_score: 0.93,
           is_continuation: false,
-          bounding_box: { x: 45, y: 360, width: 710, height: 210 },
+          bounding_box: { x: 45, y: 300, width: 710, height: 200 },
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: 'blk-101-2c',
+          script_id: 'script-101',
+          page_number: 1,
+          question_id: 'Q1c',
+          module_number: 1,
+          raw_text: 'Q1(c): Differentiate between Linear and Non-Linear Data Structures with memory layout examples.\n\n[Student Hand-Written Response - Page 1]:\n• Linear Data Structures: Elements are arranged sequentially in memory (Arrays, Stacks, Queues, Linked Lists). Single-level traversal.\n• Non-Linear Data Structures: Elements are arranged hierarchically or interconnected (Trees, Graphs). Multi-level traversal logic.',
+          confidence_score: 0.95,
+          is_continuation: false,
+          bounding_box: { x: 45, y: 520, width: 710, height: 200 },
           createdAt: new Date().toISOString()
         },
         {
@@ -1314,6 +1337,30 @@ const seedScriptParsingData = async () => {
           confidence_score: 0.88,
           is_continuation: true,
           bounding_box: { x: 45, y: 500, width: 710, height: 220 },
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: 'blk-101-5cont',
+          script_id: 'script-101',
+          page_number: 5,
+          question_id: 'Q1b',
+          module_number: 1,
+          raw_text: 'Q1(b) [Continuation from Page 1 - Multi-Page KMP Pattern Matching]:\n\n[Student Hand-Written Response - Page 5]:\nTracing KMP failure function π for Pattern P = "ababaca":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nMatching Phase: Searching P in Text T = "abxababaca". Match found starting at index 4 in O(n + m) time complexity.',
+          confidence_score: 0.94,
+          is_continuation: true,
+          bounding_box: { x: 45, y: 50, width: 710, height: 220 },
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: 'blk-101-6',
+          script_id: 'script-101',
+          page_number: 6,
+          question_id: 'Q9a',
+          module_number: 5,
+          raw_text: 'Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 6]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).',
+          confidence_score: 0.97,
+          is_continuation: false,
+          bounding_box: { x: 40, y: 50, width: 720, height: 280 },
           createdAt: new Date().toISOString()
         }
       ];
@@ -1565,7 +1612,289 @@ app.post('/api/coordinator/scripts/:id/approve-and-aggregate', async (req, res) 
   }
 });
 
-// API 7: POST /api/coordinator/scripts/seed (Force re-seed endpoint)
+// API 7: POST /api/coordinator/scripts/:id/update-block (Inline editing / Continuation toggle)
+app.post('/api/coordinator/scripts/:id/update-block', async (req, res) => {
+  try {
+    const script_id = req.params.id;
+    const { block_id, raw_text, question_id, module_number, is_continuation, confidence_score } = req.body;
+
+    if (!block_id) {
+      return res.status(400).json({ error: 'block_id is required.' });
+    }
+
+    const updateFields = {};
+    if (raw_text !== undefined) updateFields.raw_text = raw_text;
+    if (question_id !== undefined) updateFields.question_id = question_id.trim();
+    if (module_number !== undefined) updateFields.module_number = Number(module_number);
+    if (is_continuation !== undefined) updateFields.is_continuation = Boolean(is_continuation);
+    if (confidence_score !== undefined) updateFields.confidence_score = Number(confidence_score);
+
+    let updatedBlock;
+    if (mongoose.connection.readyState === 1) {
+      updatedBlock = await ExtractedBlock.findOneAndUpdate({ id: block_id, script_id }, updateFields, { new: true });
+    } else {
+      updatedBlock = await localDB.findOneAndUpdate('extracted_blocks', { id: block_id, script_id }, updateFields);
+    }
+
+    if (!updatedBlock) {
+      return res.status(404).json({ error: 'Extracted block not found.' });
+    }
+
+    const consolidated = await aggregateScriptBlocks(script_id);
+    return res.status(200).json({
+      message: 'Block updated successfully.',
+      block: updatedBlock,
+      consolidatedAnswers: consolidated
+    });
+  } catch (error) {
+    console.error('Error updating block:', error);
+    return res.status(500).json({ error: 'Server error updating block.' });
+  }
+});
+
+// API 7B: POST /api/coordinator/scripts/:id/save-all-blocks (Commit all bounding boxes and grab handle resizes)
+app.post('/api/coordinator/scripts/:id/save-all-blocks', async (req, res) => {
+  try {
+    const script_id = req.params.id;
+    const { blocks, consolidatedAnswers } = req.body;
+
+    if (!Array.isArray(blocks)) {
+      return res.status(400).json({ error: 'blocks array is required.' });
+    }
+
+    for (const b of blocks) {
+      const bPayload = {
+        id: b.id,
+        script_id: b.script_id || script_id,
+        page_number: b.page_number,
+        question_id: b.question_id,
+        module_number: b.module_number || 1,
+        raw_text: b.raw_text || '',
+        confidence_score: b.confidence_score || 1.0,
+        is_continuation: Boolean(b.is_continuation),
+        bounding_box: b.bounding_box || { x: 4, y: 4, width: 92, height: 92 }
+      };
+
+      if (mongoose.connection.readyState === 1) {
+        await ExtractedBlock.findOneAndUpdate(
+          { id: b.id, script_id },
+          bPayload,
+          { upsert: true, new: true }
+        );
+      } else {
+        const existing = await localDB.findOne('extracted_blocks', { id: b.id, script_id });
+        if (existing) {
+          await localDB.findOneAndUpdate('extracted_blocks', { id: b.id, script_id }, bPayload);
+        } else {
+          await localDB.insertOne('extracted_blocks', bPayload);
+        }
+      }
+    }
+
+    const aggregated = await aggregateScriptBlocks(script_id);
+
+    return res.status(200).json({
+      message: 'All bounding box positions, grab handle resizes, and question assignments saved successfully!',
+      blocks,
+      consolidatedAnswers: aggregated
+    });
+  } catch (error) {
+    console.error('Error saving all blocks:', error);
+    return res.status(500).json({ error: 'Server error saving all blocks.' });
+  }
+});
+
+// API 8: POST /api/coordinator/scripts/:id/delete-block (Delete noise block)
+app.post('/api/coordinator/scripts/:id/delete-block', async (req, res) => {
+  try {
+    const script_id = req.params.id;
+    const { block_id } = req.body;
+
+    if (!block_id) {
+      return res.status(400).json({ error: 'block_id is required.' });
+    }
+
+    if (mongoose.connection.readyState === 1) {
+      await ExtractedBlock.deleteOne({ id: block_id, script_id });
+    } else {
+      await localDB.deleteOne('extracted_blocks', { id: block_id, script_id });
+    }
+
+    const consolidated = await aggregateScriptBlocks(script_id);
+    return res.status(200).json({
+      message: 'Block deleted successfully.',
+      consolidatedAnswers: consolidated
+    });
+  } catch (error) {
+    console.error('Error deleting block:', error);
+    return res.status(500).json({ error: 'Server error deleting block.' });
+  }
+});
+
+// API 9: POST /api/coordinator/scripts/:id/split-block (Split block at index)
+app.post('/api/coordinator/scripts/:id/split-block', async (req, res) => {
+  try {
+    const script_id = req.params.id;
+    const { block_id, split_index, new_question_id_2 } = req.body;
+
+    if (!block_id || split_index === undefined) {
+      return res.status(400).json({ error: 'block_id and split_index are required.' });
+    }
+
+    let origBlock;
+    if (mongoose.connection.readyState === 1) {
+      origBlock = await ExtractedBlock.findOne({ id: block_id, script_id });
+    } else {
+      origBlock = await localDB.findOne('extracted_blocks', { id: block_id, script_id });
+    }
+
+    if (!origBlock) {
+      return res.status(404).json({ error: 'Block not found.' });
+    }
+
+    const fullText = origBlock.raw_text || '';
+    const text1 = fullText.substring(0, split_index).trim();
+    const text2 = fullText.substring(split_index).trim();
+
+    if (!text1 || !text2) {
+      return res.status(400).json({ error: 'Split point invalid or results in empty text snippet.' });
+    }
+
+    // Update block 1
+    if (mongoose.connection.readyState === 1) {
+      await ExtractedBlock.findOneAndUpdate({ id: block_id }, { raw_text: text1 });
+    } else {
+      await localDB.findOneAndUpdate('extracted_blocks', { id: block_id }, { raw_text: text1 });
+    }
+
+    // Create block 2
+    const block2 = {
+      id: `blk-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+      script_id,
+      page_number: origBlock.page_number,
+      question_id: (new_question_id_2 || origBlock.question_id || 'UNKNOWN').trim(),
+      module_number: origBlock.module_number || 1,
+      raw_text: text2,
+      confidence_score: 1.0,
+      is_continuation: new_question_id_2 ? false : true,
+      bounding_box: origBlock.bounding_box || { x: 50, y: 300, width: 700, height: 150 },
+      createdAt: new Date().toISOString()
+    };
+
+    if (mongoose.connection.readyState === 1) {
+      await ExtractedBlock.create(block2);
+    } else {
+      await localDB.create('extracted_blocks', block2);
+    }
+
+    const consolidated = await aggregateScriptBlocks(script_id);
+    return res.status(200).json({
+      message: 'Block successfully split into two separate answer blocks.',
+      block1_id: block_id,
+      block2_id: block2.id,
+      consolidatedAnswers: consolidated
+    });
+  } catch (error) {
+    console.error('Error splitting block:', error);
+    return res.status(500).json({ error: 'Server error splitting block.' });
+  }
+});
+
+// API 10: POST /api/coordinator/scripts/:id/auto-detect-continuations
+app.post('/api/coordinator/scripts/:id/auto-detect-continuations', async (req, res) => {
+  try {
+    const script_id = req.params.id;
+    let blocks = [];
+
+    if (mongoose.connection.readyState === 1) {
+      blocks = await ExtractedBlock.find({ script_id }).sort({ page_number: 1, createdAt: 1 });
+    } else {
+      blocks = await localDB.find('extracted_blocks', { script_id });
+      blocks.sort((a, b) => (a.page_number - b.page_number) || (new Date(a.createdAt) - new Date(b.createdAt)));
+    }
+
+    // Group blocks by question_id (ignoring UNKNOWN)
+    const questionGroups = {};
+    blocks.forEach(b => {
+      if (b.question_id && b.question_id !== 'UNKNOWN') {
+        if (!questionGroups[b.question_id]) questionGroups[b.question_id] = [];
+        questionGroups[b.question_id].push(b);
+      }
+    });
+
+    let detectedCount = 0;
+    for (const [qId, qBlks] of Object.entries(questionGroups)) {
+      if (qBlks.length > 1) {
+        qBlks.sort((a, b) => a.page_number - b.page_number);
+        // First block is primary (is_continuation: false), subsequent blocks are continuations (is_continuation: true)
+        for (let i = 1; i < qBlks.length; i++) {
+          const b = qBlks[i];
+          if (!b.is_continuation) {
+            b.is_continuation = true;
+            b.confidence_score = Math.max(b.confidence_score || 0.9, 0.95);
+            detectedCount++;
+
+            if (mongoose.connection.readyState === 1) {
+              await ExtractedBlock.findOneAndUpdate({ id: b.id }, { is_continuation: true, confidence_score: b.confidence_score });
+            } else {
+              await localDB.findOneAndUpdate('extracted_blocks', { id: b.id }, { is_continuation: true, confidence_score: b.confidence_score });
+            }
+          }
+        }
+      }
+    }
+
+    const consolidated = await aggregateScriptBlocks(script_id);
+    return res.status(200).json({
+      message: `Auto-detection completed. Linked ${detectedCount} multi-page continuation block(s).`,
+      detectedCount,
+      consolidatedAnswers: consolidated
+    });
+  } catch (error) {
+    console.error('Error auto-detecting continuations:', error);
+    return res.status(500).json({ error: 'Server error auto-detecting continuations.' });
+  }
+});
+
+// API 11: POST /api/coordinator/scripts/:id/update-consolidated-answer
+app.post('/api/coordinator/scripts/:id/update-consolidated-answer', async (req, res) => {
+  try {
+    const script_id = req.params.id;
+    const { question_id, combined_text } = req.body;
+
+    if (!question_id || combined_text === undefined) {
+      return res.status(400).json({ error: 'question_id and combined_text are required.' });
+    }
+
+    const consolidatedId = `cons-${script_id}-${question_id}`;
+    const updateData = {
+      combined_text,
+      is_manually_overridden: true
+    };
+
+    let updatedConsolidated;
+    if (mongoose.connection.readyState === 1) {
+      updatedConsolidated = await ConsolidatedAnswer.findOneAndUpdate({ id: consolidatedId }, updateData, { upsert: true, new: true });
+    } else {
+      const existing = await localDB.findOne('consolidated_answers', { id: consolidatedId });
+      if (existing) {
+        updatedConsolidated = await localDB.findOneAndUpdate('consolidated_answers', { id: consolidatedId }, updateData);
+      } else {
+        updatedConsolidated = await localDB.create('consolidated_answers', { id: consolidatedId, script_id, question_id, combined_text, block_ids: [], is_manually_overridden: true });
+      }
+    }
+
+    return res.status(200).json({
+      message: `Consolidated answer for ${question_id} updated.`,
+      consolidatedAnswer: updatedConsolidated
+    });
+  } catch (error) {
+    console.error('Error updating consolidated answer:', error);
+    return res.status(500).json({ error: 'Server error updating consolidated answer.' });
+  }
+});
+
+// API 12: POST /api/coordinator/scripts/seed (Force re-seed endpoint)
 app.post('/api/coordinator/scripts/seed', async (req, res) => {
   try {
     await seedScriptParsingData();

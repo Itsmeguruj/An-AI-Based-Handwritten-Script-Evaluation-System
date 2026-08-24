@@ -63,8 +63,34 @@ export interface CreateBlockPayload {
   bounding_box?: BoundingBox;
 }
 
+export interface UpdateBlockPayload {
+  block_id: string;
+  raw_text?: string;
+  question_id?: string;
+  module_number?: number;
+  is_continuation?: boolean;
+  confidence_score?: number;
+  bounding_box?: BoundingBox;
+}
+
+export interface SplitBlockPayload {
+  block_id: string;
+  split_index: number;
+  new_question_id_2?: string;
+}
+
+export interface DeleteBlockPayload {
+  block_id: string;
+}
+
+export interface UpdateConsolidatedPayload {
+  question_id: string;
+  combined_text: string;
+}
+
 export interface ScriptBlocksResponse {
   script: StudentScript;
   blocks: ExtractedBlock[];
   consolidatedAnswers: ConsolidatedAnswer[];
 }
+
