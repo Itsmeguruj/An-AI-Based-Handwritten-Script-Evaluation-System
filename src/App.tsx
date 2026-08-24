@@ -20,8 +20,11 @@ import {
   TermsSection,
 } from './components/HomeSections';
 import { apiService } from './services/api';
+<<<<<<< HEAD
 import { useSessionTimeout } from './hooks/useSessionTimeout';
 import { SessionTimeoutModal } from './components/SessionTimeoutModal';
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
 
 interface UserAuth {
   role: 'coordinator' | 'admin';
@@ -56,6 +59,7 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+<<<<<<< HEAD
   const getModalTitle = () => {
     switch (activeSectionModal) {
       case 'features': return 'Core Engine Architecture & Features';
@@ -72,11 +76,14 @@ function App() {
     }
   };
 
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
   // Load session from localStorage on initial render
   const [auth, setAuth] = useState<UserAuth | null>(() => {
     const saved = localStorage.getItem('deepscript_auth');
     if (saved) {
       try {
+<<<<<<< HEAD
         const lastActive = localStorage.getItem('deepscript_last_active');
         if (lastActive) {
           const elapsed = Date.now() - parseInt(lastActive, 10);
@@ -86,6 +93,8 @@ function App() {
             return null;
           }
         }
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
         return JSON.parse(saved);
       } catch (_e) {
         return null;
@@ -106,6 +115,7 @@ function App() {
     }
   }, [auth]);
 
+<<<<<<< HEAD
   // 20-minute inactivity session timeout hook for Admin and Coordinator panels
   const {
     showWarning: showTimeoutWarning,
@@ -129,6 +139,8 @@ function App() {
     setCoordSubTab('login');
   };
 
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
   // States for updating mobile number in coordinator profile modal
   const [isEditingMobile, setIsEditingMobile] = useState(false);
   const [newMobile, setNewMobile] = useState('');
@@ -226,6 +238,7 @@ function App() {
     setShowLoginOverlay(true); // Fade in dedicated overlay
   };
 
+<<<<<<< HEAD
   const clearWorkspaceSessionState = () => {
     try {
       const persistentKeys = [
@@ -265,6 +278,8 @@ function App() {
     }
   };
 
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
   const handleAuthSuccess = (
     role: 'coordinator' | 'admin',
     name: string,
@@ -274,6 +289,7 @@ function App() {
     isVerified?: boolean,
     id?: string
   ) => {
+<<<<<<< HEAD
     clearWorkspaceSessionState();
     localStorage.setItem('deepscript_last_active', String(Date.now()));
     setAuth({ role, name, email, mobile, countryCode, isVerified, id });
@@ -284,6 +300,42 @@ function App() {
     localStorage.removeItem('deepscript_auth');
     localStorage.removeItem('deepscript_last_active');
     setAuth(null);
+=======
+    setAuth({ role, name, email, mobile, countryCode, isVerified, id });
+  };
+
+  const getModalTitle = () => {
+    switch (activeSectionModal) {
+      case 'features': return 'Features';
+      case 'download': return 'Get DeepScript';
+      case 'docs': return 'Documentation';
+      case 'changelog': return 'Changelog';
+      case 'blog': return 'Blog';
+      case 'pricing': return 'Pricing';
+      case 'cases': return 'Use Cases';
+      case 'about': return 'About DeepScript';
+      case 'privacy': return 'Privacy Policy';
+      case 'terms': return 'Terms of Service';
+      default: return 'Information';
+    }
+  };
+
+  const handleLogout = () => {
+    setAuth(null);
+    localStorage.removeItem('deepscript_active_view');
+    try {
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('deepscript_dismissed_assignment_popup')) {
+          localStorage.removeItem(key);
+        }
+      });
+      Object.keys(sessionStorage).forEach(key => {
+        if (key.startsWith('deepscript_dismissed_assignment_popup')) {
+          sessionStorage.removeItem(key);
+        }
+      });
+    } catch (_err) {}
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
   };
 
   return (
@@ -1182,6 +1234,7 @@ function App() {
           </div>
         </div>
       )}
+<<<<<<< HEAD
 
       {/* 20-Minute Inactivity Session Timeout Warning & Expired Modals */}
       <SessionTimeoutModal
@@ -1193,6 +1246,8 @@ function App() {
         onDismissExpired={handleDismissTimeoutExpired}
         role={auth?.role || 'coordinator'}
       />
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
     </div>
   );
 }

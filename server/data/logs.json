@@ -10,6 +10,7 @@
     "timestamp": "2026-07-31T03:24:02.420Z"
   },
   {
+<<<<<<< HEAD
     "_id": "local-1786106500703-kekrf",
     "action": "Logged in to coordinator portal",
     "actorRole": "coordinator",
@@ -21,11 +22,15 @@
   },
   {
     "_id": "local-1786106634522-ievvq",
+=======
+    "_id": "local-1785509691555-grqji",
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
     "action": "Logged in to admin portal",
     "actorRole": "admin",
     "actorName": "Admin",
     "browser": "Chrome",
     "ipAddress": "127.0.0.1",
+<<<<<<< HEAD
     "createdAt": "2026-08-07T12:43:54.522Z",
     "timestamp": "2026-08-07T12:43:54.523Z"
   },
@@ -2798,5 +2803,9 @@
     "ipAddress": "127.0.0.1",
     "createdAt": "2026-08-23T05:22:04.408Z",
     "timestamp": "2026-08-23T05:22:04.408Z"
+=======
+    "createdAt": "2026-07-31T14:54:51.555Z",
+    "timestamp": "2026-07-31T14:54:51.555Z"
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
   }
 ]

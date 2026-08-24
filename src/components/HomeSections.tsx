@@ -154,7 +154,11 @@ export const FeaturesSection: React.FC = () => (
 
       <div style={grid3}>
         {[
+<<<<<<< HEAD
           { title: 'Qwen 2.5-VL 7B Engine', desc: 'Ultra-precision handwriting and multi-modal document recognition supporting equations, tabular rubrics, and cursive scripts.', icon: <Cpu size={20} />, color: 'var(--gta-cyan)' },
+=======
+          { title: 'GOT-OCR 2.0 Engine', desc: 'High-precision handwriting recognition supporting multilingual scripts, cursive, and mixed math notation.', icon: <Cpu size={20} />, color: 'var(--gta-cyan)' },
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
           { title: 'Custom Rubric Builder', desc: 'Define per-question scoring schemas, keywords, deduction rates, and partial mark policies.', icon: <BookOpen size={20} />, color: 'var(--gta-pink)' },
           { title: 'Multi-Coordinator Workflow', desc: 'Assign papers to verified coordinators with built-in access management and audit logs.', icon: <Users size={20} />, color: '#a78bfa' },
           { title: 'Real-Time Scorecard', desc: 'Live per-question marks with inline AI-generated feedback and confidence scores.', icon: <BarChart3 size={20} />, color: '#34d399' },
@@ -249,7 +253,11 @@ const releases = [
     tag: 'Stable',
     tagColor: '#34d399',
     changes: [
+<<<<<<< HEAD
       { type: 'New', text: 'Qwen 2.5-VL 7B model integration with ultra-precision document vision & math recognition' },
+=======
+      { type: 'New', text: 'GOT-OCR 2.0 model integration with multilingual support' },
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
       { type: 'New', text: 'Custom rubric builder with keyword matching policies' },
       { type: 'Improved', text: 'Dark/light theme toggle with full CSS variable system' },
       { type: 'Fixed', text: 'PDF scorecard export alignment and margin issues' },
@@ -552,7 +560,11 @@ export const AboutSection: React.FC = () => (
             { label: 'Founded', value: '2026' },
             { label: 'Founder', value: 'Guru Raghavendra J & Team' },
             { label: 'Headquarters', value: 'GECM, Mosalehosahalli, India' },
+<<<<<<< HEAD
             { label: 'Core Stack', value: 'React + Node.js + MongoDB + Qwen 2.5-VL 7B' },
+=======
+            { label: 'Core Stack', value: 'React + Node.js + MongoDB + GOT-OCR 2.0' },
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
             { label: 'Status', value: 'Development' },
           ].map(({ label, value }) => (
             <div key={label} style={{ padding: '16px 20px', background: 'var(--panel-bg)', border: '1px solid var(--panel-border)', borderRadius: '10px' }}>

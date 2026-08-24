@@ -10,11 +10,14 @@ import path from 'path';
 import Coordinator from './models/Coordinator.js';
 import OTP from './models/OTP.js';
 import Log from './models/Log.js';
+<<<<<<< HEAD
 import RevertedResult from './models/RevertedResult.js';
 import Assignment from './models/Assignment.js';
 import StudentScript from './models/StudentScript.js';
 import ExtractedBlock from './models/ExtractedBlock.js';
 import ConsolidatedAnswer from './models/ConsolidatedAnswer.js';
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
 
 dotenv.config();
 
@@ -36,6 +39,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
+<<<<<<< HEAD
 // Connect to MongoDB Atlas (with graceful local fallback)
 if (MONGODB_URI && !MONGODB_URI.includes('dummy')) {
   mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 2000 })
@@ -46,6 +50,12 @@ if (MONGODB_URI && !MONGODB_URI.includes('dummy')) {
 } else {
   console.log('ℹ️ Running in local JSON storage mode.');
 }
+=======
+// Connect to MongoDB Atlas
+mongoose.connect(MONGODB_URI)
+  .then(() => console.log('✅ Connected successfully to MongoDB Atlas.'))
+  .catch((err) => console.error('❌ MongoDB Atlas connection error:', err));
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
 
 // ----------------------------------------------------
 // Local JSON File Database Fallback (when MongoDB is offline)
@@ -916,6 +926,7 @@ app.get('/api/auth/logs', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 // 10. Save / Update Coordinator Reverted Result
 app.post(['/api/reverted-results', '/api/auth/reverted-results'], async (req, res) => {
   try {
@@ -1904,8 +1915,13 @@ app.post('/api/coordinator/scripts/seed', async (req, res) => {
   }
 });
 
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
 // Start Server
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Express API server running on port ${PORT}`);
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a

@@ -6,7 +6,11 @@
   "scripts": {
     "client": "vite",
     "server": "nodemon --ignore server/data/ server/index.js",
+<<<<<<< HEAD
     "dev": "concurrently --shell cmd.exe \"npm run client\" \"npm run server\"",
+=======
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -16,11 +20,17 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+<<<<<<< HEAD
     "jspdf": "^4.2.1",
     "lucide-react": "^1.21.0",
     "mongoose": "^9.7.3",
     "nodemailer": "^9.0.3",
     "pdfjs-dist": "^6.2.108",
+=======
+    "lucide-react": "^1.21.0",
+    "mongoose": "^9.7.3",
+    "nodemailer": "^9.0.3",
+>>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
