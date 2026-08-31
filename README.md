@@ -268,7 +268,7 @@ A higher similarity score indicates stronger textual alignment between the answe
 
 Simple keyword matching may not always identify conceptually correct answers.
 
-Therefore, the system can incorporate semantic analysis to identify relationships between words, phrases, and concepts.
+Therefore, the system can incorporate semantic analysis to identify relationships between words, phrases
 
 For example:
 
