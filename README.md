@@ -278,7 +278,7 @@ Model Answer
 
 Student Answer
 
-«Green plants use solar energy to produce food from carbon dioxide and water.»
+«Green plants use solar energy to produce food from carbon dioxide and water.
 
 Although the wording differs, the system can identify related concepts such as:
 
