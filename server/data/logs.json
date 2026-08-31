@@ -10,7 +10,6 @@
     "timestamp": "2026-07-31T03:24:02.420Z"
   },
   {
-<<<<<<< HEAD
     "_id": "local-1786106500703-kekrf",
     "action": "Logged in to coordinator portal",
     "actorRole": "coordinator",
@@ -22,15 +21,11 @@
   },
   {
     "_id": "local-1786106634522-ievvq",
-=======
-    "_id": "local-1785509691555-grqji",
->>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
     "action": "Logged in to admin portal",
     "actorRole": "admin",
     "actorName": "Admin",
     "browser": "Chrome",
     "ipAddress": "127.0.0.1",
-<<<<<<< HEAD
     "createdAt": "2026-08-07T12:43:54.522Z",
     "timestamp": "2026-08-07T12:43:54.523Z"
   },
@@ -2803,9 +2798,595 @@
     "ipAddress": "127.0.0.1",
     "createdAt": "2026-08-23T05:22:04.408Z",
     "timestamp": "2026-08-23T05:22:04.408Z"
-=======
-    "createdAt": "2026-07-31T14:54:51.555Z",
-    "timestamp": "2026-07-31T14:54:51.555Z"
->>>>>>> 8d53b4e2afaa94607941833c70269c620fac166a
+  },
+  {
+    "_id": "local-1788008467681-njf4x",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:01:07.681Z",
+    "timestamp": "2026-08-29T13:01:07.681Z"
+  },
+  {
+    "_id": "local-1788008476450-o1s3a",
+    "action": "Loaded grading assignment for Serial No SN-2026-002 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:01:16.450Z",
+    "timestamp": "2026-08-29T13:01:16.450Z"
+  },
+  {
+    "_id": "local-1788009573254-s0gal",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:19:33.254Z",
+    "timestamp": "2026-08-29T13:19:33.254Z"
+  },
+  {
+    "_id": "local-1788009586763-9bhhi",
+    "action": "High-Precision extraction completed: 10 main questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:19:46.763Z",
+    "timestamp": "2026-08-29T13:19:46.763Z"
+  },
+  {
+    "_id": "local-1788010130185-hq5yn",
+    "action": "Paper extraction completed: 10 questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:28:50.185Z",
+    "timestamp": "2026-08-29T13:28:50.185Z"
+  },
+  {
+    "_id": "local-1788010132501-i32cv",
+    "action": "Paper extraction completed: 10 questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:28:52.501Z",
+    "timestamp": "2026-08-29T13:28:52.501Z"
+  },
+  {
+    "_id": "local-1788010145217-1ej89",
+    "action": "Paper extraction completed: 10 questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:29:05.217Z",
+    "timestamp": "2026-08-29T13:29:05.217Z"
+  },
+  {
+    "_id": "local-1788011321653-nubxy",
+    "action": "Paper extraction completed: 10 questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:48:41.653Z",
+    "timestamp": "2026-08-29T13:48:41.655Z"
+  },
+  {
+    "_id": "local-1788011338575-r3ar4",
+    "action": "Paper extraction completed: 10 questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:48:58.575Z",
+    "timestamp": "2026-08-29T13:48:58.575Z"
+  },
+  {
+    "_id": "local-1788011486171-smob3",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:51:26.171Z",
+    "timestamp": "2026-08-29T13:51:26.171Z"
+  },
+  {
+    "_id": "local-1788011492726-2r6hz",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:51:32.726Z",
+    "timestamp": "2026-08-29T13:51:32.726Z"
+  },
+  {
+    "_id": "local-1788011604949-7pq98",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T13:53:24.949Z",
+    "timestamp": "2026-08-29T13:53:24.949Z"
+  },
+  {
+    "_id": "local-1788012234371-wbltl",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:03:54.371Z",
+    "timestamp": "2026-08-29T14:03:54.372Z"
+  },
+  {
+    "_id": "local-1788012239795-mrafm",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:03:59.795Z",
+    "timestamp": "2026-08-29T14:03:59.795Z"
+  },
+  {
+    "_id": "local-1788012245646-bc6i2",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:04:05.646Z",
+    "timestamp": "2026-08-29T14:04:05.646Z"
+  },
+  {
+    "_id": "local-1788012258801-9lfen",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:04:18.801Z",
+    "timestamp": "2026-08-29T14:04:18.801Z"
+  },
+  {
+    "_id": "local-1788012258930-0sdpw",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:04:18.930Z",
+    "timestamp": "2026-08-29T14:04:18.930Z"
+  },
+  {
+    "_id": "local-1788012330174-ce49b",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:05:30.174Z",
+    "timestamp": "2026-08-29T14:05:30.174Z"
+  },
+  {
+    "_id": "local-1788012337092-m1ci0",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:05:37.092Z",
+    "timestamp": "2026-08-29T14:05:37.092Z"
+  },
+  {
+    "_id": "local-1788012341333-99tfn",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:05:41.333Z",
+    "timestamp": "2026-08-29T14:05:41.333Z"
+  },
+  {
+    "_id": "local-1788012345988-43r6j",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:05:45.988Z",
+    "timestamp": "2026-08-29T14:05:45.988Z"
+  },
+  {
+    "_id": "local-1788012495832-g5pdd",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:08:15.832Z",
+    "timestamp": "2026-08-29T14:08:15.833Z"
+  },
+  {
+    "_id": "local-1788012500860-qvlis",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:08:20.860Z",
+    "timestamp": "2026-08-29T14:08:20.860Z"
+  },
+  {
+    "_id": "local-1788012888310-vpou8",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:14:48.310Z",
+    "timestamp": "2026-08-29T14:14:48.311Z"
+  },
+  {
+    "_id": "local-1788012907848-2k59s",
+    "action": "Paper extraction completed: 5 questions, 13 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:15:07.848Z",
+    "timestamp": "2026-08-29T14:15:07.848Z"
+  },
+  {
+    "_id": "local-1788013126103-6c04q",
+    "action": "Paper extraction completed: 10 questions, 41 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:18:46.103Z",
+    "timestamp": "2026-08-29T14:18:46.103Z"
+  },
+  {
+    "_id": "local-1788013224450-4phr8",
+    "action": "Paper extraction completed: 10 questions, 41 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-29T14:20:24.451Z",
+    "timestamp": "2026-08-29T14:20:24.451Z"
+  },
+  {
+    "_id": "local-1788139485227-smznm",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:24:45.227Z",
+    "timestamp": "2026-08-31T01:24:45.227Z"
+  },
+  {
+    "_id": "local-1788139503634-xwaoh",
+    "action": "Paper extraction completed: 10 questions, 41 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:25:03.634Z",
+    "timestamp": "2026-08-31T01:25:03.634Z"
+  },
+  {
+    "_id": "local-1788140313702-nggah",
+    "action": "Paper extraction completed: 12 questions, 12 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:38:33.702Z",
+    "timestamp": "2026-08-31T01:38:33.703Z"
+  },
+  {
+    "_id": "local-1788140370110-5371h",
+    "action": "Paper extraction completed: 12 questions, 12 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:39:30.110Z",
+    "timestamp": "2026-08-31T01:39:30.110Z"
+  },
+  {
+    "_id": "local-1788141000128-ue93k",
+    "action": "Paper extraction completed: 12 questions, 12 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:50:00.128Z",
+    "timestamp": "2026-08-31T01:50:00.128Z"
+  },
+  {
+    "_id": "local-1788141166618-305ua",
+    "action": "Paper extraction completed: 12 questions, 43 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:52:46.618Z",
+    "timestamp": "2026-08-31T01:52:46.618Z"
+  },
+  {
+    "_id": "local-1788141173412-mc4do",
+    "action": "Paper extraction completed: 12 questions, 43 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:52:53.412Z",
+    "timestamp": "2026-08-31T01:52:53.412Z"
+  },
+  {
+    "_id": "local-1788141188031-ounhz",
+    "action": "Paper extraction completed: 12 questions, 43 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:53:08.031Z",
+    "timestamp": "2026-08-31T01:53:08.031Z"
+  },
+  {
+    "_id": "local-1788141239130-4yasf",
+    "action": "Paper extraction completed: 12 questions, 43 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:53:59.130Z",
+    "timestamp": "2026-08-31T01:53:59.130Z"
+  },
+  {
+    "_id": "local-1788141317702-pc6b6",
+    "action": "Paper extraction completed: 10 questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:55:17.702Z",
+    "timestamp": "2026-08-31T01:55:17.702Z"
+  },
+  {
+    "_id": "local-1788141322975-mzj2g",
+    "action": "Paper extraction completed: 10 questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:55:22.975Z",
+    "timestamp": "2026-08-31T01:55:22.975Z"
+  },
+  {
+    "_id": "local-1788141529691-luv43",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:58:49.691Z",
+    "timestamp": "2026-08-31T01:58:49.691Z"
+  },
+  {
+    "_id": "local-1788141536773-ho82n",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T01:58:56.773Z",
+    "timestamp": "2026-08-31T01:58:56.773Z"
+  },
+  {
+    "_id": "local-1788141735635-xidue",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:02:15.635Z",
+    "timestamp": "2026-08-31T02:02:15.635Z"
+  },
+  {
+    "_id": "local-1788141738875-z4p9b",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:02:18.875Z",
+    "timestamp": "2026-08-31T02:02:18.875Z"
+  },
+  {
+    "_id": "local-1788142013567-f9w2a",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:06:53.567Z",
+    "timestamp": "2026-08-31T02:06:53.567Z"
+  },
+  {
+    "_id": "local-1788142075228-4z88x",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:07:55.228Z",
+    "timestamp": "2026-08-31T02:07:55.228Z"
+  },
+  {
+    "_id": "local-1788142084216-hf5wd",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:08:04.216Z",
+    "timestamp": "2026-08-31T02:08:04.216Z"
+  },
+  {
+    "_id": "local-1788142089765-t5iu1",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:08:09.765Z",
+    "timestamp": "2026-08-31T02:08:09.765Z"
+  },
+  {
+    "_id": "local-1788142319230-9inkg",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:11:59.230Z",
+    "timestamp": "2026-08-31T02:11:59.230Z"
+  },
+  {
+    "_id": "local-1788142564622-e11um",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:16:04.622Z",
+    "timestamp": "2026-08-31T02:16:04.622Z"
+  },
+  {
+    "_id": "local-1788142635211-4f8g0",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:17:15.211Z",
+    "timestamp": "2026-08-31T02:17:15.211Z"
+  },
+  {
+    "_id": "local-1788142728142-17yuk",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:18:48.142Z",
+    "timestamp": "2026-08-31T02:18:48.142Z"
+  },
+  {
+    "_id": "local-1788142932674-sw269",
+    "action": "Paper extraction completed: 10 main questions, 21 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:22:12.674Z",
+    "timestamp": "2026-08-31T02:22:12.674Z"
+  },
+  {
+    "_id": "local-1788143170420-hg7jt",
+    "action": "Paper extraction completed: 10 main questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:26:10.420Z",
+    "timestamp": "2026-08-31T02:26:10.421Z"
+  },
+  {
+    "_id": "local-1788143186912-7z8rs",
+    "action": "Paper extraction completed: 10 main questions, 39 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:26:26.912Z",
+    "timestamp": "2026-08-31T02:26:26.912Z"
+  },
+  {
+    "_id": "local-1788144642251-1d93u",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:50:42.251Z",
+    "timestamp": "2026-08-31T02:50:42.251Z"
+  },
+  {
+    "_id": "local-1788144649429-p78d8",
+    "action": "Paper extraction completed: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:50:49.429Z",
+    "timestamp": "2026-08-31T02:50:49.429Z"
+  },
+  {
+    "_id": "local-1788144763430-c6qfw",
+    "action": "Paper extraction completed: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T02:52:43.430Z",
+    "timestamp": "2026-08-31T02:52:43.430Z"
+  },
+  {
+    "_id": "local-1788145231740-k5yf1",
+    "action": "Paper extraction completed: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T03:00:31.740Z",
+    "timestamp": "2026-08-31T03:00:31.740Z"
+  },
+  {
+    "_id": "local-1788145277680-uokck",
+    "action": "Paper extraction completed: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T03:01:17.681Z",
+    "timestamp": "2026-08-31T03:01:17.681Z"
+  },
+  {
+    "_id": "local-1788145520451-7tz89",
+    "action": "Paper extraction completed: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T03:05:20.451Z",
+    "timestamp": "2026-08-31T03:05:20.451Z"
   }
 ]

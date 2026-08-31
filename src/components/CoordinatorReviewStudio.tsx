@@ -1865,7 +1865,8 @@ export const CoordinatorReviewStudio: React.FC<CoordinatorReviewStudioProps> = (
           style={{
             position: 'fixed',
             top: '24px',
-            right: '24px',
+            left: '50%',
+            transform: 'translateX(-50%)',
             zIndex: 10000000,
             width: '380px',
             maxWidth: 'calc(100vw - 48px)',
