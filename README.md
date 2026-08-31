@@ -18,7 +18,7 @@ The system combines:
 - TF-IDF
 - Cosine Similarity
 - Semantic Analysis
-- Neural Network-based analysis
+- Neural Network-based 
 - Rubric-based scoring
 
 The platform follows a controlled Admin–Coordinator workflow, where the Admin manages examination materials and assignments, while the Coordinator performs and verifies the AI-assisted evaluation before submitting the results back to the Admin.
