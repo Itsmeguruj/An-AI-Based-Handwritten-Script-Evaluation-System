@@ -233,6 +233,71 @@ a:hover {
   box-shadow: 0 4px 20px rgba(230, 0, 126, 0.06);
 }
 
+/* Auth / Login Box Eye-Soothing Glow Effects */
+.auth-card-glow {
+  position: relative;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-card-glow-cyan {
+  box-shadow: 
+    0 0 0 1px rgba(0, 203, 214, 0.45),
+    0 0 30px 2px rgba(0, 203, 214, 0.22),
+    0 14px 45px -4px rgba(0, 203, 214, 0.26),
+    0 24px 65px -10px rgba(92, 10, 135, 0.35) !important;
+}
+
+.auth-card-glow-pink {
+  box-shadow: 
+    0 0 0 1px rgba(230, 0, 126, 0.45),
+    0 0 30px 2px rgba(255, 42, 133, 0.22),
+    0 14px 45px -4px rgba(230, 0, 126, 0.26),
+    0 24px 65px -10px rgba(255, 150, 0, 0.28) !important;
+}
+
+/* Light Theme Auth Glow - Gentle, Glare-Free & Eye-Soothing */
+body.light-theme .auth-card-glow-cyan,
+html[data-theme="light"] .auth-card-glow-cyan {
+  box-shadow: 
+    0 0 0 1px rgba(2, 132, 199, 0.35),
+    0 0 20px 2px rgba(2, 132, 199, 0.14),
+    0 12px 35px -6px rgba(2, 132, 199, 0.18),
+    0 20px 50px -10px rgba(15, 23, 42, 0.08) !important;
+}
+
+body.light-theme .auth-card-glow-pink,
+html[data-theme="light"] .auth-card-glow-pink {
+  box-shadow: 
+    0 0 0 1px rgba(219, 39, 119, 0.35),
+    0 0 20px 2px rgba(219, 39, 119, 0.14),
+    0 12px 35px -6px rgba(219, 39, 119, 0.18),
+    0 20px 50px -10px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Ambient Radial Glow Aura behind Login Overlay Modal */
+.login-overlay-glow-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  max-height: 520px;
+  border-radius: 32px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(0, 203, 214, 0.25) 0%, rgba(92, 10, 135, 0.2) 50%, transparent 75%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.light-theme .login-overlay-glow-aura,
+html[data-theme="light"] .login-overlay-glow-aura {
+  background: radial-gradient(ellipse at 50% 50%, rgba(2, 132, 199, 0.15) 0%, rgba(219, 39, 119, 0.08) 50%, transparent 75%) !important;
+  filter: blur(35px) !important;
+}
+
 /* Text Gradient & Glows */
 .gta-text-gradient {
   background: var(--gta-gradient-1);

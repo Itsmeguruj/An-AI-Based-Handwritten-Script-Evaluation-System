@@ -814,6 +814,9 @@ function App() {
             boxSizing: 'border-box',
             animation: 'slideIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)' 
           }}>
+            {/* Ambient Eye-Soothing Glow Aura behind Login Box */}
+            <div className="login-overlay-glow-aura" />
+
             {/* Auth Form card locked to login mode */}
             <AuthForm 
               activeTab="coordinator" 

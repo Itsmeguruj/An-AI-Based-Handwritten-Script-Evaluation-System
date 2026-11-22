@@ -391,7 +391,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
 
   return (
     <div 
-      className={`glass-panel ${activeTab === 'coordinator' ? 'glass-panel-cyan' : 'glass-panel-pink'}`}
+      className={`glass-panel auth-card-glow ${activeTab === 'coordinator' ? 'glass-panel-cyan auth-card-glow-cyan' : 'glass-panel-pink auth-card-glow-pink'}`}
       style={{
         padding: '24px',
         width: '100%',
@@ -399,9 +399,6 @@ export const AuthForm: React.FC<AuthFormProps> = ({
         margin: '0 auto',
         position: 'relative',
         zIndex: 5,
-        boxShadow: activeTab === 'coordinator' 
-          ? '0 10px 40px -10px rgba(0, 203, 214, 0.12)' 
-          : '0 10px 40px -10px rgba(255, 42, 133, 0.12)',
         overflow: 'hidden'
       }}
     >
