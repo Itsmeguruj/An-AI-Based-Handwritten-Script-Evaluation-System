@@ -7828,5 +7828,55 @@
     "ipAddress": "127.0.0.1",
     "createdAt": "2026-10-31T03:24:39.454Z",
     "timestamp": "2026-10-31T03:24:39.454Z"
+  },
+  {
+    "_id": "local-1795326846783-rxgci",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T05:54:06.783Z",
+    "timestamp": "2026-11-22T05:54:06.784Z"
+  },
+  {
+    "_id": "local-1795329848240-4ktuq",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T06:44:08.241Z",
+    "timestamp": "2026-11-22T06:44:08.241Z"
+  },
+  {
+    "_id": "local-1795329857140-e620a",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T06:44:17.140Z",
+    "timestamp": "2026-11-22T06:44:17.140Z"
+  },
+  {
+    "_id": "local-1795329859140-b5i2w",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T06:44:19.140Z",
+    "timestamp": "2026-11-22T06:44:19.140Z"
+  },
+  {
+    "_id": "local-1795329908980-uu1md",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T06:45:08.980Z",
+    "timestamp": "2026-11-22T06:45:08.980Z"
   }
 ]

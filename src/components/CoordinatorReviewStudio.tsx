@@ -3596,7 +3596,7 @@ Student selected and answered Question 3 under Choice Group rules ("Answer any 1
                         overflowY: 'auto',
                         borderRadius: '6px',
                         border: '1px solid var(--panel-border)',
-                        background: '#09090e',
+                        background: 'var(--bg-studio, #09090e)',
                         boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
                         boxSizing: 'border-box'
                       }}
@@ -5179,7 +5179,7 @@ Student selected and answered Question 3 under Choice Group rules ("Answer any 1
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'rgba(5, 5, 10, 0.96)',
+          background: 'var(--modal-overlay-bg, rgba(5, 5, 10, 0.96))',
           backdropFilter: 'blur(8px)',
           zIndex: 99999,
           display: 'flex',
@@ -5192,7 +5192,7 @@ Student selected and answered Question 3 under Choice Group rules ("Answer any 1
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '10px 20px',
-            background: '#0d0d16',
+            background: 'var(--panel-bg-solid, #0d0d16)',
             borderBottom: '1px solid var(--panel-border)',
             boxShadow: '0 4px 16px rgba(0,0,0,0.5)',
             gap: '12px'
@@ -5889,7 +5889,7 @@ Student selected and answered Question 3 under Choice Group rules ("Answer any 1
             justifyContent: 'center',
             gap: '12px',
             padding: '10px 20px',
-            background: '#0d0d16',
+            background: 'var(--panel-bg-solid, #0d0d16)',
             borderTop: '1px solid var(--panel-border)'
           }}>
             <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>

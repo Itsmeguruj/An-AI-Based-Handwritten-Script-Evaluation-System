@@ -8,40 +8,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Instant Pre-Hydration Theme Initializer (prevents flicker and guarantees reload persistence) -->
     <script>
       (function() {
         try {
           var t = localStorage.getItem('deepscript_theme') || localStorage.getItem('theme');
-          if (t === 'light') {
+          var isLight = t === 'light';
+          if (isLight) {
             document.documentElement.classList.add('light-theme');
             document.documentElement.setAttribute('data-theme', 'light');
-            if (document.body) {
-              document.body.classList.add('light-theme');
-            }
+            document.documentElement.style.colorScheme = 'light';
           } else {
             document.documentElement.classList.remove('light-theme');
             document.documentElement.setAttribute('data-theme', 'dark');
-            if (document.body) {
-              document.body.classList.remove('light-theme');
-            }
+            document.documentElement.style.colorScheme = 'dark';
           }
+          document.addEventListener('DOMContentLoaded', function() {
+            try {
+              if (isLight && document.body) {
+                document.body.classList.add('light-theme');
+                document.body.setAttribute('data-theme', 'light');
+              }
+            } catch(e) {}
+          });
         } catch (e) {}
       })();
     </script>
   </head>
   <body>
+    <!-- Immediate Body Theme Application -->
     <script>
       (function() {
         try {
           var t = localStorage.getItem('deepscript_theme') || localStorage.getItem('theme');
-          if (t === 'light') {
+          var isLight = t === 'light';
+          if (isLight) {
             document.body.classList.add('light-theme');
+            document.body.setAttribute('data-theme', 'light');
             document.documentElement.classList.add('light-theme');
             document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.style.colorScheme = 'light';
           } else {
             document.body.classList.remove('light-theme');
+            document.body.setAttribute('data-theme', 'dark');
             document.documentElement.classList.remove('light-theme');
             document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.style.colorScheme = 'dark';
           }
         } catch (e) {}
       })();

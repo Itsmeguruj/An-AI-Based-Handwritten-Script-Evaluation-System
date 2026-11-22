@@ -31,6 +31,7 @@
   --panel-border-hover: rgba(255, 255, 255, 0.14);
   --panel-border-cyan: rgba(0, 203, 214, 0.25);
   --panel-border-pink: rgba(230, 0, 126, 0.25);
+  --modal-overlay-bg: rgba(5, 5, 10, 0.96);
   
   /* Fonts */
   --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -714,6 +715,7 @@ body.light-theme {
   --panel-border-hover: rgba(15, 23, 42, 0.2);
   --panel-border-cyan: rgba(0, 203, 214, 0.45);
   --panel-border-pink: rgba(230, 0, 126, 0.45);
+  --modal-overlay-bg: rgba(248, 250, 252, 0.98);
   
   /* Glow Colors Light Override */
   --gta-pink-glow: rgba(255, 42, 133, 0.06);
@@ -2026,4 +2028,84 @@ html[data-theme="light"] td {
 body.light-theme tr:hover td,
 html[data-theme="light"] tr:hover td {
   background: rgba(2, 132, 199, 0.04) !important;
+}
+
+body.light-theme .scan-scroll-viewport,
+html[data-theme="light"] .scan-scroll-viewport {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Main Dark/White Mode Header Button (Exact Orange Sun & Cyan Moon Design) */
+.btn-main-theme-toggle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  background: rgba(255, 150, 0, 0.08);
+  border: 1px solid rgba(255, 150, 0, 0.25);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.btn-main-theme-toggle:hover {
+  background: rgba(255, 150, 0, 0.16);
+  border-color: rgba(255, 150, 0, 0.5);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 14px rgba(255, 150, 0, 0.25);
+}
+
+.btn-main-theme-toggle:active {
+  transform: translateY(0) scale(0.92);
+}
+
+.btn-main-theme-toggle:focus-visible {
+  outline: 2px solid var(--gta-orange);
+  outline-offset: 2px;
+}
+
+body.light-theme .btn-main-theme-toggle,
+html[data-theme="light"] .btn-main-theme-toggle {
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+body.light-theme .btn-main-theme-toggle:hover,
+html[data-theme="light"] .btn-main-theme-toggle:hover {
+  background: rgba(2, 132, 199, 0.16);
+  border-color: rgba(2, 132, 199, 0.5);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.22);
+}
+
+body.light-theme .btn-main-theme-toggle:focus-visible,
+html[data-theme="light"] .btn-main-theme-toggle:focus-visible {
+  outline: 2px solid var(--gta-cyan);
+}
+
+/* Mobile Responsiveness for Header & Actions */
+@media (max-width: 640px) {
+  .nav-header {
+    padding: 0 14px;
+    height: 60px;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .btn-main-theme-toggle {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    border-radius: 10px !important;
+  }
 }

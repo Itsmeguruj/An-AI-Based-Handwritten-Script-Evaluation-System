@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Terminal, BookOpen, Sun, Moon, ChevronDown, User, LogOut } from 'lucide-react';
+import { Terminal, BookOpen, Sun, Moon, ChevronDown, User, LogOut, Sliders, Layers, CheckCircle2 } from 'lucide-react';
 import { HomeHero } from './components/HomeHero';
 import { PortalTabs } from './components/PortalTabs';
 import { AuthForm } from './components/AuthForm';
@@ -8,6 +8,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { DotFlowBackground } from './components/DotFlowBackground';
 import { DeepScriptLogo } from './components/DeepScriptLogo';
 import { RubricStudioSlides } from './components/RubricStudioSlides';
+import { getSavedTheme, applyTheme, type ThemeMode, THEME_EVENT_NAME } from './utils/theme';
 import {
   DownloadSection,
   FeaturesSection,
@@ -38,17 +39,7 @@ function App() {
   const [activeTab, setActiveTab] = useState<'coordinator' | 'admin'>('coordinator');
   const [coordSubTab, setCoordSubTab] = useState<'register' | 'login'>('register');
   const [showLoginOverlay, setShowLoginOverlay] = useState(false);
-  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
-    try {
-      const savedTheme = localStorage.getItem('deepscript_theme') || localStorage.getItem('theme');
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        return savedTheme;
-      }
-    } catch {
-      // ignore
-    }
-    return 'dark';
-  });
+  const [theme, setTheme] = useState<ThemeMode>(() => getSavedTheme());
   const [showDropdown, setShowDropdown] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false);
   const [activeSectionModal, setActiveSectionModal] = useState<
@@ -216,44 +207,34 @@ function App() {
   }, [auth]);
 
   useEffect(() => {
-    const isLight = theme === 'light';
-    if (isLight) {
-      document.body.classList.add('light-theme');
-      document.documentElement.classList.add('light-theme');
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
-      document.body.classList.remove('light-theme');
-      document.documentElement.classList.remove('light-theme');
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    try {
-      localStorage.setItem('deepscript_theme', theme);
-      localStorage.setItem('theme', theme);
-      window.dispatchEvent(new CustomEvent('deepscript_theme_changed', { detail: theme }));
-    } catch {
-      // ignore
-    }
+    applyTheme(theme);
   }, [theme]);
 
-  // Synchronize theme changes across tabs and global components
+  // Synchronize theme changes across tabs, storage events, and global components
   useEffect(() => {
     const handleStorage = (e: StorageEvent) => {
       if ((e.key === 'deepscript_theme' || e.key === 'theme') && (e.newValue === 'light' || e.newValue === 'dark')) {
-        setTheme(e.newValue);
+        setTheme(e.newValue as ThemeMode);
       }
     };
     const handleCustomTheme = (e: any) => {
-      if (e.detail === 'light' || e.detail === 'dark') {
-        setTheme(e.detail);
+      if ((e.detail === 'light' || e.detail === 'dark') && e.detail !== theme) {
+        setTheme(e.detail as ThemeMode);
       }
     };
     window.addEventListener('storage', handleStorage);
-    window.addEventListener('deepscript_theme_changed', handleCustomTheme);
+    window.addEventListener(THEME_EVENT_NAME, handleCustomTheme);
     return () => {
       window.removeEventListener('storage', handleStorage);
-      window.removeEventListener('deepscript_theme_changed', handleCustomTheme);
+      window.removeEventListener(THEME_EVENT_NAME, handleCustomTheme);
     };
-  }, []);
+  }, [theme]);
+
+  const handleToggleTheme = (targetMode?: ThemeMode) => {
+    const next = targetMode || (theme === 'dark' ? 'light' : 'dark');
+    applyTheme(next);
+    setTheme(next);
+  };
 
   const handleScrollToAuth = () => {
     setActiveTab('coordinator');
@@ -350,18 +331,21 @@ function App() {
         <nav className="nav-actions">
           
           <button 
-            onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
-            className="btn-gta-secondary"
-            style={{ 
-              padding: '8px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              border: '1px solid var(--panel-border)'
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleToggleTheme();
             }}
-            title={theme === 'dark' ? "Switch to White Mode" : "Switch to Dark Mode"}
+            className="btn-main-theme-toggle"
+            aria-label={theme === 'dark' ? "Switch to Eye-Soothing White Mode" : "Switch to Dark Mode"}
+            title={theme === 'dark' ? "Switch to Eye-Soothing White Mode" : "Switch to Dark Mode"}
           >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            {theme === 'dark' ? (
+              <Sun size={20} color="#ff9600" style={{ filter: 'drop-shadow(0 0 6px rgba(255, 150, 0, 0.4))' }} />
+            ) : (
+              <Moon size={20} color="#0284c7" style={{ filter: 'drop-shadow(0 0 6px rgba(2, 132, 199, 0.35))' }} />
+            )}
           </button>
 
           {auth ? (
@@ -512,7 +496,7 @@ function App() {
             userName={auth.name} 
             isVerified={auth.isVerified}
             theme={theme}
-            onToggleTheme={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+            onToggleTheme={handleToggleTheme}
           onOpenProfile={() => setShowProfileModal(true)}
           onLogout={handleLogout} 
           onVerifyStatusChange={(verified) => {
@@ -550,7 +534,7 @@ function App() {
             <div style={{ textAlign: 'left' }}>
               <div style={{ display: 'inline-flex', marginBottom: '16px' }}>
                 <span className="badge badge-cyan">
-                  🔐 SECURED CREDENTIAL PORTAL
+                  🔐 SECURED EVALUATOR PORTAL
                 </span>
               </div>
               <h2 style={{ 
@@ -561,30 +545,46 @@ function App() {
                 letterSpacing: '-1px'
               }}>
                 Access the Workspace. <br />
-                Begin Evaluative Markup.
+                From Scheme Ingestion to Script Audit.
               </h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '15px', lineHeight: '1.6', marginBottom: '24px' }}>
-                Select your respective portal tab on the right to sign in as an administrator or register as a coordinator. 
-                Coordinators require verification keys to access student workspaces and submit evaluated grades.
+                Select your respective portal tab on the right to sign in as an Administrator or register as an Evaluation Coordinator. 
+                Administrators configure university schemes and batch assignments; verified Coordinators inspect CV-parsed answer blocks, stitch multi-page scripts, and audit AI-evaluated gradebooks.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                  <Terminal size={18} color="var(--gta-pink)" style={{ marginTop: '2px' }} />
+                  <Sliders size={18} color="var(--gta-pink)" style={{ marginTop: '2px', flexShrink: 0 }} />
                   <div>
-                    <h5 style={{ fontWeight: 'bold', fontSize: '14px' }}>Automated Grade Ledger Sync</h5>
-                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
-                      Every approved question markup is automatically synchronized back to central LMS databases via administrative API pipelines.
+                    <h5 style={{ fontWeight: 'bold', fontSize: '14px', color: 'var(--text-primary)', margin: 0, marginBottom: '2px' }}>
+                      VTU Scheme Ingestion & Batch Assignment
+                    </h5>
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.45' }}>
+                      Admins ingest university examination papers (BCS304), configure 5-module choice schemas, establish step-type rubric criteria, and assign script batches to verified coordinators.
                     </p>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                  <BookOpen size={18} color="var(--gta-cyan)" style={{ marginTop: '2px' }} />
+                  <Layers size={18} color="var(--gta-cyan)" style={{ marginTop: '2px', flexShrink: 0 }} />
                   <div>
-                    <h5 style={{ fontWeight: 'bold', fontSize: '14px' }}>Custom Grading Rubric Vault</h5>
-                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
-                      Admins configure structural schemas, custom penalty rates, and handwriting confidence filters within the security perimeter.
+                    <h5 style={{ fontWeight: 'bold', fontSize: '14px', color: 'var(--text-primary)', margin: 0, marginBottom: '2px' }}>
+                      Circled-Anchor Parsing & Multi-Page Stitching
+                    </h5>
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.45' }}>
+                      Computer vision identifies circled question numbers (①, ②), auto-fits tight handwriting boundaries, and stitches scattered answer blocks across pages before AI scoring.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                  <CheckCircle2 size={18} color="var(--gta-purple)" style={{ marginTop: '2px', flexShrink: 0 }} />
+                  <div>
+                    <h5 style={{ fontWeight: 'bold', fontSize: '14px', color: 'var(--text-primary)', margin: 0, marginBottom: '2px' }}>
+                      Dual-Engine AI Scoring & Audit Ledger
+                    </h5>
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.45' }}>
+                      Multimodal models evaluate consolidated answers against rubric keys with strictness calibration (80% VTU Standard), publishing transparent, tamper-evident audit scorecards.
                     </p>
                   </div>
                 </div>

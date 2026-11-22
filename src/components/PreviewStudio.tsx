@@ -44,6 +44,7 @@ import { CoordinatorReviewStudio } from './CoordinatorReviewStudio';
 import { ErrorBoundary } from './ErrorBoundary';
 import { AIModelConfigModal } from './AIModelConfigModal';
 import { getSavedAIModelConfig } from '../services/aiModels';
+import { getSavedTheme, applyTheme, toggleTheme, type ThemeMode } from '../utils/theme';
 import { 
   extractTextFromPDF, 
   extractTextFromImage, 
@@ -68,8 +69,8 @@ interface PreviewStudioProps {
   userName: string;
   isVerified?: boolean;
   onOpenProfile?: () => void;
-  theme?: 'dark' | 'light';
-  onToggleTheme?: () => void;
+  theme?: ThemeMode;
+  onToggleTheme?: (mode?: ThemeMode) => void;
   onLogout: () => void;
   onVerifyStatusChange?: (isVerified: boolean) => void;
 }
@@ -1261,7 +1262,7 @@ export const PreviewStudio: React.FC<PreviewStudioProps> = ({
   role,
   userName: _userName,
   isVerified,
-  theme = 'dark',
+  theme = getSavedTheme(),
   onToggleTheme,
   onOpenProfile,
   onLogout: _onLogout,
@@ -6625,31 +6626,6 @@ Model Answer:
         <div className="sidebar-icon-btn" onClick={() => alert('Evaluation metrics dashboard is locked in preview mode.')} title="Metrics & Performance">
           <CheckCircle2 size={20} />
         </div>
-
-        {/* Global Theme Switcher */}
-        <div 
-          className="sidebar-icon-btn" 
-          onClick={() => {
-            if (onToggleTheme) {
-              onToggleTheme();
-            } else {
-              const current = document.body.classList.contains('light-theme') ? 'light' : 'dark';
-              const next = current === 'dark' ? 'light' : 'dark';
-              document.body.classList.toggle('light-theme', next === 'light');
-              document.documentElement.classList.toggle('light-theme', next === 'light');
-              document.documentElement.setAttribute('data-theme', next);
-              localStorage.setItem('deepscript_theme', next);
-              localStorage.setItem('theme', next);
-              window.dispatchEvent(new CustomEvent('deepscript_theme_changed', { detail: next }));
-            }
-          }}
-          title={theme === 'dark' ? "Switch to Eye-Soothing White Mode" : "Switch to Dark Mode"}
-          style={{ marginTop: 'auto', marginBottom: '12px' }}
-        >
-          {theme === 'dark' ? <Sun size={20} color="#ff9600" /> : <Moon size={20} color="#0284c7" />}
-        </div>
-
-
       </div>
 
       {/* Main Workspace Frame */}
@@ -7833,15 +7809,8 @@ Model Answer:
                   <div 
                     onClick={() => {
                       if (theme !== 'dark') {
-                        if (onToggleTheme) onToggleTheme();
-                        else {
-                          document.body.classList.remove('light-theme');
-                          document.documentElement.classList.remove('light-theme');
-                          document.documentElement.setAttribute('data-theme', 'dark');
-                          localStorage.setItem('deepscript_theme', 'dark');
-                          localStorage.setItem('theme', 'dark');
-                          window.dispatchEvent(new CustomEvent('deepscript_theme_changed', { detail: 'dark' }));
-                        }
+                        if (onToggleTheme) onToggleTheme('dark');
+                        else applyTheme('dark');
                       }
                     }}
                     style={{
@@ -7873,15 +7842,8 @@ Model Answer:
                   <div 
                     onClick={() => {
                       if (theme !== 'light') {
-                        if (onToggleTheme) onToggleTheme();
-                        else {
-                          document.body.classList.add('light-theme');
-                          document.documentElement.classList.add('light-theme');
-                          document.documentElement.setAttribute('data-theme', 'light');
-                          localStorage.setItem('deepscript_theme', 'light');
-                          localStorage.setItem('theme', 'light');
-                          window.dispatchEvent(new CustomEvent('deepscript_theme_changed', { detail: 'light' }));
-                        }
+                        if (onToggleTheme) onToggleTheme('light');
+                        else applyTheme('light');
                       }
                     }}
                     style={{
