@@ -15,8 +15,42 @@ import Assignment from './models/Assignment.js';
 import StudentScript from './models/StudentScript.js';
 import ExtractedBlock from './models/ExtractedBlock.js';
 import ConsolidatedAnswer from './models/ConsolidatedAnswer.js';
+import { OrchestrationEngine } from './services/orchestrationEngine.js';
+import { EvalDeskBenchmark } from './services/evalDeskBenchmark.js';
+import { AdminRubricOrchestrator } from './services/adminRubricOrchestrator.js';
+import { RubricBenchmarkSuite } from './services/rubricBenchmarkSuite.js';
 
 dotenv.config();
+
+// Initialize AI/ML Evaluation Orchestrator & EvalDesk Benchmark
+const orchestrator = new OrchestrationEngine({
+  glm4v: {
+    endpoint: process.env.GLM4V_ENDPOINT,
+    apiKey: process.env.GLM4V_API_KEY || process.env.HF_TOKEN
+  },
+  fermat: {
+    endpoint: process.env.FERMAT_ENDPOINT,
+    apiKey: process.env.FERMAT_API_KEY
+  }
+});
+const evalDeskBenchmark = new EvalDeskBenchmark(orchestrator);
+
+// Initialize Admin Rubric Orchestration Engine (Qwen 4B + Qwen 9B + Gemma 3 12B IT)
+const adminRubricOrchestrator = new AdminRubricOrchestrator({
+  qwen4b: {
+    endpoint: process.env.QWEN_4B_ENDPOINT,
+    apiKey: process.env.QWEN_API_KEY || process.env.HF_TOKEN
+  },
+  qwen9b: {
+    endpoint: process.env.QWEN_9B_ENDPOINT,
+    apiKey: process.env.QWEN_API_KEY || process.env.HF_TOKEN
+  },
+  gemma12b: {
+    endpoint: process.env.GEMMA_12B_ENDPOINT,
+    apiKey: process.env.GEMMA_API_KEY || process.env.HF_TOKEN
+  }
+});
+const rubricBenchmarkSuite = new RubricBenchmarkSuite(adminRubricOrchestrator);
 
 // Configure Nodemailer Transporter
 const transporter = nodemailer.createTransport({
@@ -2049,6 +2083,136 @@ app.post('/api/coordinator/scripts/seed', async (req, res) => {
     return res.status(200).json({ message: 'Seed triggered successfully.' });
   } catch (error) {
     return res.status(500).json({ error: 'Error seeding data.' });
+  }
+});
+
+// ====================================================================
+// 17. Advanced AI/ML Evaluation & EvalDesk Benchmarking Endpoints
+// ====================================================================
+
+// POST /api/evaluate/orchestrated - Evaluate question or entire script booklet
+app.post('/api/evaluate/orchestrated', async (req, res) => {
+  try {
+    const { questions, blocks, consolidatedAnswers, modelAnswerText, singleQuestion } = req.body;
+
+    if (singleQuestion) {
+      const result = await orchestrator.evaluateSingleQuestion({
+        questionId: singleQuestion.questionId || singleQuestion.id || 'Q1',
+        questionText: singleQuestion.questionText || singleQuestion.question || '',
+        maxMarks: Number(singleQuestion.maxMarks) || 10,
+        criteria: singleQuestion.criteria || [],
+        studentAnswer: singleQuestion.studentAnswer || '',
+        blocks: blocks || singleQuestion.blocks || [],
+        modelAnswer: modelAnswerText || singleQuestion.modelAnswer || ''
+      });
+      return res.status(200).json({ success: true, evaluation: result });
+    }
+
+    if (Array.isArray(questions) && questions.length > 0) {
+      const batchResult = await orchestrator.evaluateEntireScript({
+        questions,
+        blocks: blocks || [],
+        consolidatedAnswers: consolidatedAnswers || [],
+        modelAnswerText: modelAnswerText || ''
+      });
+      return res.status(200).json(batchResult);
+    }
+
+    return res.status(400).json({ error: 'Missing questions or singleQuestion in evaluation payload.' });
+  } catch (error) {
+    console.error('Error in /api/evaluate/orchestrated:', error);
+    return res.status(500).json({ error: 'Orchestrated evaluation failure: ' + error.message });
+  }
+});
+
+// POST /api/evaluate/scattered - Reconstruct scattered answer across pages
+app.post('/api/evaluate/scattered', (req, res) => {
+  try {
+    const { blocks, questionId } = req.body;
+    if (!blocks || !questionId) {
+      return res.status(400).json({ error: 'Missing blocks or questionId.' });
+    }
+    const result = orchestrator.glm4v.reconstructScatteredAnswer(blocks, questionId);
+    return res.status(200).json({ success: true, ...result });
+  } catch (error) {
+    console.error('Error in /api/evaluate/scattered:', error);
+    return res.status(500).json({ error: 'Scattered answer reconstruction failure: ' + error.message });
+  }
+});
+
+// GET /api/benchmark/evaldesk - Run full 10-scenario EvalDesk benchmark
+app.get('/api/benchmark/evaldesk', async (req, res) => {
+  try {
+    const report = await evalDeskBenchmark.runFullBenchmark();
+    return res.status(200).json(report);
+  } catch (error) {
+    console.error('Error running EvalDesk benchmark:', error);
+    return res.status(500).json({ error: 'EvalDesk benchmark execution failed: ' + error.message });
+  }
+});
+
+// ====================================================================
+// 18. Admin-Only Rubric Generation & Gemma Validation Endpoints
+// ====================================================================
+
+// Middleware: Require Admin Authorization for Rubric Generation
+const requireAdminRole = (req, res, next) => {
+  const isAuth = adminRubricOrchestrator.verifyAdminAuthorization(req);
+  if (!isAuth) {
+    return res.status(403).json({
+      error: 'Access Denied: Rubric generation, validation, and editing are restricted exclusively to Administrators. Coordinators cannot generate or modify rubrics.'
+    });
+  }
+  next();
+};
+
+// POST /api/admin/rubric/generate-orchestrated - Qwen 4B + Qwen 9B + Gemma 12B IT
+app.post('/api/admin/rubric/generate-orchestrated', requireAdminRole, async (req, res) => {
+  try {
+    const { questions, questionPaperText, modelAnswerText } = req.body;
+    if (!questions || !Array.isArray(questions) || questions.length === 0) {
+      return res.status(400).json({ error: 'Questions array is required.' });
+    }
+
+    const result = await adminRubricOrchestrator.generateAndValidatePaperRubrics({
+      questions,
+      questionPaperText: questionPaperText || '',
+      modelAnswerText: modelAnswerText || ''
+    });
+
+    return res.status(200).json(result);
+  } catch (error) {
+    console.error('Error in /api/admin/rubric/generate-orchestrated:', error);
+    return res.status(500).json({ error: 'Admin rubric generation failed: ' + error.message });
+  }
+});
+
+// POST /api/admin/rubric/validate - Gemma 3 12B IT Independent Validation
+app.post('/api/admin/rubric/validate', requireAdminRole, async (req, res) => {
+  try {
+    const { questionId, questionText, maxMarks, officialModelAnswer, rubric } = req.body;
+    const report = await adminRubricOrchestrator.gemma12b.validateAndRefineRubric({
+      questionId: questionId || 'Q1',
+      questionText: questionText || '',
+      maxMarks: Number(maxMarks) || 10,
+      officialModelAnswer: officialModelAnswer || '',
+      generatedRubric: rubric || {}
+    });
+    return res.status(200).json(report);
+  } catch (error) {
+    console.error('Error in /api/admin/rubric/validate:', error);
+    return res.status(500).json({ error: 'Gemma validation failed: ' + error.message });
+  }
+});
+
+// GET /api/admin/rubric/benchmark - Run 10-Scenario Rubric Benchmark Suite
+app.get('/api/admin/rubric/benchmark', requireAdminRole, async (req, res) => {
+  try {
+    const benchmarkResult = await rubricBenchmarkSuite.runComparativeBenchmark();
+    return res.status(200).json(benchmarkResult);
+  } catch (error) {
+    console.error('Error in /api/admin/rubric/benchmark:', error);
+    return res.status(500).json({ error: 'Rubric benchmark execution failed: ' + error.message });
   }
 });
 

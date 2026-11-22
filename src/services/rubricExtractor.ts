@@ -21,6 +21,22 @@ DO NOT generate a different question based on the topic.
 You must reproduce the ACTUAL questions appearing in the uploaded paper.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY RULE — EXACT QUESTION PAPER VISUAL REPRODUCTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+During rubric generation, the AI must reproduce every figure, tree, matrix, graph, flowchart, table, and diagram exactly as it appears in the uploaded question paper.
+
+- Use the original question paper PDF/image as the source of truth.
+- Preserve exact structure, node positions, branches, connections, labels, symbols, arrows, values, dimensions, and layout.
+- Do not create approximate or alternative representations.
+- Do not simplify, modify, omit, or replace original visuals.
+- Do not generate a generic diagram based on conceptual understanding.
+- Ensure every visual belongs to its corresponding question.
+- Compare the generated visual against the original question paper before finalizing the rubric.
+- If a visual cannot be interpreted accurately, flag it for manual verification instead of guessing: "[VISUAL UNCLEAR — MANUAL VERIFICATION REQUIRED]".
+
+Priority: Exact visual accuracy is mandatory. Reproducing the same concept is not sufficient; the generated output must reproduce the actual visual present in the question paper.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PHASE 1 — READ THE ORIGINAL PAPER
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Carefully inspect EVERY PAGE and EVERY VISIBLE REGION of the uploaded document.
@@ -994,8 +1010,9 @@ function extractSubQuestions(text: string): Array<{ question: string; marks: num
 
 /**
  * Detects if a question references or contains visual assets, diagrams, schematics, circuits, or tables
+ * MANDATORY RULE: Every figure, tree, matrix, graph, flowchart, table, and diagram must be reproduced exactly.
  */
-export function extractFigureReference(text: string): { hasFigure: boolean; figureRef: string | null; figureDescription: string | null } {
+export function extractFigureReference(text: string): { hasFigure: boolean; figureRef: string | null; figureDescription: string | null; visualType?: string } {
   if (!text) return { hasFigure: false, figureRef: null, figureDescription: null };
   const norm = text.trim();
 
@@ -1005,7 +1022,8 @@ export function extractFigureReference(text: string): { hasFigure: boolean; figu
     return {
       hasFigure: true,
       figureRef: 'Embedded Visual Asset',
-      figureDescription: tagMatch[1].trim()
+      figureDescription: tagMatch[1].trim(),
+      visualType: 'EMBEDDED_ASSET'
     };
   }
 
@@ -1015,7 +1033,19 @@ export function extractFigureReference(text: string): { hasFigure: boolean; figu
     return {
       hasFigure: true,
       figureRef: figMatch[0].trim(),
-      figureDescription: `Diagram / schematic referenced in ${figMatch[0].trim()}`
+      figureDescription: `Exact Question Paper Visual: ${figMatch[0].trim()} (Preserve exact structure, node positions, connections, labels, layout)`,
+      visualType: 'FIGURE'
+    };
+  }
+
+  // 3. Figures, trees, matrices, graphs, flowcharts, tables, and diagrams directly referenced in the question paper
+  const visualKeywordMatch = norm.match(/\b(given\s+(?:binary\s+tree|tree|graph|matrix|flowchart|table|figure|diagram|circuit|schematic)|draw\s+(?:a\s+)?(?:neat\s+)?(?:diagram|flowchart|circuit|schematic|graph|binary\s+tree|bst)|construct\s+(?:a\s+)?(?:binary\s+tree|bst|threaded\s+binary\s+tree|winner\s+tree|hash\s+table)|shown\s+in\s+(?:figure|fig)|sparse\s+matrix|transition\s+matrix|truth\s+table|state\s+diagram)\b/i);
+  if (visualKeywordMatch) {
+    return {
+      hasFigure: true,
+      figureRef: visualKeywordMatch[0].trim(),
+      figureDescription: `Exact Question Paper Visual Reproduction: ${visualKeywordMatch[0].trim()} (Zero approximation, exact nodes, connections, and labels)`,
+      visualType: 'EXACT_VISUAL_REPRODUCTION'
     };
   }
 

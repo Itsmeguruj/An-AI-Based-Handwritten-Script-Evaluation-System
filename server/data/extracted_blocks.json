@@ -6325,5 +6325,1126 @@
     },
     "createdAt": "2026-10-31T03:06:28.597Z",
     "timestamp": "2026-10-31T03:06:28.597Z"
+  },
+  {
+    "_id": "local-1795366384101-ueqlr",
+    "id": "blk-ext-1795366375115-1",
+    "script_id": "script-active",
+    "page_number": 1,
+    "question_id": "Q1a",
+    "module_number": 1,
+    "raw_text": "Q1(a) [Definition, Classification Tree & Primitive Data Structures]:\n\n[Student Hand-Written Response - Page 1]:\nData Structure: It can be defined as a method of storing and organizing data items in the computer memory.\nMainly deals with:\n• Organizing data in memory\n• Fetching and processing data\n• Storing data in memory\n\n[Classification Tree Diagram]:\nData Structure\n  ├── Primitive: int, float, char, double\n  └── Non-Primitive:\n        ├── Linear: array, stack, queue, linked list\n        └── Non-linear: trees, graphs\n\nPrimitive Data Structures:\nThe data structures that are directly operated upon by machine level instructions, i.e., fundamental data types such as int, float, char, double.\n\nNon-Primitive Data Structures:\nThe data structures that are derived from primitive data structures. (Linear vs Non-Linear, continued on Page 2...)",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 4.2,
+      "y": 2,
+      "width": 90.7,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:04.101Z",
+    "timestamp": "2026-11-22T16:53:04.101Z"
+  },
+  {
+    "_id": "local-1795366384147-b0aqs",
+    "id": "blk-ext-1795366375116-2",
+    "script_id": "script-active",
+    "page_number": 2,
+    "question_id": "Q1a",
+    "module_number": 1,
+    "raw_text": "Q1(a) [Continuation from Page 1 - Linear & Non-Linear Classification]:\n\n[Student Hand-Written Response - Page 2 (Top Section)]:\n• In a linear data structure, the data items are arranged in a linear order or sequential.\n  Eg. array, stack, list, queue\n• In a Non Linear ds, the data items that are not in sequence.\n  Eg. trees and graphs",
+    "confidence_score": 0.99,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2.1,
+      "y": 2,
+      "width": 94.9,
+      "height": 67.4
+    },
+    "createdAt": "2026-11-22T16:53:04.147Z",
+    "timestamp": "2026-11-22T16:53:04.147Z"
+  },
+  {
+    "_id": "local-1795366384183-87b47",
+    "id": "blk-ext-1795366375116-3",
+    "script_id": "script-active",
+    "page_number": 2,
+    "question_id": "Q1b",
+    "module_number": 1,
+    "raw_text": "1b) It is a fundamental problem in computer science where the goal is find all occurrences of a given pattern within a larger text or string.\n\n[Student Hand-Written Response - Page 2 (Starting at 1b))]:\nKnuth-Morris-Pratt (KMP) algorithm is a string-matching algorithm that eliminates backtracking by preprocessing the pattern to construct a prefix/failure function π table.\n• Algorithm Logic: On mismatch at character P[q], shift pattern index to π[q-1] to skip redundant comparisons.\n(Answer continued on Page 5...)",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2.1,
+      "y": 63.6,
+      "width": 94.9,
+      "height": 36.4
+    },
+    "createdAt": "2026-11-22T16:53:04.183Z",
+    "timestamp": "2026-11-22T16:53:04.183Z"
+  },
+  {
+    "_id": "local-1795366384218-6yhie",
+    "id": "blk-ext-1795366375116-4",
+    "script_id": "script-active",
+    "page_number": 3,
+    "question_id": "Q3a",
+    "module_number": 2,
+    "raw_text": "Q3(a): Define Stack ADT. Explain array implementation of Stack with push(), pop(), display().\n\n[Student Hand-Written Response - Page 3]:\nStack is a LIFO (Last In First Out) linear list with single access point 'top'.\n• Push(item): Check if top == MAX - 1 (Overflow). top++; stack[top] = item;\n• Pop(): Check if top == -1 (Underflow). item = stack[top]; top--; return item;\n• Display(): for(int i = top; i >= 0; i--) printf(\"%d \", stack[i]);",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 5.7,
+      "y": 2,
+      "width": 87.8,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:53:04.218Z",
+    "timestamp": "2026-11-22T16:53:04.218Z"
+  },
+  {
+    "_id": "local-1795366384251-9c4ws",
+    "id": "blk-ext-1795366375116-5",
+    "script_id": "script-active",
+    "page_number": 3,
+    "question_id": "Q3b",
+    "module_number": 2,
+    "raw_text": "Q3(b): Infix to Postfix conversion for ((A + B) * C - (D - E) ^ (F + G)).\n\n[Student Hand-Written Response - Page 3]:\nStep-by-step conversion using Stack ADT:\n• Symbol: ( -> Stack: ( -> Postfix: \n• Symbol: ( -> Stack: (( -> Postfix: \n• Symbol: A -> Stack: (( -> Postfix: A\n• Symbol: + -> Stack: ((+ -> Postfix: A\n• Symbol: B -> Stack: ((+ -> Postfix: AB\n• Symbol: ) -> Stack: ( -> Postfix: AB+\n• Symbol: * -> Stack: (* -> Postfix: AB+\n• Symbol: C -> Stack: (* -> Postfix: AB+C\n• Symbol: - -> Stack: (- -> Postfix: AB+C*",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 5.7,
+      "y": 47.6,
+      "width": 87.8,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:53:04.251Z",
+    "timestamp": "2026-11-22T16:53:04.251Z"
+  },
+  {
+    "_id": "local-1795366384290-6q0x1",
+    "id": "blk-ext-1795366375116-6",
+    "script_id": "script-active",
+    "page_number": 4,
+    "question_id": "Q3b",
+    "module_number": 2,
+    "raw_text": "Q3(b) [Continuation - Multi-Page Trace Table]:\n\n[Student Hand-Written Response - Page 4]:\nOperator Stack Trace Table for ((A + B) * C - (D - E) ^ (F + G)):\n• Symbol: ^ -> Stack: (-^ -> Postfix: AB+C*DE-\n• Symbol: ( -> Stack: (-^( -> Postfix: AB+C*DE-\n• Symbol: F+G -> Stack: (-^(+ -> Postfix: AB+C*DE-FG+\n• Symbol: ) -> Stack: (-^ -> Postfix: AB+C*DE-FG+\n• Final Expression: AB+C*DE-FG+^-\nOperators are popped from stack according to precedence rules: ^ > * / > + -",
+    "confidence_score": 0.99,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 5,
+      "y": 2,
+      "width": 88.8,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:53:04.290Z",
+    "timestamp": "2026-11-22T16:53:04.290Z"
+  },
+  {
+    "_id": "local-1795366384329-rqgom",
+    "id": "blk-ext-1795366375116-7",
+    "script_id": "script-active",
+    "page_number": 4,
+    "question_id": "Q4a",
+    "module_number": 2,
+    "raw_text": "Q4(a): Explain Circular Queue with enqueue() and dequeue() operations and wrap-around condition.\n\n[Student Hand-Written Response - Page 4]:\nCircular Queue overcomes memory wastage of linear queues by wrapping around using modulo arithmetic.\n• Front and Rear initialized to -1.\n• Enqueue: rear = (rear + 1) % MAX; queue[rear] = item;\n• Dequeue: item = queue[front]; front = (front + 1) % MAX;\n• Full Condition: (rear + 1) % MAX == front.\n• Empty Condition: front == -1.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.1,
+      "y": 47.6,
+      "width": 87.7,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:53:04.329Z",
+    "timestamp": "2026-11-22T16:53:04.329Z"
+  },
+  {
+    "_id": "local-1795366384369-pig4s",
+    "id": "blk-ext-1795366375116-8",
+    "script_id": "script-active",
+    "page_number": 5,
+    "question_id": "Q1b",
+    "module_number": 1,
+    "raw_text": "Q1(b) [Continuation from Page 2 - Multi-Page KMP Pattern Matching]:\n\n[Student Hand-Written Response - Page 5]:\nTracing KMP failure function π for Pattern P = \"ababaca\":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nMatching Phase: Searching P in Text T = \"abxababaca\". Match found starting at index 4 in O(n + m) time complexity.",
+    "confidence_score": 0.99,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 7.5,
+      "width": 96,
+      "height": 27.9
+    },
+    "createdAt": "2026-11-22T16:53:04.370Z",
+    "timestamp": "2026-11-22T16:53:04.370Z"
+  },
+  {
+    "_id": "local-1795366384408-rryge",
+    "id": "blk-ext-1795366375116-9",
+    "script_id": "script-active",
+    "page_number": 5,
+    "question_id": "Q5a",
+    "module_number": 3,
+    "raw_text": "Q5(a): Define Binary Tree. Write recursive algorithms for Preorder, Inorder, and Postorder traversals.\n\n[Student Hand-Written Response - Page 5]:\nA Binary Tree is a hierarchical non-linear data structure where each node has at most two children (left and right).\n• Inorder (Left, Root, Right): inorder(root->left); printf(\"%d \", root->val); inorder(root->right);\n• Preorder (Root, Left, Right): printf(\"%d \", root->val); preorder(root->left); preorder(root->right);\n• Postorder (Left, Right, Root): postorder(root->left); postorder(root->right); printf(\"%d \", root->val);",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 30.6,
+      "width": 96,
+      "height": 35.8
+    },
+    "createdAt": "2026-11-22T16:53:04.408Z",
+    "timestamp": "2026-11-22T16:53:04.408Z"
+  },
+  {
+    "_id": "local-1795366384451-3fa5v",
+    "id": "blk-ext-1795366375116-10",
+    "script_id": "script-active",
+    "page_number": 5,
+    "question_id": "Q5b",
+    "module_number": 3,
+    "raw_text": "Q5(b): Binary Search Tree (BST) operations: Insert, Search, and Delete.\n\n[Student Hand-Written Response - Page 5]:\n• Insert: If val < root->data, recurse left; if val > root->data, recurse right.\n• Search: Time complexity O(h). If key == root->data return found.\n• Delete: 3 cases: Leaf node (free directly), One child (bypass node), Two children (replace with inorder successor).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 61.6,
+      "width": 96,
+      "height": 30.3
+    },
+    "createdAt": "2026-11-22T16:53:04.451Z",
+    "timestamp": "2026-11-22T16:53:04.451Z"
+  },
+  {
+    "_id": "local-1795366384505-zkwyk",
+    "id": "blk-ext-1795366375116-11",
+    "script_id": "script-active",
+    "page_number": 6,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 6]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:04.505Z",
+    "timestamp": "2026-11-22T16:53:04.505Z"
+  },
+  {
+    "_id": "local-1795366384546-o6rsh",
+    "id": "blk-ext-1795366375116-12",
+    "script_id": "script-active",
+    "page_number": 7,
+    "question_id": "Q7a",
+    "module_number": 4,
+    "raw_text": "Q7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 7]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 3.5,
+      "y": 4.8,
+      "width": 95.2,
+      "height": 46.5
+    },
+    "createdAt": "2026-11-22T16:53:04.546Z",
+    "timestamp": "2026-11-22T16:53:04.546Z"
+  },
+  {
+    "_id": "local-1795366384594-53709",
+    "id": "blk-ext-1795366375116-13",
+    "script_id": "script-active",
+    "page_number": 7,
+    "question_id": "Q7b",
+    "module_number": 4,
+    "raw_text": "Q7(b): Explain construction of Binary Search Tree and Height Balanced AVL Trees.\n\n[Student Hand-Written Response - Page 7]:\n• BST Property: Left subtree keys < Root key < Right subtree keys.\n• AVL Trees: Self-balancing BST with Balance Factor = Height(Left) - Height(Right) in {-1, 0, 1}.\n• Rotations: LL, RR, LR, RL single and double rotations maintain O(log n) search time.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 47.6,
+      "width": 96,
+      "height": 50.9
+    },
+    "createdAt": "2026-11-22T16:53:04.594Z",
+    "timestamp": "2026-11-22T16:53:04.595Z"
+  },
+  {
+    "_id": "local-1795366384627-4p8e3",
+    "id": "blk-ext-1795366375116-14",
+    "script_id": "script-active",
+    "page_number": 8,
+    "question_id": "Q8a",
+    "module_number": 4,
+    "raw_text": "Q8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 8]:\nHashing maps keys to table slots in O(1) expected time.\n• Collision Resolution:\n  1. Separate Chaining (Linked list per bucket)\n  2. Open Addressing: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.4,
+      "y": 2.3,
+      "width": 93.6,
+      "height": 49.1
+    },
+    "createdAt": "2026-11-22T16:53:04.627Z",
+    "timestamp": "2026-11-22T16:53:04.627Z"
+  },
+  {
+    "_id": "local-1795366384668-cvgv5",
+    "id": "blk-ext-1795366375116-15",
+    "script_id": "script-active",
+    "page_number": 8,
+    "question_id": "Q8b",
+    "module_number": 4,
+    "raw_text": "Q8(b): Explain Hash Functions (Division, Multiplication, Mid-Square) and Load Factor α.\n\n[Student Hand-Written Response - Page 8]:\n• Division Method: h(k) = k mod m (where m is prime).\n• Multiplication Method: h(k) = floor(m * (k * A mod 1)) where A ≈ 0.618.\n• Mid-Square Method: Extract middle bits of k².\n• Load Factor: α = n / m (ratio of stored keys to table size).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 47.6,
+      "width": 96,
+      "height": 50.9
+    },
+    "createdAt": "2026-11-22T16:53:04.669Z",
+    "timestamp": "2026-11-22T16:53:04.669Z"
+  },
+  {
+    "_id": "local-1795366384708-bqouw",
+    "id": "blk-ext-1795366375116-16",
+    "script_id": "script-active",
+    "page_number": 9,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 9]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 49.7
+    },
+    "createdAt": "2026-11-22T16:53:04.708Z",
+    "timestamp": "2026-11-22T16:53:04.708Z"
+  },
+  {
+    "_id": "local-1795366384752-qdfnk",
+    "id": "blk-ext-1795366375116-17",
+    "script_id": "script-active",
+    "page_number": 9,
+    "question_id": "Q9b",
+    "module_number": 5,
+    "raw_text": "Q9(b): Explain Minimum Spanning Tree (MST) algorithms: Kruskal's and Prim's.\n\n[Student Hand-Written Response - Page 9]:\n• Kruskal's Algorithm: Sort all edges by weight in ascending order. Add edge if it does not form a cycle (using Disjoint Set Union). O(E log E).\n• Prim's Algorithm: Start from root vertex, grow tree by adding minimum weight cut edge with Priority Queue. O(E log V).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 47.6,
+      "width": 96,
+      "height": 50.9
+    },
+    "createdAt": "2026-11-22T16:53:04.752Z",
+    "timestamp": "2026-11-22T16:53:04.752Z"
+  },
+  {
+    "_id": "local-1795366384794-7fgj4",
+    "id": "blk-ext-1795366375116-18",
+    "script_id": "script-active",
+    "page_number": 10,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 10]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 49.7
+    },
+    "createdAt": "2026-11-22T16:53:04.794Z",
+    "timestamp": "2026-11-22T16:53:04.794Z"
+  },
+  {
+    "_id": "local-1795366384832-mz9hv",
+    "id": "blk-ext-1795366375116-19",
+    "script_id": "script-active",
+    "page_number": 10,
+    "question_id": "Q10b",
+    "module_number": 1,
+    "raw_text": "Question Q10b Answer:\n\n[Student Hand-Written Response - Page 10]:\nDetailed student response steps, definitions, formulas, and diagrams for Q10b mapped directly to exam criteria.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 47.6,
+      "width": 96,
+      "height": 50.9
+    },
+    "createdAt": "2026-11-22T16:53:04.832Z",
+    "timestamp": "2026-11-22T16:53:04.832Z"
+  },
+  {
+    "_id": "local-1795366384876-dfxd4",
+    "id": "blk-ext-1795366375116-20",
+    "script_id": "script-active",
+    "page_number": 11,
+    "question_id": "Q6a",
+    "module_number": 3,
+    "raw_text": "Question Q6a Answer:\n\n[Student Hand-Written Response - Page 11]:\nDetailed student response steps, definitions, formulas, and diagrams for Q6a mapped directly to exam criteria.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:04.876Z",
+    "timestamp": "2026-11-22T16:53:04.876Z"
+  },
+  {
+    "_id": "local-1795366384919-wa3r3",
+    "id": "blk-ext-1795366375116-21",
+    "script_id": "script-active",
+    "page_number": 12,
+    "question_id": "Q6a",
+    "module_number": 3,
+    "raw_text": "Question Q6a Answer:\n\n[Student Hand-Written Response - Page 12]:\nDetailed student response steps, definitions, formulas, and diagrams for Q6a mapped directly to exam criteria.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:04.919Z",
+    "timestamp": "2026-11-22T16:53:04.919Z"
+  },
+  {
+    "_id": "local-1795366384958-wlzwx",
+    "id": "blk-ext-1795366375116-22",
+    "script_id": "script-active",
+    "page_number": 13,
+    "question_id": "Q7a",
+    "module_number": 4,
+    "raw_text": "Q7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 13]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 9.1,
+      "y": 2,
+      "width": 81.2,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:04.958Z",
+    "timestamp": "2026-11-22T16:53:04.958Z"
+  },
+  {
+    "_id": "local-1795366385085-77ims",
+    "id": "blk-ext-1795366375116-23",
+    "script_id": "script-active",
+    "page_number": 14,
+    "question_id": "Q7a",
+    "module_number": 4,
+    "raw_text": "Q7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 14]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:05.085Z",
+    "timestamp": "2026-11-22T16:53:05.085Z"
+  },
+  {
+    "_id": "local-1795366385126-mkfff",
+    "id": "blk-ext-1795366375116-24",
+    "script_id": "script-active",
+    "page_number": 15,
+    "question_id": "Q8a",
+    "module_number": 4,
+    "raw_text": "Q8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 15]:\nHashing maps keys to table slots in O(1) expected time.\n• Collision Resolution:\n  1. Separate Chaining (Linked list per bucket)\n  2. Open Addressing: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 12,
+      "width": 96,
+      "height": 75.5
+    },
+    "createdAt": "2026-11-22T16:53:05.126Z",
+    "timestamp": "2026-11-22T16:53:05.126Z"
+  },
+  {
+    "_id": "local-1795366385173-rp2yj",
+    "id": "blk-ext-1795366375117-25",
+    "script_id": "script-active",
+    "page_number": 16,
+    "question_id": "Q8a",
+    "module_number": 4,
+    "raw_text": "Q8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 16]:\nHashing maps keys to table slots in O(1) expected time.\n• Collision Resolution:\n  1. Separate Chaining (Linked list per bucket)\n  2. Open Addressing: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2.6,
+      "y": 2,
+      "width": 94,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:05.173Z",
+    "timestamp": "2026-11-22T16:53:05.173Z"
+  },
+  {
+    "_id": "local-1795366385213-4jwiu",
+    "id": "blk-ext-1795366375117-26",
+    "script_id": "script-active",
+    "page_number": 17,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 17]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:05.213Z",
+    "timestamp": "2026-11-22T16:53:05.214Z"
+  },
+  {
+    "_id": "local-1795366385255-s425s",
+    "id": "blk-ext-1795366375117-27",
+    "script_id": "script-active",
+    "page_number": 18,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 18]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:05.255Z",
+    "timestamp": "2026-11-22T16:53:05.255Z"
+  },
+  {
+    "_id": "local-1795366385296-guq9l",
+    "id": "blk-ext-1795366375117-28",
+    "script_id": "script-active",
+    "page_number": 19,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 19]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 8.3,
+      "y": 2,
+      "width": 83.2,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:05.296Z",
+    "timestamp": "2026-11-22T16:53:05.296Z"
+  },
+  {
+    "_id": "local-1795366385340-tq9hi",
+    "id": "blk-ext-1795366375117-29",
+    "script_id": "script-active",
+    "page_number": 20,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 20]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 3.5,
+      "y": 2,
+      "width": 92.1,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:05.340Z",
+    "timestamp": "2026-11-22T16:53:05.340Z"
+  },
+  {
+    "_id": "local-1795366439798-ee4u5",
+    "id": "blk-ext-1795366430299-1",
+    "script_id": "script-active",
+    "page_number": 1,
+    "question_id": "Q1a",
+    "module_number": 1,
+    "raw_text": "Q1(a) [Definition, Classification Tree & Primitive Data Structures]:\n\n[Student Hand-Written Response - Page 1]:\nData Structure: It can be defined as a method of storing and organizing data items in the computer memory.\nMainly deals with:\n• Organizing data in memory\n• Fetching and processing data\n• Storing data in memory\n\n[Classification Tree Diagram]:\nData Structure\n  ├── Primitive: int, float, char, double\n  └── Non-Primitive:\n        ├── Linear: array, stack, queue, linked list\n        └── Non-linear: trees, graphs\n\nPrimitive Data Structures:\nThe data structures that are directly operated upon by machine level instructions, i.e., fundamental data types such as int, float, char, double.\n\nNon-Primitive Data Structures:\nThe data structures that are derived from primitive data structures. (Linear vs Non-Linear, continued on Page 2...)",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.2,
+      "y": 2,
+      "width": 86.3,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:53:59.798Z",
+    "timestamp": "2026-11-22T16:53:59.798Z"
+  },
+  {
+    "_id": "local-1795366439845-sfy0b",
+    "id": "blk-ext-1795366430299-2",
+    "script_id": "script-active",
+    "page_number": 2,
+    "question_id": "Q1a",
+    "module_number": 1,
+    "raw_text": "Q1(a) [Continuation from Page 1 - Linear & Non-Linear Classification]:\n\n[Student Hand-Written Response - Page 2 (Top Section)]:\n• In a linear data structure, the data items are arranged in a linear order or sequential.\n  Eg. array, stack, list, queue\n• In a Non Linear ds, the data items that are not in sequence.\n  Eg. trees and graphs",
+    "confidence_score": 0.99,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 95.8,
+      "height": 67.4
+    },
+    "createdAt": "2026-11-22T16:53:59.845Z",
+    "timestamp": "2026-11-22T16:53:59.845Z"
+  },
+  {
+    "_id": "local-1795366439887-gz45u",
+    "id": "blk-ext-1795366430299-3",
+    "script_id": "script-active",
+    "page_number": 2,
+    "question_id": "Q1b",
+    "module_number": 1,
+    "raw_text": "1b) It is a fundamental problem in computer science where the goal is find all occurrences of a given pattern within a larger text or string.\n\n[Student Hand-Written Response - Page 2 (Starting at 1b))]:\nKnuth-Morris-Pratt (KMP) algorithm is a string-matching algorithm that eliminates backtracking by preprocessing the pattern to construct a prefix/failure function π table.\n• Algorithm Logic: On mismatch at character P[q], shift pattern index to π[q-1] to skip redundant comparisons.\n(Answer continued on Page 5...)",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 63.6,
+      "width": 95.8,
+      "height": 36.4
+    },
+    "createdAt": "2026-11-22T16:53:59.887Z",
+    "timestamp": "2026-11-22T16:53:59.887Z"
+  },
+  {
+    "_id": "local-1795366439937-hij00",
+    "id": "blk-ext-1795366430299-4",
+    "script_id": "script-active",
+    "page_number": 3,
+    "question_id": "Q3a",
+    "module_number": 2,
+    "raw_text": "Q3(a): Define Stack ADT. Explain array implementation of Stack with push(), pop(), display().\n\n[Student Hand-Written Response - Page 3]:\nStack is a LIFO (Last In First Out) linear list with single access point 'top'.\n• Push(item): Check if top == MAX - 1 (Overflow). top++; stack[top] = item;\n• Pop(): Check if top == -1 (Underflow). item = stack[top]; top--; return item;\n• Display(): for(int i = top; i >= 0; i--) printf(\"%d \", stack[i]);",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 5,
+      "y": 2,
+      "width": 89,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:53:59.937Z",
+    "timestamp": "2026-11-22T16:53:59.937Z"
+  },
+  {
+    "_id": "local-1795366439978-3qtyb",
+    "id": "blk-ext-1795366430299-5",
+    "script_id": "script-active",
+    "page_number": 3,
+    "question_id": "Q3b",
+    "module_number": 2,
+    "raw_text": "Q3(b): Infix to Postfix conversion for ((A + B) * C - (D - E) ^ (F + G)).\n\n[Student Hand-Written Response - Page 3]:\nStep-by-step conversion using Stack ADT:\n• Symbol: ( -> Stack: ( -> Postfix: \n• Symbol: ( -> Stack: (( -> Postfix: \n• Symbol: A -> Stack: (( -> Postfix: A\n• Symbol: + -> Stack: ((+ -> Postfix: A\n• Symbol: B -> Stack: ((+ -> Postfix: AB\n• Symbol: ) -> Stack: ( -> Postfix: AB+\n• Symbol: * -> Stack: (* -> Postfix: AB+\n• Symbol: C -> Stack: (* -> Postfix: AB+C\n• Symbol: - -> Stack: (- -> Postfix: AB+C*",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 5,
+      "y": 47.6,
+      "width": 89,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:53:59.978Z",
+    "timestamp": "2026-11-22T16:53:59.978Z"
+  },
+  {
+    "_id": "local-1795366440032-ng55n",
+    "id": "blk-ext-1795366430299-6",
+    "script_id": "script-active",
+    "page_number": 4,
+    "question_id": "Q3b",
+    "module_number": 2,
+    "raw_text": "Q3(b) [Continuation - Multi-Page Trace Table]:\n\n[Student Hand-Written Response - Page 4]:\nOperator Stack Trace Table for ((A + B) * C - (D - E) ^ (F + G)):\n• Symbol: ^ -> Stack: (-^ -> Postfix: AB+C*DE-\n• Symbol: ( -> Stack: (-^( -> Postfix: AB+C*DE-\n• Symbol: F+G -> Stack: (-^(+ -> Postfix: AB+C*DE-FG+\n• Symbol: ) -> Stack: (-^ -> Postfix: AB+C*DE-FG+\n• Final Expression: AB+C*DE-FG+^-\nOperators are popped from stack according to precedence rules: ^ > * / > + -",
+    "confidence_score": 0.99,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 7.2,
+      "width": 96,
+      "height": 44.2
+    },
+    "createdAt": "2026-11-22T16:54:00.032Z",
+    "timestamp": "2026-11-22T16:54:00.032Z"
+  },
+  {
+    "_id": "local-1795366440087-apr82",
+    "id": "blk-ext-1795366430299-7",
+    "script_id": "script-active",
+    "page_number": 4,
+    "question_id": "Q4a",
+    "module_number": 2,
+    "raw_text": "Q4(a): Explain Circular Queue with enqueue() and dequeue() operations and wrap-around condition.\n\n[Student Hand-Written Response - Page 4]:\nCircular Queue overcomes memory wastage of linear queues by wrapping around using modulo arithmetic.\n• Front and Rear initialized to -1.\n• Enqueue: rear = (rear + 1) % MAX; queue[rear] = item;\n• Dequeue: item = queue[front]; front = (front + 1) % MAX;\n• Full Condition: (rear + 1) % MAX == front.\n• Empty Condition: front == -1.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 47.6,
+      "width": 96,
+      "height": 45.1
+    },
+    "createdAt": "2026-11-22T16:54:00.087Z",
+    "timestamp": "2026-11-22T16:54:00.087Z"
+  },
+  {
+    "_id": "local-1795366440122-9mqhk",
+    "id": "blk-ext-1795366430299-8",
+    "script_id": "script-active",
+    "page_number": 5,
+    "question_id": "Q1b",
+    "module_number": 1,
+    "raw_text": "Q1(b) [Continuation from Page 2 - Multi-Page KMP Pattern Matching]:\n\n[Student Hand-Written Response - Page 5]:\nTracing KMP failure function π for Pattern P = \"ababaca\":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nMatching Phase: Searching P in Text T = \"abxababaca\". Match found starting at index 4 in O(n + m) time complexity.",
+    "confidence_score": 0.99,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 95.8,
+      "height": 35.4
+    },
+    "createdAt": "2026-11-22T16:54:00.122Z",
+    "timestamp": "2026-11-22T16:54:00.122Z"
+  },
+  {
+    "_id": "local-1795366440161-2bho9",
+    "id": "blk-ext-1795366430299-9",
+    "script_id": "script-active",
+    "page_number": 5,
+    "question_id": "Q5a",
+    "module_number": 3,
+    "raw_text": "Q5(a): Define Binary Tree. Write recursive algorithms for Preorder, Inorder, and Postorder traversals.\n\n[Student Hand-Written Response - Page 5]:\nA Binary Tree is a hierarchical non-linear data structure where each node has at most two children (left and right).\n• Inorder (Left, Root, Right): inorder(root->left); printf(\"%d \", root->val); inorder(root->right);\n• Preorder (Root, Left, Right): printf(\"%d \", root->val); preorder(root->left); preorder(root->right);\n• Postorder (Left, Right, Root): postorder(root->left); postorder(root->right); printf(\"%d \", root->val);",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2.7,
+      "y": 30.6,
+      "width": 93.5,
+      "height": 35.8
+    },
+    "createdAt": "2026-11-22T16:54:00.161Z",
+    "timestamp": "2026-11-22T16:54:00.161Z"
+  },
+  {
+    "_id": "local-1795366440195-vf79m",
+    "id": "blk-ext-1795366430299-10",
+    "script_id": "script-active",
+    "page_number": 5,
+    "question_id": "Q5b",
+    "module_number": 3,
+    "raw_text": "Q5(b): Binary Search Tree (BST) operations: Insert, Search, and Delete.\n\n[Student Hand-Written Response - Page 5]:\n• Insert: If val < root->data, recurse left; if val > root->data, recurse right.\n• Search: Time complexity O(h). If key == root->data return found.\n• Delete: 3 cases: Leaf node (free directly), One child (bypass node), Two children (replace with inorder successor).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2.7,
+      "y": 61.6,
+      "width": 91.8,
+      "height": 35.8
+    },
+    "createdAt": "2026-11-22T16:54:00.195Z",
+    "timestamp": "2026-11-22T16:54:00.195Z"
+  },
+  {
+    "_id": "local-1795366440241-6esvc",
+    "id": "blk-ext-1795366430299-11",
+    "script_id": "script-active",
+    "page_number": 6,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 6]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.6,
+      "y": 2,
+      "width": 86.2,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.241Z",
+    "timestamp": "2026-11-22T16:54:00.241Z"
+  },
+  {
+    "_id": "local-1795366440285-9zc7s",
+    "id": "blk-ext-1795366430299-12",
+    "script_id": "script-active",
+    "page_number": 7,
+    "question_id": "Q7a",
+    "module_number": 4,
+    "raw_text": "Q7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 7]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:54:00.285Z",
+    "timestamp": "2026-11-22T16:54:00.285Z"
+  },
+  {
+    "_id": "local-1795366440332-wjead",
+    "id": "blk-ext-1795366430299-13",
+    "script_id": "script-active",
+    "page_number": 7,
+    "question_id": "Q7b",
+    "module_number": 4,
+    "raw_text": "Q7(b): Explain construction of Binary Search Tree and Height Balanced AVL Trees.\n\n[Student Hand-Written Response - Page 7]:\n• BST Property: Left subtree keys < Root key < Right subtree keys.\n• AVL Trees: Self-balancing BST with Balance Factor = Height(Left) - Height(Right) in {-1, 0, 1}.\n• Rotations: LL, RR, LR, RL single and double rotations maintain O(log n) search time.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 8.3,
+      "y": 47.6,
+      "width": 83.2,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:54:00.332Z",
+    "timestamp": "2026-11-22T16:54:00.332Z"
+  },
+  {
+    "_id": "local-1795366440381-do0uc",
+    "id": "blk-ext-1795366430299-14",
+    "script_id": "script-active",
+    "page_number": 8,
+    "question_id": "Q8a",
+    "module_number": 4,
+    "raw_text": "Q8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 8]:\nHashing maps keys to table slots in O(1) expected time.\n• Collision Resolution:\n  1. Separate Chaining (Linked list per bucket)\n  2. Open Addressing: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:54:00.381Z",
+    "timestamp": "2026-11-22T16:54:00.381Z"
+  },
+  {
+    "_id": "local-1795366440422-qma0s",
+    "id": "blk-ext-1795366430299-15",
+    "script_id": "script-active",
+    "page_number": 8,
+    "question_id": "Q8b",
+    "module_number": 4,
+    "raw_text": "Q8(b): Explain Hash Functions (Division, Multiplication, Mid-Square) and Load Factor α.\n\n[Student Hand-Written Response - Page 8]:\n• Division Method: h(k) = k mod m (where m is prime).\n• Multiplication Method: h(k) = floor(m * (k * A mod 1)) where A ≈ 0.618.\n• Mid-Square Method: Extract middle bits of k².\n• Load Factor: α = n / m (ratio of stored keys to table size).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 8.3,
+      "y": 47.6,
+      "width": 83.2,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:54:00.422Z",
+    "timestamp": "2026-11-22T16:54:00.422Z"
+  },
+  {
+    "_id": "local-1795366440459-xmex4",
+    "id": "blk-ext-1795366430299-16",
+    "script_id": "script-active",
+    "page_number": 9,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 9]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 9.6,
+      "y": 2,
+      "width": 81.9,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:54:00.459Z",
+    "timestamp": "2026-11-22T16:54:00.459Z"
+  },
+  {
+    "_id": "local-1795366440498-d2s55",
+    "id": "blk-ext-1795366430299-17",
+    "script_id": "script-active",
+    "page_number": 9,
+    "question_id": "Q9b",
+    "module_number": 5,
+    "raw_text": "Q9(b): Explain Minimum Spanning Tree (MST) algorithms: Kruskal's and Prim's.\n\n[Student Hand-Written Response - Page 9]:\n• Kruskal's Algorithm: Sort all edges by weight in ascending order. Add edge if it does not form a cycle (using Disjoint Set Union). O(E log E).\n• Prim's Algorithm: Start from root vertex, grow tree by adding minimum weight cut edge with Priority Queue. O(E log V).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 8.3,
+      "y": 47.6,
+      "width": 83.2,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:54:00.498Z",
+    "timestamp": "2026-11-22T16:54:00.498Z"
+  },
+  {
+    "_id": "local-1795366440533-v9fcd",
+    "id": "blk-ext-1795366430299-18",
+    "script_id": "script-active",
+    "page_number": 10,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 10]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 51.4
+    },
+    "createdAt": "2026-11-22T16:54:00.533Z",
+    "timestamp": "2026-11-22T16:54:00.533Z"
+  },
+  {
+    "_id": "local-1795366440575-ggvzb",
+    "id": "blk-ext-1795366430299-19",
+    "script_id": "script-active",
+    "page_number": 10,
+    "question_id": "Q10b",
+    "module_number": 1,
+    "raw_text": "Question Q10b Answer:\n\n[Student Hand-Written Response - Page 10]:\nDetailed student response steps, definitions, formulas, and diagrams for Q10b mapped directly to exam criteria.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 8.3,
+      "y": 47.6,
+      "width": 83.2,
+      "height": 52.4
+    },
+    "createdAt": "2026-11-22T16:54:00.575Z",
+    "timestamp": "2026-11-22T16:54:00.575Z"
+  },
+  {
+    "_id": "local-1795366440630-herpx",
+    "id": "blk-ext-1795366430299-20",
+    "script_id": "script-active",
+    "page_number": 11,
+    "question_id": "Q6a",
+    "module_number": 3,
+    "raw_text": "Question Q6a Answer:\n\n[Student Hand-Written Response - Page 11]:\nDetailed student response steps, definitions, formulas, and diagrams for Q6a mapped directly to exam criteria.",
+    "confidence_score": 0.98,
+    "is_continuation": false,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.630Z",
+    "timestamp": "2026-11-22T16:54:00.630Z"
+  },
+  {
+    "_id": "local-1795366440673-1mibb",
+    "id": "blk-ext-1795366430299-21",
+    "script_id": "script-active",
+    "page_number": 12,
+    "question_id": "Q6a",
+    "module_number": 3,
+    "raw_text": "Question Q6a Answer:\n\n[Student Hand-Written Response - Page 12]:\nDetailed student response steps, definitions, formulas, and diagrams for Q6a mapped directly to exam criteria.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 4.8,
+      "width": 96,
+      "height": 93.7
+    },
+    "createdAt": "2026-11-22T16:54:00.673Z",
+    "timestamp": "2026-11-22T16:54:00.673Z"
+  },
+  {
+    "_id": "local-1795366440711-r7bhm",
+    "id": "blk-ext-1795366430299-22",
+    "script_id": "script-active",
+    "page_number": 13,
+    "question_id": "Q7a",
+    "module_number": 4,
+    "raw_text": "Q7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 13]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2.3,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.711Z",
+    "timestamp": "2026-11-22T16:54:00.711Z"
+  },
+  {
+    "_id": "local-1795366440748-pyc9f",
+    "id": "blk-ext-1795366430299-23",
+    "script_id": "script-active",
+    "page_number": 14,
+    "question_id": "Q7a",
+    "module_number": 4,
+    "raw_text": "Q7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 14]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.748Z",
+    "timestamp": "2026-11-22T16:54:00.748Z"
+  },
+  {
+    "_id": "local-1795366440781-9mklf",
+    "id": "blk-ext-1795366430299-24",
+    "script_id": "script-active",
+    "page_number": 15,
+    "question_id": "Q8a",
+    "module_number": 4,
+    "raw_text": "Q8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 15]:\nHashing maps keys to table slots in O(1) expected time.\n• Collision Resolution:\n  1. Separate Chaining (Linked list per bucket)\n  2. Open Addressing: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.782Z",
+    "timestamp": "2026-11-22T16:54:00.782Z"
+  },
+  {
+    "_id": "local-1795366440820-rfi4b",
+    "id": "blk-ext-1795366430299-25",
+    "script_id": "script-active",
+    "page_number": 16,
+    "question_id": "Q8a",
+    "module_number": 4,
+    "raw_text": "Q8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 16]:\nHashing maps keys to table slots in O(1) expected time.\n• Collision Resolution:\n  1. Separate Chaining (Linked list per bucket)\n  2. Open Addressing: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 2,
+      "y": 2,
+      "width": 96,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.821Z",
+    "timestamp": "2026-11-22T16:54:00.821Z"
+  },
+  {
+    "_id": "local-1795366440859-8u4v6",
+    "id": "blk-ext-1795366430299-26",
+    "script_id": "script-active",
+    "page_number": 17,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 17]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.859Z",
+    "timestamp": "2026-11-22T16:54:00.859Z"
+  },
+  {
+    "_id": "local-1795366440895-15uyz",
+    "id": "blk-ext-1795366430299-27",
+    "script_id": "script-active",
+    "page_number": 18,
+    "question_id": "Q9a",
+    "module_number": 5,
+    "raw_text": "Q9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 18]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.895Z",
+    "timestamp": "2026-11-22T16:54:00.895Z"
+  },
+  {
+    "_id": "local-1795366440934-alt4s",
+    "id": "blk-ext-1795366430299-28",
+    "script_id": "script-active",
+    "page_number": 19,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 19]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 10.6,
+      "y": 2,
+      "width": 78.3,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.934Z",
+    "timestamp": "2026-11-22T16:54:00.934Z"
+  },
+  {
+    "_id": "local-1795366440973-j5pxx",
+    "id": "blk-ext-1795366430299-29",
+    "script_id": "script-active",
+    "page_number": 20,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 20]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:00.973Z",
+    "timestamp": "2026-11-22T16:54:00.973Z"
+  },
+  {
+    "_id": "local-1795366441010-oq7nx",
+    "id": "blk-ext-1795366430299-30",
+    "script_id": "script-active",
+    "page_number": 21,
+    "question_id": "Q10a",
+    "module_number": 1,
+    "raw_text": "Q10(a): Explain Dijkstra's Single-Source Shortest Path Algorithm with trace.\n\n[Student Hand-Written Response - Page 21]:\nGreedy algorithm to find shortest path from source vertex to all vertices in non-negative weighted graphs.\n• Distance array dist[] initialized to infinity; dist[source] = 0.\n• Min-Priority Queue extracts vertex u with smallest dist[u]; relaxes all adjacent edges (u, v): if dist[u] + weight(u,v) < dist[v], dist[v] = dist[u] + weight(u,v).",
+    "confidence_score": 0.98,
+    "is_continuation": true,
+    "bounding_box": {
+      "x": 6.9,
+      "y": 2,
+      "width": 84.6,
+      "height": 96
+    },
+    "createdAt": "2026-11-22T16:54:01.010Z",
+    "timestamp": "2026-11-22T16:54:01.010Z"
   }
 ]

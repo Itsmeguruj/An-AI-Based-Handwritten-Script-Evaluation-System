@@ -89,6 +89,23 @@ any text that is not clearly visible in the source document.
 The uploaded document is the ONLY source of truth.
 
 ==================================================
+MANDATORY RULE – EXACT QUESTION PAPER VISUAL REPRODUCTION
+==================================================
+
+During extraction and rubric generation, you must reproduce every figure, tree, matrix, graph, flowchart, table, and diagram EXACTLY as it appears in the uploaded question paper.
+
+- Use the original question paper PDF/image as the source of truth.
+- Preserve exact structure, node positions, branches, connections, labels, symbols, arrows, values, dimensions, and layout.
+- Do not create approximate or alternative representations.
+- Do not simplify, modify, omit, or replace original visuals.
+- Do not generate a generic diagram based on conceptual understanding.
+- Ensure every visual belongs strictly to its corresponding question.
+- Compare the generated visual against the original question paper before finalizing the rubric.
+- If a visual cannot be interpreted accurately, flag it for manual verification instead of guessing: "[VISUAL UNCLEAR — MANUAL VERIFICATION REQUIRED]".
+
+Priority: Exact visual accuracy is mandatory. Reproducing the same concept is not sufficient; the generated output must reproduce the actual visual present in the question paper.
+
+==================================================
 1. EXACT TEXT EXTRACTION
 ==================================================
 

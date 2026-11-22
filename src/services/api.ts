@@ -427,6 +427,103 @@ export const apiService = {
       body: JSON.stringify(payload)
     });
     return handleResponse(response);
+  },
+
+  /**
+   * 31. Intelligent Model Orchestration Evaluation (GLM-4.6V HG-SFT + FERMAT)
+   */
+  async evaluateOrchestrated(payload: {
+    questions?: any[];
+    blocks?: any[];
+    consolidatedAnswers?: any[];
+    modelAnswerText?: string;
+    singleQuestion?: any;
+  }) {
+    const response = await fetch('/api/evaluate/orchestrated', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 32. Reconstruct Scattered and Multi-Page Handwritten Answers
+   */
+  async reconstructScatteredAnswer(payload: { blocks: any[]; questionId: string }) {
+    const response = await fetch('/api/evaluate/scattered', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 33. EvalDesk Benchmarking Suite (10 Standard Test Scenarios)
+   */
+  async runEvalDeskBenchmark() {
+    const response = await fetch('/api/benchmark/evaldesk', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 34. Admin-Only Qwen 4B + Qwen 9B + Gemma 12B IT Rubric Generation
+   */
+  async generateAdminOrchestratedRubric(payload: {
+    questions: any[];
+    questionPaperText?: string;
+    modelAnswerText?: string;
+    userRole?: string;
+  }) {
+    const response = await fetch('/api/admin/rubric/generate-orchestrated', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-user-role': payload.userRole || 'admin'
+      },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 35. Admin-Only Gemma 3 12B IT Independent Rubric Validation
+   */
+  async validateAdminRubric(payload: {
+    questionId?: string;
+    questionText?: string;
+    maxMarks?: number;
+    officialModelAnswer?: string;
+    rubric?: any;
+    userRole?: string;
+  }) {
+    const response = await fetch('/api/admin/rubric/validate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-user-role': payload.userRole || 'admin'
+      },
+      body: JSON.stringify(payload)
+    });
+    return handleResponse(response);
+  },
+
+  /**
+   * 36. Admin-Only Rubric Benchmark Suite (10 University Scenarios)
+   */
+  async runAdminRubricBenchmark(userRole: string = 'admin') {
+    const response = await fetch('/api/admin/rubric/benchmark', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-user-role': userRole
+      }
+    });
+    return handleResponse(response);
   }
 };
 

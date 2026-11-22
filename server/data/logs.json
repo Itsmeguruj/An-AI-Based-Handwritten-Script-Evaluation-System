@@ -7878,5 +7878,225 @@
     "ipAddress": "127.0.0.1",
     "createdAt": "2026-11-22T06:45:08.980Z",
     "timestamp": "2026-11-22T06:45:08.980Z"
+  },
+  {
+    "_id": "local-1795332868370-qzvug",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T07:34:28.370Z",
+    "timestamp": "2026-11-22T07:34:28.370Z"
+  },
+  {
+    "_id": "local-1795354215351-fnhmg",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T13:30:15.351Z",
+    "timestamp": "2026-11-22T13:30:15.351Z"
+  },
+  {
+    "_id": "local-1795354251052-ls319",
+    "action": "Text keys extracted from Qpaper BCS304.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T13:30:51.052Z",
+    "timestamp": "2026-11-22T13:30:51.053Z"
+  },
+  {
+    "_id": "local-1795354262612-18sl0",
+    "action": "Model answer paper \"DS model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T13:31:02.612Z",
+    "timestamp": "2026-11-22T13:31:02.612Z"
+  },
+  {
+    "_id": "local-1795354268643-bjjdr",
+    "action": "Rubrics created: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T13:31:08.643Z",
+    "timestamp": "2026-11-22T13:31:08.643Z"
+  },
+  {
+    "_id": "local-1795361699541-3bjis",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T15:34:59.541Z",
+    "timestamp": "2026-11-22T15:34:59.541Z"
+  },
+  {
+    "_id": "local-1795361713815-e4ess",
+    "action": "Text keys extracted from Qpaper BCS304.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T15:35:13.815Z",
+    "timestamp": "2026-11-22T15:35:13.815Z"
+  },
+  {
+    "_id": "local-1795361731735-8gt1t",
+    "action": "Model answer paper \"DS model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T15:35:31.735Z",
+    "timestamp": "2026-11-22T15:35:31.735Z"
+  },
+  {
+    "_id": "local-1795361743514-z2fwo",
+    "action": "Model answer paper \"DS model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T15:35:43.514Z",
+    "timestamp": "2026-11-22T15:35:43.514Z"
+  },
+  {
+    "_id": "local-1795361748661-69hk6",
+    "action": "Rubrics created: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T15:35:48.661Z",
+    "timestamp": "2026-11-22T15:35:48.661Z"
+  },
+  {
+    "_id": "local-1795363660546-4bx1v",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:07:40.546Z",
+    "timestamp": "2026-11-22T16:07:40.546Z"
+  },
+  {
+    "_id": "local-1795363681072-8wmy6",
+    "action": "Text keys extracted from Qpaper BCS304.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:08:01.072Z",
+    "timestamp": "2026-11-22T16:08:01.072Z"
+  },
+  {
+    "_id": "local-1795363685912-d6fyc",
+    "action": "Model answer paper \"DS model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:08:05.912Z",
+    "timestamp": "2026-11-22T16:08:05.912Z"
+  },
+  {
+    "_id": "local-1795363693148-lr9zb",
+    "action": "Rubrics created: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:08:13.148Z",
+    "timestamp": "2026-11-22T16:08:13.148Z"
+  },
+  {
+    "_id": "local-1795365050602-rghfp",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:30:50.602Z",
+    "timestamp": "2026-11-22T16:30:50.602Z"
+  },
+  {
+    "_id": "local-1795366196009-4b63o",
+    "action": "Text keys extracted from Qpaper BCS304.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:49:56.009Z",
+    "timestamp": "2026-11-22T16:49:56.009Z"
+  },
+  {
+    "_id": "local-1795366201906-xf7fs",
+    "action": "Model answer paper \"DS model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:50:01.906Z",
+    "timestamp": "2026-11-22T16:50:01.906Z"
+  },
+  {
+    "_id": "local-1795366207229-u0t93",
+    "action": "Rubrics created: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:50:07.229Z",
+    "timestamp": "2026-11-22T16:50:07.229Z"
+  },
+  {
+    "_id": "local-1795366346904-dkwg4",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:52:26.904Z",
+    "timestamp": "2026-11-22T16:52:26.904Z"
+  },
+  {
+    "_id": "local-1795366358076-1uzgs",
+    "action": "Loaded grading assignment for Serial No SN-30 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:52:38.076Z",
+    "timestamp": "2026-11-22T16:52:38.076Z"
+  },
+  {
+    "_id": "local-1795366385897-bg1nw",
+    "action": "Started paper evaluation using DeepScript Intelligent Orchestration (GLM-4.6V + FERMAT)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:53:05.897Z",
+    "timestamp": "2026-11-22T16:53:05.897Z"
+  },
+  {
+    "_id": "local-1795366441520-48nmd",
+    "action": "Started paper evaluation using DeepScript Intelligent Orchestration (GLM-4.6V + FERMAT)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-11-22T16:54:01.520Z",
+    "timestamp": "2026-11-22T16:54:01.520Z"
   }
 ]
