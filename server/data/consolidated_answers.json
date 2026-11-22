@@ -4,7 +4,11 @@
     "script_id": "script-101",
     "question_id": "Q1a",
     "combined_text": "[Text from Page 1]:\nQ1(a) [Definition, Classification Tree & Primitive Data Structures]:\n\n[Student Hand-Written Response - Page 1]:\nData Structure: It can be defined as a method of storing and organizing data items in the computer memory.\nMainly deals with:\n• Organizing data in memory\n• Fetching and processing data\n• Storing data in memory\n\n[Classification Tree Diagram]:\nData Structure\n  ├── Primitive: int, float, char, double\n  └── Non-Primitive:\n        ├── Linear: array, stack, queue, linked list\n        └── Non-linear: trees, graphs\n\nPrimitive Data Structures:\nThe data structures that are directly operated upon by machine level instructions, i.e., fundamental data types such as int, float, char, double.\n\n[Continuation from Page 2]:\nQ1(a) [Continuation from Page 1 - Linear & Non-Linear Classification]:\n\n[Student Hand-Written Response - Page 2 (Top Section)]:\n• In a linear data structure, the data items are arranged in a linear order or sequential.\n  Eg. array, stack, list, queue\n• In a Non Linear ds, the data items that are not in sequence.\n  Eg. trees and graphs",
-    "block_ids": ["blk-101-1", "blk-101-2", "blk-101-3"],
+    "block_ids": [
+      "blk-101-1",
+      "blk-101-2",
+      "blk-101-3"
+    ],
     "is_manually_overridden": false
   },
   {
@@ -12,7 +16,10 @@
     "script_id": "script-101",
     "question_id": "Q1b",
     "combined_text": "[Text from Page 2]:\n1b) It is a fundamental problem in computer science where the goal is find all occurrences of a given pattern within a larger text or string.\n\n[Student Hand-Written Response - Page 2 (Starting at 1b))]:\nKnuth-Morris-Pratt (KMP) algorithm is a string-matching algorithm that eliminates backtracking by preprocessing the pattern to construct a prefix/failure function π table.\n• Algorithm Logic: On mismatch at character P[q], shift pattern index to π[q-1] to skip redundant comparisons.\n(Answer continued on Page 5...)\n\n[Continuation from Page 5]:\nQ1(b) [Multi-Page KMP Pattern Matching]:\n\n[Student Hand-Written Response - Page 5]:\nTracing KMP failure function π for Pattern P = \"ababaca\":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nMatching Phase: Searching P in Text T = \"abxababaca\". Match found starting at index 4 in O(n + m) time complexity.",
-    "block_ids": ["blk-101-4", "blk-101-10"],
+    "block_ids": [
+      "blk-101-4",
+      "blk-101-10"
+    ],
     "is_manually_overridden": false
   },
   {
@@ -20,7 +27,169 @@
     "script_id": "script-101",
     "question_id": "Q9a",
     "combined_text": "[Text from Page 6]:\nQ9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 6]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
-    "block_ids": ["blk-101-13"],
+    "block_ids": [
+      "blk-101-13"
+    ],
     "is_manually_overridden": false
+  },
+  {
+    "_id": "local-1793341451688-3i4nj",
+    "id": "cons-script-101-Q1a",
+    "script_id": "script-101",
+    "question_id": "Q1a",
+    "combined_text": "[Text from Page 1]:\nQ1(a): Define Data Structure. Explain primitive and non-primitive data structures with classification diagram and memory allocation principles.\n\n[Student Hand-Written Response - Page 1]:\nA data structure is a specialized format for organizing, processing, retrieving, and storing data in computer memory efficiently.\n• Primitive Data Structures: Int (4 bytes), Float (4 bytes), Char (1 byte), Double (8 bytes), Pointer.\n• Non-Primitive Data Structures:\n  - Linear: Arrays, Stacks, Queues, Linked Lists (sequential layout).\n  - Non-Linear: Trees, Graphs (hierarchical layout).\n• Memory Allocation: Static allocation uses stack memory at compile-time. Dynamic allocation uses heap memory at runtime via pointers.\n\n[Additional Section - Page 1]:\nQ1(a) [Primitive & Non-Primitive Data Structures]:\n\n[Student Hand-Written Response - Page 1]:\nPrimitive data structures: The data structures that are directly operated upon by machine level instructions, i.e. fundamental data types such as int, float, char, double.\n• Non-Primitive Data Structures:\n  - Linear: Arrays, Stacks, Queues, Linked Lists\n  - Non-Linear: Trees, Graphs\n\n[Continuation from Page 2]:\nQ1(a) [Continuation from Page 1 - Non-Primitive Classification & Data Structure Operations]:\n\n[Student Hand-Written Response - Page 2 (Top Section)]:\n• In a linear data structure, the data items are arranged in a linear order or sequential.\n  Eg. array, stack, list, queue\n• In a Non Linear ds, the data items that are not in sequence.\n  Eg. trees and graphs",
+    "block_ids": [
+      "blk-101-1",
+      "blk-101-2",
+      "blk-101-3"
+    ],
+    "is_manually_overridden": true,
+    "createdAt": "2026-10-30T06:24:11.688Z",
+    "timestamp": "2026-10-30T06:24:11.688Z"
+  },
+  {
+    "_id": "local-1793341451696-n31hh",
+    "id": "cons-script-101-Q1b",
+    "script_id": "script-101",
+    "question_id": "Q1b",
+    "combined_text": "[Text from Page 2]:\n1b) It is a fundamental problem in computer science where the goal is find all occurrences of a given pattern within a larger text or string.\n\n[Student Hand-Written Response - Page 2 (Starting at 1b))]:\n• Knuth-Morris-Pratt (KMP) algorithm is a string-matching algorithm that eliminates backtracking by preprocessing the pattern to construct a prefix/failure function π table.\n• Algorithm Logic: On mismatch at character P[q], shift pattern index to π[q-1] to skip redundant comparisons.\n(Answer continued on Page 5...)\n\n[Continuation from Page 5]:\nQ1(b) [Continuation from Page 1 - Multi-Page KMP Pattern Matching]:\n\n[Student Hand-Written Response - Page 5]:\nTracing KMP failure function π for Pattern P = \"ababaca\":\n• Index: 1 2 3 4 5 6 7\n• Char:  a b a b a c a\n• π val: 0 0 1 2 3 0 1\nMatching Phase: Searching P in Text T = \"abxababaca\". Match found starting at index 4 in O(n + m) time complexity.",
+    "block_ids": [
+      "blk-101-4",
+      "blk-101-10"
+    ],
+    "is_manually_overridden": true,
+    "createdAt": "2026-10-30T06:24:11.696Z",
+    "timestamp": "2026-10-30T06:24:11.696Z"
+  },
+  {
+    "_id": "local-1793341451703-ckrsl",
+    "id": "cons-script-101-Q3a",
+    "script_id": "script-101",
+    "question_id": "Q3a",
+    "combined_text": "[Text from Page 3]:\nQ3(a): Define Stack ADT. Explain array implementation of Stack with push(), pop(), display().\n\n[Student Hand-Written Response - Page 3]:\nStack is LIFO linear list.\n• Push: Check if top == MAX - 1 (Overflow). top++; stack[top] = item;\n• Pop: Check if top == -1 (Underflow). item = stack[top]; top--; return item;",
+    "block_ids": [
+      "blk-101-6"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.703Z",
+    "timestamp": "2026-10-30T06:24:11.703Z"
+  },
+  {
+    "_id": "local-1793341451710-ejlgo",
+    "id": "cons-script-101-Q3b",
+    "script_id": "script-101",
+    "question_id": "Q3b",
+    "combined_text": "[Text from Page 3]:\nQ3(b): Infix to Postfix conversion for ((A + B) * C - (D - E) ^ (F + G)).\n\n[Student Hand-Written Response - Page 3]:\nStep-by-step conversion using Stack ADT:\n• Symbol: ( -> Stack: (\n• Symbol: A -> Stack: ( -> Postfix: A\n• Symbol: + -> Stack: (+ -> Postfix: A\n\n[Continuation from Page 4]:\nQ3(b) [Continuation - Multi-Page Trace Table]:\n\n[Student Hand-Written Response - Page 4]:\nOperator Stack Trace Table for ((A + B) * C - (D - E) ^ (F + G)):\n• Symbol: ^ -> Stack: (-^ -> Postfix: AB+C*DE-\n• Final Expression: AB+C*DE-FG+^-",
+    "block_ids": [
+      "blk-101-7",
+      "blk-101-8"
+    ],
+    "is_manually_overridden": true,
+    "createdAt": "2026-10-30T06:24:11.710Z",
+    "timestamp": "2026-10-30T06:24:11.710Z"
+  },
+  {
+    "_id": "local-1793341451717-ngx3r",
+    "id": "cons-script-101-Q4a",
+    "script_id": "script-101",
+    "question_id": "Q4a",
+    "combined_text": "[Text from Page 4]:\nQ4(a): Explain Circular Queue with enqueue() and dequeue() operations and wrap-around condition.\n\n[Student Hand-Written Response - Page 4]:\nCircular Queue overcomes memory wastage of linear queues by wrapping around using modulo arithmetic.",
+    "block_ids": [
+      "blk-101-9"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.717Z",
+    "timestamp": "2026-10-30T06:24:11.717Z"
+  },
+  {
+    "_id": "local-1793341451728-lxm4o",
+    "id": "cons-script-101-Q5a",
+    "script_id": "script-101",
+    "question_id": "Q5a",
+    "combined_text": "[Text from Page 5]:\nQ5(a): Define Binary Tree. Write recursive algorithms for Preorder, Inorder, and Postorder traversals.\n\n[Student Hand-Written Response - Page 5]:\nA Binary Tree is a hierarchical non-linear data structure where each node has at most two children (left and right).\n• Inorder (Left, Root, Right): inorder(root->left); printf(\"%d \", root->val); inorder(root->right);",
+    "block_ids": [
+      "blk-101-11"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.728Z",
+    "timestamp": "2026-10-30T06:24:11.728Z"
+  },
+  {
+    "_id": "local-1793341451735-t97go",
+    "id": "cons-script-101-Q5b",
+    "script_id": "script-101",
+    "question_id": "Q5b",
+    "combined_text": "[Text from Page 5]:\nQ5(b): Binary Search Tree (BST) operations: Insert, Search, and Delete.\n\n[Student Hand-Written Response - Page 5]:\n• Insert: If val < root->data, recurse left; if val > root->data, recurse right.\n• Search: Time complexity O(h). If key == root->data return found.",
+    "block_ids": [
+      "blk-101-12"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.735Z",
+    "timestamp": "2026-10-30T06:24:11.735Z"
+  },
+  {
+    "_id": "local-1793341451743-m0rql",
+    "id": "cons-script-101-Q7a",
+    "script_id": "script-101",
+    "question_id": "Q7a",
+    "combined_text": "[Text from Page 7]:\nQ7(a): Define Heap and Priority Queue. Explain Max-Heap and Min-Heap with array representation and heapify algorithm.\n\n[Student Hand-Written Response - Page 7]:\nA Heap is a complete binary tree satisfying the heap property.\n• Max-Heap: Every parent node >= children nodes. Root has maximum element.\n• Min-Heap: Every parent node <= children nodes. Root has minimum element.\n• Array Representation: Parent at (i-1)/2, Left Child at 2i+1, Right Child at 2i+2.\n• Heapify: Restores heap property downwards in O(log n) time.",
+    "block_ids": [
+      "blk-101-14"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.743Z",
+    "timestamp": "2026-10-30T06:24:11.743Z"
+  },
+  {
+    "_id": "local-1793341451751-79nbc",
+    "id": "cons-script-101-Q7b",
+    "script_id": "script-101",
+    "question_id": "Q7b",
+    "combined_text": "[Text from Page 7]:\nQ7(b): Explain construction of Binary Search Tree and Height Balanced AVL Trees.\n\n[Student Hand-Written Response - Page 7]:\n• BST Property: Left subtree keys < Root key < Right subtree keys.\n• AVL Trees: Self-balancing BST with Balance Factor = Height(Left) - Height(Right) in {-1, 0, 1}.\n• Rotations: LL, RR, LR, RL single and double rotations maintain O(log n) search time.",
+    "block_ids": [
+      "blk-101-15"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.751Z",
+    "timestamp": "2026-10-30T06:24:11.751Z"
+  },
+  {
+    "_id": "local-1793341451758-d9tef",
+    "id": "cons-script-101-Q8a",
+    "script_id": "script-101",
+    "question_id": "Q8a",
+    "combined_text": "[Text from Page 8]:\nQ8(a): Explain Hashing and Collision Resolution Techniques: Separate Chaining vs Open Addressing.\n\n[Student Hand-Written Response - Page 8]:\nHashing maps large key values to small array indices using hash function h(key).\n• Collision Handling:\n  1. Separate Chaining: Each hash slot is a linked list of collided keys.\n  2. Open Addressing: All elements stored directly in hash table. Probing methods: Linear Probing ((h(k) + i) % m), Quadratic Probing, Double Hashing.",
+    "block_ids": [
+      "blk-101-16"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.758Z",
+    "timestamp": "2026-10-30T06:24:11.758Z"
+  },
+  {
+    "_id": "local-1793341451765-4wn5n",
+    "id": "cons-script-101-Q8b",
+    "script_id": "script-101",
+    "question_id": "Q8b",
+    "combined_text": "[Text from Page 8]:\nQ8(b): Explain Hash Functions (Division, Multiplication, Mid-Square) and Load Factor α.\n\n[Student Hand-Written Response - Page 8]:\n• Division Method: h(k) = k mod m (where m is prime).\n• Multiplication Method: h(k) = floor(m * (k * A mod 1)) where A ≈ 0.618.\n• Mid-Square Method: Square key k, extract middle r bits.\n• Load Factor: α = n / m (ratio of stored keys to table size).",
+    "block_ids": [
+      "blk-101-17"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.765Z",
+    "timestamp": "2026-10-30T06:24:11.765Z"
+  },
+  {
+    "_id": "local-1793341451771-jkg7b",
+    "id": "cons-script-101-Q9a",
+    "script_id": "script-101",
+    "question_id": "Q9a",
+    "combined_text": "[Text from Page 6]:\nQ9(a): Define Graph Data Structure. Explain Graph representations using Adjacency Matrix and Adjacency List with examples and memory comparison.\n\n[Student Hand-Written Response - Page 6]:\nA Graph G = (V, E) is a non-linear data structure consisting of vertices V and edges E connecting pairs of vertices.\n• Adjacency Matrix: V x V 2D array representation. Fast O(1) edge lookup, but O(V²) space complexity.\n• Adjacency List: Array of linked lists representing adjacent vertices. O(V + E) space complexity; efficient for sparse graphs.\n• Graph Traversals: BFS uses Queue (level-order traversal); DFS uses Stack / Recursion (path discovery).",
+    "block_ids": [
+      "blk-101-13"
+    ],
+    "is_manually_overridden": false,
+    "createdAt": "2026-10-30T06:24:11.771Z",
+    "timestamp": "2026-10-30T06:24:11.771Z"
   }
 ]

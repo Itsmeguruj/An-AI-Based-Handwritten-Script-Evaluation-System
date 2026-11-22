@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "client": "vite",
-    "server": "nodemon --ignore server/data/ server/index.js",
+    "server": "nodemon --config nodemon.json server/index.js",
     "dev": "concurrently --shell cmd.exe \"npm run client\" \"npm run server\"",
     "build": "tsc -b && vite build",
     "lint": "oxlint",

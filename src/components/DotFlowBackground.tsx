@@ -52,8 +52,8 @@ export const DotFlowBackground: React.FC = () => {
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Check if light mode is active on body
-      const isLightMode = document.body.classList.contains('light-theme');
+      // Check if light mode is active on body or documentElement
+      const isLightMode = document.body.classList.contains('light-theme') || document.documentElement.classList.contains('light-theme');
       
       // Select base colors based on theme
       const dotColor = isLightMode ? 'rgba(15, 12, 30, 0.15)' : 'rgba(255, 255, 255, 0.1)';

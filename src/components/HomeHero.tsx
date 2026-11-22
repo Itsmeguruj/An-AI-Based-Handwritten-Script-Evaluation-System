@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ChevronRight, 
   ChevronLeft,
-  UploadCloud,
-  Zap,
-  BookOpen,
-  BarChart3,
-  Building
+  FileText,
+  Scan,
+  Layers,
+  Sparkles,
+  ShieldCheck,
+  Link2
 } from 'lucide-react';
 
 interface HomeHeroProps {
@@ -14,137 +15,176 @@ interface HomeHeroProps {
 }
 
 export const HomeHero: React.FC<HomeHeroProps> = ({ onActionClick }) => {
-  const [activeIdx, setActiveIdx] = useState(2); // Set Step 2 (Evaluation) as active initially (the center slide)
-  const [isHovered, setIsHovered] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(2); // Set Step 3 (Stitching / Coordinator Review) as active initially (center slide)
   const [displayedPrompt, setDisplayedPrompt] = useState('');
-  const autoPlayRef = useRef<(() => void) | null>(null);
 
   const steps = [
     {
       id: 0,
-      title: "Batch Script Upload",
-      icon: <UploadCloud size={16} />,
+      title: "Question Paper & Rubric Ingestion",
+      icon: <FileText size={16} />,
       color: "var(--gta-pink)",
-      promptText: "Upload raw scans or low-contrast handwritten answer scripts...",
+      promptText: "Ingest question papers and model schemes to structure module criteria and mark weights...",
       visual: (
-        <div className="card-visual-container">
-          <div className="stacked-papers">
-            <div className="paper-sheet p1">
-              <div className="paper-line"></div>
-              <div className="paper-line short"></div>
-            </div>
-            <div className="paper-sheet p2">
-              <div className="paper-line"></div>
-              <div className="paper-line short"></div>
-            </div>
-            <div className="paper-sheet p3">
-              <div className="scanning-laser"></div>
-              <div style={{ display: 'flex', justifyContent: 'center', margin: '8px auto 4px' }}>
-                <UploadCloud size={18} color="var(--gta-pink)" />
+        <div className="card-visual-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '16px' }}>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', position: 'relative', width: '100%', maxWidth: '205px' }}>
+            <div style={{ flex: 1, background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
+              <div style={{ fontSize: '9px', fontWeight: '800', color: 'var(--gta-pink)', marginBottom: '5px' }}>QP SCHEMA</div>
+              <div style={{ height: '3px', background: 'rgba(255,255,255,0.2)', borderRadius: '2px', marginBottom: '4px' }}></div>
+              <div style={{ height: '3px', width: '70%', background: 'rgba(255,255,255,0.15)', borderRadius: '2px', marginBottom: '5px' }}></div>
+              <div style={{ display: 'flex', gap: '3px', marginTop: '6px' }}>
+                <span style={{ fontSize: '8px', padding: '1px 4px', background: 'rgba(230,0,126,0.15)', color: 'var(--gta-pink)', borderRadius: '2px', fontWeight: 'bold' }}>Q1: 5M</span>
+                <span style={{ fontSize: '8px', padding: '1px 4px', background: 'rgba(230,0,126,0.15)', color: 'var(--gta-pink)', borderRadius: '2px', fontWeight: 'bold' }}>Q2: 5M</span>
               </div>
-              <div className="paper-line" style={{ background: 'var(--gta-pink)' }}></div>
-              <div className="paper-line short" style={{ background: 'var(--gta-pink)' }}></div>
             </div>
+            <div style={{ flex: 1, background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
+              <div style={{ fontSize: '9px', fontWeight: '800', color: 'var(--gta-cyan)', marginBottom: '5px' }}>MODEL RUBRIC</div>
+              <div style={{ height: '3px', background: 'rgba(255,255,255,0.2)', borderRadius: '2px', marginBottom: '4px' }}></div>
+              <div style={{ height: '3px', width: '80%', background: 'rgba(255,255,255,0.15)', borderRadius: '2px', marginBottom: '5px' }}></div>
+              <div style={{ fontSize: '8px', color: 'var(--text-muted)', marginTop: '5px' }}>Step-wise Bounds</div>
+            </div>
+          </div>
+          <div className="scanning-laser" style={{ top: '50%' }}></div>
+          <div style={{ marginTop: '12px', background: 'rgba(230, 0, 126, 0.12)', border: '1px solid var(--gta-pink)', borderRadius: '4px', padding: '2px 8px', fontSize: '9px', color: 'var(--gta-pink)', fontWeight: 'bold', letterSpacing: '0.4px' }}>
+            SCHEMA EXTRACTED
           </div>
         </div>
       )
     },
     {
       id: 1,
-      title: "OCR Handwriting Parsing",
-      icon: <Zap size={16} />,
+      title: "Circled Anchor & Boundary Parsing",
+      icon: <Scan size={16} />,
       color: "var(--gta-cyan)",
-      promptText: "Transcribe cursive writing and handwritten papers to text...",
+      promptText: "Detect handwritten circled anchors (①, ②, 4)) with projection profile text line segmentation...",
       visual: (
-        <div className="card-visual-container">
-          <div className="perspective-grid">
-            <div className="grid-mesh"></div>
-            <div className="grid-sphere"></div>
-            <span className="float-symbol" style={{ top: '25%', left: '15%', animationDelay: '0s' }}>α</span>
-            <span className="float-symbol" style={{ top: '15%', left: '75%', animationDelay: '1s' }}>f(x)</span>
-            <span className="float-symbol" style={{ top: '45%', left: '60%', animationDelay: '2s' }}>∑</span>
-            <span className="float-symbol" style={{ top: '35%', left: '30%', animationDelay: '3s' }}>dy/dx</span>
+        <div className="card-visual-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '14px' }}>
+          <div style={{ width: '195px', background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '10px', position: 'relative' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '18px', height: '18px', borderRadius: '50%', border: '1.5px solid var(--gta-cyan)', color: 'var(--gta-cyan)', fontSize: '10px', fontWeight: 'bold' }}>①</span>
+              <span style={{ fontSize: '9.5px', fontWeight: '700', color: 'var(--gta-cyan)' }}>Anchor Q1</span>
+              <span style={{ fontSize: '8px', color: 'var(--text-muted)', marginLeft: 'auto' }}>98% Conf</span>
+            </div>
+            {/* Fitted text lines with grab box */}
+            <div style={{ border: '1.5px dashed var(--gta-cyan)', borderRadius: '4px', padding: '6px', background: 'rgba(0, 203, 214, 0.05)', position: 'relative' }}>
+              <div style={{ height: '3px', width: '90%', background: 'rgba(255,255,255,0.25)', borderRadius: '2px', marginBottom: '5px' }}></div>
+              <div style={{ height: '3px', width: '75%', background: 'rgba(255,255,255,0.2)', borderRadius: '2px', marginBottom: '5px' }}></div>
+              <div style={{ height: '3px', width: '60%', background: 'rgba(255,255,255,0.18)', borderRadius: '2px' }}></div>
+              {/* Corner grab handles */}
+              <div style={{ position: 'absolute', top: '-3px', left: '-3px', width: '6px', height: '6px', background: 'var(--gta-cyan)', borderRadius: '1px' }}></div>
+              <div style={{ position: 'absolute', top: '-3px', right: '-3px', width: '6px', height: '6px', background: 'var(--gta-cyan)', borderRadius: '1px' }}></div>
+              <div style={{ position: 'absolute', bottom: '-3px', left: '-3px', width: '6px', height: '6px', background: 'var(--gta-cyan)', borderRadius: '1px' }}></div>
+              <div style={{ position: 'absolute', bottom: '-3px', right: '-3px', width: '6px', height: '6px', background: 'var(--gta-cyan)', borderRadius: '1px' }}></div>
+            </div>
+          </div>
+          <div style={{ marginTop: '8px', background: 'rgba(0, 203, 214, 0.12)', border: '1px solid var(--gta-cyan)', borderRadius: '4px', padding: '2px 8px', fontSize: '9px', color: 'var(--gta-cyan)', fontWeight: 'bold' }}>
+            HPP / VPP TIGHT FIT
           </div>
         </div>
       )
     },
     {
       id: 2,
-      title: "Rubric-based Evaluation",
-      icon: <BookOpen size={16} />,
+      title: "Intelligent Block Stitching",
+      icon: <Layers size={16} />,
       color: "var(--gta-purple)",
-      promptText: "Evaluate responses against custom rubric marking schemes...",
+      promptText: "Stitch scattered answer blocks and multi-page continuations (e.g. Q1b continued on Page 5)...",
       visual: (
-        <div className="card-visual-container">
-          <div className="particle-rings">
-            <div className="concentric-ring r1"></div>
-            <div className="concentric-ring r2"></div>
-            <div className="concentric-ring r3"></div>
-            <div className="orb-core"></div>
+        <div className="card-visual-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '14px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', width: '100%', maxWidth: '210px', justifyContent: 'center' }}>
+            {/* Page 2 Block */}
+            <div style={{ width: '85px', background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '6px', fontSize: '8.5px' }}>
+              <div style={{ color: '#93c5fd', fontWeight: 'bold', marginBottom: '3px' }}>Page 2: Q1b</div>
+              <div style={{ height: '3px', background: 'rgba(255,255,255,0.2)', borderRadius: '1px', marginBottom: '3px' }}></div>
+              <div style={{ height: '3px', width: '70%', background: 'rgba(255,255,255,0.15)', borderRadius: '1px', marginBottom: '4px' }}></div>
+              <span style={{ fontSize: '7.5px', color: '#60a5fa', background: 'rgba(37,99,235,0.2)', padding: '1px 3px', borderRadius: '2px' }}>contd...</span>
+            </div>
+            
+            {/* Connector */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+              <Link2 size={14} color="var(--gta-purple)" />
+              <div style={{ width: '18px', height: '2px', background: 'var(--gta-purple)' }}></div>
+            </div>
+
+            {/* Page 5 Block */}
+            <div style={{ width: '85px', background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '6px', fontSize: '8.5px' }}>
+              <div style={{ color: '#93c5fd', fontWeight: 'bold', marginBottom: '3px' }}>Page 5: Q1b</div>
+              <div style={{ height: '3px', background: 'rgba(255,255,255,0.2)', borderRadius: '1px', marginBottom: '3px' }}></div>
+              <div style={{ height: '3px', width: '85%', background: 'rgba(255,255,255,0.15)', borderRadius: '1px', marginBottom: '4px' }}></div>
+              <span style={{ fontSize: '7.5px', color: '#10b981', background: 'rgba(16,185,129,0.2)', padding: '1px 3px', borderRadius: '2px' }}>unified</span>
+            </div>
           </div>
-          <div className="particle-swarm">
-            <div className="swarm-dot" style={{ top: '80%', left: '30%', '--drift': '15px', animationDelay: '0s' } as any}></div>
-            <div className="swarm-dot" style={{ top: '75%', left: '50%', '--drift': '-20px', animationDelay: '0.8s' } as any}></div>
-            <div className="swarm-dot" style={{ top: '90%', left: '70%', '--drift': '30px', animationDelay: '1.4s' } as any}></div>
-            <div className="swarm-dot" style={{ top: '85%', left: '45%', '--drift': '-10px', animationDelay: '2.1s' } as any}></div>
+          <div style={{ marginTop: '12px', background: 'rgba(147, 51, 234, 0.15)', border: '1px solid var(--gta-purple)', borderRadius: '4px', padding: '2px 8px', fontSize: '9px', color: '#c084fc', fontWeight: 'bold' }}>
+            CONSOLIDATED ANSWER STITCH
           </div>
         </div>
       )
     },
     {
       id: 3,
-      title: "Analytics & Markup Export",
-      icon: <BarChart3 size={16} />,
+      title: "Dual-Engine Rubric Evaluation",
+      icon: <Sparkles size={16} />,
       color: "var(--gta-orange)",
-      promptText: "Generate annotated PDFs, scorecards, and class summaries...",
+      promptText: "Evaluate responses against rubric criteria with step marks and examination choice exclusion rules...",
       visual: (
-        <div className="card-visual-container">
-          <div className="chart-card-viz">
-            <div className="chart-bar-row">
-              <div className="chart-bar" style={{ '--height': '35px' } as any}></div>
-              <div className="chart-bar" style={{ '--height': '60px', animationDelay: '0.2s' } as any}></div>
-              <div className="chart-bar" style={{ '--height': '45px', animationDelay: '0.4s' } as any}></div>
-              <div className="chart-bar" style={{ '--height': '80px', animationDelay: '0.6s' } as any}></div>
+        <div className="card-visual-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '12px' }}>
+          <div style={{ width: '200px', background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '10px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+              <span style={{ fontSize: '10px', fontWeight: 'bold', color: 'var(--text-primary)' }}>Question 1 Evaluation</span>
+              <span style={{ fontSize: '11px', fontWeight: '800', color: 'var(--gta-orange)' }}>4.5 / 5.0</span>
             </div>
-            <div style={{
-              position: 'absolute',
-              top: '25%',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              background: 'rgba(255, 150, 0, 0.12)',
-              border: '1px solid var(--gta-orange)',
-              borderRadius: '6px',
-              padding: '4px 8px',
-              fontSize: '10px',
-              color: 'var(--gta-orange)',
-              fontWeight: 'bold',
-              letterSpacing: '0.5px'
-            }}>
-              PUBLISH
+            {/* Criteria breakdown rows */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '8px', color: 'var(--text-secondary)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span>• Concept & Definition</span>
+                <span style={{ color: '#10b981', fontWeight: 'bold' }}>2.0/2.0</span>
+              </div>
+              <div style={{ height: '3px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px' }}>
+                <div style={{ width: '100%', height: '100%', background: '#10b981', borderRadius: '2px' }}></div>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2px' }}>
+                <span>• Implementation Flow</span>
+                <span style={{ color: '#10b981', fontWeight: 'bold' }}>2.5/2.5</span>
+              </div>
+              <div style={{ height: '3px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px' }}>
+                <div style={{ width: '100%', height: '100%', background: 'var(--gta-orange)', borderRadius: '2px' }}></div>
+              </div>
             </div>
+          </div>
+          <div style={{ marginTop: '8px', display: 'flex', gap: '6px', alignItems: 'center' }}>
+            <span style={{ fontSize: '8px', color: 'var(--text-muted)', background: 'rgba(255,255,255,0.06)', padding: '2px 5px', borderRadius: '3px' }}>Choice Policy: Top Marks Counted</span>
           </div>
         </div>
       )
     },
     {
       id: 4,
-      title: "LMS Sync Integrations",
-      icon: <Building size={16} />,
+      title: "Coordinator Audit & Gradebook",
+      icon: <ShieldCheck size={16} />,
       color: "var(--gta-cyan)",
-      promptText: "Synchronize grades and feedback automatically to Canvas, Blackboard, or Moodle...",
+      promptText: "Coordinator review queues, revert verification loops, booklet audit logs, and certified scorebooks...",
       visual: (
-        <div className="card-visual-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ position: 'relative', width: '130px', height: '110px' }}>
-            <div style={{ position: 'absolute', top: '10%', left: '5%', background: 'rgba(230, 0, 126, 0.1)', border: '1px solid var(--gta-pink)', borderRadius: '6px', padding: '3px 6px', fontSize: '9px', color: 'var(--gta-pink)', fontWeight: 'bold' }}>
-              Canvas
+        <div className="card-visual-container" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '14px' }}>
+          <div style={{ width: '190px', background: 'var(--panel-bg-solid)', border: '1px solid var(--panel-border)', borderRadius: '6px', padding: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.18)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+              <span style={{ fontSize: '9px', fontFamily: 'monospace', color: 'var(--gta-cyan)', fontWeight: 'bold' }}>BKT-2026-33</span>
+              <span style={{ fontSize: '8.5px', background: 'rgba(16,185,129,0.15)', color: '#10b981', padding: '1px 5px', borderRadius: '3px', fontWeight: 'bold' }}>✓ APPROVED</span>
             </div>
-            <div style={{ position: 'absolute', bottom: '15%', left: '10%', background: 'rgba(0, 203, 214, 0.1)', border: '1px solid var(--gta-cyan)', borderRadius: '6px', padding: '3px 6px', fontSize: '9px', color: 'var(--gta-cyan)', fontWeight: 'bold' }}>
-              Moodle
+            <div style={{ fontSize: '13px', fontWeight: '900', color: 'var(--text-primary)', marginBottom: '4px' }}>
+              Score: 15 / 25
             </div>
-            <div style={{ position: 'absolute', top: '40%', right: '0%', background: 'rgba(255, 150, 0, 0.1)', border: '1px solid var(--gta-orange)', borderRadius: '6px', padding: '3px 6px', fontSize: '9px', color: 'var(--gta-orange)', fontWeight: 'bold' }}>
-              Blackboard
+            <div style={{ display: 'flex', gap: '4px', fontSize: '8px', color: 'var(--text-muted)' }}>
+              <span>• Audit Trail Logged</span>
+              <span>• Signed & Sealed</span>
             </div>
-            <div className="orb-core" style={{ top: '50%', left: '45%' }}></div>
+          </div>
+          <div style={{ marginTop: '10px', display: 'flex', gap: '6px' }}>
+            <span style={{ fontSize: '8.5px', background: 'rgba(0, 203, 214, 0.12)', border: '1px solid var(--gta-cyan)', color: 'var(--gta-cyan)', padding: '2px 7px', borderRadius: '4px', fontWeight: 'bold' }}>
+              AUDIT VERIFIED
+            </span>
+            <span style={{ fontSize: '8.5px', background: 'rgba(255, 255, 255, 0.08)', color: 'var(--text-secondary)', padding: '2px 7px', borderRadius: '4px', fontWeight: 'bold' }}>
+              PDF REPORT
+            </span>
           </div>
         </div>
       )
@@ -159,19 +199,16 @@ export const HomeHero: React.FC<HomeHeroProps> = ({ onActionClick }) => {
     setActiveIdx(prev => (prev - 1 + steps.length) % steps.length);
   };
 
-  autoPlayRef.current = nextStep;
-
-  // Autoplay loops
+  // Automated banner sliding timer (slides smoothly every 3.5 seconds)
   useEffect(() => {
-    if (isHovered) return;
-    const play = () => {
-      if (autoPlayRef.current) autoPlayRef.current();
-    };
-    const interval = setInterval(play, 6000);
-    return () => clearInterval(interval);
-  }, [isHovered]);
+    const timer = setInterval(() => {
+      setActiveIdx(prev => (prev + 1) % steps.length);
+    }, 3500);
 
-  // Typing effect hook
+    return () => clearInterval(timer);
+  }, [activeIdx, steps.length]);
+
+  // Typing effect hook for current active step
   useEffect(() => {
     const fullText = steps[activeIdx].promptText;
     setDisplayedPrompt('');
@@ -186,7 +223,7 @@ export const HomeHero: React.FC<HomeHeroProps> = ({ onActionClick }) => {
       } else {
         clearInterval(interval);
       }
-    }, 35);
+    }, 22);
     
     return () => clearInterval(interval);
   }, [activeIdx]);
@@ -248,8 +285,6 @@ export const HomeHero: React.FC<HomeHeroProps> = ({ onActionClick }) => {
       {/* Welcome Showcase 3D perspective slider */}
       <div 
         id="how-it-works"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         style={{
           position: 'relative',
           width: '100%',
@@ -285,6 +320,14 @@ export const HomeHero: React.FC<HomeHeroProps> = ({ onActionClick }) => {
                 key={step.id} 
                 className={`carousel-card ${pos}`}
                 onClick={() => setActiveIdx(idx)}
+                style={{
+                  '--card-accent': step.color,
+                  '--card-glow': step.color === 'var(--gta-pink)' ? 'rgba(230, 0, 126, 0.35)' :
+                                 step.color === 'var(--gta-cyan)' ? 'rgba(0, 203, 214, 0.35)' :
+                                 step.color === 'var(--gta-purple)' ? 'rgba(147, 51, 234, 0.35)' :
+                                 step.color === 'var(--gta-orange)' ? 'rgba(255, 150, 0, 0.35)' :
+                                 'rgba(0, 203, 214, 0.35)'
+                } as React.CSSProperties}
               >
                 {/* Simulated Screen / Visual Animation */}
                 {step.visual}

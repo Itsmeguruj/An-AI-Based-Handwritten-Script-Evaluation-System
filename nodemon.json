@@ -1,0 +1,22 @@
+{
+  "watch": [
+    "server/index.js",
+    "server/models"
+  ],
+  "ignore": [
+    "server/data/**",
+    "server/data/*",
+    "src/**",
+    "public/**",
+    "dist/**",
+    "node_modules/**",
+    "*.md",
+    "*.jpg",
+    "*.png",
+    "*.svg",
+    "*.ps1"
+  ],
+  "ext": "js,mjs,cjs,json",
+  "delay": "1000"
+}
+

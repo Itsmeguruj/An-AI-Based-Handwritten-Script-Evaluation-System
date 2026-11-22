@@ -11,6 +11,32 @@ export interface BoundingBox {
   height: number;
 }
 
+export interface PolygonPoint {
+  x: number; // percentage (0 - 100)
+  y: number; // percentage (0 - 100)
+}
+
+export interface CircledQuestionMarker {
+  detected: boolean;
+  questionNumber: string; // e.g. "1", "2", "4", "6", "1a", "2b"
+  rawLabel?: string;      // e.g. "①", "④", "4)", "Q2"
+  subQuestion?: string;   // e.g. "a", "b"
+  bbox: BoundingBox;      // Circle boundary coordinates in percentage
+  confidence: number;     // 0.0 to 1.0
+  circleShape?: 'circle' | 'oval' | 'rounded_rect' | 'irregular';
+  radiusPercent?: number;
+}
+
+export interface ParsingConfidenceMetrics {
+  circledDetectionConf: number;   // Metric 1: Circle/oval contour quality (0.0 to 1.0)
+  questionOcrConf: number;        // Metric 2: Question number OCR recognition (0.0 to 1.0)
+  handwritingConf: number;        // Metric 3: Handwritten content density & clarity (0.0 to 1.0)
+  boundaryAccuracyConf: number;   // Metric 4: Answer boundary tightness & fit (0.0 to 1.0)
+  blockAssociationConf: number;   // Metric 5: Answer block to rubric question match (0.0 to 1.0)
+  continuationConf: number;       // Metric 6: Cross-page continuation detection (0.0 to 1.0)
+  overallConf: number;            // Composite overall confidence (0.0 to 1.0)
+}
+
 export interface StudentScript {
   id: string;
   studentId: string;
@@ -33,6 +59,12 @@ export interface ExtractedBlock {
   confidence_score: number; // 0.0 to 1.0
   is_continuation: boolean;
   bounding_box?: BoundingBox;
+  polygon?: PolygonPoint[]; // Precise polygon boundary points
+  circled_marker?: CircledQuestionMarker; // Visual circled question number anchor
+  confidence_metrics?: ParsingConfidenceMetrics; // 6-dimension independent confidence scores
+  detected_orientation?: 'portrait' | 'landscape';
+  text_lines_count?: number;
+  ink_density?: number;
 }
 
 export interface ConsolidatedAnswer {
@@ -61,6 +93,7 @@ export interface CreateBlockPayload {
   module_number: number;
   raw_text: string;
   bounding_box?: BoundingBox;
+  polygon?: PolygonPoint[];
 }
 
 export interface UpdateBlockPayload {
@@ -71,6 +104,7 @@ export interface UpdateBlockPayload {
   is_continuation?: boolean;
   confidence_score?: number;
   bounding_box?: BoundingBox;
+  polygon?: PolygonPoint[];
 }
 
 export interface SplitBlockPayload {
@@ -93,4 +127,3 @@ export interface ScriptBlocksResponse {
   blocks: ExtractedBlock[];
   consolidatedAnswers: ConsolidatedAnswer[];
 }
-

@@ -28,7 +28,10 @@ export interface LoginDetails {
 async function handleResponse(response: Response) {
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(data.error || 'Network error occurred. Please check your server.');
+    if (response.status === 502 || response.status === 503 || response.status === 504) {
+      throw new Error(data.error || 'DeepScript backend API server is unreachable. Please verify server is running on port 5000.');
+    }
+    throw new Error(data.error || data.message || `Server error (${response.status}). Please check your server.`);
   }
   return data;
 }

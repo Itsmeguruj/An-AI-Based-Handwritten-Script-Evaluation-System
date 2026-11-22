@@ -1,0 +1,316 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 1560" width="100%" height="100%" style="background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Arrowhead Markers -->
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <marker id="arr-admin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-coord" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#4f46e5"/>
+    </marker>
+    <marker id="arr-revert" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ea580c"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+
+    <!-- Shadows -->
+    <filter id="shadow" x="-5%" y="-10%" width="110%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <filter id="panel-shadow" x="-3%" y="-2%" width="106%" height="104%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="adminHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="coordHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="adminCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="coordCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <linearGradient id="diamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <linearGradient id="editGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="revertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title Header -->
+  <g id="header" transform="translate(0, 32)">
+    <text x="530" y="24" text-anchor="middle" font-size="22" font-weight="800" fill="#0f172a" letter-spacing="-0.02em">DeepScript System Flowchart</text>
+    <text x="530" y="46" text-anchor="middle" font-size="13" font-weight="500" fill="#64748b">AI-Based Handwritten Script Evaluation Pipeline</text>
+  </g>
+
+  <!-- START Node -->
+  <g id="start" transform="translate(450, 95)">
+    <rect x="0" y="0" width="160" height="38" rx="19" fill="url(#pillGrad)" filter="url(#shadow)"/>
+    <text x="80" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="0.08em">START</text>
+  </g>
+
+  <!-- Arrow: START -> User Authentication -->
+  <line x1="530" y1="133" x2="530" y2="153" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- User Authentication -->
+  <g id="auth" transform="translate(390, 155)">
+    <rect x="0" y="0" width="280" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" filter="url(#shadow)"/>
+    <text x="140" y="26" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1e293b">User Authentication</text>
+  </g>
+
+  <!-- Arrows branching to Admin Panel and Coordinator Panel -->
+  <path d="M 530,197 L 530,215 L 280,215 L 280,235" fill="none" stroke="#0284c7" stroke-width="2" marker-end="url(#arr-admin)"/>
+  <path d="M 530,197 L 530,215 L 780,215 L 780,235" fill="none" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+  <!-- ============================================== -->
+  <!-- LEFT: ADMIN PANEL                              -->
+  <!-- ============================================== -->
+  <g id="admin-panel" transform="translate(60, 237)">
+    <!-- Container -->
+    <rect x="0" y="0" width="440" height="1060" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="1.8" filter="url(#panel-shadow)"/>
+    <!-- Header -->
+    <rect x="0" y="0" width="440" height="44" rx="12" fill="url(#adminHeader)"/>
+    <rect x="0" y="32" width="440" height="12" fill="url(#adminHeader)"/>
+    <text x="220" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="0.04em">ADMIN PANEL</text>
+
+    <!-- Step 1: Upload Question Paper -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#adminCard)" stroke="#7dd3fc" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#0369a1">Upload Question Paper</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="102" x2="220" y2="120" stroke="#0284c7" stroke-width="2" marker-end="url(#arr-admin)"/>
+
+    <!-- Step 2: Process Questions -->
+    <g transform="translate(50, 122)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#adminCard)" stroke="#7dd3fc" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#0369a1">Process Questions</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="164" x2="220" y2="182" stroke="#0284c7" stroke-width="2" marker-end="url(#arr-admin)"/>
+
+    <!-- Step 3: Upload Model Answer -->
+    <g transform="translate(50, 184)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#adminCard)" stroke="#7dd3fc" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#0369a1">Upload Model Answer</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="226" x2="220" y2="244" stroke="#0284c7" stroke-width="2" marker-end="url(#arr-admin)"/>
+
+    <!-- Step 4: Assign Script to Coordinator -->
+    <g transform="translate(50, 246)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#0369a1">Assign Script to Coordinator</text>
+    </g>
+
+    <!-- Lower Section in Admin Panel: Receive Reverted Results -->
+    <g id="receive-reverted" transform="translate(50, 890)">
+      <rect x="0" y="0" width="340" height="48" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="170" y="24" text-anchor="middle" font-size="13.5" font-weight="800" fill="#c2410c">Receive Reverted Results</text>
+      <text x="170" y="39" text-anchor="middle" font-size="11" font-weight="600" fill="#ea580c">(Under Evaluation Results View)</text>
+    </g>
+  </g>
+
+  <!-- Handoff Arrow: Admin (Assign Script) -> Coordinator (Upload Student Answer Script) -->
+  <path d="M 450,504 L 560,504 L 560,317 L 600,317" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr-coord)"/>
+
+  <!-- ============================================== -->
+  <!-- RIGHT: COORDINATOR PANEL                       -->
+  <!-- ============================================== -->
+  <g id="coordinator-panel" transform="translate(560, 237)">
+    <!-- Container -->
+    <rect x="0" y="0" width="440" height="1060" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.8" filter="url(#panel-shadow)"/>
+    <!-- Header -->
+    <rect x="0" y="0" width="440" height="44" rx="12" fill="url(#coordHeader)"/>
+    <rect x="0" y="32" width="440" height="12" fill="url(#coordHeader)"/>
+    <text x="220" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="0.04em">COORDINATOR PANEL</text>
+
+    <!-- Step 1: Upload Student Answer Script -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Upload Student Answer Script</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="102" x2="220" y2="120" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 2: Image Preprocessing -->
+    <g transform="translate(50, 122)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Image Preprocessing</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="164" x2="220" y2="182" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 3: Handwritten Text Extraction -->
+    <g transform="translate(50, 184)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Handwritten Text Extraction</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="226" x2="220" y2="244" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 4: Answer Block Detection -->
+    <g transform="translate(50, 246)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Answer Block Detection</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="288" x2="220" y2="306" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 5: Question Mapping -->
+    <g id="coord-q-mapping" transform="translate(50, 308)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Question Mapping</text>
+    </g>
+
+    <!-- Arrow to Diamond -->
+    <line x1="220" y1="350" x2="220" y2="380" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 6: Coordinator Verification (Diamond Decision) -->
+    <!-- Diamond centered at (220, 418). Height = 76, Width = 210 -->
+    <g id="diamond">
+      <polygon points="220,380 325,418 220,456 115,418" fill="url(#diamondGrad)" stroke="#818cf8" stroke-width="2" filter="url(#shadow)"/>
+      <text x="220" y="414" text-anchor="middle" font-size="12.5" font-weight="700" fill="#312e81">Coordinator</text>
+      <text x="220" y="430" text-anchor="middle" font-size="12.5" font-weight="700" fill="#312e81">Verification</text>
+    </g>
+
+    <!-- Branch 'Incorrect' -> Right to Edit / Correct -->
+    <line x1="325" y1="418" x2="345" y2="418" stroke="#d97706" stroke-width="1.8"/>
+    <text x="335" y="411" text-anchor="middle" font-size="9.5" font-weight="700" fill="#b45309">No</text>
+
+    <!-- Edit / Correct Box -->
+    <g transform="translate(340, 436)">
+      <rect x="0" y="0" width="85" height="38" rx="6" fill="url(#editGrad)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="42.5" y="23" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">Edit / Correct</text>
+    </g>
+
+    <!-- Loop Back: from Edit / Correct up to Question Mapping -->
+    <path d="M 382,474 L 382,490 L 418,490 L 418,329 L 392,329" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="3,3" marker-end="url(#arr-amber)"/>
+
+    <!-- Branch 'Correct' -> Downwards -->
+    <line x1="220" y1="456" x2="220" y2="494" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+    <text x="238" y="476" font-size="10" font-weight="700" fill="#4338ca">Correct</text>
+
+    <!-- Step 7: Answer Consolidation -->
+    <g transform="translate(50, 496)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Answer Consolidation</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="538" x2="220" y2="556" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 8: AI-Assisted Evaluation -->
+    <g transform="translate(50, 558)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">AI-Assisted Evaluation</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="600" x2="220" y2="618" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 9: Rubric-Based Scoring -->
+    <g transform="translate(50, 620)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Rubric-Based Scoring</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="662" x2="220" y2="680" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 10: Calculate Marks -->
+    <g transform="translate(50, 682)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="url(#coordCard)" stroke="#c4b5fd" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#4338ca">Calculate Marks</text>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="220" y1="724" x2="220" y2="742" stroke="#4f46e5" stroke-width="2" marker-end="url(#arr-coord)"/>
+
+    <!-- Step 11: Generate Final Result -->
+    <g transform="translate(50, 744)">
+      <rect x="0" y="0" width="340" height="42" rx="7" fill="#ede9fe" stroke="#4f46e5" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="170" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#4338ca">Generate Final Result</text>
+    </g>
+
+    <!-- Arrow down to Revert to Admin -->
+    <line x1="220" y1="786" x2="220" y2="814" stroke="#ea580c" stroke-width="2" marker-end="url(#arr-revert)"/>
+
+    <!-- Step 12: Revert to Admin -->
+    <g id="coord-revert" transform="translate(50, 816)">
+      <rect x="0" y="0" width="340" height="48" rx="8" fill="url(#revertGrad)" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+      <text x="170" y="24" text-anchor="middle" font-size="14" font-weight="800" fill="#c2410c">Revert to Admin</text>
+      <text x="170" y="39" text-anchor="middle" font-size="11" font-weight="600" fill="#ea580c">Submit Evaluated Result back to Admin</text>
+    </g>
+  </g>
+
+  <!-- ============================================== -->
+  <!-- REVERT ARROW: COORDINATOR -> ADMIN             -->
+  <!-- ============================================== -->
+  <!-- From bottom of Revert to Admin across to Admin Receive Reverted Results -->
+  <path d="M 610,1077 L 450,1151" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr-revert)"/>
+  <rect x="470" y="1098" width="120" height="22" rx="4" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+  <text x="530" y="1113" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ea580c">Revert to Admin</text>
+
+  <!-- ============================================== -->
+  <!-- BOTTOM SECTION: EVALUATION RESULTS & PDF EXPORT-->
+  <!-- ============================================== -->
+  <!-- Line out from Admin Receive Reverted Results down to bottom fork -->
+  <path d="M 280,1175 L 280,1230 L 530,1230 L 530,1250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Fork Out into Evaluation Results Database and PDF Scorecard -->
+  <path d="M 530,1250 L 530,1270 L 370,1270 L 370,1290" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 530,1250 L 530,1270 L 690,1270 L 690,1290" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Evaluation Results Database Box -->
+  <g id="eval-results-db" transform="translate(250, 1292)">
+    <rect x="0" y="0" width="240" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" filter="url(#shadow)"/>
+    <text x="120" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Evaluation Results DB</text>
+  </g>
+
+  <!-- PDF Scorecard Box -->
+  <g id="pdf-scorecard" transform="translate(570, 1292)">
+    <rect x="0" y="0" width="240" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.8" filter="url(#shadow)"/>
+    <text x="120" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">PDF Scorecard Export</text>
+  </g>
+
+  <!-- Join into END -->
+  <path d="M 370,1334 L 370,1365 L 530,1365 L 530,1385" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 690,1334 L 690,1365 L 530,1365" fill="none" stroke="#475569" stroke-width="2"/>
+
+  <!-- END Node -->
+  <g id="end" transform="translate(450, 1387)">
+    <rect x="0" y="0" width="160" height="38" rx="19" fill="url(#pillGrad)" filter="url(#shadow)"/>
+    <text x="80" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="0.08em">END</text>
+  </g>
+</svg>

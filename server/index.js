@@ -31,7 +31,112 @@ const transporter = nodemailer.createTransport({
 
 const app = express();
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+
+// Node PDF.js loader for resilient server-side text extraction
+let nodePdfJs = null;
+try {
+  nodePdfJs = await import('pdfjs-dist/legacy/build/pdf.mjs');
+} catch (e) {
+  console.warn('Node PDF.js legacy load warning:', e.message);
+}
+
+// Server-side PDF Text Extraction API (handles digital PDFs seamlessly)
+app.post(['/api/extract-pdf-text', '/api/auth/extract-pdf-text'], async (req, res) => {
+  try {
+    const { base64Data, filename } = req.body;
+    if (!base64Data) {
+      return res.status(400).json({ error: 'base64Data is required' });
+    }
+
+    const cleanBase64 = base64Data.replace(/^data:[^;]+;base64,/, '');
+    const buffer = Buffer.from(cleanBase64, 'base64');
+
+    if (!nodePdfJs) {
+      nodePdfJs = await import('pdfjs-dist/legacy/build/pdf.mjs');
+    }
+
+    const loadingTask = nodePdfJs.getDocument({
+      data: new Uint8Array(buffer),
+      useSystemFonts: true,
+      disableFontFace: true
+    });
+    const pdf = await loadingTask.promise;
+    let fullText = '';
+    const totalPages = Math.min(pdf.numPages, 30);
+
+    for (let pageNum = 1; pageNum <= totalPages; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      const textContent = await page.getTextContent();
+      const items = (textContent?.items || []).filter(it => it.str && it.str.trim() !== '');
+
+      if (items.length > 0) {
+        const linesMap = new Map();
+        for (const item of items) {
+          const y = item.transform[5];
+          let foundBaseline = null;
+          for (const baseline of linesMap.keys()) {
+            if (Math.abs(baseline - y) <= 4.5) {
+              foundBaseline = baseline;
+              break;
+            }
+          }
+          if (foundBaseline !== null) {
+            linesMap.get(foundBaseline).push(item);
+          } else {
+            linesMap.set(y, [item]);
+          }
+        }
+
+        const sortedBaselines = Array.from(linesMap.keys()).sort((a, b) => b - a);
+        const assembledLines = [];
+        const pageWidth = (page.view && page.view[2]) || 600;
+        for (const baseline of sortedBaselines) {
+          const lineItems = linesMap.get(baseline);
+          lineItems.sort((a, b) => a.transform[4] - b.transform[4]);
+
+          let lineStr = '';
+          let prevEnd = -1;
+          for (let idx = 0; idx < lineItems.length; idx++) {
+            const item = lineItems[idx];
+            const startX = item.transform[4];
+            const str = item.str || '';
+            const itemText = str.trim();
+            const isLast = idx === lineItems.length - 1;
+            const isRightColumn = startX > (pageWidth * 0.78);
+            const isPureScore = /^(?:0?[1-9]|[1-4][0-9]|50)$/.test(itemText);
+
+            if (prevEnd !== -1) {
+              const gap = startX - prevEnd;
+              if (gap > 35) lineStr += ' | ';
+              else if (gap > 2) lineStr += ' ';
+            }
+
+            if (isLast && isRightColumn && isPureScore) {
+              lineStr += ` [${itemText} Marks]`;
+            } else {
+              lineStr += str;
+            }
+            prevEnd = startX + (item.width || (str.length * 6));
+          }
+          if (lineStr.trim()) assembledLines.push(lineStr.trim());
+        }
+        fullText += assembledLines.join('\n') + '\n\n';
+      }
+    }
+
+    return res.status(200).json({
+      success: true,
+      text: fullText.trim(),
+      numPages: pdf.numPages,
+      filename: filename || 'document.pdf'
+    });
+  } catch (err) {
+    console.error('Error in /api/extract-pdf-text:', err);
+    return res.status(500).json({ error: err.message || 'Failed to extract PDF text' });
+  }
+});
 
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -1020,11 +1125,23 @@ app.post(['/api/assignments', '/api/auth/assignments'], async (req, res) => {
     
     // Batch save of entire coordinatorAssignments dictionary
     if (coordinatorAssignments && typeof coordinatorAssignments === 'object') {
+      const assignedSerials = new Set();
+      Object.entries(coordinatorAssignments).forEach(([cId, list]) => {
+        if (cId !== 'all' && Array.isArray(list)) {
+          list.forEach(item => {
+            if (item && item.serialNo) assignedSerials.add(item.serialNo);
+          });
+        }
+      });
+
       const allEntries = [];
       Object.entries(coordinatorAssignments).forEach(([cId, list]) => {
         if (Array.isArray(list)) {
           list.forEach(item => {
             if (item.serialNo) {
+              if (cId === 'all' && assignedSerials.has(item.serialNo)) {
+                return; // Prevent duplicate 'all' assignment when assigned to specific coordinator
+              }
               allEntries.push({
                 id: item.id || `${cId}-${item.serialNo}`,
                 coordinatorId: cId,
@@ -1051,6 +1168,9 @@ app.post(['/api/assignments', '/api/auth/assignments'], async (req, res) => {
 
       if (mongoose.connection.readyState === 1) {
         for (const item of allEntries) {
+          if (item.coordinatorId !== 'all') {
+            await Assignment.deleteMany({ coordinatorId: 'all', serialNo: item.serialNo });
+          }
           await Assignment.findOneAndUpdate(
             { coordinatorId: item.coordinatorId, serialNo: item.serialNo },
             item,
@@ -1060,6 +1180,9 @@ app.post(['/api/assignments', '/api/auth/assignments'], async (req, res) => {
         console.log(`✅ [ASSIGNMENTS] Batch saved ${allEntries.length} items to MongoDB Atlas`);
       } else {
         for (const item of allEntries) {
+          if (item.coordinatorId !== 'all') {
+            await localDB.deleteMany('assignments', { coordinatorId: 'all', serialNo: item.serialNo });
+          }
           await localDB.deleteMany('assignments', { coordinatorId: item.coordinatorId, serialNo: item.serialNo });
           await localDB.create('assignments', item);
         }
@@ -1132,6 +1255,21 @@ app.get(['/api/assignments', '/api/auth/assignments'], async (req, res) => {
       }
       grouped[item.coordinatorId].push(item);
     });
+
+    if (grouped['all']) {
+      const specificSerials = new Set();
+      Object.entries(grouped).forEach(([cId, items]) => {
+        if (cId !== 'all' && Array.isArray(items)) {
+          items.forEach(it => {
+            if (it && it.serialNo) specificSerials.add(it.serialNo);
+          });
+        }
+      });
+      grouped['all'] = grouped['all'].filter(it => it && it.serialNo && !specificSerials.has(it.serialNo));
+      if (grouped['all'].length === 0) {
+        delete grouped['all'];
+      }
+    }
 
     return res.status(200).json(grouped);
   } catch (error) {
@@ -1686,7 +1824,7 @@ app.post('/api/coordinator/scripts/:id/save-all-blocks', async (req, res) => {
         if (existing) {
           await localDB.findOneAndUpdate('extracted_blocks', { id: b.id, script_id }, bPayload);
         } else {
-          await localDB.insertOne('extracted_blocks', bPayload);
+          await localDB.create('extracted_blocks', bPayload);
         }
       }
     }

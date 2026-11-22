@@ -4,6 +4,7 @@ import { HomeHero } from './components/HomeHero';
 import { PortalTabs } from './components/PortalTabs';
 import { AuthForm } from './components/AuthForm';
 import { PreviewStudio } from './components/PreviewStudio';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { DotFlowBackground } from './components/DotFlowBackground';
 import { DeepScriptLogo } from './components/DeepScriptLogo';
 import { RubricStudioSlides } from './components/RubricStudioSlides';
@@ -37,7 +38,17 @@ function App() {
   const [activeTab, setActiveTab] = useState<'coordinator' | 'admin'>('coordinator');
   const [coordSubTab, setCoordSubTab] = useState<'register' | 'login'>('register');
   const [showLoginOverlay, setShowLoginOverlay] = useState(false);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    try {
+      const savedTheme = localStorage.getItem('deepscript_theme') || localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+    } catch {
+      // ignore
+    }
+    return 'dark';
+  });
   const [showDropdown, setShowDropdown] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false);
   const [activeSectionModal, setActiveSectionModal] = useState<
@@ -205,12 +216,44 @@ function App() {
   }, [auth]);
 
   useEffect(() => {
-    if (theme === 'light') {
+    const isLight = theme === 'light';
+    if (isLight) {
       document.body.classList.add('light-theme');
+      document.documentElement.classList.add('light-theme');
+      document.documentElement.setAttribute('data-theme', 'light');
     } else {
       document.body.classList.remove('light-theme');
+      document.documentElement.classList.remove('light-theme');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    try {
+      localStorage.setItem('deepscript_theme', theme);
+      localStorage.setItem('theme', theme);
+      window.dispatchEvent(new CustomEvent('deepscript_theme_changed', { detail: theme }));
+    } catch {
+      // ignore
     }
   }, [theme]);
+
+  // Synchronize theme changes across tabs and global components
+  useEffect(() => {
+    const handleStorage = (e: StorageEvent) => {
+      if ((e.key === 'deepscript_theme' || e.key === 'theme') && (e.newValue === 'light' || e.newValue === 'dark')) {
+        setTheme(e.newValue);
+      }
+    };
+    const handleCustomTheme = (e: any) => {
+      if (e.detail === 'light' || e.detail === 'dark') {
+        setTheme(e.detail);
+      }
+    };
+    window.addEventListener('storage', handleStorage);
+    window.addEventListener('deepscript_theme_changed', handleCustomTheme);
+    return () => {
+      window.removeEventListener('storage', handleStorage);
+      window.removeEventListener('deepscript_theme_changed', handleCustomTheme);
+    };
+  }, []);
 
   const handleScrollToAuth = () => {
     setActiveTab('coordinator');
@@ -229,6 +272,8 @@ function App() {
   const clearWorkspaceSessionState = () => {
     try {
       const persistentKeys = [
+        'deepscript_theme',
+        'theme',
         'deepscript_auth',
         'deepscript_registered_coordinators',
         'deepscript_revertedResults',
@@ -461,16 +506,20 @@ function App() {
       {/* Main Body */}
       {auth ? (
         // Logged-in AI Evaluation Workspace (Google AI Studio themed)
-        <PreviewStudio 
-          role={auth.role} 
-          userName={auth.name} 
-          isVerified={auth.isVerified}
+        <ErrorBoundary fallbackTitle="DeepScript Workspace Recovered" onReset={() => window.location.reload()}>
+          <PreviewStudio 
+            role={auth.role} 
+            userName={auth.name} 
+            isVerified={auth.isVerified}
+            theme={theme}
+            onToggleTheme={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
           onOpenProfile={() => setShowProfileModal(true)}
           onLogout={handleLogout} 
           onVerifyStatusChange={(verified) => {
             setAuth(prev => prev ? { ...prev, isVerified: verified } : null);
           }}
         />
+        </ErrorBoundary>
       ) : (
         // Landing & Registration / Login Homepage
         <main style={{ flex: 1, paddingBottom: '80px', position: 'relative', overflow: 'hidden' }}>

@@ -3388,5 +3388,4445 @@
     "ipAddress": "127.0.0.1",
     "createdAt": "2026-08-31T03:05:20.451Z",
     "timestamp": "2026-08-31T03:05:20.451Z"
+  },
+  {
+    "_id": "local-1788145711746-fyk4k",
+    "action": "Paper extraction completed: 10 main questions, 28 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-08-31T03:08:31.746Z",
+    "timestamp": "2026-08-31T03:08:31.746Z"
+  },
+  {
+    "_id": "local-1790668591682-wvi95",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T07:56:31.682Z",
+    "timestamp": "2026-09-29T07:56:31.682Z"
+  },
+  {
+    "_id": "local-1790669199200-et5le",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:06:39.200Z",
+    "timestamp": "2026-09-29T08:06:39.200Z"
+  },
+  {
+    "_id": "local-1790669563654-jpgzf",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:12:43.654Z",
+    "timestamp": "2026-09-29T08:12:43.654Z"
+  },
+  {
+    "_id": "local-1790670091013-3a8i5",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:21:31.013Z",
+    "timestamp": "2026-09-29T08:21:31.014Z"
+  },
+  {
+    "_id": "local-1790670572863-gs064",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:29:32.863Z",
+    "timestamp": "2026-09-29T08:29:32.864Z"
+  },
+  {
+    "_id": "local-1790671638964-jm8j5",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:47:18.964Z",
+    "timestamp": "2026-09-29T08:47:18.965Z"
+  },
+  {
+    "_id": "local-1790671663991-7j3c2",
+    "action": "Assigned paper 25_Marks_Question_Paper-2.pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:47:43.991Z",
+    "timestamp": "2026-09-29T08:47:43.991Z"
+  },
+  {
+    "_id": "local-1790671864644-o9si3",
+    "action": "Assigned paper 25_Marks_Question_Paper-2.pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:51:04.644Z",
+    "timestamp": "2026-09-29T08:51:04.644Z"
+  },
+  {
+    "_id": "local-1790671868153-3w3xu",
+    "action": "Assigned paper 25_Marks_Question_Paper-2.pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:51:08.153Z",
+    "timestamp": "2026-09-29T08:51:08.153Z"
+  },
+  {
+    "_id": "local-1790671890727-wvufz",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:51:30.727Z",
+    "timestamp": "2026-09-29T08:51:30.727Z"
+  },
+  {
+    "_id": "local-1790672193978-uyouc",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T08:56:33.978Z",
+    "timestamp": "2026-09-29T08:56:33.978Z"
+  },
+  {
+    "_id": "local-1790673122871-by6pq",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T09:12:02.871Z",
+    "timestamp": "2026-09-29T09:12:02.871Z"
+  },
+  {
+    "_id": "local-1790673230187-zghue",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T09:13:50.187Z",
+    "timestamp": "2026-09-29T09:13:50.187Z"
+  },
+  {
+    "_id": "local-1790674205779-blix3",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T09:30:05.779Z",
+    "timestamp": "2026-09-29T09:30:05.779Z"
+  },
+  {
+    "_id": "local-1790675104548-zuqqy",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T09:45:04.548Z",
+    "timestamp": "2026-09-29T09:45:04.548Z"
+  },
+  {
+    "_id": "local-1790679357919-qeufp",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T10:55:57.919Z",
+    "timestamp": "2026-09-29T10:55:57.919Z"
+  },
+  {
+    "_id": "local-1790679364568-141du",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T10:56:04.568Z",
+    "timestamp": "2026-09-29T10:56:04.568Z"
+  },
+  {
+    "_id": "local-1790680704886-rv1x3",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T11:18:24.886Z",
+    "timestamp": "2026-09-29T11:18:24.886Z"
+  },
+  {
+    "_id": "local-1790680718070-2ruuq",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T11:18:38.070Z",
+    "timestamp": "2026-09-29T11:18:38.070Z"
+  },
+  {
+    "_id": "local-1790680740723-wxa9i",
+    "action": "Saved evaluation result for Serial No SN-2026-001 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T11:19:00.723Z",
+    "timestamp": "2026-09-29T11:19:00.723Z"
+  },
+  {
+    "_id": "local-1790682009340-qi4cd",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-29T11:40:09.340Z",
+    "timestamp": "2026-09-29T11:40:09.340Z"
+  },
+  {
+    "_id": "local-1790726454990-6gcy1",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:00:54.990Z",
+    "timestamp": "2026-09-30T00:00:54.990Z"
+  },
+  {
+    "_id": "local-1790726579774-fdhrp",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:02:59.774Z",
+    "timestamp": "2026-09-30T00:02:59.774Z"
+  },
+  {
+    "_id": "local-1790726619029-p04bb",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:03:39.029Z",
+    "timestamp": "2026-09-30T00:03:39.029Z"
+  },
+  {
+    "_id": "local-1790728477433-0jzek",
+    "action": "Paper extraction completed: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:34:37.433Z",
+    "timestamp": "2026-09-30T00:34:37.433Z"
+  },
+  {
+    "_id": "local-1790728478514-foxgt",
+    "action": "Paper extraction completed: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:34:38.514Z",
+    "timestamp": "2026-09-30T00:34:38.514Z"
+  },
+  {
+    "_id": "local-1790729839772-tf7ei",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:57:19.772Z",
+    "timestamp": "2026-09-30T00:57:19.772Z"
+  },
+  {
+    "_id": "local-1790729847896-7phqp",
+    "action": "Paper extraction completed: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:57:27.896Z",
+    "timestamp": "2026-09-30T00:57:27.896Z"
+  },
+  {
+    "_id": "local-1790729849916-wwpqq",
+    "action": "Paper extraction completed: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T00:57:29.916Z",
+    "timestamp": "2026-09-30T00:57:29.916Z"
+  },
+  {
+    "_id": "local-1790732120171-if2st",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T01:35:20.171Z",
+    "timestamp": "2026-09-30T01:35:20.171Z"
+  },
+  {
+    "_id": "local-1790732122073-n38h0",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T01:35:22.073Z",
+    "timestamp": "2026-09-30T01:35:22.073Z"
+  },
+  {
+    "_id": "local-1790733363495-hzsyu",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T01:56:03.495Z",
+    "timestamp": "2026-09-30T01:56:03.495Z"
+  },
+  {
+    "_id": "local-1790733652174-oraio",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:00:52.174Z",
+    "timestamp": "2026-09-30T02:00:52.174Z"
+  },
+  {
+    "_id": "local-1790733674911-xlz0x",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:01:14.911Z",
+    "timestamp": "2026-09-30T02:01:14.911Z"
+  },
+  {
+    "_id": "local-1790733680627-h4kha",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:01:20.627Z",
+    "timestamp": "2026-09-30T02:01:20.627Z"
+  },
+  {
+    "_id": "local-1790733687281-0hctv",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:01:27.281Z",
+    "timestamp": "2026-09-30T02:01:27.281Z"
+  },
+  {
+    "_id": "local-1790733688681-p10el",
+    "action": "Auto-generated Model Answer Key using Qwen 2.5-VL 7B Vision-Language model",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:01:28.681Z",
+    "timestamp": "2026-09-30T02:01:28.681Z"
+  },
+  {
+    "_id": "local-1790733698793-9nsey",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:01:38.794Z",
+    "timestamp": "2026-09-30T02:01:38.794Z"
+  },
+  {
+    "_id": "local-1790733769138-cxog1",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:02:49.138Z",
+    "timestamp": "2026-09-30T02:02:49.138Z"
+  },
+  {
+    "_id": "local-1790733778290-tra0q",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:02:58.290Z",
+    "timestamp": "2026-09-30T02:02:58.290Z"
+  },
+  {
+    "_id": "local-1790733972708-azppd",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:06:12.708Z",
+    "timestamp": "2026-09-30T02:06:12.708Z"
+  },
+  {
+    "_id": "local-1790736479183-auueb",
+    "action": "Saved evaluation result for Serial No SN-2026-001 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:47:59.183Z",
+    "timestamp": "2026-09-30T02:47:59.183Z"
+  },
+  {
+    "_id": "local-1790736479198-zl6ls",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:47:59.198Z",
+    "timestamp": "2026-09-30T02:47:59.198Z"
+  },
+  {
+    "_id": "local-1790736510379-kk8zo",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T02:48:30.379Z",
+    "timestamp": "2026-09-30T02:48:30.379Z"
+  },
+  {
+    "_id": "local-1790737892885-n9mxx",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T03:11:32.885Z",
+    "timestamp": "2026-09-30T03:11:32.885Z"
+  },
+  {
+    "_id": "local-1790738217323-44bm8",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T03:16:57.323Z",
+    "timestamp": "2026-09-30T03:16:57.323Z"
+  },
+  {
+    "_id": "local-1790738233973-lre96",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T03:17:13.974Z",
+    "timestamp": "2026-09-30T03:17:13.974Z"
+  },
+  {
+    "_id": "local-1790738398318-4l3r8",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T03:19:58.318Z",
+    "timestamp": "2026-09-30T03:19:58.318Z"
+  },
+  {
+    "_id": "local-1790739029493-gwr9z",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-09-30T03:30:29.493Z",
+    "timestamp": "2026-09-30T03:30:29.493Z"
+  },
+  {
+    "_id": "local-1791695569981-lsbtd",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T05:12:49.981Z",
+    "timestamp": "2026-10-11T05:12:49.981Z"
+  },
+  {
+    "_id": "local-1791699198586-r87ru",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T06:13:18.586Z",
+    "timestamp": "2026-10-11T06:13:18.586Z"
+  },
+  {
+    "_id": "local-1791699853846-oi1pp",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T06:24:13.846Z",
+    "timestamp": "2026-10-11T06:24:13.846Z"
+  },
+  {
+    "_id": "local-1791699856256-q69vw",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T06:24:16.256Z",
+    "timestamp": "2026-10-11T06:24:16.256Z"
+  },
+  {
+    "_id": "local-1791702554062-upmj4",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T07:09:14.062Z",
+    "timestamp": "2026-10-11T07:09:14.062Z"
+  },
+  {
+    "_id": "local-1791703216742-19g34",
+    "action": "Paper extraction completed: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T07:20:16.742Z",
+    "timestamp": "2026-10-11T07:20:16.742Z"
+  },
+  {
+    "_id": "local-1791703580965-up8n6",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T07:26:20.965Z",
+    "timestamp": "2026-10-11T07:26:20.965Z"
+  },
+  {
+    "_id": "local-1791703589909-alh37",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T07:26:29.909Z",
+    "timestamp": "2026-10-11T07:26:29.909Z"
+  },
+  {
+    "_id": "local-1791706296069-t79y7",
+    "action": "Auto-generated Model Answer Key using Qwen 2.5-VL 7B Vision-Language model",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T08:11:36.069Z",
+    "timestamp": "2026-10-11T08:11:36.069Z"
+  },
+  {
+    "_id": "local-1791706300178-eexca",
+    "action": "Auto-generated Model Answer Key using Qwen 2.5-VL 7B Vision-Language model",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T08:11:40.178Z",
+    "timestamp": "2026-10-11T08:11:40.178Z"
+  },
+  {
+    "_id": "local-1791710233175-6pfge",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T09:17:13.175Z",
+    "timestamp": "2026-10-11T09:17:13.175Z"
+  },
+  {
+    "_id": "local-1791730414764-cqy49",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T14:53:34.764Z",
+    "timestamp": "2026-10-11T14:53:34.764Z"
+  },
+  {
+    "_id": "local-1791730674814-exbou",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T14:57:54.814Z",
+    "timestamp": "2026-10-11T14:57:54.814Z"
+  },
+  {
+    "_id": "local-1791730699332-690i4",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T14:58:19.332Z",
+    "timestamp": "2026-10-11T14:58:19.332Z"
+  },
+  {
+    "_id": "local-1791730796015-fpmo8",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T14:59:56.015Z",
+    "timestamp": "2026-10-11T14:59:56.015Z"
+  },
+  {
+    "_id": "local-1791732941431-ckzeg",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-00",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:35:41.431Z",
+    "timestamp": "2026-10-11T15:35:41.431Z"
+  },
+  {
+    "_id": "local-1791733344841-7pgid",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:42:24.841Z",
+    "timestamp": "2026-10-11T15:42:24.841Z"
+  },
+  {
+    "_id": "local-1791733352428-fqrgg",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-00",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:42:32.428Z",
+    "timestamp": "2026-10-11T15:42:32.428Z"
+  },
+  {
+    "_id": "local-1791733376167-ayj64",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-00",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:42:56.167Z",
+    "timestamp": "2026-10-11T15:42:56.167Z"
+  },
+  {
+    "_id": "local-1791733670441-i694g",
+    "action": "Evaluation timing restriction enabled by Admin.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:47:50.441Z",
+    "timestamp": "2026-10-11T15:47:50.441Z"
+  },
+  {
+    "_id": "local-1791733671970-g6k9h",
+    "action": "Evaluation timing restriction disabled by Admin.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:47:51.970Z",
+    "timestamp": "2026-10-11T15:47:51.970Z"
+  },
+  {
+    "_id": "local-1791733673205-icdxs",
+    "action": "Evaluation timing restriction enabled by Admin.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:47:53.205Z",
+    "timestamp": "2026-10-11T15:47:53.205Z"
+  },
+  {
+    "_id": "local-1791733673706-125gc",
+    "action": "Evaluation timing restriction disabled by Admin.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:47:53.706Z",
+    "timestamp": "2026-10-11T15:47:53.706Z"
+  },
+  {
+    "_id": "local-1791733674318-3uq3a",
+    "action": "Evaluation timing restriction enabled by Admin.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:47:54.318Z",
+    "timestamp": "2026-10-11T15:47:54.318Z"
+  },
+  {
+    "_id": "local-1791733674950-6esdl",
+    "action": "Evaluation timing restriction disabled by Admin.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:47:54.950Z",
+    "timestamp": "2026-10-11T15:47:54.950Z"
+  },
+  {
+    "_id": "local-1791733852480-m89ev",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:50:52.480Z",
+    "timestamp": "2026-10-11T15:50:52.481Z"
+  },
+  {
+    "_id": "local-1791733863905-qrpcq",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:51:03.905Z",
+    "timestamp": "2026-10-11T15:51:03.906Z"
+  },
+  {
+    "_id": "local-1791733872503-msz35",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:51:12.503Z",
+    "timestamp": "2026-10-11T15:51:12.503Z"
+  },
+  {
+    "_id": "local-1791733884789-abd4i",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:51:24.789Z",
+    "timestamp": "2026-10-11T15:51:24.789Z"
+  },
+  {
+    "_id": "local-1791734005859-4apo0",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:53:25.859Z",
+    "timestamp": "2026-10-11T15:53:25.859Z"
+  },
+  {
+    "_id": "local-1791734008338-2qadk",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:53:28.338Z",
+    "timestamp": "2026-10-11T15:53:28.338Z"
+  },
+  {
+    "_id": "local-1791734020075-1w047",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:53:40.075Z",
+    "timestamp": "2026-10-11T15:53:40.075Z"
+  },
+  {
+    "_id": "local-1791734055102-mfrlu",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:54:15.102Z",
+    "timestamp": "2026-10-11T15:54:15.102Z"
+  },
+  {
+    "_id": "local-1791734083904-2c6ly",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:54:43.904Z",
+    "timestamp": "2026-10-11T15:54:43.904Z"
+  },
+  {
+    "_id": "local-1791734089985-7jpea",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:54:49.985Z",
+    "timestamp": "2026-10-11T15:54:49.985Z"
+  },
+  {
+    "_id": "local-1791734096501-m4j42",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:54:56.501Z",
+    "timestamp": "2026-10-11T15:54:56.501Z"
+  },
+  {
+    "_id": "local-1791734100658-x402m",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:55:00.658Z",
+    "timestamp": "2026-10-11T15:55:00.658Z"
+  },
+  {
+    "_id": "local-1791734128710-jitqx",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T15:55:28.710Z",
+    "timestamp": "2026-10-11T15:55:28.710Z"
+  },
+  {
+    "_id": "local-1791734446502-wwoca",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:00:46.502Z",
+    "timestamp": "2026-10-11T16:00:46.502Z"
+  },
+  {
+    "_id": "local-1791734666534-uggfy",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:04:26.534Z",
+    "timestamp": "2026-10-11T16:04:26.535Z"
+  },
+  {
+    "_id": "local-1791734683860-833sk",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:04:43.860Z",
+    "timestamp": "2026-10-11T16:04:43.860Z"
+  },
+  {
+    "_id": "local-1791735047229-wyzh6",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:10:47.229Z",
+    "timestamp": "2026-10-11T16:10:47.230Z"
+  },
+  {
+    "_id": "local-1791735060115-35cjl",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:11:00.115Z",
+    "timestamp": "2026-10-11T16:11:00.115Z"
+  },
+  {
+    "_id": "local-1791735070112-sumq8",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:11:10.112Z",
+    "timestamp": "2026-10-11T16:11:10.112Z"
+  },
+  {
+    "_id": "local-1791735279396-26w68",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:14:39.396Z",
+    "timestamp": "2026-10-11T16:14:39.396Z"
+  },
+  {
+    "_id": "local-1791735303353-h8kw3",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:15:03.353Z",
+    "timestamp": "2026-10-11T16:15:03.353Z"
+  },
+  {
+    "_id": "local-1791735310055-dvoz8",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:15:10.055Z",
+    "timestamp": "2026-10-11T16:15:10.055Z"
+  },
+  {
+    "_id": "local-1791735310091-lvegv",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:15:10.091Z",
+    "timestamp": "2026-10-11T16:15:10.091Z"
+  },
+  {
+    "_id": "local-1791735481477-5szru",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:18:01.477Z",
+    "timestamp": "2026-10-11T16:18:01.478Z"
+  },
+  {
+    "_id": "local-1791735486164-bhq4p",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:18:06.164Z",
+    "timestamp": "2026-10-11T16:18:06.164Z"
+  },
+  {
+    "_id": "local-1791735499048-5lla5",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:18:19.048Z",
+    "timestamp": "2026-10-11T16:18:19.048Z"
+  },
+  {
+    "_id": "local-1791735502261-tugyw",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:18:22.261Z",
+    "timestamp": "2026-10-11T16:18:22.261Z"
+  },
+  {
+    "_id": "local-1791735653066-arxwf",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:20:53.066Z",
+    "timestamp": "2026-10-11T16:20:53.066Z"
+  },
+  {
+    "_id": "local-1791735654571-mxddd",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:20:54.572Z",
+    "timestamp": "2026-10-11T16:20:54.572Z"
+  },
+  {
+    "_id": "local-1791735663659-topoe",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:21:03.659Z",
+    "timestamp": "2026-10-11T16:21:03.659Z"
+  },
+  {
+    "_id": "local-1791736037814-nh6st",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:27:17.814Z",
+    "timestamp": "2026-10-11T16:27:17.815Z"
+  },
+  {
+    "_id": "local-1791736039432-0yswj",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:27:19.432Z",
+    "timestamp": "2026-10-11T16:27:19.432Z"
+  },
+  {
+    "_id": "local-1791736045215-j81u8",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:27:25.215Z",
+    "timestamp": "2026-10-11T16:27:25.215Z"
+  },
+  {
+    "_id": "local-1791736056059-gv6jq",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:27:36.059Z",
+    "timestamp": "2026-10-11T16:27:36.059Z"
+  },
+  {
+    "_id": "local-1791736061951-yayg6",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:27:41.951Z",
+    "timestamp": "2026-10-11T16:27:41.951Z"
+  },
+  {
+    "_id": "local-1791736071862-nl8wl",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: SN-2026-008) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:27:51.862Z",
+    "timestamp": "2026-10-11T16:27:51.862Z"
+  },
+  {
+    "_id": "local-1791737815037-t2sw6",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:56:55.037Z",
+    "timestamp": "2026-10-11T16:56:55.037Z"
+  },
+  {
+    "_id": "local-1791737824074-ipwe3",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:57:04.074Z",
+    "timestamp": "2026-10-11T16:57:04.074Z"
+  },
+  {
+    "_id": "local-1791737828013-97yyg",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:57:08.013Z",
+    "timestamp": "2026-10-11T16:57:08.013Z"
+  },
+  {
+    "_id": "local-1791737837664-9sfhg",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:57:17.664Z",
+    "timestamp": "2026-10-11T16:57:17.665Z"
+  },
+  {
+    "_id": "local-1791737839334-lp0hr",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:57:19.334Z",
+    "timestamp": "2026-10-11T16:57:19.334Z"
+  },
+  {
+    "_id": "local-1791737860129-lnkt6",
+    "action": "Revoked assignment (Serial No: SN-2026-008) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T16:57:40.129Z",
+    "timestamp": "2026-10-11T16:57:40.129Z"
+  },
+  {
+    "_id": "local-1791738242147-46f4l",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T17:04:02.148Z",
+    "timestamp": "2026-10-11T17:04:02.148Z"
+  },
+  {
+    "_id": "local-1791738266341-o53hl",
+    "action": "Loaded grading assignment for Serial No SN-2026-008 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T17:04:26.341Z",
+    "timestamp": "2026-10-11T17:04:26.341Z"
+  },
+  {
+    "_id": "local-1791738310494-sb691",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T17:05:10.495Z",
+    "timestamp": "2026-10-11T17:05:10.495Z"
+  },
+  {
+    "_id": "local-1791738334807-6azj3",
+    "action": "Saved evaluation result for Serial No SN-2026-008 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-11T17:05:34.807Z",
+    "timestamp": "2026-10-11T17:05:34.807Z"
+  },
+  {
+    "_id": "local-1791767765670-kwf3a",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:16:05.671Z",
+    "timestamp": "2026-10-12T01:16:05.671Z"
+  },
+  {
+    "_id": "local-1791767779241-vw0wd",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:16:19.241Z",
+    "timestamp": "2026-10-12T01:16:19.241Z"
+  },
+  {
+    "_id": "local-1791767877343-i9pws",
+    "action": "Text keys extracted from ds.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:17:57.343Z",
+    "timestamp": "2026-10-12T01:17:57.343Z"
+  },
+  {
+    "_id": "local-1791767993607-mu33m",
+    "action": "Text keys extracted from BCS304 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:19:53.608Z",
+    "timestamp": "2026-10-12T01:19:53.608Z"
+  },
+  {
+    "_id": "local-1791768031261-mlsl8",
+    "action": "Text keys extracted from BCS304 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:20:31.261Z",
+    "timestamp": "2026-10-12T01:20:31.261Z"
+  },
+  {
+    "_id": "local-1791768266573-krd5y",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:24:26.573Z",
+    "timestamp": "2026-10-12T01:24:26.573Z"
+  },
+  {
+    "_id": "local-1791768339494-awxn9",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:25:39.494Z",
+    "timestamp": "2026-10-12T01:25:39.494Z"
+  },
+  {
+    "_id": "local-1791768465471-8jo0z",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:27:45.471Z",
+    "timestamp": "2026-10-12T01:27:45.472Z"
+  },
+  {
+    "_id": "local-1791768470726-0doz6",
+    "action": "Rubrics created: 10 main questions, 19 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:27:50.726Z",
+    "timestamp": "2026-10-12T01:27:50.726Z"
+  },
+  {
+    "_id": "local-1791769284661-hnsxp",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:41:24.661Z",
+    "timestamp": "2026-10-12T01:41:24.662Z"
+  },
+  {
+    "_id": "local-1791769290026-dnlb0",
+    "action": "Rubrics created: 10 main questions, 19 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T01:41:30.026Z",
+    "timestamp": "2026-10-12T01:41:30.027Z"
+  },
+  {
+    "_id": "local-1791772436370-y6mub",
+    "action": "Text keys extracted from BCS304 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:33:56.370Z",
+    "timestamp": "2026-10-12T02:33:56.370Z"
+  },
+  {
+    "_id": "local-1791772442506-ci5s3",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:34:02.506Z",
+    "timestamp": "2026-10-12T02:34:02.506Z"
+  },
+  {
+    "_id": "local-1791772446177-115h1",
+    "action": "Text keys extracted from ds key answer.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:34:06.177Z",
+    "timestamp": "2026-10-12T02:34:06.177Z"
+  },
+  {
+    "_id": "local-1791772452289-8k2he",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:34:12.289Z",
+    "timestamp": "2026-10-12T02:34:12.289Z"
+  },
+  {
+    "_id": "local-1791772457234-j6ycb",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:34:17.234Z",
+    "timestamp": "2026-10-12T02:34:17.234Z"
+  },
+  {
+    "_id": "local-1791772472649-w5wxt",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:34:32.649Z",
+    "timestamp": "2026-10-12T02:34:32.649Z"
+  },
+  {
+    "_id": "local-1791772481674-952o9",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:34:41.674Z",
+    "timestamp": "2026-10-12T02:34:41.674Z"
+  },
+  {
+    "_id": "local-1791773140260-0qhes",
+    "action": "Text keys extracted from BCS304 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:45:40.260Z",
+    "timestamp": "2026-10-12T02:45:40.260Z"
+  },
+  {
+    "_id": "local-1791773149557-u7dnv",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:45:49.557Z",
+    "timestamp": "2026-10-12T02:45:49.557Z"
+  },
+  {
+    "_id": "local-1791773154717-ph7ke",
+    "action": "Rubrics created: 10 main questions, 19 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:45:54.717Z",
+    "timestamp": "2026-10-12T02:45:54.717Z"
+  },
+  {
+    "_id": "local-1791773925437-lrifo",
+    "action": "Text keys extracted from BCS304 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:58:45.438Z",
+    "timestamp": "2026-10-12T02:58:45.438Z"
+  },
+  {
+    "_id": "local-1791773931703-l6uf7",
+    "action": "Model answer paper \"ds key answer.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:58:51.704Z",
+    "timestamp": "2026-10-12T02:58:51.704Z"
+  },
+  {
+    "_id": "local-1791773936966-fmnnq",
+    "action": "Rubrics created: 10 main questions, 19 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:58:56.966Z",
+    "timestamp": "2026-10-12T02:58:56.966Z"
+  },
+  {
+    "_id": "local-1791773977329-nsqw7",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T02:59:37.329Z",
+    "timestamp": "2026-10-12T02:59:37.329Z"
+  },
+  {
+    "_id": "local-1791774977428-jmv9w",
+    "action": "Text keys extracted from 2nd model paper.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T03:16:17.428Z",
+    "timestamp": "2026-10-12T03:16:17.428Z"
+  },
+  {
+    "_id": "local-1791775007156-rp7lm",
+    "action": "Text keys extracted from 2nd question paper .pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T03:16:47.156Z",
+    "timestamp": "2026-10-12T03:16:47.156Z"
+  },
+  {
+    "_id": "local-1791823713699-0kqtd",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T16:48:33.699Z",
+    "timestamp": "2026-10-12T16:48:33.699Z"
+  },
+  {
+    "_id": "local-1791824752366-xhuql",
+    "action": "Text keys extracted from 2nd question paper .pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:05:52.366Z",
+    "timestamp": "2026-10-12T17:05:52.366Z"
+  },
+  {
+    "_id": "local-1791824777590-vtyjx",
+    "action": "Text keys extracted from 2nd question paper .pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:06:17.590Z",
+    "timestamp": "2026-10-12T17:06:17.590Z"
+  },
+  {
+    "_id": "local-1791825098702-5zizw",
+    "action": "Text keys extracted from 2nd question paper .pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:11:38.702Z",
+    "timestamp": "2026-10-12T17:11:38.702Z"
+  },
+  {
+    "_id": "local-1791825180390-pc17d",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:13:00.390Z",
+    "timestamp": "2026-10-12T17:13:00.390Z"
+  },
+  {
+    "_id": "local-1791826863339-4iijs",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:03.339Z",
+    "timestamp": "2026-10-12T17:41:03.339Z"
+  },
+  {
+    "_id": "local-1791826870286-vbk5n",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:10.286Z",
+    "timestamp": "2026-10-12T17:41:10.286Z"
+  },
+  {
+    "_id": "local-1791826890170-4bwkz",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:30.170Z",
+    "timestamp": "2026-10-12T17:41:30.170Z"
+  },
+  {
+    "_id": "local-1791826894964-xujk7",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:34.964Z",
+    "timestamp": "2026-10-12T17:41:34.964Z"
+  },
+  {
+    "_id": "local-1791826905034-lkctb",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:45.034Z",
+    "timestamp": "2026-10-12T17:41:45.034Z"
+  },
+  {
+    "_id": "local-1791826908405-czs80",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:48.405Z",
+    "timestamp": "2026-10-12T17:41:48.405Z"
+  },
+  {
+    "_id": "local-1791826913735-cp8ph",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:53.735Z",
+    "timestamp": "2026-10-12T17:41:53.735Z"
+  },
+  {
+    "_id": "local-1791826915122-i1m8o",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T17:41:55.122Z",
+    "timestamp": "2026-10-12T17:41:55.122Z"
+  },
+  {
+    "_id": "local-1791828186542-87n6e",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:03:06.542Z",
+    "timestamp": "2026-10-12T18:03:06.543Z"
+  },
+  {
+    "_id": "local-1791828189415-x8hi1",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:03:09.415Z",
+    "timestamp": "2026-10-12T18:03:09.415Z"
+  },
+  {
+    "_id": "local-1791828194861-gj9ln",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:03:14.861Z",
+    "timestamp": "2026-10-12T18:03:14.861Z"
+  },
+  {
+    "_id": "local-1791828224880-fzzt4",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-008",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:03:44.880Z",
+    "timestamp": "2026-10-12T18:03:44.880Z"
+  },
+  {
+    "_id": "local-1791828686862-bgr25",
+    "action": "Toggled access for coordinator Guru to: Suspended",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:11:26.862Z",
+    "timestamp": "2026-10-12T18:11:26.862Z"
+  },
+  {
+    "_id": "local-1791828689190-gq63c",
+    "action": "Toggled access for coordinator Guru to: Granted",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:11:29.190Z",
+    "timestamp": "2026-10-12T18:11:29.190Z"
+  },
+  {
+    "_id": "local-1791828699403-njsqj",
+    "action": "Toggled access for coordinator Guru to: Suspended",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:11:39.404Z",
+    "timestamp": "2026-10-12T18:11:39.404Z"
+  },
+  {
+    "_id": "local-1791828700622-rl2vm",
+    "action": "Toggled access for coordinator Guru to: Granted",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:11:40.622Z",
+    "timestamp": "2026-10-12T18:11:40.622Z"
+  },
+  {
+    "_id": "local-1791830557803-ya1tw",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:42:37.803Z",
+    "timestamp": "2026-10-12T18:42:37.803Z"
+  },
+  {
+    "_id": "local-1791830564394-nmxo7",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:42:44.394Z",
+    "timestamp": "2026-10-12T18:42:44.394Z"
+  },
+  {
+    "_id": "local-1791830569092-hvvnt",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:42:49.092Z",
+    "timestamp": "2026-10-12T18:42:49.092Z"
+  },
+  {
+    "_id": "local-1791830574090-eksju",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:42:54.090Z",
+    "timestamp": "2026-10-12T18:42:54.090Z"
+  },
+  {
+    "_id": "local-1791830587671-stgkw",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:43:07.671Z",
+    "timestamp": "2026-10-12T18:43:07.671Z"
+  },
+  {
+    "_id": "local-1791830592536-55t2v",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:43:12.536Z",
+    "timestamp": "2026-10-12T18:43:12.536Z"
+  },
+  {
+    "_id": "local-1791830597829-x8w1q",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:43:17.829Z",
+    "timestamp": "2026-10-12T18:43:17.829Z"
+  },
+  {
+    "_id": "local-1791830764682-4eutf",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:46:04.682Z",
+    "timestamp": "2026-10-12T18:46:04.682Z"
+  },
+  {
+    "_id": "local-1791830770794-s1j46",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:46:10.794Z",
+    "timestamp": "2026-10-12T18:46:10.794Z"
+  },
+  {
+    "_id": "local-1791830839712-7boo0",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:47:19.712Z",
+    "timestamp": "2026-10-12T18:47:19.712Z"
+  },
+  {
+    "_id": "local-1791830908174-w1t4j",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:48:28.174Z",
+    "timestamp": "2026-10-12T18:48:28.175Z"
+  },
+  {
+    "_id": "local-1791830913968-g1y0m",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:48:33.968Z",
+    "timestamp": "2026-10-12T18:48:33.968Z"
+  },
+  {
+    "_id": "local-1791830915833-drg1z",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:48:35.833Z",
+    "timestamp": "2026-10-12T18:48:35.833Z"
+  },
+  {
+    "_id": "local-1791830944254-a9ka2",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: 001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:49:04.254Z",
+    "timestamp": "2026-10-12T18:49:04.254Z"
+  },
+  {
+    "_id": "local-1791830958740-rzkkc",
+    "action": "Revoked assignment (Serial No: SN-2026-008) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:49:18.740Z",
+    "timestamp": "2026-10-12T18:49:18.740Z"
+  },
+  {
+    "_id": "local-1791830965193-xxnjn",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:49:25.193Z",
+    "timestamp": "2026-10-12T18:49:25.193Z"
+  },
+  {
+    "_id": "local-1791830973368-7ly41",
+    "action": "Revoked assignment (Serial No: 001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:49:33.368Z",
+    "timestamp": "2026-10-12T18:49:33.368Z"
+  },
+  {
+    "_id": "local-1791830979359-qczf1",
+    "action": "Revoked assignment (Serial No: 001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:49:39.359Z",
+    "timestamp": "2026-10-12T18:49:39.359Z"
+  },
+  {
+    "_id": "local-1791830985317-z56j8",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: 001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T18:49:45.317Z",
+    "timestamp": "2026-10-12T18:49:45.317Z"
+  },
+  {
+    "_id": "local-1791831679205-xfl85",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:01:19.205Z",
+    "timestamp": "2026-10-12T19:01:19.205Z"
+  },
+  {
+    "_id": "local-1791831688996-fj53a",
+    "action": "Revoked assignment (Serial No: SN-2026-002) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:01:28.996Z",
+    "timestamp": "2026-10-12T19:01:28.996Z"
+  },
+  {
+    "_id": "local-1791832463406-ezl4n",
+    "action": "Revoked assignment (Serial No: 001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:14:23.406Z",
+    "timestamp": "2026-10-12T19:14:23.406Z"
+  },
+  {
+    "_id": "local-1791832469924-i2yjn",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: 001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:14:29.924Z",
+    "timestamp": "2026-10-12T19:14:29.924Z"
+  },
+  {
+    "_id": "local-1791832471333-uxpwd",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:14:31.333Z",
+    "timestamp": "2026-10-12T19:14:31.333Z"
+  },
+  {
+    "_id": "local-1791832473189-auwxt",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: 001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:14:33.189Z",
+    "timestamp": "2026-10-12T19:14:33.189Z"
+  },
+  {
+    "_id": "local-1791832474291-g334g",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:14:34.291Z",
+    "timestamp": "2026-10-12T19:14:34.291Z"
+  },
+  {
+    "_id": "local-1791832486104-sgabf",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: 001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:14:46.104Z",
+    "timestamp": "2026-10-12T19:14:46.104Z"
+  },
+  {
+    "_id": "local-1791833498376-azm0b",
+    "action": "Admin exported 1 assigned task(s) to PDF summary report.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:31:38.376Z",
+    "timestamp": "2026-10-12T19:31:38.376Z"
+  },
+  {
+    "_id": "local-1791834832852-fpuq3",
+    "action": "Revoked assignment (Serial No: 001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:53:52.852Z",
+    "timestamp": "2026-10-12T19:53:52.852Z"
+  },
+  {
+    "_id": "local-1791834839980-g258c",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: 001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:53:59.980Z",
+    "timestamp": "2026-10-12T19:53:59.980Z"
+  },
+  {
+    "_id": "local-1791834844034-ytzw4",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: 001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:54:04.034Z",
+    "timestamp": "2026-10-12T19:54:04.034Z"
+  },
+  {
+    "_id": "local-1791834845468-17prl",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:54:05.468Z",
+    "timestamp": "2026-10-12T19:54:05.468Z"
+  },
+  {
+    "_id": "local-1791834862002-44ks5",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: 001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:54:22.002Z",
+    "timestamp": "2026-10-12T19:54:22.002Z"
+  },
+  {
+    "_id": "local-1791834890599-n6j15",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:54:50.599Z",
+    "timestamp": "2026-10-12T19:54:50.599Z"
+  },
+  {
+    "_id": "local-1791834911936-2ap37",
+    "action": "Text keys extracted from 2nd question paper .pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:55:11.936Z",
+    "timestamp": "2026-10-12T19:55:11.936Z"
+  },
+  {
+    "_id": "local-1791834930349-o5mvz",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:55:30.349Z",
+    "timestamp": "2026-10-12T19:55:30.349Z"
+  },
+  {
+    "_id": "local-1791834933513-uhv8v",
+    "action": "Rubrics created: 4 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-12T19:55:33.513Z",
+    "timestamp": "2026-10-12T19:55:33.513Z"
+  },
+  {
+    "_id": "local-1791854939129-lgwu9",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T01:28:59.129Z",
+    "timestamp": "2026-10-13T01:28:59.129Z"
+  },
+  {
+    "_id": "local-1791858901312-jb7x2",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:35:01.312Z",
+    "timestamp": "2026-10-13T02:35:01.312Z"
+  },
+  {
+    "_id": "local-1791858906830-q0adx",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:35:06.830Z",
+    "timestamp": "2026-10-13T02:35:06.830Z"
+  },
+  {
+    "_id": "local-1791859139371-c5hl5",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:38:59.371Z",
+    "timestamp": "2026-10-13T02:38:59.371Z"
+  },
+  {
+    "_id": "local-1791859193738-yc2xf",
+    "action": "Text keys extracted from Qpaper 2.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:39:53.738Z",
+    "timestamp": "2026-10-13T02:39:53.738Z"
+  },
+  {
+    "_id": "local-1791859197039-djicn",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:39:57.039Z",
+    "timestamp": "2026-10-13T02:39:57.039Z"
+  },
+  {
+    "_id": "local-1791859198600-7e7wn",
+    "action": "Rubrics created: 10 main questions, 11 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:39:58.600Z",
+    "timestamp": "2026-10-13T02:39:58.600Z"
+  },
+  {
+    "_id": "local-1791859265952-lqfv9",
+    "action": "Revoked assignment (Serial No: 001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:41:05.952Z",
+    "timestamp": "2026-10-13T02:41:05.952Z"
+  },
+  {
+    "_id": "local-1791859280267-hi7kc",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:41:20.267Z",
+    "timestamp": "2026-10-13T02:41:20.268Z"
+  },
+  {
+    "_id": "local-1791859288735-qkyjh",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-002",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:41:28.735Z",
+    "timestamp": "2026-10-13T02:41:28.735Z"
+  },
+  {
+    "_id": "local-1791859290900-1vh8s",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:41:30.900Z",
+    "timestamp": "2026-10-13T02:41:30.900Z"
+  },
+  {
+    "_id": "local-1791859306753-7xu1p",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:41:46.753Z",
+    "timestamp": "2026-10-13T02:41:46.753Z"
+  },
+  {
+    "_id": "local-1791859311564-25tgs",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: SN-2026-001) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:41:51.564Z",
+    "timestamp": "2026-10-13T02:41:51.564Z"
+  },
+  {
+    "_id": "local-1791859552741-u6t3c",
+    "action": "Text keys extracted from Qpaper 3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:45:52.741Z",
+    "timestamp": "2026-10-13T02:45:52.741Z"
+  },
+  {
+    "_id": "local-1791859564095-yua5n",
+    "action": "Model answer paper \"model_answers_detailed_25_marks.pdf\" linked to Job Serial No: SN-2026-002",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:46:04.095Z",
+    "timestamp": "2026-10-13T02:46:04.095Z"
+  },
+  {
+    "_id": "local-1791859565609-au2p2",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:46:05.609Z",
+    "timestamp": "2026-10-13T02:46:05.609Z"
+  },
+  {
+    "_id": "local-1791859600180-i5wqo",
+    "action": "Assigned paper Qpaper 3.pdf (Serial No: SN-2026-003) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:46:40.180Z",
+    "timestamp": "2026-10-13T02:46:40.180Z"
+  },
+  {
+    "_id": "local-1791859626177-7ns9y",
+    "action": "Text keys extracted from Qpaper 2.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:47:06.177Z",
+    "timestamp": "2026-10-13T02:47:06.177Z"
+  },
+  {
+    "_id": "local-1791859641831-bjmp4",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-003",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:47:21.831Z",
+    "timestamp": "2026-10-13T02:47:21.831Z"
+  },
+  {
+    "_id": "local-1791859642984-cvwyd",
+    "action": "Rubrics created: 10 main questions, 11 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:47:22.984Z",
+    "timestamp": "2026-10-13T02:47:22.984Z"
+  },
+  {
+    "_id": "local-1791860023268-x163t",
+    "action": "Text keys extracted from Qpaper2 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:53:43.268Z",
+    "timestamp": "2026-10-13T02:53:43.268Z"
+  },
+  {
+    "_id": "local-1791860037344-gkq0e",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-003",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:53:57.344Z",
+    "timestamp": "2026-10-13T02:53:57.344Z"
+  },
+  {
+    "_id": "local-1791860038877-kqehg",
+    "action": "Rubrics created: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:53:58.877Z",
+    "timestamp": "2026-10-13T02:53:58.877Z"
+  },
+  {
+    "_id": "local-1791860150761-fxh2z",
+    "action": "Assigned paper Qpaper2 (1).pdf (Serial No: SN-2026-002) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:55:50.761Z",
+    "timestamp": "2026-10-13T02:55:50.761Z"
+  },
+  {
+    "_id": "local-1791860218224-mv1ct",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:56:58.224Z",
+    "timestamp": "2026-10-13T02:56:58.224Z"
+  },
+  {
+    "_id": "local-1791860227311-2xpou",
+    "action": "Loaded grading assignment for Serial No SN-2026-001 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:57:07.311Z",
+    "timestamp": "2026-10-13T02:57:07.311Z"
+  },
+  {
+    "_id": "local-1791860261500-1oxd0",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:57:41.500Z",
+    "timestamp": "2026-10-13T02:57:41.500Z"
+  },
+  {
+    "_id": "local-1791860280296-9yym2",
+    "action": "Saved evaluation result for Serial No SN-2026-001 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:58:00.296Z",
+    "timestamp": "2026-10-13T02:58:00.296Z"
+  },
+  {
+    "_id": "local-1791860396987-6w1vz",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T02:59:56.987Z",
+    "timestamp": "2026-10-13T02:59:56.987Z"
+  },
+  {
+    "_id": "local-1791860405952-s7iij",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:00:05.952Z",
+    "timestamp": "2026-10-13T03:00:05.952Z"
+  },
+  {
+    "_id": "local-1791860410924-e4uxx",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:00:10.924Z",
+    "timestamp": "2026-10-13T03:00:10.924Z"
+  },
+  {
+    "_id": "local-1791860412152-0j858",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:00:12.152Z",
+    "timestamp": "2026-10-13T03:00:12.152Z"
+  },
+  {
+    "_id": "local-1791860461650-b5mwi",
+    "action": "Revoked assignment (Serial No: SN-2026-002) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:01.650Z",
+    "timestamp": "2026-10-13T03:01:01.650Z"
+  },
+  {
+    "_id": "local-1791860463996-uhvoi",
+    "action": "Revoked assignment (Serial No: SN-2026-003) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:03.996Z",
+    "timestamp": "2026-10-13T03:01:03.996Z"
+  },
+  {
+    "_id": "local-1791860469003-np6n6",
+    "action": "Revoked assignment (Serial No: SN-2026-001) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:09.003Z",
+    "timestamp": "2026-10-13T03:01:09.003Z"
+  },
+  {
+    "_id": "local-1791860472657-nkuwr",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: SN-2026-10-1) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:12.657Z",
+    "timestamp": "2026-10-13T03:01:12.657Z"
+  },
+  {
+    "_id": "local-1791860494574-j0ugk",
+    "action": "Text keys extracted from Qpaper2 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:34.574Z",
+    "timestamp": "2026-10-13T03:01:34.574Z"
+  },
+  {
+    "_id": "local-1791860497276-bvp54",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-10-1",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:37.276Z",
+    "timestamp": "2026-10-13T03:01:37.276Z"
+  },
+  {
+    "_id": "local-1791860499394-oyii2",
+    "action": "Rubrics created: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:39.394Z",
+    "timestamp": "2026-10-13T03:01:39.394Z"
+  },
+  {
+    "_id": "local-1791860512436-15pq5",
+    "action": "Assigned paper Qpaper2 (1).pdf (Serial No: SN-2026-10-1) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:01:52.437Z",
+    "timestamp": "2026-10-13T03:01:52.437Z"
+  },
+  {
+    "_id": "local-1791860534240-5jzpu",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:02:14.240Z",
+    "timestamp": "2026-10-13T03:02:14.240Z"
+  },
+  {
+    "_id": "local-1791860542600-2r2e0",
+    "action": "Revoked assignment (Serial No: SN-2026-10-1) from coordinator Coordinator",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:02:22.600Z",
+    "timestamp": "2026-10-13T03:02:22.600Z"
+  },
+  {
+    "_id": "local-1791860558677-idnvi",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:02:38.677Z",
+    "timestamp": "2026-10-13T03:02:38.677Z"
+  },
+  {
+    "_id": "local-1791860563494-r7o7o",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:02:43.494Z",
+    "timestamp": "2026-10-13T03:02:43.494Z"
+  },
+  {
+    "_id": "local-1791860564573-ngt72",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:02:44.573Z",
+    "timestamp": "2026-10-13T03:02:44.573Z"
+  },
+  {
+    "_id": "local-1791860592820-5q4gy",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: 2026-10-01) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:03:12.820Z",
+    "timestamp": "2026-10-13T03:03:12.820Z"
+  },
+  {
+    "_id": "local-1791860601496-4fxis",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:03:21.496Z",
+    "timestamp": "2026-10-13T03:03:21.496Z"
+  },
+  {
+    "_id": "local-1791860628347-vc8c9",
+    "action": "Text keys extracted from Qpaper2 (1).pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:03:48.347Z",
+    "timestamp": "2026-10-13T03:03:48.347Z"
+  },
+  {
+    "_id": "local-1791860629047-cf05x",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:03:49.047Z",
+    "timestamp": "2026-10-13T03:03:49.047Z"
+  },
+  {
+    "_id": "local-1791860630762-96bbs",
+    "action": "Rubrics created: 6 main questions, 6 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:03:50.762Z",
+    "timestamp": "2026-10-13T03:03:50.762Z"
+  },
+  {
+    "_id": "local-1791860650628-nbahy",
+    "action": "Assigned paper Qpaper2 (1).pdf (Serial No: 2026-10-02) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:04:10.628Z",
+    "timestamp": "2026-10-13T03:04:10.628Z"
+  },
+  {
+    "_id": "local-1791860654131-1cjpn",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:04:14.131Z",
+    "timestamp": "2026-10-13T03:04:14.131Z"
+  },
+  {
+    "_id": "local-1791860669549-k4qjv",
+    "action": "Text keys extracted from Qpaper 3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:04:29.549Z",
+    "timestamp": "2026-10-13T03:04:29.549Z"
+  },
+  {
+    "_id": "local-1791860671569-tkecb",
+    "action": "Model answer paper \"internal answer paper .pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:04:31.569Z",
+    "timestamp": "2026-10-13T03:04:31.569Z"
+  },
+  {
+    "_id": "local-1791860676747-4gobb",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:04:36.747Z",
+    "timestamp": "2026-10-13T03:04:36.747Z"
+  },
+  {
+    "_id": "local-1791860698837-j00rw",
+    "action": "Assigned paper Qpaper 3.pdf (Serial No: 2026-10-03) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:04:58.837Z",
+    "timestamp": "2026-10-13T03:04:58.837Z"
+  },
+  {
+    "_id": "local-1791860748956-5t4vt",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:05:48.956Z",
+    "timestamp": "2026-10-13T03:05:48.956Z"
+  },
+  {
+    "_id": "local-1791860768242-np9b0",
+    "action": "Loaded grading assignment for Serial No 2026-10-01 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:06:08.242Z",
+    "timestamp": "2026-10-13T03:06:08.242Z"
+  },
+  {
+    "_id": "local-1791860800837-s9g63",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:06:40.837Z",
+    "timestamp": "2026-10-13T03:06:40.837Z"
+  },
+  {
+    "_id": "local-1791861992920-z4bk7",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:26:32.920Z",
+    "timestamp": "2026-10-13T03:26:32.920Z"
+  },
+  {
+    "_id": "local-1791862338289-cmp31",
+    "action": "Saved evaluation result for Serial No 2026-10-01 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:32:18.289Z",
+    "timestamp": "2026-10-13T03:32:18.289Z"
+  },
+  {
+    "_id": "local-1791862357311-bf6h1",
+    "action": "Saved evaluation result for Serial No 2026-10-01 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:32:37.311Z",
+    "timestamp": "2026-10-13T03:32:37.311Z"
+  },
+  {
+    "_id": "local-1791862357322-lyfsr",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:32:37.322Z",
+    "timestamp": "2026-10-13T03:32:37.322Z"
+  },
+  {
+    "_id": "local-1791862368570-5nzxd",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:32:48.570Z",
+    "timestamp": "2026-10-13T03:32:48.570Z"
+  },
+  {
+    "_id": "local-1791862391569-9gp2s",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T03:33:11.569Z",
+    "timestamp": "2026-10-13T03:33:11.570Z"
+  },
+  {
+    "_id": "local-1791912291390-3rf0o",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T17:24:51.390Z",
+    "timestamp": "2026-10-13T17:24:51.390Z"
+  },
+  {
+    "_id": "local-1791912752113-7etzx",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T17:32:32.113Z",
+    "timestamp": "2026-10-13T17:32:32.113Z"
+  },
+  {
+    "_id": "local-1791912770868-5wkg8",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T17:32:50.868Z",
+    "timestamp": "2026-10-13T17:32:50.868Z"
+  },
+  {
+    "_id": "local-1791912804857-vhotp",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-13T17:33:24.857Z",
+    "timestamp": "2026-10-13T17:33:24.857Z"
+  },
+  {
+    "_id": "local-1791937419435-vgya8",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:23:39.435Z",
+    "timestamp": "2026-10-14T00:23:39.435Z"
+  },
+  {
+    "_id": "local-1791937431252-vdlmu",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:23:51.252Z",
+    "timestamp": "2026-10-14T00:23:51.252Z"
+  },
+  {
+    "_id": "local-1791937462915-dleog",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:24:22.915Z",
+    "timestamp": "2026-10-14T00:24:22.915Z"
+  },
+  {
+    "_id": "local-1791937482668-obntz",
+    "action": "Saved evaluation result for Serial No 2026-10-02 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:24:42.669Z",
+    "timestamp": "2026-10-14T00:24:42.669Z"
+  },
+  {
+    "_id": "local-1791937482712-pjgyb",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:24:42.714Z",
+    "timestamp": "2026-10-14T00:24:42.714Z"
+  },
+  {
+    "_id": "local-1791937492234-tbiyn",
+    "action": "Loaded grading assignment for Serial No 2026-10-01 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:24:52.234Z",
+    "timestamp": "2026-10-14T00:24:52.234Z"
+  },
+  {
+    "_id": "local-1791937516330-1sxp0",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:25:16.330Z",
+    "timestamp": "2026-10-14T00:25:16.330Z"
+  },
+  {
+    "_id": "local-1791938547700-mexxp",
+    "action": "Saved evaluation result for Serial No 2026-10-01 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:42:27.700Z",
+    "timestamp": "2026-10-14T00:42:27.700Z"
+  },
+  {
+    "_id": "local-1791938575288-o892u",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:42:55.288Z",
+    "timestamp": "2026-10-14T00:42:55.288Z"
+  },
+  {
+    "_id": "local-1791938604268-92k31",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:43:24.268Z",
+    "timestamp": "2026-10-14T00:43:24.268Z"
+  },
+  {
+    "_id": "local-1791939384640-60zax",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T00:56:24.640Z",
+    "timestamp": "2026-10-14T00:56:24.640Z"
+  },
+  {
+    "_id": "local-1791939753106-ffd0z",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:02:33.106Z",
+    "timestamp": "2026-10-14T01:02:33.106Z"
+  },
+  {
+    "_id": "local-1791939845232-apzm5",
+    "action": "Saved evaluation result for Serial No 2026-10-02 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:04:05.232Z",
+    "timestamp": "2026-10-14T01:04:05.232Z"
+  },
+  {
+    "_id": "local-1791939845241-a09jp",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:04:05.241Z",
+    "timestamp": "2026-10-14T01:04:05.241Z"
+  },
+  {
+    "_id": "local-1791939859126-b1znl",
+    "action": "Loaded grading assignment for Serial No 2026-10-01 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:04:19.126Z",
+    "timestamp": "2026-10-14T01:04:19.126Z"
+  },
+  {
+    "_id": "local-1791940600153-tvky6",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:16:40.153Z",
+    "timestamp": "2026-10-14T01:16:40.153Z"
+  },
+  {
+    "_id": "local-1791940674922-y3aug",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:17:54.922Z",
+    "timestamp": "2026-10-14T01:17:54.922Z"
+  },
+  {
+    "_id": "local-1791941038997-ke6ox",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:23:58.997Z",
+    "timestamp": "2026-10-14T01:23:58.997Z"
+  },
+  {
+    "_id": "local-1791941091598-u5iqv",
+    "action": "Saved evaluation result for Serial No 2026-10-02 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:24:51.598Z",
+    "timestamp": "2026-10-14T01:24:51.598Z"
+  },
+  {
+    "_id": "local-1791941091609-48q2p",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:24:51.609Z",
+    "timestamp": "2026-10-14T01:24:51.609Z"
+  },
+  {
+    "_id": "local-1791941735097-q0i1f",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T01:35:35.097Z",
+    "timestamp": "2026-10-14T01:35:35.097Z"
+  },
+  {
+    "_id": "local-1791943214038-iftn6",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:00:14.038Z",
+    "timestamp": "2026-10-14T02:00:14.038Z"
+  },
+  {
+    "_id": "local-1791943674698-jb0o2",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:07:54.698Z",
+    "timestamp": "2026-10-14T02:07:54.698Z"
+  },
+  {
+    "_id": "local-1791944226899-paofs",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:17:06.899Z",
+    "timestamp": "2026-10-14T02:17:06.899Z"
+  },
+  {
+    "_id": "local-1791944946806-5rrn1",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:29:06.807Z",
+    "timestamp": "2026-10-14T02:29:06.807Z"
+  },
+  {
+    "_id": "local-1791945017790-kqsm2",
+    "action": "Saved evaluation result for Serial No 2026-10-02 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:30:17.790Z",
+    "timestamp": "2026-10-14T02:30:17.790Z"
+  },
+  {
+    "_id": "local-1791945037236-9cybs",
+    "action": "Saved evaluation result for Serial No 2026-10-02 (Booklet ID: BKT-2026-002).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:30:37.236Z",
+    "timestamp": "2026-10-14T02:30:37.236Z"
+  },
+  {
+    "_id": "local-1791945037246-1mzzl",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:30:37.246Z",
+    "timestamp": "2026-10-14T02:30:37.246Z"
+  },
+  {
+    "_id": "local-1791945052000-cymea",
+    "action": "Loaded grading assignment for Serial No 2026-10-03 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T02:30:52.000Z",
+    "timestamp": "2026-10-14T02:30:52.000Z"
+  },
+  {
+    "_id": "local-1791948543887-fwq23",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:29:03.887Z",
+    "timestamp": "2026-10-14T03:29:03.887Z"
+  },
+  {
+    "_id": "local-1791948551730-fkqcc",
+    "action": "Loaded grading assignment for Serial No 2026-10-03 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:29:11.730Z",
+    "timestamp": "2026-10-14T03:29:11.730Z"
+  },
+  {
+    "_id": "local-1791948564074-z9p7q",
+    "action": "Loaded grading assignment for Serial No 2026-10-01 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:29:24.074Z",
+    "timestamp": "2026-10-14T03:29:24.074Z"
+  },
+  {
+    "_id": "local-1791948580535-a6jkk",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:29:40.535Z",
+    "timestamp": "2026-10-14T03:29:40.535Z"
+  },
+  {
+    "_id": "local-1791948618821-qmoxh",
+    "action": "Saved evaluation result for Serial No 2026-10-01 (Booklet ID: BKT-2026-001).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:30:18.821Z",
+    "timestamp": "2026-10-14T03:30:18.821Z"
+  },
+  {
+    "_id": "local-1791948618832-r19s3",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:30:18.832Z",
+    "timestamp": "2026-10-14T03:30:18.832Z"
+  },
+  {
+    "_id": "local-1791948625665-836ov",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:30:25.665Z",
+    "timestamp": "2026-10-14T03:30:25.665Z"
+  },
+  {
+    "_id": "local-1791948655630-k736h",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T03:30:55.630Z",
+    "timestamp": "2026-10-14T03:30:55.630Z"
+  },
+  {
+    "_id": "local-1791996958765-0w9kg",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T16:55:58.765Z",
+    "timestamp": "2026-10-14T16:55:58.765Z"
+  },
+  {
+    "_id": "local-1791996968846-rme1s",
+    "action": "Loaded grading assignment for Serial No 2026-10-03 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T16:56:08.846Z",
+    "timestamp": "2026-10-14T16:56:08.846Z"
+  },
+  {
+    "_id": "local-1791997068250-5fgcv",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T16:57:48.250Z",
+    "timestamp": "2026-10-14T16:57:48.251Z"
+  },
+  {
+    "_id": "local-1791997248100-8up5s",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T17:00:48.100Z",
+    "timestamp": "2026-10-14T17:00:48.100Z"
+  },
+  {
+    "_id": "local-1791997362220-dy5sl",
+    "action": "Saved evaluation result for Serial No 2026-10-03 (Booklet ID: BKT-2026-003).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T17:02:42.220Z",
+    "timestamp": "2026-10-14T17:02:42.220Z"
+  },
+  {
+    "_id": "local-1791997362232-nnkgg",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T17:02:42.232Z",
+    "timestamp": "2026-10-14T17:02:42.232Z"
+  },
+  {
+    "_id": "local-1792004854721-hkcmu",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T19:07:34.721Z",
+    "timestamp": "2026-10-14T19:07:34.721Z"
+  },
+  {
+    "_id": "local-1792004871954-dnfyr",
+    "action": "Saved evaluation result for Serial No 2026-10-03 (Booklet ID: BKT-2026-003).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T19:07:51.954Z",
+    "timestamp": "2026-10-14T19:07:51.954Z"
+  },
+  {
+    "_id": "local-1792005386242-qer99",
+    "action": "Reverted 3 evaluation result(s) to Admin.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T19:16:26.242Z",
+    "timestamp": "2026-10-14T19:16:26.242Z"
+  },
+  {
+    "_id": "local-1792005394044-dxahj",
+    "action": "Admin exported 3 evaluation result record(s) to PDF summary report.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T19:16:34.044Z",
+    "timestamp": "2026-10-14T19:16:34.044Z"
+  },
+  {
+    "_id": "local-1792005412983-yxhqv",
+    "action": "Saved evaluation result for Serial No 2026-10-03 (Booklet ID: BKT-2026-003).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T19:16:52.983Z",
+    "timestamp": "2026-10-14T19:16:52.983Z"
+  },
+  {
+    "_id": "local-1792005412997-u28qt",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Chrome",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-14T19:16:52.997Z",
+    "timestamp": "2026-10-14T19:16:52.997Z"
+  },
+  {
+    "_id": "local-1793287817738-mslh7",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-29T15:30:17.738Z",
+    "timestamp": "2026-10-29T15:30:17.738Z"
+  },
+  {
+    "_id": "local-1793338684926-zj3ny",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:38:04.926Z",
+    "timestamp": "2026-10-30T05:38:04.926Z"
+  },
+  {
+    "_id": "local-1793338970552-w5sl7",
+    "action": "Text keys extracted from Qpaper BCS304.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:42:50.552Z",
+    "timestamp": "2026-10-30T05:42:50.552Z"
+  },
+  {
+    "_id": "local-1793338989521-ia20k",
+    "action": "Model answer paper \"DS model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:43:09.521Z",
+    "timestamp": "2026-10-30T05:43:09.521Z"
+  },
+  {
+    "_id": "local-1793338994940-rb0c0",
+    "action": "Rubrics created: 10 main questions, 19 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:43:14.940Z",
+    "timestamp": "2026-10-30T05:43:14.940Z"
+  },
+  {
+    "_id": "local-1793339072893-rfg32",
+    "action": "Assigned paper Qpaper BCS304.pdf (Serial No: SN-30) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:44:32.893Z",
+    "timestamp": "2026-10-30T05:44:32.893Z"
+  },
+  {
+    "_id": "local-1793339325519-0kkkj",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:48:45.519Z",
+    "timestamp": "2026-10-30T05:48:45.519Z"
+  },
+  {
+    "_id": "local-1793339348067-aiuek",
+    "action": "Loaded grading assignment for Serial No SN-30 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:49:08.067Z",
+    "timestamp": "2026-10-30T05:49:08.067Z"
+  },
+  {
+    "_id": "local-1793339368664-0uu9q",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T05:49:28.664Z",
+    "timestamp": "2026-10-30T05:49:28.664Z"
+  },
+  {
+    "_id": "local-1793341451904-1jasc",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:24:11.905Z",
+    "timestamp": "2026-10-30T06:24:11.905Z"
+  },
+  {
+    "_id": "local-1793341487869-gk9wm",
+    "action": "Loaded grading assignment for Serial No SN-30 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:24:47.869Z",
+    "timestamp": "2026-10-30T06:24:47.869Z"
+  },
+  {
+    "_id": "local-1793341504299-84qe8",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:25:04.299Z",
+    "timestamp": "2026-10-30T06:25:04.299Z"
+  },
+  {
+    "_id": "local-1793341579178-lppe8",
+    "action": "Saved evaluation result for Serial No SN-30 (Booklet ID: 30).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:26:19.179Z",
+    "timestamp": "2026-10-30T06:26:19.179Z"
+  },
+  {
+    "_id": "local-1793341579195-83lpu",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:26:19.195Z",
+    "timestamp": "2026-10-30T06:26:19.195Z"
+  },
+  {
+    "_id": "local-1793341613220-r75l0",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:26:53.220Z",
+    "timestamp": "2026-10-30T06:26:53.220Z"
+  },
+  {
+    "_id": "local-1793342299914-m2di8",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:38:19.914Z",
+    "timestamp": "2026-10-30T06:38:19.914Z"
+  },
+  {
+    "_id": "local-1793342315055-fijeo",
+    "action": "Text keys extracted from CIE_3_Question_Paper.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:38:35.055Z",
+    "timestamp": "2026-10-30T06:38:35.055Z"
+  },
+  {
+    "_id": "local-1793342326452-8iyvn",
+    "action": "Model answer paper \"model_answers_detailed_25_marks.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:38:46.452Z",
+    "timestamp": "2026-10-30T06:38:46.452Z"
+  },
+  {
+    "_id": "local-1793342328227-exg6n",
+    "action": "Rubrics created: 3 main questions, 3 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:38:48.227Z",
+    "timestamp": "2026-10-30T06:38:48.227Z"
+  },
+  {
+    "_id": "local-1793342345151-1b3mb",
+    "action": "Assigned paper CIE_3_Question_Paper.pdf (Serial No: SN-34) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:39:05.151Z",
+    "timestamp": "2026-10-30T06:39:05.151Z"
+  },
+  {
+    "_id": "local-1793342668181-qvk9n",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:44:28.181Z",
+    "timestamp": "2026-10-30T06:44:28.181Z"
+  },
+  {
+    "_id": "local-1793342678267-dkde2",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:44:38.267Z",
+    "timestamp": "2026-10-30T06:44:38.267Z"
+  },
+  {
+    "_id": "local-1793342693014-7tf7q",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:44:53.014Z",
+    "timestamp": "2026-10-30T06:44:53.014Z"
+  },
+  {
+    "_id": "local-1793342705070-bk1b4",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:45:05.070Z",
+    "timestamp": "2026-10-30T06:45:05.070Z"
+  },
+  {
+    "_id": "local-1793342711492-9v1z7",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:45:11.492Z",
+    "timestamp": "2026-10-30T06:45:11.492Z"
+  },
+  {
+    "_id": "local-1793342725703-s40v2",
+    "action": "Text keys extracted from cie1.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:45:25.703Z",
+    "timestamp": "2026-10-30T06:45:25.703Z"
+  },
+  {
+    "_id": "local-1793342741292-wu1ub",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-32",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:45:41.292Z",
+    "timestamp": "2026-10-30T06:45:41.292Z"
+  },
+  {
+    "_id": "local-1793342742945-kgdzc",
+    "action": "Rubrics created: 1 main questions, 1 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:45:42.945Z",
+    "timestamp": "2026-10-30T06:45:42.946Z"
+  },
+  {
+    "_id": "local-1793342779093-zvae0",
+    "action": "Text keys extracted from CIE_3_Question_Paper.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:46:19.093Z",
+    "timestamp": "2026-10-30T06:46:19.093Z"
+  },
+  {
+    "_id": "local-1793342791287-qhf0e",
+    "action": "Text keys extracted from CIE_3_Question_Paper.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:46:31.287Z",
+    "timestamp": "2026-10-30T06:46:31.287Z"
+  },
+  {
+    "_id": "local-1793342811478-pg8q3",
+    "action": "Model answer paper \"model_answers_detailed_25_marks.pdf\" linked to Job Serial No: SN-34",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:46:51.478Z",
+    "timestamp": "2026-10-30T06:46:51.478Z"
+  },
+  {
+    "_id": "local-1793342813187-dorhr",
+    "action": "Rubrics created: 3 main questions, 3 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:46:53.187Z",
+    "timestamp": "2026-10-30T06:46:53.187Z"
+  },
+  {
+    "_id": "local-1793343378183-tsofi",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T06:56:18.183Z",
+    "timestamp": "2026-10-30T06:56:18.183Z"
+  },
+  {
+    "_id": "local-1793346874254-a6ypc",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T07:54:34.254Z",
+    "timestamp": "2026-10-30T07:54:34.254Z"
+  },
+  {
+    "_id": "local-1793346881633-70ra7",
+    "action": "Loaded grading assignment for Serial No 2026-10-03 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T07:54:41.633Z",
+    "timestamp": "2026-10-30T07:54:41.633Z"
+  },
+  {
+    "_id": "local-1793346993013-79mai",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T07:56:33.014Z",
+    "timestamp": "2026-10-30T07:56:33.014Z"
+  },
+  {
+    "_id": "local-1793347020461-stka7",
+    "action": "Saved evaluation result for Serial No 2026-10-03 (Booklet ID: BKT-2026-34).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T07:57:00.461Z",
+    "timestamp": "2026-10-30T07:57:00.461Z"
+  },
+  {
+    "_id": "local-1793347020476-o8e4f",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T07:57:00.476Z",
+    "timestamp": "2026-10-30T07:57:00.476Z"
+  },
+  {
+    "_id": "local-1793347047509-ghnaf",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T07:57:27.509Z",
+    "timestamp": "2026-10-30T07:57:27.509Z"
+  },
+  {
+    "_id": "local-1793348243023-vr2vv",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:17:23.023Z",
+    "timestamp": "2026-10-30T08:17:23.023Z"
+  },
+  {
+    "_id": "local-1793348307926-4va1k",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:18:27.926Z",
+    "timestamp": "2026-10-30T08:18:27.926Z"
+  },
+  {
+    "_id": "local-1793348325103-jg0t6",
+    "action": "Text keys extracted from 2nd question paper .pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:18:45.103Z",
+    "timestamp": "2026-10-30T08:18:45.103Z"
+  },
+  {
+    "_id": "local-1793348332919-bahib",
+    "action": "Model answer paper \"2nd model paper.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:18:52.919Z",
+    "timestamp": "2026-10-30T08:18:52.919Z"
+  },
+  {
+    "_id": "local-1793348334542-htin9",
+    "action": "Rubrics created: 4 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:18:54.542Z",
+    "timestamp": "2026-10-30T08:18:54.542Z"
+  },
+  {
+    "_id": "local-1793348382710-nsqvf",
+    "action": "Assigned paper 2nd question paper .pdf (Serial No: SN-33) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:19:42.710Z",
+    "timestamp": "2026-10-30T08:19:42.710Z"
+  },
+  {
+    "_id": "local-1793348397030-311sq",
+    "action": "Admin reset entire workspace assets, serial numbers, papers, and rubric criteria to default empty.",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:19:57.030Z",
+    "timestamp": "2026-10-30T08:19:57.030Z"
+  },
+  {
+    "_id": "local-1793348406737-b3xyi",
+    "action": "Text keys extracted from CIE_1_Question_Paper_Final_3.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:20:06.737Z",
+    "timestamp": "2026-10-30T08:20:06.737Z"
+  },
+  {
+    "_id": "local-1793348415698-jidjg",
+    "action": "Model answer paper \"model paper (35m).pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:20:15.698Z",
+    "timestamp": "2026-10-30T08:20:15.698Z"
+  },
+  {
+    "_id": "local-1793348417036-lx4z6",
+    "action": "Rubrics created: 5 main questions, 5 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:20:17.036Z",
+    "timestamp": "2026-10-30T08:20:17.036Z"
+  },
+  {
+    "_id": "local-1793348448497-ao5ne",
+    "action": "Assigned paper CIE_1_Question_Paper_Final_3.pdf (Serial No: SN-32) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:20:48.497Z",
+    "timestamp": "2026-10-30T08:20:48.497Z"
+  },
+  {
+    "_id": "local-1793348531274-ou8vr",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:22:11.274Z",
+    "timestamp": "2026-10-30T08:22:11.274Z"
+  },
+  {
+    "_id": "local-1793348683120-gmvtr",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:24:43.120Z",
+    "timestamp": "2026-10-30T08:24:43.120Z"
+  },
+  {
+    "_id": "local-1793348727330-oh5g2",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:25:27.330Z",
+    "timestamp": "2026-10-30T08:25:27.330Z"
+  },
+  {
+    "_id": "local-1793349272580-dk03t",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:34:32.580Z",
+    "timestamp": "2026-10-30T08:34:32.580Z"
+  },
+  {
+    "_id": "local-1793349283824-xw4vf",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:34:43.824Z",
+    "timestamp": "2026-10-30T08:34:43.824Z"
+  },
+  {
+    "_id": "local-1793349303371-b98jg",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:35:03.371Z",
+    "timestamp": "2026-10-30T08:35:03.371Z"
+  },
+  {
+    "_id": "local-1793349738820-yd7zl",
+    "action": "Loaded grading assignment for Serial No SN-32 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:42:18.820Z",
+    "timestamp": "2026-10-30T08:42:18.820Z"
+  },
+  {
+    "_id": "local-1793349762068-immfm",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:42:42.068Z",
+    "timestamp": "2026-10-30T08:42:42.068Z"
+  },
+  {
+    "_id": "local-1793349811917-372xh",
+    "action": "Saved evaluation result for Serial No SN-32 (Booklet ID: BKT-2026-32).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:43:31.917Z",
+    "timestamp": "2026-10-30T08:43:31.917Z"
+  },
+  {
+    "_id": "local-1793349811927-v08gv",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:43:31.927Z",
+    "timestamp": "2026-10-30T08:43:31.928Z"
+  },
+  {
+    "_id": "local-1793349843648-6nadj",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:44:03.648Z",
+    "timestamp": "2026-10-30T08:44:03.648Z"
+  },
+  {
+    "_id": "local-1793349903261-qvauz",
+    "action": "Loaded grading assignment for Serial No SN-32 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:45:03.261Z",
+    "timestamp": "2026-10-30T08:45:03.261Z"
+  },
+  {
+    "_id": "local-1793349950189-5roai",
+    "action": "Loaded grading assignment for Serial No SN-30 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:45:50.189Z",
+    "timestamp": "2026-10-30T08:45:50.189Z"
+  },
+  {
+    "_id": "local-1793349982446-222le",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:46:22.446Z",
+    "timestamp": "2026-10-30T08:46:22.446Z"
+  },
+  {
+    "_id": "local-1793350016616-t17xi",
+    "action": "Saved evaluation result for Serial No SN-30 (Booklet ID: BKT-2026-301).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:46:56.616Z",
+    "timestamp": "2026-10-30T08:46:56.617Z"
+  },
+  {
+    "_id": "local-1793350016627-n529c",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:46:56.627Z",
+    "timestamp": "2026-10-30T08:46:56.627Z"
+  },
+  {
+    "_id": "local-1793350029243-wor1z",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:47:09.243Z",
+    "timestamp": "2026-10-30T08:47:09.243Z"
+  },
+  {
+    "_id": "local-1793350047184-cigl4",
+    "action": "Saved evaluation result for Serial No SN-30 (Booklet ID: BKT-2026-301).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:47:27.184Z",
+    "timestamp": "2026-10-30T08:47:27.184Z"
+  },
+  {
+    "_id": "local-1793350047195-6gvb4",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:47:27.195Z",
+    "timestamp": "2026-10-30T08:47:27.195Z"
+  },
+  {
+    "_id": "local-1793350121205-ejdyt",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:48:41.205Z",
+    "timestamp": "2026-10-30T08:48:41.205Z"
+  },
+  {
+    "_id": "local-1793350130911-8q19m",
+    "action": "Loaded grading assignment for Serial No SN-32 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:48:50.911Z",
+    "timestamp": "2026-10-30T08:48:50.911Z"
+  },
+  {
+    "_id": "local-1793350147012-diiut",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:49:07.013Z",
+    "timestamp": "2026-10-30T08:49:07.013Z"
+  },
+  {
+    "_id": "local-1793350263912-wa8pf",
+    "action": "Loaded grading assignment for Serial No SN-30 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:51:03.912Z",
+    "timestamp": "2026-10-30T08:51:03.913Z"
+  },
+  {
+    "_id": "local-1793350282500-w35ck",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:51:22.501Z",
+    "timestamp": "2026-10-30T08:51:22.501Z"
+  },
+  {
+    "_id": "local-1793350294005-3kizx",
+    "action": "Saved evaluation result for Serial No SN-30 (Booklet ID: BKT-2026-30).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:51:34.005Z",
+    "timestamp": "2026-10-30T08:51:34.005Z"
+  },
+  {
+    "_id": "local-1793350294034-7cnb5",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:51:34.034Z",
+    "timestamp": "2026-10-30T08:51:34.034Z"
+  },
+  {
+    "_id": "local-1793350301096-e4xk6",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:51:41.096Z",
+    "timestamp": "2026-10-30T08:51:41.096Z"
+  },
+  {
+    "_id": "local-1793350313490-30q7d",
+    "action": "Loaded grading assignment for Serial No SN-32 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:51:53.490Z",
+    "timestamp": "2026-10-30T08:51:53.490Z"
+  },
+  {
+    "_id": "local-1793350337358-jussf",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:52:17.358Z",
+    "timestamp": "2026-10-30T08:52:17.358Z"
+  },
+  {
+    "_id": "local-1793350347774-eiedj",
+    "action": "Saved evaluation result for Serial No SN-32 (Booklet ID: BKT-2026-32).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:52:27.774Z",
+    "timestamp": "2026-10-30T08:52:27.774Z"
+  },
+  {
+    "_id": "local-1793350347787-jky2s",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:52:27.787Z",
+    "timestamp": "2026-10-30T08:52:27.787Z"
+  },
+  {
+    "_id": "local-1793350357668-qz74w",
+    "action": "Loaded grading assignment for Serial No SN-34 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:52:37.668Z",
+    "timestamp": "2026-10-30T08:52:37.668Z"
+  },
+  {
+    "_id": "local-1793350382368-1vpqc",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T08:53:02.368Z",
+    "timestamp": "2026-10-30T08:53:02.368Z"
+  },
+  {
+    "_id": "local-1793350812363-1lskr",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:00:12.363Z",
+    "timestamp": "2026-10-30T09:00:12.363Z"
+  },
+  {
+    "_id": "local-1793350835638-zl80l",
+    "action": "Text keys extracted from CIE_3_Question_Paper.pdf",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:00:35.638Z",
+    "timestamp": "2026-10-30T09:00:35.638Z"
+  },
+  {
+    "_id": "local-1793350852177-rjol7",
+    "action": "Model answer paper \"model_answers_detailed_25_marks.pdf\" linked to Job Serial No: SN-2026-001",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:00:52.177Z",
+    "timestamp": "2026-10-30T09:00:52.177Z"
+  },
+  {
+    "_id": "local-1793350860158-8vmzm",
+    "action": "Rubrics created: 3 main questions, 3 sub-criteria",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:01:00.158Z",
+    "timestamp": "2026-10-30T09:01:00.158Z"
+  },
+  {
+    "_id": "local-1793350883694-4c7bw",
+    "action": "Assigned paper CIE_3_Question_Paper.pdf (Serial No: SN-2026-005) to: Guru",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:01:23.694Z",
+    "timestamp": "2026-10-30T09:01:23.694Z"
+  },
+  {
+    "_id": "local-1793351146029-hc38m",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:05:46.029Z",
+    "timestamp": "2026-10-30T09:05:46.029Z"
+  },
+  {
+    "_id": "local-1793351181571-7i1hw",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:06:21.571Z",
+    "timestamp": "2026-10-30T09:06:21.571Z"
+  },
+  {
+    "_id": "local-1793351212514-bm6td",
+    "action": "Loaded grading assignment for Serial No SN-2026-005 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:06:52.515Z",
+    "timestamp": "2026-10-30T09:06:52.515Z"
+  },
+  {
+    "_id": "local-1793351239868-h8tmy",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:07:19.868Z",
+    "timestamp": "2026-10-30T09:07:19.868Z"
+  },
+  {
+    "_id": "local-1793351308794-8bd1v",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:08:28.794Z",
+    "timestamp": "2026-10-30T09:08:28.794Z"
+  },
+  {
+    "_id": "local-1793351336206-nv2nz",
+    "action": "Saved evaluation result for Serial No SN-2026-005 (Booklet ID: BKT-2026-005).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:08:56.206Z",
+    "timestamp": "2026-10-30T09:08:56.207Z"
+  },
+  {
+    "_id": "local-1793351351359-ckf7w",
+    "action": "Saved evaluation result for Serial No SN-2026-005 (Booklet ID: BKT-2026-005).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-30T09:09:11.359Z",
+    "timestamp": "2026-10-30T09:09:11.359Z"
+  },
+  {
+    "_id": "local-1793410780720-pblsh",
+    "action": "Logged in to admin portal",
+    "actorRole": "admin",
+    "actorName": "Admin",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:39:40.720Z",
+    "timestamp": "2026-10-31T01:39:40.720Z"
+  },
+  {
+    "_id": "local-1793410851030-ljcrb",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:40:51.030Z",
+    "timestamp": "2026-10-31T01:40:51.030Z"
+  },
+  {
+    "_id": "local-1793410920294-mx1aw",
+    "action": "Loaded grading assignment for Serial No SN-32 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:42:00.294Z",
+    "timestamp": "2026-10-31T01:42:00.294Z"
+  },
+  {
+    "_id": "local-1793410971687-cubg6",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:42:51.687Z",
+    "timestamp": "2026-10-31T01:42:51.687Z"
+  },
+  {
+    "_id": "local-1793410991762-q4cmj",
+    "action": "Saved evaluation result for Serial No SN-32 (Booklet ID: BKT-2026-32).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:43:11.762Z",
+    "timestamp": "2026-10-31T01:43:11.762Z"
+  },
+  {
+    "_id": "local-1793410991779-ej357",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:43:11.779Z",
+    "timestamp": "2026-10-31T01:43:11.779Z"
+  },
+  {
+    "_id": "local-1793410998314-w6fn5",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:43:18.314Z",
+    "timestamp": "2026-10-31T01:43:18.314Z"
+  },
+  {
+    "_id": "local-1793411043272-kq724",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T01:44:03.272Z",
+    "timestamp": "2026-10-31T01:44:03.272Z"
+  },
+  {
+    "_id": "local-1793412129333-u7ip5",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:02:09.333Z",
+    "timestamp": "2026-10-31T02:02:09.333Z"
+  },
+  {
+    "_id": "local-1793412169637-kjje5",
+    "action": "Saved evaluation result for Serial No SN-33 (Booklet ID: BKT-2026-33).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:02:49.637Z",
+    "timestamp": "2026-10-31T02:02:49.637Z"
+  },
+  {
+    "_id": "local-1793412169648-lbeju",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:02:49.648Z",
+    "timestamp": "2026-10-31T02:02:49.648Z"
+  },
+  {
+    "_id": "local-1793412180583-xim66",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:03:00.583Z",
+    "timestamp": "2026-10-31T02:03:00.583Z"
+  },
+  {
+    "_id": "local-1793412537174-twgai",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:08:57.174Z",
+    "timestamp": "2026-10-31T02:08:57.174Z"
+  },
+  {
+    "_id": "local-1793413059384-aekjg",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:17:39.384Z",
+    "timestamp": "2026-10-31T02:17:39.384Z"
+  },
+  {
+    "_id": "local-1793413526173-92dmb",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:25:26.173Z",
+    "timestamp": "2026-10-31T02:25:26.173Z"
+  },
+  {
+    "_id": "local-1793414259534-dy0fn",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:37:39.534Z",
+    "timestamp": "2026-10-31T02:37:39.534Z"
+  },
+  {
+    "_id": "local-1793414270760-xn1l5",
+    "action": "Saved evaluation result for Serial No SN-33 (Booklet ID: BKT-2026-33).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:37:50.760Z",
+    "timestamp": "2026-10-31T02:37:50.760Z"
+  },
+  {
+    "_id": "local-1793414270773-0deo5",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T02:37:50.773Z",
+    "timestamp": "2026-10-31T02:37:50.773Z"
+  },
+  {
+    "_id": "local-1793415648104-105vm",
+    "action": "Logged in to coordinator portal",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:00:48.104Z",
+    "timestamp": "2026-10-31T03:00:48.104Z"
+  },
+  {
+    "_id": "local-1793415650033-okuhs",
+    "action": "Loaded grading assignment for Serial No 2026-10-02 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:00:50.033Z",
+    "timestamp": "2026-10-31T03:00:50.033Z"
+  },
+  {
+    "_id": "local-1793415665231-gjn6f",
+    "action": "Loaded grading assignment for Serial No SN-2026-005 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:01:05.231Z",
+    "timestamp": "2026-10-31T03:01:05.231Z"
+  },
+  {
+    "_id": "local-1793415974943-ksubu",
+    "action": "Loaded grading assignment for Serial No SN-33 in evaluation workspace",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:06:14.943Z",
+    "timestamp": "2026-10-31T03:06:14.943Z"
+  },
+  {
+    "_id": "local-1793415988746-8a6d0",
+    "action": "Started paper evaluation using Qwen 2.5-VL 7B (Ultra-Precision Vision-Language)",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:06:28.746Z",
+    "timestamp": "2026-10-31T03:06:28.746Z"
+  },
+  {
+    "_id": "local-1793417079442-gl7gq",
+    "action": "Saved evaluation result for Serial No SN-33 (Booklet ID: BKT-2026-33).",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:24:39.442Z",
+    "timestamp": "2026-10-31T03:24:39.442Z"
+  },
+  {
+    "_id": "local-1793417079454-grpq7",
+    "action": "Started evaluation of another paper for selected task, cleared previous uploaded student script.",
+    "actorRole": "coordinator",
+    "actorName": "Guru",
+    "browser": "Edge",
+    "ipAddress": "127.0.0.1",
+    "createdAt": "2026-10-31T03:24:39.454Z",
+    "timestamp": "2026-10-31T03:24:39.454Z"
   }
 ]
